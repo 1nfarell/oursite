@@ -5,355 +5,801 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ВЕБ-СТУДИЯ M&P. Разработка и дизайн</title>
+
+    <link rel="stylesheet" href="/assets/css/itc-slider.min.css">
     <link rel="stylesheet" href="/assets/css/index.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="ancor">
         <div id="header" class="header-wrapper">
-            <div class="header">
-                 <img class="logo-icon" src="/images/logo.png" alt="ВЕБ-СТУДИЯ M&P">   
-                 <div>
-                    <a class="header-ref" href="">ГЛАВНАЯ</a>
+            <div class="header">  
+                <div class="header-left">
+                    <span class="bg"></span>              
+                    <img id="hide-logo-site" class="logo-icon" src="/images/logo.png" alt="ВЕБ-СТУДИЯ M&P">
+                    <a id="hide-logo" class="hide-logo" href="#ancor">
+                        
+                        <img class="logo-icon" src="/images/logo.png" alt="ВЕБ-СТУДИЯ M&P">
+                    </a>               
+                    <div class="site-description">
+                        <h3>ВЕБ-СТУДИЯ M&P</h3>  
+                        <p>Разработка сайтов и графического дизайна</p>                  
+                    </div> 
+                </div>           
+                <div class="header-ref-hide">
+                    <a class="header-ref" href="/">ГЛАВНАЯ</a>
                     <a class="header-ref" href="">О НАС</a>
-                    <a class="header-ref" href="">КЛИЕНТАМ</a>
+                    <a class="header-ref" href="#benefit">КЛИЕНТАМ</a>
                     <a class="header-ref" href="">ПОРТФОЛИО</a>
-                 </div>
-                 <div>
-                    <img class="icon-message" src="/images/header-telegram.png" alt="написать в telegram">
-                    <img class="icon-message" src="/images/header-whatsup.png" alt="написать в whatsup">
-                    <img class="icon-message" src="/images/header-message.png" alt="форма для обратной связи">
-                 </div>    
-            </div>
-        </div>
-        <div class="container-header">   
-            
-            
-            
-            <picture>
-                <source srcset="/images/title-image.avif" type="image/avif"/>
-                <source srcset="/images/title-image.webp" type="image/webp"/>                
-                <img class="title-image" src="/images/title-image.jpg" alt="ВЕБ-СТУДИЯ M&P">
-            </picture>
-            
-            <div class="header-box">
-                <div>
-                    <h1>ВЕБ-СТУДИЯ M&P</h1>
-                    <span>Разработка и дизайн</span>
                 </div>
-                <div class="header-box-desription">
-                    <div>
-                        <p>
-                            Задача организации, в особенности же укрепление и развитие структуры обеспечивает 
-                            широкому кругу (специалистов) участие в формировании новых предложений. 
-                            Разнообразный и богатый опыт реализация намеченных плановых заданий требуют 
-                            от нас анализа систем массового участия. 
-                        </p>
-                        <div class="btn-wpapper">
-                            <button class="btn-box-desription btn-desription-service" type="button" ><a href="#container-pricesite">ПЕРЕЙТИ К УСЛУГАМ</a></button>
-                            <button class="btn-box-desription btn-desription-price" type="button"><a href="#container-pricesite"><span>ДИЗАЙН</span><span>0Т 20 000 Р</span></a></button>
+                <div class="menu">
+                    <div class="dropdown dropdown-show">
+                        <img class="icon-message" src="/images/menu.png" alt="меню">
+                        <div class="dropdown-content">
+                            <a class="header-ref" href="/">ГЛАВНАЯ</a>
+                            <a class="header-ref" href="">О НАС</a>
+                            <a class="header-ref" href="#benefit">КЛИЕНТАМ</a>
+                            <a class="header-ref" href="">ПОРТФОЛИО</a>
                         </div>
                     </div>
-                    <div>
-                        <p>
-                            Задача организации, в особенности же укрепление и развитие структуры обеспечивает 
-                            широкому кругу (специалистов) участие в формировании новых предложений. 
-                            Разнообразный и богатый опыт реализация намеченных плановых заданий требуют 
-                            от нас анализа систем массового участия. 
-                        </p>  
-                        <div class="btn-wpapper">
-                            
-                            <button class="btn-box-desription btn-desription-service" type="button"><a href="#container-pricedesign">ПЕРЕЙТИ К УСЛУГАМ</a></button>
-                            <button class="btn-box-desription btn-desription-price" type="button"><a href="#container-pricesite"><span>САЙТ</span><span>ОТ 30 000 Р</span></a></button>
-                        </div>                  
-                    </div>
-                </div>
+                    <a href="tg://resolve?domain=pzay812"><img class="icon-message" src="/images/header-telegram.png" alt="написать в telegram"></a>
+                    <a href="https://wa.me/79954163886?text=Добрый день. До свидания"><img class="icon-message" src="/images/header-whatsup.png" alt="написать в whatsup"></a>
+                </div>  
+                
             </div>
         </div>
-
-        <!-- блок с ценами на сайт -->
-        <div id="container-pricesite" class="container-pricesite">
-            <div class="wrapper-pricesite">
-                <div class="pricesite-title">
-                    <h2>Цены на создание сайтов</h2>
-                    <span>Разработка и дизайн</span>
-                </div>
-
-                <img class="card-icon-price" src="/images/price.png" alt="цены на создание сайтов">
-
-                <div class="card-wrapper">  
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="уникальный WEB/UX/UI дизайн">
-                                <h3>уникальный WEB/UX/UI дизайн</h3>
+        <div class="container-header">  
+            <div class="container-background">
+                <picture>
+                    <source srcset="/images/title-image.avif" type="image/avif"/>
+                    <source srcset="/images/title-image.webp" type="image/webp"/>                
+                    <img class="title-image" src="/images/title-image.jpg" alt="ВЕБ-СТУДИЯ M&P">
+                </picture>
+            </div>
+            <div class="wrapper-title-form">
+                <div class="title-form">
+                    <div class="form-offer height-form-offer">
+                        <div class="form-offer-box">
+                            <h2><i>Разработка</i> и <i>продвижение</i> сайтов!</h2>
+                            <p>Мы веб-студия, которую в первую очередь, заботит результат работы, успех созданного сайта и отзывы наших клиентов - финансовое вознаграждение за труды!</p>
+                        </div>
+                    </div>
+                    <div class="form-offer">
+                        <form id="form-submit" class="form-offer-box">                            
+                            <label for="name">Ваше имя</label>
+                            <input name="name" id="name" type="text" placeholder="" autocomplete="off" maxlength="25">
+                            <label for="number">Телефон или почта</label>
+                            <input name="mail" id="mail" type="text" placeholder="" autocomplete="off" maxlength="25">
+                            <div class="form-offer-box-submit">
+                                <button id="pressbtnform" class="btn-form-offer-box" type="submit">Сделать запрос</button>
+                                <div class="form__message">
+                                    <!-- Всплывающие сообщения об отправке -->
+                                    <div class="preloader"></div>
+                                    <p class="contact-form__message"></p>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>       
+            </div>
+            <div class="itc-slider carousel-header-box" data-slider="itc-slider" data-autoplay="true" data-interval="7000" data-loop="true">                
+                <div class="itc-slider__wrapper">                    
+                  <div class="itc-slider__items">
+                    <div class="itc-slider__item">
+                        <div class="header-box">                            
+                            <div>  
+                                <div class="header-box-desription">  
+                                    <div>
+                                        <h2 class="title-text">СДЕЛАЕМ <i style="color: rgba(133, 224, 171, 1);">САЙТ,</i> КОТОРЫЙ <i style="color: rgba(133, 224, 171, 1);">ПРОДАЕТ!</i></h1>
+                                        <div class="title-description-box">
+                                            <p class="title-description"><i style="color: rgba(133, 224, 171, 1);">Создаем продающие сайты</i> для бизнеса, которые окупаются и попадают в ТОП выдачи</p>
+                                            <p class="title-description"><i style="color: rgba(133, 224, 171, 1);">Обеспечиваем быструю окупаемость</i> ваших вложений и стабильный поток клиентов</p>
+                                            <p class="title-description"><i style="color: rgba(133, 224, 171, 1);">Создаем узнаваемость компании</i> с помощью разработки фирменного стиля</p>
+                                            
+                                        </div>
+                                        
+                                        <div class="btn-wpapper">
+                                            <button class="btn-box-desription btn-desription-price" type="button"><a href="#container-pricesite">Сделать заказ</a></button>
+                                            <button class="btn-box-desription btn-desription-service" type="button"><a href="#container-pricesite">Перейти к стоимости</a></button>
+                                            
+                                        </div>                  
+                                    </div> 
+                                </div> 
                             </div> 
                         </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <button class="btn-card-price btn-card-pricesite" type="button">ОТ 20 000 Р</button> 
-                            </div>
-                        </div>                  
                     </div>
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="верстка сайта и наполнение">
-                                <h3>верстка сайта и наполнение</h3>
-                            </div>                              
+                    <div class="itc-slider__item">
+                        <div class="header-box">
+                            <div>                
+                                
+                                <div class="header-box-desription">  
+                                    <div>
+                                        <h2 class="title-text">ГРАФИЧЕСКИЙ ДИЗАЙН</h1>
+                                        
+                                        <p class="title-description">Задача организации, в особенности же укрепление и развитие структуры обеспечивает 
+                                            широкому кругу (специалистов) участие в формировании новых предложений. 
+                                            Разнообразный и богатый опыт реализация намеченных плановых заданий требуют 
+                                            от нас анализа систем массового участия</p>
+                                       
+                                        <div class="btn-wpapper">
+                                            <button class="btn-box-desription btn-desription-price" type="button"><a href="#container-pricesite">Сделать заказ</a></button>
+                                            <button class="btn-box-desription btn-desription-service" type="button" ><a href="#container-pricesite">Перейти к стоимости</a></button>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div> 
+                            </div> 
+                            
                         </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <button class="btn-card-price btn-card-pricesite" type="button">ОТ 30 000 Р</button>
-                            </div>
-                        </div>   
                     </div>
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="верстка HTML писем">
-                                <h3>верстка HTML писем</h3>                                                      
-                            </div>                             
-                        </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <li>адаптивная HTML верстка Email писем для рассылки</li> 
-                                <button class="btn-card-price btn-card-pricesite" type="button">1 000 Р</button>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="написание текстов (copywriting)">
-                                <h3>продвижение сайта</h3>                                                       
-                            </div>  
-                        </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <li>SEO-продвижение сайта в поисковых системах</li>
-                                <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">5 000 Р ЗА СТР.</button>
-                                <li>добавление сайта на карты, реклама</li>  
-                                <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">1 500 Р ЗА СТР.</button> 
-                            </div>
-                        </div>                         
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="написание текстов (copywriting)">
-                                <h3>написание текстов (copywriting)</h3>                                                         
-                            </div>                       
-                        </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <li>простые тексты</li>
-                                <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">500 Р ЗА СТР.</button>
-                                <li>текты с оптимизацией под поисковые роботы</li> 
-                                <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">1 500 Р ЗА СТР.</button>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="подбор и регистрация доменов">
-                                <h3>подбор и регистрация доменов</h3>                 
-                            </div>                        
-                        </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <li>подбор доменного имени</li>
-                                <li>регистрация и продление одного домена</li> 
-                                <button class="btn-card-price btn-card-pricesite" type="button">1 000 Р</button> 
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="хостинг сайта">
-                                <h3>хостинг сайта</h3>                                                   
-                            </div>                        
-                        </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <li>выбор, покупка и настройка хостинга</li>
-                                <li>размещение сайта</li>
-                                <li>настройка редиректов</li> 
-                                <li>подключение SLL сертификата</li>      
-                                <button class="btn-card-price btn-card-pricesite" type="button">3 000 Р</button>  
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card">  
-                        <div class="card__face card__face--front">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back card-design">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>    
+                    <!-- <div class="itc-slider__item">
+                      
+                    </div> -->
+                  </div>
                 </div>
-                
-                <button class="btn-card-submit btn-card-pricesite" type="button">сделать заказ</button>                
-            </div>           
+                <ol class="itc-slider__indicators">
+                    <li class="itc-slider__indicator" data-slide-to="0"></li>
+                    <li class="itc-slider__indicator" data-slide-to="1"></li>
+                </ol>
+            </div>
         </div>
-        <!-- блок с ценами на дизайн -->
-        <div id="container-pricedesign" class="container-pricesite container-pricedesign">
-            <div class="wrapper-pricesite">
-                <div class="pricesite-title">
-                    <h2>Цены на графический дизайн</h2>
-                    <span>Нет идеи? Есть решение!</span>
+        <!-- преимущества и выгоды  -->
+    <div class="container-background-block-1">
+        <div class="container-block-1">
+            <div id="benefit" class="wrapper-container-block-1">
+                <div>
+                    <div class="pricesite-title">
+                        <h2>ПРЕИМУЩЕСТВА И ВЫГОДЫ</h2>
+                        <span>Мы помогаем реализовать все Ваши идеи и пожелания: от самых базовых, до индивидуальных и нестандартных задумок</span>
+                    </div>                    
+                    <div class="box-benefit">
+                        <div class="benefit-1">
+                            <h3 class="benefit-text-right">Сайт для любых целей</h3>
+                            <p class="benefit-text-right">Разрабытваем эффектные лендинги, сайты-визитки, корпоративные сайты, интернет каталоги с уникальным дизайном, промо сайты</p>
+                        </div>   
+                        <div class="benefit-2">
+                            <h3 class="benefit-text-right">Адаптивный дизайн</h3>
+                            <p class="benefit-text-right">Разрабатываем быстрые сайты, адаптированные под все устройства</p>
+                        </div> 
+                        <div class="benefit-3">
+                            <h3 class="benefit-text-right">Графический дизайн</h3>
+                            <p class="benefit-text-right">Рисуем иллюстрации, банеры, логотипы, иконки — всё для лучшей подачи компании</p>
+                        </div> 
+                        <div class="benefit-4">
+                            <h3 class="benefit-text-left">Скорость</h3>
+                            <p class="benefit-text-left">Скорость работы так же важна, как и ее качество. Мы умеем работать быстро, а потому готовы создать качественный проект в заранее оговоренные сроки.
+                            </p>
+                        </div>   
+                        <div class="benefit-5">
+                            <h3 class="benefit-text-left">Команда</h3>
+                            <p class="benefit-text-left">Каждый наш сотрудник отлично владеет навыками кодирования для создания лучших сайтов</p>
+                        </div> 
+                        <div class="benefit-6">
+                            <h3 class="benefit-text-left">Поддержка</h3>
+                            <p class="benefit-text-left">Клиент получает нашу поддержку до конца существования сайта. Просто свяжитесь с нами – мы обязательно придем на помощь</p>
+                        </div>  
+                        <div class="benefit-center">                              
+                            <div class="benefit-center-hidden">
+                                <img class="benefit-center-img" src="/images/ResponsiveDesign-gray.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div>                         
+                            <div class="benefit-center-hidden">
+                                <img class="benefit-center-img" src="/images/sitetype-gray.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img class="benefit-center-img" src="/images/design-gray.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img class="benefit-center-img" src="/images/ResponsiveDesign-gray.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div> 
+                            <div class="benefit-center-hidden">
+                                <img class="benefit-center-img" src="/images/sitetype-gray.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div> 
+                            <div class="benefit-center-hidden">
+                                <img class="benefit-center-img" src="/images/design-gray.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div> 
+                            <div class="title-benefit-under">
+                                <img class="benefit-center-img" src="/images/title-benefit.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis, distinctio beatae vitae provident harum, quidem amet ratione iste saepe accusantium, dignissimos molestias ipsum? Quas rem quibusdam perspiciatis doloremque enim?
+                                </p>
+                            </div> 
+                        </div>   
+                    </div> 
                 </div>
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>                         
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div class="card__face card__face--front card-design">
-                            <div>
-                                <img class="card-icon" src="/images/whatsup.png" alt="сопровождение и поддержка сайта">
-                                <h3>сопровождение и поддержка сайта</h3>                                                              
-                            </div>                    
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div>
-                                <li>техподдержка сайта</li>                                
-                                <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
-                            </div>
-                        </div>    
-                    </div>    
-                </div>
+            </div>                  
+        </div>   
+        <!-- этапы разработки --> 
+       
+        <div class="stage-wrapper ">
+            <div class="stage-title">
+                <h2>ЭТАПЫ РАЗРАБОТКИ</h2>                        
+            </div>    
+            <div class="itc-slider carousel-pricesite " data-slider="itc-slider" data-autoplay="false" data-loop="false">
+                <div class="itc-slider__wrapper">
+                    <div class="itc-slider__items">
+                    <div class="itc-slider__item">
+                        <div class="container-pricesite">
+                            <div class="wrapper-pricesite wrapper-padding">
+                                <div class="pricesite-title">
+                                    <span>7 этапов разработки сайта</span>
+                                </div>                        
+                                <div class="stage-box-column">  
+                                    <div class="stage-box-row">
+                                        <div class="stage-circle anime-cercle-1-1">
+                                               
+                                        </div>
+                                        <div class="stage-text textwidth">
+                                            <img class="imgwidth anime-cercle-2-1" src="/images/arrow.png" alt="стрелка вправо">
+                                            <div class="stage-text-number" style="position: absolute;">1</div>
+                                            Сбор информации: назначение, основные цели и целевая аудитория
 
-                <button class="btn-card-submit btn-card-design" type="button">сделать заказ</button>
-            </div>           
-        </div>        
-    </div>
+                                        </div>
+                                        <div class="stage-circle anime-cercle-3-1">
+                                            
+                                        </div>
+                                        <div class="stage-text textwidth">
+                                            <img class="imgwidth anime-cercle-4-1" src="/images/arrow.png" alt="стрелка вправо">
+                                            <div class="stage-text-number" style="position: absolute;">2</div>
+                                            Планирование: создание макета
+                                        </div>
+                                        <div class="stage-circle anime-cercle-5-1">
+                                            
+                                        </div>
+                                        <div class="stage-text textwidth3">
+                                            <img class="textwidth3 anime-cercle-6-1" src="/images/arrow.png" alt="стрелка вправо">
+                                            <div class="stage-text-number" style="position: absolute;">3</div>
+                                            Дизайн: шаблон, обзор и утверждение
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="stage-box-row">
+                                        <div class="stage-circle anime-cercle-14-1">
+
+                                        </div>
+                                        <div class="stage-text textwidth">
+                                            <img class="imgwidth anime-cercle-13-1" src="/images/arrow.png" alt="стрелка влево">
+                                            <div class="stage-text-number" style="position: absolute;">7</div>
+                                            Поддержка
+
+                                        </div>
+                                        <div class="stage-circle anime-cercle-12-1">
+                                            
+                                        </div>
+                                        <div class="stage-text textwidth">
+                                            <img class="imgwidth anime-cercle-11-1" src="/images/arrow.png" alt="стрелка влево">
+                                            <div class="stage-text-number" style="position: absolute;">6</div>
+                                            Тестирование и запуск
+
+                                        </div>
+                                        <div class="stage-circle anime-cercle-10-1">
+                                            
+                                        </div>
+                                        <div class="stage-text textwidth arrow-circe-position">
+                                            <img class="imgwidth anime-cercle-9-1" src="/images/arrow.png" alt="стрелка влево">
+                                            <div class="stage-text-number" style="position: absolute;">5</div>
+                                            Верстка и разработка
+                                            <div>Создание контента</div> 
+                                            <img class="arrow-circe anime-cercle-7-1" src="/images/arrow.png" alt="стрелка вниз">
+                                        </div>
+                                        <div class="stage-circle  anime-cercle-8-1">
+                                            
+                                        </div>
+                                        <div style="position: relative;">
+                                            <div class="stage-text-number" style="position: absolute;">4</div>
+                                        </div>
+                                        
+                                    </div>      
+                                </div>                                             
+                            </div>          
+                        </div>
+                    </div>
+                    <div class="itc-slider__item">
+                        <div class="container-pricesite">
+                            <div class="wrapper-pricesite wrapper-padding">
+                                <div class="pricesite-title">
+                                    
+                                    <span>5 этапов разработки дизайна</span>
+                                </div>
+                                <div class="stage-box-column">  
+                                    <div class="stage-box-row">
+                                        <div class="stage-circle anime-cercle-1">
+
+                                        </div>
+                                        <div class="stage-text">
+                                            <img class="anime-cercle-2" src="/images/arrow.png" alt="стрелка вправо">
+                                            <div class="stage-text-number" style="position: absolute;">1</div>
+                                            Анализ деятельности компании и конкурентов
+                                        </div>
+                                        <div class="stage-circle anime-cercle-3">
+                                            
+                                        </div>
+                                        <div class="stage-text ">
+                                            <img class="imgwidth2 anime-cercle-4" src="/images/arrow.png" alt="стрелка вправо">
+                                            <div class="stage-text-number" style="position: absolute;">2</div>
+                                            Создание предварительных эскизов
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="stage-box-row">
+                                        <div class="stage-circle anime-cercle-10">
+
+                                        </div>
+                                        <div class="stage-text">
+                                            <img class="anime-cercle-9" src="/images/arrow.png" alt="стрелка влево">
+                                            <div class="stage-text-number" style="position: absolute;">5</div>
+                                            Презентация конечного результата
+
+                                        </div>
+                                        <div class="stage-circle anime-cercle-8">
+                                            
+                                        </div>
+                                        <div class="stage-text arrow-circe-position">
+                                            <img class="anime-cercle-7" src="/images/arrow.png" alt="стрелка влево">
+                                            <div class="stage-text-number" style="position: absolute;">4</div>
+                                            Внесение корректировок
+                                            <img class="arrow-circe circe-pricedesign anime-cercle-5" src="/images/arrow.png" alt="стрелка вниз">
+                                            <div class="text-right-pricedesign">Презентация и оценка логотипа</div> 
+                                        </div>
+                                        
+                                        <div class="stage-circle anime-cercle-6">
+                                            
+                                        </div>  
+                                        <div style="position: relative;">
+                                            <div class="stage-text-number" style="position: absolute;">3</div>
+                                        </div>
+                                    </div>      
+                                </div>
+                            </div>       
+                        </div>
+                    </div>      
+                    </div>
+                </div>
+                <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                <button class="itc-slider__btn itc-slider__btn_prev btn-set-radius"></button>
+                <button class="itc-slider__btn itc-slider__btn_next btn-set-radius"></button>
+
+                <ol class="itc-slider__indicators indicators-bottom-up stage-indicators-bottom-up">
+                    <li class="itc-slider__indicator" data-slide-to="0"></li>
+                    <li class="itc-slider__indicator" data-slide-to="1"></li>
+                </ol>
+            </div>
+        </div> 
+    </div>              
+        <!-- блок с ценами -->
+        <div class="stage-wrapper stage-wrapper-color">
+            <div id="container-pricesite" class="stage-title">
+                <h2>СТОИМОСТЬ РАБОТЫ</h2>                        
+            </div>            
+            <div class="itc-slider carousel-pricesite carousel-backgroung-color" data-slider="itc-slider" data-autoplay="false" data-loop="false">
+                <div class="itc-slider__wrapper">
+                  <div class="itc-slider__items">
+                    <div class="itc-slider__item">
+                        <div class="container-pricesite">
+                            <!-- блок с ценами на сайт -->
+                            <div class="wrapper-pricesite">
+                                <div class="pricesite-title">                                    
+                                    <span>Цены на создание сайтов</span>
+                                </div>
+                
+                                <img class="card-icon-price" src="/images/price.png" alt="цены на создание сайтов">
+                
+                                <div class="card-wrapper"> 
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-1.png" alt="уникальный WEB/UX/UI дизайн">
+                                                    <h3>уникальный WEB/UX/UI дизайн</h3>
+                                                </div> 
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">ОТ 20 000 Р</button> 
+                                                </div>
+                                            </div>                  
+                                        </div>
+                                    </div> 
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-2.png" alt="верстка сайта и наполнение">
+                                                    <h3>верстка сайта и наполнение</h3>
+                                                </div>                              
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">ОТ 30 000 Р</button>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-3.png" alt="верстка HTML писем">
+                                                    <h3>верстка HTML писем</h3>                                                      
+                                                </div>                             
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <li>адаптивная HTML верстка Email писем для рассылки</li> 
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">1 000 Р</button>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-4.png" alt="написание текстов (copywriting)">
+                                                    <h3>продвижение сайта</h3>                                                       
+                                                </div>  
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <li>SEO-продвижение сайта в поисковых системах</li>
+                                                    <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">5 000 Р ЗА СТР.</button>
+                                                    <li>добавление сайта на карты Google, 2ГИС, Yandex. Реклама (РСЯ)</li>  
+                                                    <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">1 500 Р</button> 
+                                                </div>
+                                            </div>                         
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-5.png" alt="написание текстов (copywriting)">
+                                                    <h3>написание текстов (copywriting)</h3>                                                         
+                                                </div>                       
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <li>простые тексты</li>
+                                                    <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">500 Р ЗА СТР.</button>
+                                                    <li>текты с оптимизацией под поисковые роботы</li> 
+                                                    <button class="btn-card-price btn-card-pricesite btn-overflow" type="button">1 500 Р ЗА СТР.</button>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-6.png" alt="подбор и регистрация доменов">
+                                                    <h3>подбор и регистрация доменов</h3>                 
+                                                </div>                        
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <li>подбор доменного имени</li>
+                                                    <li>регистрация и продление одного домена</li> 
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">1 000 Р</button> 
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-7.png" alt="хостинг сайта">
+                                                    <h3>хостинг сайта</h3>                                                   
+                                                </div>                        
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <li>выбор, покупка и настройка хостинга</li>
+                                                    <li>размещение сайта</li>
+                                                    <li>настройка редиректов</li> 
+                                                    <li>подключение SLL сертификата</li>      
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">3 000 Р</button>  
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">  
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-8.png" alt="сопровождение и поддержка сайта">
+                                                    <h3>сопровождение и поддержка сайта</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back card-design">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>  
+                                    </div>  
+                                </div>                                             
+                            </div>          
+                        </div>
+                    </div>
+                    <div class="itc-slider__item">
+                        <div class="container-pricesite">
+                            <!-- блок с ценами на дизайн -->
+                            <div class="wrapper-pricesite">
+                                <div class="pricesite-title">
+                                    <span>Цены на графический дизайн</span>
+                                </div>
+                                <div class="card-wrapper">
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-9.png" alt="дизайн листовок и флаеров">
+                                                    <h3>дизайн листовок и флаеров</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>                         
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-10.png" alt="создание фирменного стиля">
+                                                    <h3>создание фирменного стиля</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-11.png" alt="разработка и дизайн логотипа">
+                                                    <h3>разработка и дизайн логотипа</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/price-icon-12.png" alt="разработка и дизайн визиток">
+                                                    <h3>разработка и дизайн визиток</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/whatsup.png" alt="макетирование страницы сайта в утвержденной стилистике">
+                                                    <h3>макетирование страницы сайта в утвержденной стилистике</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/whatsup.png" alt="разработка интерфейсов сайта">
+                                                    <h3>разработка интерфейсов сайта</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/whatsup.png" alt="продающие рекламные баннеры">
+                                                    <h3>продающие рекламные баннеры</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card">
+                                            <div class="card__face card__face--front card-design">
+                                                <div>
+                                                    <img class="card-icon" src="/images/whatsup.png" alt="создание иконок">
+                                                    <h3>создание иконок</h3>                                                              
+                                                </div>                    
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div>
+                                                    <li>техподдержка сайта</li>                                
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">5 000 Р</button> 
+                                                </div>
+                                            </div>    
+                                        </div>  
+                                    </div>  
+                                </div>
+                            </div>       
+                        </div>
+                    </div>      
+                  </div>
+                </div>
+                <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                <button class="itc-slider__btn itc-slider__btn_prev btn-set-radius"></button>
+                <button class="itc-slider__btn itc-slider__btn_next btn-set-radius"></button>
+
+                <ol class="itc-slider__indicators indicators-bottom-up">
+                    <li class="itc-slider__indicator" data-slide-to="0"></li>
+                    <li class="itc-slider__indicator" data-slide-to="1"></li>
+                </ol>
+            </div>
+        </div>
     
-
+        
+        <div class="container-block">
+            <div class="wrapper-block">
+                <div class="pricesite-title">
+                    <h2>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+                    <span>Ответы на часто задаваемые вопросы</span>
+                </div>  
+                <div class="wrapper-accordion">
+                    <button class="accordion">Какие сайты мы разрабатываем?</button>
+                    <div class="panel">
+                        <p>Предлагаем услуги разработки сайтов всех коммерческих и некоммерческих видов.</p>
+                        <p>Коммерческие:</p>
+                        <li>Landing Page;</li>
+                        <li>Корпоративный сайт;</li>
+                        <li>Сайт-визитка;</li>
+                        <li>Сайт-каталог.</li>
+                        <p>Некоммерческие:</p>
+                        <li>Инфопорталы;</li>
+                        <li>Сайты медийных личностей;</li>
+                        <li>Ресурсы любого назначения для информирования пользователей.</li>
+                    </div>
+                    <button class="accordion">Какой тип сайта подойдет для вашего бизнеса?</button>
+                    <div class="panel">
+                        <p>Выбор сайта зависит от характера бизнеса и целей, которые необходимо достичь разработкой. Имеет значение объемы компании. Если цель продать услугу/продукт - landing page идеальный вариант. Для стартапов, новых, молодых компаний подойдет сайт-визитка с возможностью в дальнейшем развернуть сайт, сделав корпоративным. Для устоявшихся в нише компаний подходит крупный сайт компании с возможностью продажи своих товаров или услуг.
+                            Выбор типа сайта определяется после анализа бизнеса, целевой аудитории и задач, которые должен выполнять проект.</p>
+                    </div>
+                    <button class="accordion">От чего зависят сроки разработки сайта?</button>
+                    <div class="panel">
+                        <p>Сроки создания сайта зависят от ряда факторов:</p>
+                        <li>тематики сайта. Если это узкоспециализированное направление, есть необходимость более глубокого изучения темы и целевой аудитории;</li>
+                        <li>объем будущего сайта: количество страниц, сложность их наполнения, количества товаров (если это интернет-магазин) и т.п.;</li>
+                        <li>сложность сайта: дизайна, функционала, отдельных элементов;</li>
+                        <li>составление ТЗ;</li>
+                        <li>тестирование сайта — может занимать до 20% всего времени создания сайта. В ходе тестинга специалист прорабатывает каждую зону сайта под разными нагрузками и факторами. Если обнаруживается ошибка, сайт-проект возвращается на доработку, а после снова тестируется;</li>
+                        <li>качество связи с клиентом. Сроки могут превышать ранее заявленные, если клиент своевременно не выходит на связь в моментах, когда необходимо его мнение.</li>
+                        <p>При оглашении нами сроков разработки сайтов, мы указываем приблизительный временной промежуток. Точные сроки оглашаются только после согласования всех нюансов с заказчиком, а также при полном понимании своих задач.</p>
+                    </div>
+                    <button class="accordion">Как заказать создание сайта?</button>
+                    <div class="panel">
+                        <p>Чтобы заказать создание сайта в нашей веб-студии или заказать дополнительные услуги, оказываемые нами, просто свяжитесь с нами по контактному номеру телефона или с помощью мессенджеров. Обсудим проект, огласим примерную стоимость и сроки, предложим выгодное, рациональное решение поставленной задачи.
+                            В процессе консультации определимся с видом сайта и целями, которые должна достичь разработка. После согласования стоимости и сроков, мы предложим заполнить подробный бриф, где необходимо ответить на все важные для изготовления сайта вопросы о бизнесе. После заполнения брифа, заключается договор. Далее составляется техническое задание, а после его согласования мы приступаем к созданию сайта.</p>
+                    </div>
+                    <button class="accordion">Гарантии</button>
+                    <div class="panel">
+                        <p>Услуга создания сайта, дизайна основывается на договоре. Договор является документом с полноценной юридической силой и является основой для абсолютной безопасности как для клиента, так и для исполнителя.</p>
+                    </div>
+                    <button class="accordion">Что такое создание сайта под ключ?</button>
+                    <div class="panel">
+                        <p>Это выполнение всего спектра услуг одним исполнителем. В нашем случае, только наша студия и только наши специалисты выполняют всю работу, связанную с созданием сайта - от составления технического задания, дизайна, копирайтинга до продвижения проекта после его запуска. Мы не привлекает сторонних исполнителей, потому контролируем каждый этап самостоятельно и несем за него ответственность. Для вас, как заказчика, это гораздо удобнее и надежнее.</p>
+                    </div>
+                    <button class="accordion">От чего зависит цена создания сайта?</button>
+                    <div class="panel">
+                        <p>Когда речь идет о создании сайта с нуля под ключ, невозможно сразу, еще на моменте первичной консультации указать точную стоимость и сроки. Это нивелирующие величины, которые зависят от ряда факторов.
+                            Если нужно узнать окончательную стоимость создания сайтов, необходимо сделать общую и детальную оценку сайта. Цена разработки зависит от:</p>
+                            <li>вида сайта и его объема; </li>
+                            <li>сложности технического задания, функционала, дизайна;</li>
+                            <li>стоимость дополнительных услуг, которые планируется заказать в дальнейшем: написание текстов, наполнение сайта контентом (фото, видео, аудио) и др.</li>
+                        <p>Ни одна профессиональная веб-студия, предлагающая создание сайта под ключ, не сможет сказать точную цену сразу после первого обращения. Все цены, указанные в прайсе, являются примерными и показывают лишь минимальный порог за услуги исполнителей.</p>
+                        <p>Конечная стоимость оглашается на моменте составления технического задания. Она вносится в договор и является неизменной. Исключением изменения стоимости разработки сайта становится необходимость доработки сайта функциями, о которых клиент ранее не указывал.</p>
+                    </div>
+                    <button class="accordion">Какие дополнительные услуги можно у нас заказать?</button>
+                    <div class="panel">
+                        <p>Вы можете заказать эффективный сайт с нуля под ключ, а также отдельные услуги, которые мы предоставляем:</p>
+                        <li>Продвижение сайта: SEO-продвижение, реклама;</li>
+                        <li>Копирайтинг, рерайтинг, написание продающих текстов;</li>
+                        <li>Доработка сайта;</li>
+                        <li>Техническая поддержка;</li>
+                        <li>Разработка дизайна сайта;</li>
+                        <li>Создание логотипа.</li>
+                        <p>Стоимость услуг оговаривается индивидуально и зависит от ваших требований и сложности задачи.</p>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <!-- itc-slider -->    
+    <script src="/assets/js/itc-slider.min.js" defer></script> 
+    <!-- jquery -->
+    <script src="/assets/js/jquery-3.6.1.min.js"></script>
+    <script src="/assets/js/telegramform.js"></script>
     <!-- Липкий заголовок -->
     <script>
         window.onscroll = function() {myFunction()};
 
         var header = document.getElementById("header");
+        var logo = document.getElementById("hide-logo");
+        var logoSite = document.getElementById("hide-logo-site");
 
         function myFunction() {
             if ($(this).scrollTop() > 0) {
-                header.classList.add("sticky");
+                header.classList.add("sticky");                
+                logo.classList.add("show-logo");
+                logoSite.classList.add("hide-logo-site");
             } else {
                 header.classList.remove("sticky");
+                logo.classList.remove("show-logo");
+                logoSite.classList.remove("hide-logo-site");
             }
         }
     </script>
     <!-- sdn css houdini -->
     <script>        
-        if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');       
+        if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('/assets/js/smooth-corners.js');   
+        if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('/assets/js/paint.js');     
     </script>
     
-    <!-- jquery -->
-    <script src="/assets/js/jquery-3.6.1.min.js"></script>
     <!-- плавный скрол для ссылок -->
     <script>
         $('a[href^="#"').on('click', function() {
@@ -373,34 +819,94 @@
         });
         
     </script>
-    <!-- параллакс эффект -->
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+    <!-- удержание текста преимущества -->
     <script>
-        var titleimage = document.getElementsByClassName('title-image');
+       
         
-        new simpleParallax(titleimage, {
-            delay: .6,
-            scale: 1.4,
-            transition: 'cubic-bezier(0,0,0,1)'
+        $('.benefit-1').click(function(){             
+                if($('.benefit-center-hidden:nth-of-type(1)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(1)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
+                {
+                    $('.benefit-center-hidden').removeClass('is-selected');
+                    $('.benefit-center-hidden:nth-of-type(1)').addClass('is-selected');
+                    $('.title-benefit-under').addClass('TitleBenefitHide');
+                }
+            
+        });
+        $('.benefit-2').click(function(){             
+                if($('.benefit-center-hidden:nth-of-type(2)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(2)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
+                {   
+                    $('.benefit-center-hidden').removeClass('is-selected');
+                    
+                    $('.benefit-center-hidden:nth-of-type(2)').addClass('is-selected');
+                    $('.title-benefit-under').addClass('TitleBenefitHide');
+                }
+           
+        });
+        $('.benefit-3').click(function(){ 
+            if($('.benefit-center-hidden:nth-of-type(3)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(3)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
+                {
+                    $('.benefit-center-hidden').removeClass('is-selected');
+                    $('.benefit-center-hidden:nth-of-type(3)').addClass('is-selected');
+                    $('.title-benefit-under').addClass('TitleBenefitHide');
+                }
+        });
+        $('.benefit-4').click(function(){ 
+            if($('.benefit-center-hidden:nth-of-type(4)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(4)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
+                {
+                    $('.benefit-center-hidden').removeClass('is-selected');
+                    $('.benefit-center-hidden:nth-of-type(4)').addClass('is-selected');
+                    $('.title-benefit-under').addClass('TitleBenefitHide');
+                }
+        });
+        $('.benefit-5').click(function(){ 
+            if($('.benefit-center-hidden:nth-of-type(5)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(5)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
+                {
+                    $('.benefit-center-hidden').removeClass('is-selected');
+                    $('.benefit-center-hidden:nth-of-type(5)').addClass('is-selected');
+                    $('.title-benefit-under').addClass('TitleBenefitHide');
+                }
+        });
+        $('.benefit-6').click(function(){ 
+            if($('.benefit-center-hidden:nth-of-type(6)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(6)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
+                {
+                    $('.benefit-center-hidden').removeClass('is-selected');
+                    $('.benefit-center-hidden:nth-of-type(6)').addClass('is-selected');
+                    $('.title-benefit-under').addClass('TitleBenefitHide');
+                }
         });
 
-        var iconpriceimage = document.getElementsByClassName('card-icon-price');
         
-        new simpleParallax(iconpriceimage, {
-            delay: .6,
-            scale: 1.1,
-            overflow: true,
-            orientation: 'right',
-            transition: 'cubic-bezier(0,0,0,1)'
-        });
-
+        
         
     </script>
 
-    <!-- AOS.js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- параллакс эффект title изображения -->
     <script>
-        AOS.init();
+        let bg = document.querySelector('.title-image');
+        window.addEventListener('mousemove', function(e) {
+            let x = e.clientX / window.innerWidth;
+            let y = e.clientY / window.innerHeight;  
+            bg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+        });
+    </script>
+    <!-- блок ЧаВо -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + 60 + "px";
+            } 
+        });
+        }
     </script>
 </body>
 </html>
