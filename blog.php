@@ -78,23 +78,32 @@ include 'vendor/generator.php';
                         <a class="header-ref" href="/blog">БЛОГ</a> 
                                    
                     </div>
-                    <div class="menu">
-                        <div class="dropdown dropdown-show">
-                            <img class="icon-message" src="/images/menu.png" alt="меню">
-                            <div class="dropdown-content">
-                                <a class="header-ref" href="/">ГЛАВНАЯ</a> 
-                                <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
-                                <a class="header-ref" href="/#price">УСЛУГИ</a>
-                                <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
-                                <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
-                                <a class="header-ref" href="/#about">О НАС</a>  
-                                <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
-                                <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>
-                                <a class="header-ref" href="/blog">БЛОГ</a>   
+                    <div class="search-menu">
+                        <div class="filter-long-string"> 
+                            <img class="SearchIcon" src="images/search.svg"> 
+                            <input type="text" id="search" class="search" placeholder="Ищи здесь!">
+                            <div class="DelSearch">
+                                <img  id="btnDelSearch" class="DeleteIcon" style="display:none;" src="images/iconDelete.svg"> 
+                            </div>          
+                        </div>          
+                        
+                        <div class="menu">
+                            <div class="dropdown dropdown-show">
+                                <img class="icon-message" src="/images/menu.png" alt="меню">
+                                <div class="dropdown-content">
+                                    <a class="header-ref" href="/">ГЛАВНАЯ</a> 
+                                    <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
+                                    <a class="header-ref" href="/#price">УСЛУГИ</a>
+                                    <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
+                                    <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
+                                    <a class="header-ref" href="/#about">О НАС</a>  
+                                    <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
+                                    <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>
+                                    <a class="header-ref" href="/blog">БЛОГ</a>   
+                                </div>
                             </div>
                         </div>
-                               
-                    </div>                  
+                    </div>                 
                 </div>
             </div>  
         </header>   
@@ -126,6 +135,7 @@ include 'vendor/generator.php';
             <!-- основные блоки  -->      
             <div class="container-background-block-1">  
                 <div class="container-block-1">
+                    <div class="main-title">ВСЕ СТАТЬИ</div>
                     <div class="filters">
                         <div class="filter"> 
                             <select id="filterCateg" class="filterCategories"> 
@@ -138,39 +148,27 @@ include 'vendor/generator.php';
                                 <option value="sortdefault">Самые новые</option>          
                                 <option value="sortdate">Самые старые</option>
                             </select>           
-                        </div>   
-                        <div class="filter"> 
-                            <div class="filter-long-string"> 
-                                <img class="SearchIcon" src="images/search.svg"> 
-                                <input type="text" id="search" class="search" placeholder="Ищи здесь!">
-                                <div class="DelSearch">
-                                    <img  id="btnDelSearch" class="DeleteIcon" style="display:none;" src="images/iconDelete.svg"> 
-                                </div>          
-                            </div>          
-                        </div>  
+                        </div>                          
                     </div> 
                 </div>    
                 <!-- main -->
                 <div class="container-block-1">
                     <div class="wrapper-block">
+                        
                         <div class="main">        
                             <div id="main-center" class="main-center">
                                 
                             </div> 
                             <div class="main-menu">
+                               
+                                <div class="main-menu-title">Категории</div>
                                 <?php selectCategories(); ?>  
                             </div>                   
                         </div>
                         
                     </div>
                 </div>
-                <!-- фон и курсор -->
-                <div class="lines">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>                    
-                </div> 
+               
             </div> 
         </main>    
         <!-- футтер -->

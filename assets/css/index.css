@@ -1935,6 +1935,10 @@ input::placeholder, textarea::placeholder {
     padding-bottom: 15px;
 }
 
+.container-padding-top{
+    margin-top: 100px;
+}
+
 
 @media (min-width: 1240px)  {
     .container{
@@ -1945,6 +1949,8 @@ input::placeholder, textarea::placeholder {
     }
     
 }
+
+
 
 @media (max-width: 1240px)  { 
      /*услуги копирайт и рерайт  */
