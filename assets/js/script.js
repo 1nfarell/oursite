@@ -83,11 +83,12 @@
 
     var acC = document.getElementsByClassName("accordion-stage");
     var i;
-
+    
     for (i = 0; i < acC.length; i++) {
     acC[i].addEventListener("click", function() {
         this.classList.toggle("active-field");
         var panelField = this.previousElementSibling;
+      
         if (panelField.style.maxHeight){
             const element = document.querySelector('#panel-title');
             const topPos = element.getBoundingClientRect().top + window.pageYOffset;
@@ -96,9 +97,11 @@
             top: topPos, 
             behavior: 'smooth' 
             })
-            panelField.style.maxHeight = null;   
+            panelField.style.maxHeight = null; 
+             
         } else {
-        panelField.style.maxHeight = "fit-content";}});}
+        panelField.style.maxHeight = "fit-content";
+        }});}
 
 
 //переворот карточки

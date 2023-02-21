@@ -1,5 +1,5 @@
 <?php
-
+//загрузка файлов index.html
 $file = basename($_GET['file']);
 $file = '../doc/'.$file;
 

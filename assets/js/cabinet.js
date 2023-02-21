@@ -1,6 +1,6 @@
 let dataForm = $(this).serialize();
 let field = $('#field-center');
- 
+//вывод outputCabinet.php (вывод списка в таблицу в cabinet.php)
 function tableValue() {
     
     let arr = "";

@@ -1,6 +1,6 @@
 <?php
 require_once 'StaticConnection.php';
-// блок похожие посты
+// блок похожие посты в post.php (outlikepost.js)
 function outLikePost(){  
     $id = $_GET['id'];
 

@@ -1,7 +1,7 @@
 <?php
 require_once 'StaticConnection.php';
 
-//вывод статей на главную страницу blog.php
+//вывод статей на главную страницу blog.php (index.js)
 function outputHome()
 {
     

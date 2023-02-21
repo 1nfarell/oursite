@@ -1,5 +1,5 @@
 <?php
-
+//регистрация
 session_start();
 require_once 'StaticConnection.php';
 

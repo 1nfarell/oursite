@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//авторизация
 require_once 'StaticConnection.php';
 
 $login = $_POST['login'];

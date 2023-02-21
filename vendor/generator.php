@@ -1,7 +1,7 @@
 <?php
 
 require_once 'StaticConnection.php';
-//вывод ингридиентов на главную страницу blog.php, вызывается в function generationPost 
+//вывод вывод статей автора по клику на автора в карточке blog.php 
 
 function autorPost()
 {
@@ -123,12 +123,12 @@ function addPost(){
     } 
 }
 
-//SELECT categories в выпадающий список addpost.php
+//SELECT categories в выпадающий список addpost.php и blog.php
 function selectCategories(){
 
     $db = StaticConnection::getConnection();
     $sth = $db->prepare("SELECT DISTINCT * FROM categories");
-    $sth->execute();            
+    $sth->execute();
     
     if ($sth->rowCount() > 0){
         while($article = $sth->fetch(PDO::FETCH_ASSOC)){ 

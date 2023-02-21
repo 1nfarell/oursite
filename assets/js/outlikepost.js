@@ -1,6 +1,6 @@
 let dataForm = $(this).serialize();
 var field = $('#main-center');
-
+// вывод outputLikePost.php (блок похожие посты в post.php)
 $.ajax({
     url: 'vendor/outputLikePost.php',
     method: 'GET',

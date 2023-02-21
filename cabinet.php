@@ -43,7 +43,7 @@ include 'vendor/generator.php';
             </div>           
             <div class="header-ref-hide">                           
                
-                <a class="header-ref" href="/">ГЛАВНАЯ</a>
+                <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a> 
                 <a class="header-ref" href="/blog">БЛОГ</a> 
                 <div class="dropdown dropdown-high">                                
                     ТЕКСТ

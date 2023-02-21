@@ -1,7 +1,7 @@
 <?php
 require_once 'StaticConnection.php';
 session_start();
-
+// вывод списка в таблицу в cabinet.php (cabinet.js)
 function cabinetPost(){
     $id_user = $_SESSION['user']['id'];
     

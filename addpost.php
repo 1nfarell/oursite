@@ -43,18 +43,8 @@ include 'vendor/generator.php';
                     
                 </div> 
             </div>           
-            <div class="header-ref-hide">                           
-                <div class="dropdown dropdown-high">                                
-                    РАЗРАБОТКА САЙТОВ
-                    <img class="icon-dropdown" src="/images/plus.png" alt="меню">
-                    <div class="dropdown-content">                                
-                        <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
-                        <a class="header-ref" href="/#price">УСЛУГИ</a>
-                        <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
-                        <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
-                        <a class="header-ref" href="/#about">О НАС</a>  
-                    </div>
-                </div>
+            <div class="header-ref-hide">
+                <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a>  
                 <div class="dropdown dropdown-high">                                
                     РАБОТА С ТЕКСТОМ
                     <img class="icon-dropdown" src="/images/plus.png" alt="меню">
@@ -70,11 +60,7 @@ include 'vendor/generator.php';
                     <div class="dropdown dropdown-show">
                         <img class="icon-message" src="/images/menu.png" alt="меню">
                         <div class="dropdown-content">
-                            <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
-                            <a class="header-ref" href="/#price">УСЛУГИ</a>
-                            <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
-                            <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
-                            <a class="header-ref" href="/#about">О НАС</a>  
+                            <a class="header-ref" href="/">ГЛАВНАЯ</a> 
                             <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
                             <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>
                             <a class="header-ref" href="/blog">БЛОГ</a>   

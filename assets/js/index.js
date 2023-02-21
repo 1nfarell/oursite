@@ -1,7 +1,7 @@
 
 let dataForm = $(this).serialize();
 var field = $('#main-center');
-
+//вывод outputHome.php (вывод статей на главную страницу blog.php)
 $.ajax({
     url: 'vendor/outputHome.php',
     method: 'GET',

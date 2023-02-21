@@ -2,7 +2,6 @@
 
 require_once 'StaticConnection.php';
 
-
 //вывод статей на  страницу post.php
 function generationOutput()
 {

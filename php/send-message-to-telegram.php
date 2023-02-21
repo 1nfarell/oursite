@@ -1,4 +1,9 @@
+
+
 <?php
+
+//телеграмм бот
+
 // Токен
   const TOKEN = '5881005163:AAECPwmOwNmCN3_MvEZPZDiRBrPj_rWtslY';
 

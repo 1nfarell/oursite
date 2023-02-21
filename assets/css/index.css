@@ -3,7 +3,23 @@
 }
 
 html{
-    filter: invert(.9);
+    filter: invert(.95);
+}
+
+.form-offer-box-title, .dropdown-content, .icon-message-invert, .dropdown .icon-message, .dropdown-show, .italic-green, .dropdown-high > .dropdown-content a, .form-offer-box-title, .form-offer-box-p, .form-offer-box label, .title-text, .logo-icon, .site-description span:last-child, .header-ref-hide, .menu{
+    filter: invert(1);
+}
+
+.box-benefit > div span, .site-field p, .stage-text, p, li, .panel p, .panel li, .about-block div, .card_facefront, .accordion, .setwidthspanpricedescription, .about-block div a, .p-block span, .offer-description, .footer-row div:nth-child(2), .footer-row-column{
+    color: rgba(255, 255, 255, .7);
+}
+
+.form-offer-box-title, .form-offer-box label, .title-text{
+    color: white;
+}
+
+.pricesite-text i{
+    filter: invert(0);
 }
 
 /* скролбар */
@@ -30,14 +46,13 @@ html{
 body{
     font-family: "RussoOne-Regular";
     font-size: 16px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.8);
     letter-spacing: 1px;
     background-color: #171717;
 }
 
 p, li{
     line-height: 22px;
-    color: rgba(255, 255, 255, .8);
 }
 
 
@@ -46,7 +61,6 @@ p, li{
     display: flex;
     flex-direction:column;
     align-items: flex-start;
-    color: rgba(255,255,255,.8);
 }
 
 .footer-row-column span + span{
@@ -76,15 +90,11 @@ p, li{
     width: 100%;    
     height: 75px;
     z-index: 20;
-    
+    filter: invert(.9);
+    background: #ffffffcc;
+    box-shadow: 0px 5px 7px 3px rgb(0 0 0 / 10%);
 }
 
-.header-wrapper:hover{
-    background: #1b0439;
-    background: linear-gradient(-45deg, rgba(39,38,61,.7) 0%, rgba(67,62,91,.5) 64%, rgba(100,90,127,.3) 80%, rgba(139,122,168,.1) 100%);
-    background-size: 400% 400%; 
-    box-shadow: 0px 10px 7px 3px rgb(0 0 0 / 10%);
-}
 
 .header{
     display: flex;
@@ -101,10 +111,7 @@ p, li{
     max-width: 1920px;
     top: 0;
     z-index: 20;
-    background: #1b0439;
-    background: linear-gradient(-45deg, rgba(39,38,61,.7) 0%, rgba(67,62,91,.5) 64%, rgba(100,90,127,.3) 80%, rgba(139,122,168,.1) 100%);
-    background-size: 400% 400%; 
-    box-shadow: 0px 10px 7px 3px rgb(0 0 0 / 10%);
+    box-shadow: 0px 5px 7px 3px rgb(0 0 0 / 10%);
 }
 
 .header-left{
@@ -113,11 +120,14 @@ p, li{
     align-items: center;
 }
 
+.mainpage-ref{
+    padding-right: 20px;
+}
+
 .logo-icon{    
     width: 39px;
     height: 52px;  
     z-index: 10;  
-    filter: hue-rotate(230deg);
 }
 
 .show-logo{
@@ -153,7 +163,7 @@ p, li{
 }
 
 .header-ref{
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.8);
     text-decoration: none;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -211,7 +221,7 @@ a.header-ref{
         display: none;
         position: absolute;
         border-radius: 20px;
-        background: rgb(39,38,61);
+        background: #ffffffcc;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -221,7 +231,7 @@ a.header-ref{
     
     /* Ссылки внутри выпадающего списка */
     .dropdown-content a {
-        color: rgba(255,255,255,0.9);
+        color: rgba(255,255,255,.8);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -229,7 +239,7 @@ a.header-ref{
     
     /* Изменение цвета выпадающих ссылок при наведении курсора */
     .dropdown-content a:hover {
-        background-color: rgba(255,255,255,0.9);
+        background-color: rgba(255,255,255,0.8);
         color: rgb(39,38,61);
     }
     
@@ -349,6 +359,8 @@ a.header-ref{
     height: 970px;
     position: relative;
     overflow: hidden;
+    background-image: url(/images/title.webp);
+    filter: invert(1);
 }
 
 .title-image{
@@ -425,50 +437,26 @@ a.header-ref{
     flex-direction: column;
     justify-content: space-between;
     padding-top: 30px;
-    width: 770px;
+    width: 812px;    
 }
+
 
 .title-text{
-    font-size: 42px;
-}
-
-.title-description-box{
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-    gap: 35px;
-}
-
-.title-description{
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 23px;
-    letter-spacing: .5px;
-    color: rgba(255,255,255,.8);
-}
-
-.header-box-desription h2{
     font-weight: normal;
     padding-bottom: 40px;
     letter-spacing: 3px;
+    font-size: 42px;
+    line-height: 58px;
+    text-shadow: 3px 4px 5px black;
+    color: rgba(255,255,255,.96);
 }
 
-.header-box-desription > div{
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.header-box-desription > div p{
-    font-size: 16px;
-    letter-spacing: .5px;
-}
 
 .btn-box-desription{
     width: 150px;
     height: 70px;
-    color: rgba(255,255,255,0.9);
     margin-bottom: 18px;
-    border-radius: 8px;    
-         
+    border-radius: 8px;             
     font-family: 'RussoOne-Regular';
     font-size: 16px;
     border: 0;
@@ -507,7 +495,6 @@ a.header-ref{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-top: 40px;
 }
 
 .btn-desription-service{  
@@ -526,6 +513,7 @@ a.header-ref{
 .btn-stage-set-width{
     background: linear-gradient(135deg, rgba(39,38,61,1) 0%, rgba(67,62,91,1) 64%, rgba(100,90,127,1) 80%, rgba(139,122,168,1) 100%);
     background-size: 200% 100%;
+    color: rgba(255, 255, 255, .75);
 }
 
 .btn-desription-price{
@@ -549,7 +537,7 @@ a.header-ref{
 .title-form{
     position: absolute;
     right: -50px;
-    bottom: 100px;
+    bottom: 220px;
     z-index: 10;
 }
 
@@ -560,42 +548,52 @@ a.header-ref{
 
 .form-offer-box-title{
     font-size: 18px;
-    padding-bottom: 20px;
     line-height: 25px;
-    padding-top: 50px;
+    padding-top: 20px;
     font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.form-offer-box-p{
-    font-size: 16px;
-    line-height: 23px;
-    padding-left: 28px;
-    border-left: 2px solid;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
 
 .form-offer{
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 350px;
+    width: 330px;
+    height: 485px;
     position: relative;     
     border-radius: 20px;
-    background: linear-gradient(-45deg, rgba(139,122,168,.7) 0%, rgba(100,90,127,.5) 57%, rgba(67,62,91,.3) 75%, rgba(39,38,61,.1) 100%);
-    background-size: 400% 400%;      
-    box-shadow: -10px -10px 7px 3px rgb(0 0 0 / 10%);
+    box-shadow: -1px -1px 1px 2px rgb(91 91 110 / 25%), 1px 1px 1px 2px rgb(91 91 110 / 25%);
+    background: linear-gradient(151deg, rgb(91 91 110 / 70%), transparent);
 }
 
 .form-offer-box{
-    padding: 30px 25px 25px 25px;
-    height: 100%;
+    padding: 10px 25px 15px 25px;   
 }
 
 .offer-box-title{
     width: 100%;
     font-size: 25px;
     padding-bottom: 20px;
+}
+
+.form-offer-box textarea{
+    height: 130px;
+    width: 95%;
+    background: linear-gradient(-45deg,rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.6) 100%);
+    background-size: 400% 400%;    
+    --smooth-corners: 8;
+    -webkit-mask-image: paint(smooth-corners); 
+    border: 0;
+    color: rgba(255,255,255,1);
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
 }
 
 .form-offer-box input{
@@ -617,7 +615,7 @@ a.header-ref{
     border-radius: 8px;
 }
 
-input::placeholder{
+input::placeholder, textarea::placeholder {
     color: rgba(255,255,255,0.55);;
 }
 
@@ -656,7 +654,6 @@ input::placeholder{
     font-size: 16px;
     background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);  
     background-size: 400% 400%; 
-    color: rgba(255,255,255,1);
     transition:  .4s;
     letter-spacing: .4px;
 }
@@ -705,95 +702,8 @@ input::placeholder{
 }
 
 .background-bubbles {
-    position: relative;
-    top: 0;
-    left: 0;
-    background: #1b0439;
     overflow: hidden;
 }
-
-.background-bubbles span {
-    width: 34vmin;
-    height: 34vmin;
-    border-radius: 34vmin;
-    backface-visibility: hidden;
-    position: absolute;
-    animation: move;
-    animation-duration: 38s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.background-bubbles span:nth-child(0) {
-    color: #858080;
-    top: 25%;
-    left: 65%;
-    animation-duration: 53s;
-    animation-delay: -98s;
-    transform-origin: -23vw 19vh;
-    box-shadow: -68vmin 0 8.922342602256437vmin currentColor;
-}
-
-.background-bubbles span:nth-child(1) {
-    color: #583C87;
-    top: 96%;
-    left: 27%;
-    animation-duration: 19s;
-    animation-delay: -44s;
-    transform-origin: -11vw -14vh;
-    box-shadow: -68vmin 0 9.056720018336144vmin currentColor;
-}
-
-.background-bubbles span:nth-child(2) {
-    color: #43acc7;
-    top: 99%;
-    left: 39%;
-    animation-duration: 52s;
-    animation-delay: -26s;
-    transform-origin: 2vw 16vh;
-    box-shadow: 68vmin 0 8.527591385306962vmin currentColor;
-}
-
-.background-bubbles span:nth-child(3) {
-    color: #858080;
-    top: 41%;
-    left: 96%;
-    animation-duration: 58s;
-    animation-delay: -62s;
-    transform-origin: 2vw 9vh;
-    box-shadow: -68vmin 0 9.063441603671706vmin currentColor;
-}
-
-.background-bubbles span:nth-child(4) {
-    color: #858080;
-    top: 30%;
-    left: 95%;
-    animation-duration: 15s;
-    animation-delay: -38s;
-    transform-origin: 6vw 20vh;
-    box-shadow: 68vmin 0 8.922757516796045vmin currentColor;
-}
-
-.background-bubbles span:nth-child(5) {
-    color: #583C87;
-    top: 55%;
-    left: 99%;
-    animation-duration: 78s;
-    animation-delay: -105s;
-    transform-origin: -7vw -15vh;
-    box-shadow: 68vmin 0 9.211380103371328vmin currentColor;
-}
-
-.background-bubbles span:nth-child(6) {
-    color: #858080;
-    top: 85%;
-    left: 81%;
-    animation-duration: 68s;
-    animation-delay: -97s;
-    transform-origin: -15vw 24vh;
-    box-shadow: -68vmin 0 8.875559051065402vmin currentColor;
-}
-
 /* почему мы? */
 .slogan {
     padding-top: 150px;
@@ -975,7 +885,6 @@ input::placeholder{
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 50px;
     grid-row-gap: 30px;
-    padding-bottom: 50px;
     letter-spacing: .8px;
 }
 
@@ -1002,7 +911,6 @@ input::placeholder{
 .box-benefit > div span{  
     display: flex;  
     font-size: 16px;
-    color: rgba(255, 255, 255, .8);
     font-weight: 300;
     padding-bottom: 20px;
     line-height: 22px;
@@ -1149,7 +1057,7 @@ input::placeholder{
 }
 
 .stage-wrapper-color {
-    background: #1b0439;
+    background: #000000;
     z-index: 1;
     position: relative;
 }
@@ -1222,7 +1130,6 @@ input::placeholder{
 
 .site-field p{
     padding-left: 30px;
-    color: rgba(255,255,255,0.8);
 }
 
 .site-field p + p{
@@ -1261,7 +1168,7 @@ input::placeholder{
 .field3 { grid-area: 2 / 3 / 3 / 5; }
 .field4 { grid-area: 3 / 3 / 4 / 5; }
 .field5 { grid-area: 4 / 3 / 5 / 5; }
-.field6 { grid-area: 5 / 3 / 6 / 5; }
+.field6 { grid-area: 5 / 3 / 6 / 5;}
 .field7 { grid-area: 6 / 3 / 7 / 5; }
 .field8 { grid-area: 7 / 3 / 8 / 5; }
 .field9 { grid-area: 8 / 3 / 9 / 5; }
@@ -1446,23 +1353,11 @@ input::placeholder{
     padding-right: 20px;
     padding-top: 30px;
     position: relative;
-    color: rgba(255,255,255,.8);
 }
 
-.about-block div{
-    color: rgba(255,255,255,.8);
-}
-
-.form-offer-box-p{
-    color: rgba(255,255,255,.8);
-}
-
-.form-offer-box label{
-    color: rgba(255,255,255,.8);
-}
 
 .setwidthspanpricedescription{
-    color: rgba(255,255,255,.8);
+    text-align: center;
 }
 
 .stage-text-number{
@@ -1510,7 +1405,7 @@ input::placeholder{
     width: 1180px;
     padding: 0px 30px 0px 30px;    
     position: relative;    
-    align-items: flex-end;
+    align-items: center;
 }
 
 .wrapper-title{
@@ -1553,26 +1448,37 @@ input::placeholder{
     padding: 0 10%;
 }
 
+.pricesite{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.pricesite-text{
+    padding-right: 35px;
+    border-right: 1px solid rgba(255,255,255,.2);
+    margin-right: 120px;
+}
+
+.pricesite-text p{
+    padding-bottom: 15px;
+}
+
+.container-card-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .card-wrapper{
     display: grid;
-    grid-template-columns: repeat(2, 310px);
-    grid-template-rows: repeat(1, 550px);
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: repeat(1, 510px);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     padding-bottom: 50px;
 }
 
-.card-icon-price{
-    position: absolute;
-    left: 410px;
-    top: 205px;
-    width: 480px;
-    height: 640px;
-    z-index: 1;
-    opacity: .8;
-}
 
 .card{    
     display: flex;
@@ -1619,7 +1525,7 @@ input::placeholder{
     justify-content: center;
     padding-left: 40px;
     padding-right: 20px;
-    padding-top: 30px;
+    padding-top: 30px;    
 }
 
 .card__face ul{
@@ -1630,7 +1536,6 @@ input::placeholder{
 .card__face--front {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
     text-align: center;
     border-radius: 20px;
@@ -1677,7 +1582,7 @@ input::placeholder{
 .card > div button{
     margin-top: 20px;
     margin-left: 0px;
-    /*box-shadow: 0px 2px 7px 2px rgb(0 0 0 / 50%) inset;*/
+    color: rgba(255, 255, 255, .8);
 }
 
 .btn-overflow{    
@@ -1788,9 +1693,8 @@ input::placeholder{
 
 .accordion {
 
-    background: #1b0439;
+    background: #000000;
     font-size: 16px;
-    color: rgba(255,255,255,.8);
     cursor: pointer;
     padding: 10px;
     width: 100%;
@@ -1844,9 +1748,6 @@ input::placeholder{
     font-size: 16px;
 }
 
-.panel p, .panel li{
-    color: rgba(255, 255, 255, .8);
-}
 
 .active + .panel{
     margin: 20px;
@@ -1903,7 +1804,6 @@ input::placeholder{
 .offer-description{
     font-size: 16px;
     line-height: 23px;
-    color: rgba(255,255,255,.8);
 }
 
 .offer-description > i{
@@ -1934,6 +1834,7 @@ input::placeholder{
     flex-direction: column;
     text-align: center;   
     justify-content: flex-end; 
+    align-items: flex-end;
 }
 
 .footer-row a{
@@ -1946,14 +1847,28 @@ input::placeholder{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
-    grid-row-gap: 0px;
+    grid-row-gap: 100px;
 }
 
 .p-block{
     display: flex;
 }
 
-.p-block div{
+.p-block-ref{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-ref{
+    padding-top: 20px;
+}
+
+.block-ref a + a{
+    padding-left: 5px;
+}
+
+.p-block-description{
     display: flex;
     flex-direction: column;
     padding-left: 30px;
@@ -1961,15 +1876,13 @@ input::placeholder{
 }
 
 .p-block span{
-    color: rgba(255, 255, 255, .8);
     padding-bottom: 10px;    
 }
 
-.p-block img{
+.p-block-img{
     width: 200px;
     height: 200px;
     --smooth-corners: 6.2;
-    /* mask-image: paint(smooth-corners); */
     -webkit-mask-image: paint(smooth-corners);
     border-radius: 20px;
     filter: invert(1);
@@ -2014,7 +1927,6 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: rgba(255,255,255,0.9);
 }
 /* копирайт и рерайт */
 .card-wrapper-writing-title{
@@ -2077,7 +1989,7 @@ input::placeholder{
         padding-left: 20px;
         padding-right: 20px;
         text-align: center;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         font-size: 34px;
         line-height: 44px;
         width: unset;
@@ -2090,20 +2002,13 @@ input::placeholder{
         line-height: 20px;
     }
 
-    .form-offer{
-        --smooth-corners: 10;
-        /* mask-image: paint(smooth-corners); */
-        -webkit-mask-image: paint(smooth-corners);
-    }
-
+ 
     .slogan-header-description{
         padding-left: 0;
         justify-content: center;        
     }
 
-    .title-description-box{
-        gap: 30px;
-    }
+  
 
     p {
         line-height: 20px;
@@ -2261,7 +2166,6 @@ input::placeholder{
     
     /* Ссылки внутри выпадающего списка */
     .dropdown-content a {
-        color: rgba(255,255,255,0.9);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -2269,7 +2173,7 @@ input::placeholder{
     
     /* Изменение цвета выпадающих ссылок при наведении курсора */
     .dropdown-content a:hover {
-        background-color: rgba(255,255,255,0.9);
+        background-color: rgba(255,255,255,.8);
         color: rgb(39,38,61);
     }
     
@@ -2358,36 +2262,19 @@ input::placeholder{
     }
     
     .title-text{
-        font-size: 28px !important;
-    }
-
-    .title-description{
-        font-size: 14px;
-        line-height: 20px;  
-        letter-spacing: .3px;      
-    }
-    
-    .header-box-desription h2{
         padding-bottom: 15px;
         font-size: 15px;
         font-weight: bolder;
         letter-spacing: 3px;
         line-height: 39px;
+        font-size: 28px !important;
+        width: 90%;
     }
-    
-    .header-box-desription > div{
-        width: 100%;
-        margin-bottom: 30px;
-        font-size: 14px;
-    }
-    
-    .header-box-desription > div p {
-        font-size: 14px;
-    }
+        
     
     .btn-box-desription{
         width: 110px;
-        height: 60px;
+        height: 50px;
         margin-bottom: 18px;
         border-radius: 8px;    
         font-size: 14px;
@@ -2406,7 +2293,6 @@ input::placeholder{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        padding-top:20px;
     }
     
     .btn-desription-service{  
@@ -2442,7 +2328,7 @@ input::placeholder{
     .title-form{
         position: absolute;
         right: 150px;
-        bottom: 55px;        
+        bottom: 100px;        
         z-index: 10;
     }
     
@@ -2452,39 +2338,37 @@ input::placeholder{
     }
     
     .form-offer-box-title{
-        font-size: 16px;
-        padding-bottom: 5px;
+        font-size: 14px;
         font-weight: 300;
-        line-height: 18px;
-        text-align: left;
+        line-height: 19px;
         padding-top: 0;
     }
-    
-    .form-offer-box-p{
-        font-size: 14px;
-        line-height: 16px;
-        text-align: left;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 15px;
-    }
+   
     
     .form-offer{
         display: flex;
         flex-direction: column;
         width: 215px;
-        height: 200px;
+        height: 310px;
         margin-top: 0;
         position: relative;         
-        border-radius: 16px;   
+        border-radius: 20px;   
         -webkit-transform: none; 
         transform: none;
+        box-shadow: -1px -1px 1px 2px rgb(91 91 110 / 25%), 1px 1px 1px 2px rgb(91 91 110 / 25%);
+        background: linear-gradient(151deg, rgb(91 91 110 / 70%), transparent);
     }
     
     .form-offer-box{
-        padding: 15px 15px 0 15px;
-        height: 200px;
+        padding: 20px 15px 0px 15px;
         transform: none;
+    }
+
+    .form-offer-box textarea{
+        height: 60px;
+        width: 90%;
+        font-size: 14px;
+        line-height: 19px;
     }
     
     .offer-box-title{
@@ -2506,7 +2390,7 @@ input::placeholder{
     .form-offer-box label{
         display: block;
         position: absolute;
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .form-offer-box-submit{
@@ -2528,9 +2412,9 @@ input::placeholder{
     
     .btn-form-offer-box{
         width: 110px;
-        height: 60px;
+        height: 50px;
         margin-bottom: 5px;
-        margin-top: 0; 
+        margin-top: 10px; 
         border-radius: 8px;      
         font-size: 12px;
     }
@@ -2619,10 +2503,11 @@ input::placeholder{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, auto);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 0;
     }
 
     .benefit-1{
@@ -2688,12 +2573,12 @@ input::placeholder{
         justify-content: center;
         align-items: center;
         overflow: hidden;  
-        height: 300px;   
     }
 
-    .is-selected, .benefit-center-img{
-        height: 300px;  
+    .is-selected, .benefit-center-img {
+        aspect-ratio: 16/9;
     }
+    
 
     .TitleBenefitHide {
         display: none !important;
@@ -2790,8 +2675,8 @@ input::placeholder{
     }
 
     .stage-circle{
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 100px;
     }
 
@@ -2824,12 +2709,13 @@ input::placeholder{
         padding-left: 10px;
         padding-right: 0px;
         padding-top: 12px;
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 19px;
     }   
     
     .imgwidth{
         padding-top: 0 !important;
-        width: 110px !important;
+        width: 150px !important;
     }
 
     .imgwidth2 {
@@ -2837,7 +2723,7 @@ input::placeholder{
     }
     
     .arrow-div{
-        width: 100px;
+        width: 130px;
     }
 
     .stage-text-number{
@@ -2859,11 +2745,11 @@ input::placeholder{
     }
 
     .textwidth{
-        width: 130px !important;
+        width: 160px !important;
     }
 
     .textwidth3 {
-        width: 130px !important;
+        width: 150px !important;
     }
 
     .stage-indicators-bottom-up{
@@ -2892,7 +2778,7 @@ input::placeholder{
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-bottom: 50px;
+        padding-bottom: 0;
         align-items: center;    
     }
     
@@ -2901,8 +2787,7 @@ input::placeholder{
         display: flex;
         flex-direction: column;
         max-width: 1240px;
-        width: 100%;
-        padding: 10px 0px 0px 0px;    
+        width: 100%;  
         position: relative;    
         align-items: unset;
     }
@@ -2920,7 +2805,7 @@ input::placeholder{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 40px;
+        padding-bottom: 50px;
         padding-top: 70px;
         padding-left: 10%;
         padding-right: 10%;
@@ -2934,12 +2819,26 @@ input::placeholder{
         line-height: 39px;
         width: 100%;
         text-align: center;
-        padding-bottom: 10px;
+        padding-bottom: 0;
         
     }
     
-     
-    
+    .pricesite{
+        flex-direction: column;
+    }
+
+    .pricesite-text {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 20px;
+        border-right: unset;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+        margin-bottom: 40px;
+    }
+
+    .container-card-wrapper {
+        align-items: unset;
+    }
     .card-wrapper{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -2953,13 +2852,7 @@ input::placeholder{
         padding-right: 5%;
     }
     
-    .card-icon-price{
-        position: absolute;
-        left: 330px;
-        top: 245px;
-        width: 360px;
-        height: 480px;
-    }
+   
     
     .card{    
         display: flex;
@@ -2991,7 +2884,7 @@ input::placeholder{
         text-align: center;
         justify-content: flex-start;
         padding-top: 30px;  
-        background: linear-gradient(180deg, rgba(133, 224, 171, .7), transparent);
+        background: linear-gradient(176deg, rgb(49 49 72 / 90%), transparent);
     }
     
     .card__face--back {
@@ -3085,7 +2978,7 @@ input::placeholder{
         line-height: 20px;
     }
     .btn-stage-set-width{
-        margin-top: 20px;
+        margin-top: 40px;
     }
     .container-block {
         padding-left: 150px;
@@ -3110,6 +3003,12 @@ input::placeholder{
         border-bottom-right-radius: unset;
         padding-top: unset;
         filter: unset;
+        width: inherit;
+    }
+
+    .pricesite-text{
+        font-size: 14px;
+        line-height: 19px;
     }
 }
 
@@ -3120,6 +3019,7 @@ input::placeholder{
 }
 
 @media (max-width: 980px)  { 
+    
     
     .card-wrapper-writing {
         display: grid;
@@ -3212,10 +3112,7 @@ input::placeholder{
         padding-left: 50px;
     }
 
-    .card-icon-price{
-        left: unset;
-    }
-
+   
     .card__face--back{
         padding-left: 10px;
         padding-right: 10px;
@@ -3232,12 +3129,11 @@ input::placeholder{
     .about-block{
         height: 300px;
     }
-    
-    .card-icon-price{
-        left: unset;
-    }
 
-  
+    .arrow-div {
+        width: 100px;
+    }
+   
 
     .footer-row{
         display: grid;
@@ -3248,6 +3144,8 @@ input::placeholder{
     .footer-row div:nth-child(2){        
         padding-left: 20px;
         padding-right: 20px;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .footer-row div:nth-child(3){
@@ -3283,12 +3181,7 @@ input::placeholder{
         padding-left: 0px;
         padding-right: 0px;
     }
-    .header-box-desription h2 {
-        padding-bottom: 40px;
-        margin: 0 5%;
-        text-align: center;
-    }
-    
+   
     .btn-overflow {
         padding: 0 5px;
     }
@@ -3301,12 +3194,9 @@ input::placeholder{
         font-size: 14px;
     }
     
-    .container-header{
-        height: 720px;
-    }
 
-    .container-background {
-        height: 720px;
+    .container-background, .container-header {
+        height: 570px;
     }
 
     .header-left{
@@ -3320,25 +3210,9 @@ input::placeholder{
    
     .itc-slider__indicators {
         bottom: -10px;
-        margin: unset;
-        justify-content: unset;
-        left: 113px;
     }
 
-    .header-box{
-        height: unset;
-    }
-
-    .header-box > div:last-child{
-        padding-right: 0;    
-    }
-
-    .header-box-desription{
-        padding-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        align-items: center;
-    }
+   
 
     .wrapper-title-form{
         position: absolute;
@@ -3347,47 +3221,34 @@ input::placeholder{
     }
    
     .title-form{
-        display: flex;
-        flex-direction: column;
-        padding-left: 20px;
         padding-right: 20px;
-        padding-top: 20px;
-        bottom: -200px;
         right: 0px;
+        bottom: -10px; 
     }
 
-    .title-description-box{
-        grid-template-columns: 65%;
-        gap: 10px;
-    }
+
 
     .pricesite-title h2 {
         text-align: center;
-        padding-bottom: 10px;
     }
 
 
     .box-benefit{
-        grid-row-gap: 20px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .stage-circle {
-        width: 40px;
-        height: 40px;
-    }
-
     .stage-text {
-        height: 125px;
+        height: 135px;
         width: 110px;
         padding-left: 10px;
         padding-top: 13px;
         font-size: 13px;
+        line-height: 18px;
     }
 
     .arrow-circe-position .circe-pricedesign {
-        bottom: 150px;
+        bottom: 165px;
     }
 
     .textwidth{
@@ -3404,7 +3265,7 @@ input::placeholder{
     }
 
     .arrow-circe-position > div{
-        bottom: 145px;
+        bottom: 160px;
         right: -23px;
     }
 
@@ -3450,9 +3311,7 @@ input::placeholder{
         padding-right: 20px;
     }
 
-    .title-description-box{
-        grid-template-columns: 60%;
-    }
+ 
 
     .field5{
         grid-area: 4 / 1 / 5 / 5;
@@ -3478,9 +3337,14 @@ input::placeholder{
     .field4{
         grid-area: 3 / 1 / 4 / 5;
     }
+    
 }
 
 @media (max-width: 650px){
+
+    .is-selected, .benefit-center-img{
+        aspect-ratio: 4/3;
+    }
     .googleform{
         width: 100vw !important;         
     }
@@ -3503,35 +3367,28 @@ input::placeholder{
     .card-wrapper {
         grid-template-rows: repeat(1, 610px);
     }
-    .header-box-desription h2 {
+    .title-text {
         padding-bottom: 40px;
         margin-left: 0;
         margin-right: 0;
+        width: unset;
     } 
 
-    .title-description-box{
-        gap: 10px !important;
-        grid-template-columns: 55%;
-    }
 
-    .btn-form-offer-box{
-        height: 55px;
-    }
 
     
 
     .btn-box-desription {
         width: 110px;
-        height: 55px;
     }
 
-    .card-icon-price{
-        left: unset;
-    }
-    
 }
 
 @media (max-width: 550px)  { 
+    .container-card-wrapper {
+        overflow-x: scroll;
+        margin: 0 20px;
+    }
     .btn-card-price{
         width: 120px;
     }
@@ -3540,7 +3397,6 @@ input::placeholder{
         padding-left: 20px;
         padding-right: 20px;
         text-align: center;
-        padding-bottom: 20px;
         font-size: 30px;
         line-height: 36px;
         width: unset;
@@ -3554,16 +3410,21 @@ input::placeholder{
     }
 
     .carousel-header-box{
-        padding-top: 70px;
+        padding-top: unset;
     }   
 
     .header-description-title {
         line-height: 20px;
     }
 
-    .header-box-desription h2{
-        padding-top: 10px;
-        padding-bottom: 0;
+    .title-text{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .btn-wpapper{
+        justify-content: center;
     }
 
     p {
@@ -3594,10 +3455,16 @@ input::placeholder{
         grid-template-columns: repeat(2, 300px);
         grid-template-rows: repeat(1, 545px);        
         grid-row-gap: 20px;
-        width: 660px;
+        justify-content: unset;
+        width: 300px;        
+        margin-left: 0;
+        padding-left: 0;
+        padding-bottom: 50px;
     }
 
-    
+    .container-card-wrapper{
+        padding-bottom: 40px;
+    }
 
     .stage-title h2{
         text-align: center;
@@ -3607,6 +3474,8 @@ input::placeholder{
     .header-box-desription{
         padding-left: 20px;
         padding-right: 20px;
+        height: 100%;
+        justify-content: space-evenly
     }
 
     
@@ -3616,25 +3485,10 @@ input::placeholder{
     }
 
     .itc-slider__indicators {
-        bottom: 0px;
-    }
-
-    .title-description-box {
-        position: absolute;
-        top: 220px;
-    }
-
-    .btn-wpapper {
-        position: absolute;
-        top: 340px;
-    }
-
-    .header-box-desription > div p {
-        font-size: 14px;
-    }
-
-    .header-box {
-        height: 550px;
+        margin: 0 15%;
+        justify-content: center;
+        left: 0;
+        bottom: 5%;
     }
 
     .header-box > div:first-child{
@@ -3656,15 +3510,10 @@ input::placeholder{
         display: none;
     }
 
-    .card-icon-price {
-        position: absolute;
-        left: unset;
-        top: 250px;
-        width: 360px;
-        height: 480px;
-    }
 
-   
+    .header-box > div:last-child{
+        padding-right: unset;
+    }
      
 
     .form-offer-box {
@@ -3677,11 +3526,7 @@ input::placeholder{
         line-height: 18px;
     }
 
-    .form-offer-box-p {
-        font-size: 14px;
-        line-height: 15px;
-        text-align: left;
-    }
+ 
 
     .form-offer-box input {
         width: 90%;
@@ -3692,32 +3537,26 @@ input::placeholder{
     }
 
     .form-offer {
-        width: 200px;
-        height: 200px;
-       
+        display: none;    
     }
 
-    
-    .pricesite-title {
-        padding-top: 30px;       
-    }
 
     .form__message {
         padding-left: 5px;
     }
     
-    .wrapper-pricesite{
-        overflow-x: scroll;
-        padding-bottom: 30px;
-    }
 
-  
-
+    
     .title-form{
-        bottom: -245px;
         padding-left: 20px; 
         padding-right: 20px;
     }    
+
+    .container-header, .container-background, .header-box{
+        height: 100vh;
+    }
+
+
 }  
 
 @media (max-width: 505px){
@@ -3735,7 +3574,7 @@ input::placeholder{
         flex-direction: column;
     }
 
-    .p-block div{
+    .p-block-description{
         border-left: 2px solid;
         padding-top: 20px;
         padding-left: 5%;
@@ -3743,7 +3582,7 @@ input::placeholder{
 
     
     .offer-container{
-        padding-top: 25px;
+        padding-top: 50px;
         padding-bottom: 25px;
     }
 
@@ -3753,13 +3592,7 @@ input::placeholder{
         text-align: left;
     }
 
-    .card-icon-price {
-        position: absolute;
-        left: unset;
-        top: 165px;
-        width: 360px;
-        height: 480px;
-    }
+  
 
     .btn-form-offer-box{
         width: 130px;
@@ -3772,11 +3605,10 @@ input::placeholder{
         margin-top: 0;
     }
     
-    .header-box-desription h2 {
+    .title-text {
         margin-left: 0;
         margin-right: 0;
         width: fit-content;
-        text-align: left;
         letter-spacing: 1px;
         line-height: 36px;
         font-weight: normal;
@@ -3800,17 +3632,7 @@ input::placeholder{
         line-height: 20px;
     }
 
-    .container-header {
-        height: 850px;
-    }
 
-    .container-background {
-        height: 850px;
-    }
-
-    .itc-slider__indicators {
-        bottom: 0px;
-    }
 
     .title-form {
         display: flex;
@@ -3834,11 +3656,7 @@ input::placeholder{
         margin-left: 20px;
     }
 
-    .form-offer{
-        width: 210px;
-        height: 215px;
-        margin-bottom: 0;
-    }
+    
 
     .height-form-offer {
         height: 215px !important;
@@ -3854,26 +3672,6 @@ input::placeholder{
 
     .site-description{        
         width: 150px;
-    }
-
-    .title-description-box {
-        grid-template-columns: 90%;
-        text-align: left;
-        top: 220px;
-    }
-
-    .btn-wpapper {
-        padding-top: unset;
-        top: 350px;
-    }
-
-    .header-box {
-        height: 470px;
-    }
-
-    .itc-slider__indicators {
-        justify-content: center;
-        left: 0;
     }
 
     .header-description-title{
@@ -3921,7 +3719,6 @@ input::placeholder{
     .box-benefit{
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
         grid-template-rows: none;
-        grid-row-gap: 20px;
     }
 
   
@@ -3956,7 +3753,6 @@ input::placeholder{
     .benefit-center-img {
         object-fit: cover;
         width: 100%;
-        border-radius: 10px;
     }
 
     .site-field {
@@ -3969,9 +3765,6 @@ input::placeholder{
 
   
 
-    .container-pricesite{
-        padding-bottom: 50px;
-    }
 
     .stage-wrapper .itc-slider__indicators {
         bottom: 30px;
@@ -4000,7 +3793,6 @@ input::placeholder{
         justify-content: start;
         padding-left: unset; 
         padding-right: unset;
-        margin-left: 20px;
     }
 
     .card_facefront {
@@ -4021,10 +3813,7 @@ input::placeholder{
 
     
 
-    .carousel-header-box {
-        padding-top: 50px;
-    }
-
+   
     .btn-stage-set-width{
         margin-top: 20px;
     }
@@ -4070,29 +3859,16 @@ input::placeholder{
         margin-top: 20px;
         margin-left: 0;
     }
-
-    .container-header {
-        height: 1050px;
-    }
-
-    .container-background {
-        height: 1050px;
-    }
-
     .pricesite-title h2{
         font-size: 22px;
         line-height: 30px;
         letter-spacing: 2px;
     }
 
-    .title-description-box {
-        top: 205px;
-    }
 
-    .btn-wpapper {
-        top: 340px;
-    }
-    .header-box-desription h2{
+
+   
+    .title-text{
         width: 100%;
         letter-spacing: 1px;
         font-size: 22px  !important;
@@ -4129,16 +3905,9 @@ input::placeholder{
         grid-auto-rows: 210px;
         padding-left: unset; 
         padding-right: unset;
-        margin-left: 20px;
     }
 
-    .card-icon-price {
-        position: absolute;
-        left: unset;
-        top: 300px;
-        width: 270px;
-        height: 360px;
-    }
+   
 
     .site-description{
         display: none;        
@@ -4153,110 +3922,44 @@ input::placeholder{
     }
 }
 
-@media (max-width: 375px){
-    .title-description-box {
-        top: 210px;
-    }
-
-    .btn-wpapper {
-        top: 350px;
-    }
-
-    .header-box {
-        height: 500px;
-    }
-}
-
 
 
 @media (max-width: 365px){
-    .itc-slider__indicators{
-        bottom: 10px;
-    }
-
+   
     .itc-slider__btn {
         top: 30px;
     }   
-
-    .header-box {
-        height: 540px;
-    }
-
-    .btn-wpapper {
-        top: 370px;
-    }
-
 }
 
 @media (max-width: 345px){
-    .header-box-desription h2 {
+    .title-text {
         padding-bottom: 20px;
     }
     
     .title-form {
         bottom: -470px;
     }
-    
-    .container-background {
-        height: 1070px;
-    }
-    .container-header {
-        height: 1070px;
-    }
-
- 
 }
 
 
 @media (max-width: 330px){
-    .itc-slider__indicators {
-        bottom: 0;
-    }
-
-    .title-description-box {
-        top: 240px;
-    }
 
     .height-form-offer {
         height: 190px !important;        
-    }
-
-    .card-icon-price {
-        left: unset;
-        top: 340px;
-        width: 240px;
-        height: 320px;
-    }
+    } 
 
     .wrapper-title-form {
         top: 540px;
     }  
 
-    .btn-wpapper {
-        top: 415px;
-    }
-
-    .header-box {
-        height: 550px;
-    }
-
     .form-offer-box {
         padding: 20px;
     }
-
-    
 
     .title-form {
         bottom: -500px;
     }
     
-    .container-background {
-        height: 1070px;
-    }
-
-    .container-header {
-        height: 1070px;
-    }
 }
 
 @font-face {

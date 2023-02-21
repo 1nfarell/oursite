@@ -54,7 +54,8 @@ include 'vendor/generator.php';
                             <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span>  
                         </div> 
                     </div>           
-                    <div class="header-ref-hide">                           
+                    <div class="header-ref-hide">   
+                        <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a>                         
                         <div class="dropdown dropdown-high">                                
                             РАЗРАБОТКА САЙТОВ
                             <img class="icon-dropdown" src="/images/plus.png" alt="меню">
@@ -81,6 +82,7 @@ include 'vendor/generator.php';
                         <div class="dropdown dropdown-show">
                             <img class="icon-message" src="/images/menu.png" alt="меню">
                             <div class="dropdown-content">
+                                <a class="header-ref" href="/">ГЛАВНАЯ</a> 
                                 <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
                                 <a class="header-ref" href="/#price">УСЛУГИ</a>
                                 <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
@@ -100,13 +102,7 @@ include 'vendor/generator.php';
         <main>   
             <!-- первый блок  -->
             <div class="container-header background-bubbles container-radius-bottom"> 
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                
                 <div class="container-background">
                 </div>
                 <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Создание успешных веб-сайтов: искусство разработки, дизайна и интернет-маркетинга</h1>
@@ -160,8 +156,12 @@ include 'vendor/generator.php';
                         <div class="main">        
                             <div id="main-center" class="main-center">
                                 
-                            </div>                    
+                            </div> 
+                            <div class="main-menu">
+                                <?php selectCategories(); ?>  
+                            </div>                   
                         </div>
+                        
                     </div>
                 </div>
                 <!-- фон и курсор -->
