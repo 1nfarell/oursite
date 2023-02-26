@@ -54,7 +54,7 @@ function generationOutput()
                                                     <h2 class="post-text-header"> <?= $value['header_text'] ?></h2>
                                                 </div>
                                                 <div class="post-text">                                                    
-                                                    <p class="post-text-value"> <?= $value['text'] ?></p> 
+                                                    <div class="post-text-value"> <?= $value['text'] ?></div> 
                                                 </div>
                                             </div>
                                         <?php
