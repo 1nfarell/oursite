@@ -48,6 +48,8 @@ $(document).ready(function(){
         
         $(field).empty();
         for (let key in outputData){ 
+            //console.log(date);
+            //date = new Date(outputData[key]['date']).toLocaleDateString('ru');
             $(field).append('                                                                                          \
                 <div class="main-field">                                                                               \
                     <a class="card-picture-teg-a" href="post.php?title='+`${outputData[key]['title']}`+'&id='+`${outputData[key]['id']}`+'">      \
