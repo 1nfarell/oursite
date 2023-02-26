@@ -80,7 +80,7 @@ function generationOutput()
 
                         <div class="post-date">
                             <img class="post-icon-date" src="images\date.png">
-                            <p class="post-date"><?= $article['date'] ?> </p>
+                            <p class="post-date"><?= date("d.m.Y",strtotime($article['date'])) ?> </p>
                         </div>  
                     </div>
 

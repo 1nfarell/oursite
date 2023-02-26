@@ -1,9 +1,14 @@
-
 class Pagination {
-
     #currentPage = 1;
-    maxPage = 3;
-    perPage = 2;
+    #maxPage = 3;
+    setMaxPage(maxPage/*int*/) {
+
+        if(maxPage < 1) {
+            maxPage = 1;
+        }
+        this.#maxPage = maxPage;
+    }
+    perPage = 2;    
     #indicator;
     category = "all";
     #outputRoot = document.querySelector('.pag-items');
@@ -15,8 +20,8 @@ class Pagination {
         if(iNumber < 1) {
             iNumber = 1;
         }
-        if(iNumber > this.maxPage) {
-            iNumber = this.maxPage;
+        if(iNumber > this.#maxPage) {
+            iNumber = this.#maxPage;
         }
         this.#currentPage = iNumber;
         this.#getData(this.#currentPage);
@@ -60,7 +65,8 @@ class Pagination {
         
         data = JSON.parse(data);
         console.log(`countArray: `, Math.ceil(data.count/context.perPage));
-        context.maxPage = Math.ceil(data.count/context.perPage);
+        context.setMaxPage(Math.ceil(data.count/context.perPage));
+
         context.output(context.#outputRoot, data.items);
     }
 
