@@ -1,6 +1,7 @@
 <?php
 
 include 'vendor/generator.php';
+include 'vendor/pagination.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@ include 'vendor/generator.php';
 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/pagination.css">
     <meta name="application-name" content="Создание успешных веб-сайтов - Студия Веб Дизайна MNDP">
 
     <meta property="og:type" content="website">
@@ -166,6 +168,8 @@ include 'vendor/generator.php';
                             </div>                   
                         </div>
                         
+                        <!-- пагинация (pagination.css, pagination.js)-->
+                        <div class ="pagination"></div>
                     </div>
                 </div>
                
@@ -198,6 +202,7 @@ include 'vendor/generator.php';
 
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/pagination.js"></script>
 
    
 </body>
