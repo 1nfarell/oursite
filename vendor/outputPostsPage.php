@@ -50,7 +50,7 @@ function getPosts($offset, $limit, $sortField, array $categorIdArray = [])
                 'categName' => $article['categName'],
                 'title' => $article['title'],
                 'full_name' => $article['full_name'],
-                'date' => date("d.m.Y",strtotime($article['date'])),                
+                'date' => date("d.m.Y",strtotime($article['date'])),  
             ]; 
             $valuecard_json = $valuecard;      
         }             

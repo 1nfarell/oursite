@@ -139,12 +139,10 @@ include 'vendor/pagination.php';
                 <div class="container-block-1">
                     <div class="main-title">ВСЕ СТАТЬИ</div>
                     <div class="filters">
-                        <div class="filter"> 
-                            <select id="filterCateg" class="filterCategories"> 
-                                <option value="sortdefault">Любая категория</option>
-                                <?php selectCategories(); ?>
-                            </select>           
-                        </div> 
+                        <div class="main-menu">
+                                    
+                            <?php selectCategories(); ?>  
+                        </div>  
                         <div class="filter"> 
                             <select id="filtersort" class="filterCategories"> 
                                 <option value="sortdefault">Самые новые</option>          
@@ -157,15 +155,12 @@ include 'vendor/pagination.php';
                 <div class="container-block-1">
                     <div class="wrapper-block">
                         
-                        <div class="main">        
+                        <div class="main">   
+                                  
                             <div id="main-center" class="main-center">
                                 
                             </div> 
-                            <div class="main-menu">
-                               
-                                <div class="main-menu-title">Категории</div>
-                                <?php selectCategories(); ?>  
-                            </div>                   
+                                            
                         </div>
                         
                         <!-- пагинация (pagination.css, pagination.js)-->

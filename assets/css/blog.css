@@ -31,9 +31,15 @@
 
 
 .filters{
-    display: none;
+    display: flex;
     padding: 40px 0;
     min-width: 1180px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .filter + .filter{
@@ -116,36 +122,41 @@
 
 .main{
     display: flex;
-    flex-direction: row;
-    padding-top: 50px;
+    flex-direction: column;
 }
 
 .main-title{
     font-size: 42px;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0 ;
 }
 
 .main-center{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-    grid-row-gap: 30px;
-    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-column-gap: 80px;
     grid-auto-rows: 260px;
     width: 100%;
 }
 
+
+
 .main-menu{
-    width: 200px;
+    display: flex;
     padding-left: 20px;
-    margin-left: 50px;
-    padding-top: 20px;
-    border-left: 1px solid rgba(255,255,255,.2);
+    padding-right: 15px;
+    margin-right: 40px;
+    border-right: 1px solid rgba(255,255,255,.2); 
+    width: 47%;
+    flex-wrap: wrap;
+    line-height: 22px;
 }
 
-.main-menu-title{
-    padding-bottom: 10px;
+.main-menu option + option{
+    padding-right: 20px;
 }
+
 
 .main-field{
     background: #000000;
@@ -155,6 +166,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .card-picture-teg-a{
@@ -196,18 +208,20 @@
 
 .card-title{
     text-decoration: none;
-    color: rgba(255,255,255,.9);    
+    color: rgba(255,255,255,.8);    
     text-align: center;
-    
+    background-color: rgba(0,0,0,.4);
+    width: 110%;
     position: relative;
+    
 }
 
 .card-title h2{
-    letter-spacing: 2px;
     line-height: 36px;
     font-size: 26px;  
     padding: 20px; 
     font-weight: normal;
+    letter-spacing: .8px;
 }
 
 .card-text-description{
@@ -222,7 +236,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
     font-size: 14px;
     position: relative;
 }
@@ -255,7 +268,7 @@
 }
 
 div.post-date{
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 p.post-date{
@@ -263,6 +276,10 @@ p.post-date{
 }
 
 /* пост */
+
+.main-post{
+    position: relative;
+}
 
 .post-icon-views{
     width: 20px;
@@ -303,14 +320,14 @@ p.post-date{
     object-fit: cover;
     border-radius: 40px;
     opacity: .8;
-    filter: drop-shadow(2px 4px 6px black);
+    filter: drop-shadow(1px 1px 2px black);
 }
 
 .post-title{
     font-size: 52px;
     position: absolute;
     background-color: rgba(0,0,0,.5);
-    width: 100%;
+    width: 110%;
     text-align: center;
     line-height: 72px;
     letter-spacing: 1.5px;
@@ -318,9 +335,13 @@ p.post-date{
 }
 
 .post-description{
-    padding-bottom: 60px;
-    width: 590px;
-    padding-left: 100px;
+    background-color: rgba(0,0,0,.5);
+    width: 30%;
+    position: absolute;
+    left: 860px;
+    top: 640px;
+    padding: 58px;
+    z-index: 0;
 }
 
 .post-text-description{
@@ -328,16 +349,20 @@ p.post-date{
 }
 
 .post-general{
-    width: 590px;
-    padding-left: 100px;
+    width: 760px;
 }
 
-.info{
-    padding-top: 50px;
-}
 
 .post-text-value{
-    padding: 20px 10px 60px 10px;
+    padding: 40px 10px 60px 10px;
+}
+
+.post-text-value p, .post-text-value li{
+    padding-bottom: 20px;
+}
+
+.post-text-description, .post-text-value p{
+    text-indent: 40px;
 }
 
 .post-picture-image{
@@ -360,7 +385,7 @@ p.post-date{
 .post-text-header{
     position: absolute;
     background-color: rgba(0,0,0,.5);
-    width: 100%;
+    width: 680px;
     text-align: center;
     font-size: 32px;
     line-height: 44px;
@@ -473,15 +498,11 @@ p.post-date{
     }
 }
 @media (max-width: 910px){
-    .filters{
-        display: flex;
-    }
+   
     .main-menu{
         display: none;
     }
-    .main{
-        padding-top: 0;
-    }
+   
 }
 
 

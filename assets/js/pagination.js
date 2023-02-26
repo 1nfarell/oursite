@@ -1,6 +1,4 @@
-
 class Pagination {
-
     #currentPage = 1;
     #maxPage = 3;
     setMaxPage(maxPage/*int*/) {
@@ -8,7 +6,6 @@ class Pagination {
         if(maxPage < 1) {
             maxPage = 1;
         }
-
         this.#maxPage = maxPage;
     }
     perPage = 2;    
@@ -69,6 +66,7 @@ class Pagination {
         data = JSON.parse(data);
         console.log(`countArray: `, Math.ceil(data.count/context.perPage));
         context.setMaxPage(Math.ceil(data.count/context.perPage));
+
         context.output(context.#outputRoot, data.items);
     }
 

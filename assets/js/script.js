@@ -1,6 +1,4 @@
-// sdn css houdini
-         
-    if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('/assets/js/smooth-corners.js');    
+  
    
 //Липкий заголовок 
 
@@ -20,7 +18,9 @@
             logo.classList.remove("show-logo");
             logoSite.classList.remove("hide-logo-site");}}
         
-    
+// sdn css houdini
+         
+    if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('/assets/js/smooth-corners.js');    
 //плавный скрол для ссылок 
 
     $('a[href^="#"').on('click', function() {
@@ -32,7 +32,7 @@
         return false;});
 
 
-//удержание текста преимущества
+//блок преимущества
 
     $('.benefit-1').click(function(){             
             if($('.benefit-center-hidden:nth-of-type(1)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(1)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
@@ -108,19 +108,6 @@
 
     $('.card').click(function(){
         $(this).toggleClass('is-flipped');}); 
-
-//блок цен, для мобилки отключить свайп
-
-    let width = innerWidth;
-    console.log(width);
-    if(width < 505){
-        document.addEventListener('DOMContentLoaded', () => {
-        ItcSlider.getOrCreateInstance('#itc-slider', {        
-            swipe: false, // без свайпа
-            loop:false,
-            autoplay:false
-        });})
-    }
 
 
 //блок ЧаВо

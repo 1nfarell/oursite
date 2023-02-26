@@ -105,16 +105,16 @@ include 'vendor/generator.php';
             </div>
             <div class="nameReceptArea">        
                 <p class="formP">Название рецепта</p> 
-                <input  class="nameRecept" name="title" type="text" placeholder="Название рецепта" maxlength="60" pattern="^[А-Яа-яЁё\s]+$" required/>           
+                <input  class="nameRecept" name="title" type="text" placeholder="Название рецепта" maxlength="70"  required/>           
             </div>             
             <div class="descriptionArea">
                 <p class="formP">Краткое описание</p>                
-                <textarea class="descriptionRecept" name="description" type="text" placeholder="Краткое описание" maxlength="170"  required></textarea> 
+                <textarea class="descriptionRecept" name="description" type="text" placeholder="Краткое описание" maxlength="180"  required></textarea> 
             </div>
             <div class="imageReceptArea">
                 <p class="formP">Картинка для обложки</p>
                 <label class="custom-file-upload">
-                <input class="imageRecept" type="file" name="myimage" accept="image/jpeg" required/>Загрузить
+                <input class="imageRecept" type="file" name="myimage" accept="image/*" required/>Загрузить
                 </label>
             </div>
             <div class="inputRecept"> 
@@ -216,8 +216,8 @@ include 'vendor/generator.php';
         let count = 1;
         
         
-        let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Пункт №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="Заголовок" maxlength="60" required /><textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Опишите процесс приготовления.." maxlength="500" required></textarea> </div></div> ');
-                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение</p> <label class="custom-file-upload"><input  class="addpicture" name="picture'+y+'" type="file" accept="image/jpeg" required/>Загрузить</label> </div><!-- поля с картинками --> </div>');
+        let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Пункт №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="Заголовок" maxlength="60" required /><textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Опишите процесс приготовления.."  required></textarea> </div></div> ');
+                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение</p> <label class="custom-file-upload"><input  class="addpicture" name="picture'+y+'" type="file" accept="image/*" required/>Загрузить</label> </div><!-- поля с картинками --> </div>');
                 Wraptext = $("#Wrapper_add_text");
                 $(Wraptext).append(el);
                 el.append(buttons);
@@ -230,8 +230,8 @@ include 'vendor/generator.php';
                 
                 FieldCount++;
                 //добавляем поле
-                let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Пункт №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="Заголовок" maxlength="60" required />  <textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Опишите процесс приготовления.." maxlength="500" required></textarea> </div></div> ');
-                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение</p> <label class="custom-file-upload"><input  class="addpicture" name="picture'+y+'" type="file" accept="image/jpeg" required/>Загрузить</label><input id="removeclassimage'+y+'" class="removeclassimage" type="button" value="Удалить поле"/> </div><!-- поля с картинками --> </div>');
+                let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Пункт №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="Заголовок" maxlength="60" required />  <textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Опишите процесс приготовления.." required></textarea> </div></div> ');
+                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение</p> <label class="custom-file-upload"><input  class="addpicture" name="picture'+y+'" type="file" accept="image/*" required/>Загрузить</label><input id="removeclassimage'+y+'" class="removeclassimage" type="button" value="Удалить поле"/> </div><!-- поля с картинками --> </div>');
                 Wraptext = $("#Wrapper_add_text");
                 $(Wraptext).append(el);
                 el.append(buttons);

@@ -465,6 +465,7 @@ a.header-ref{
     /* mask-image: paint(smooth-corners); */
     -webkit-mask-image: paint(smooth-corners);
     transition-duration:  0.6s;
+    color: rgba(0, 0, 0, .95);
 }
 
 .btn-box-desription a{
@@ -1155,7 +1156,7 @@ input::placeholder, textarea::placeholder {
 
 .field1-box img{
     object-fit: cover;
-    width: 100%;
+    width: 90%;
     border-radius: 20px;
 }
 
@@ -1918,10 +1919,6 @@ input::placeholder, textarea::placeholder {
     filter: invert(1);
 }
 
-.about-block div img:hover{
-    width: 360px;
-    height: 240px;
-}
 
 .about-block div a{
     display: flex;
@@ -1953,6 +1950,7 @@ input::placeholder, textarea::placeholder {
 
 
 @media (max-width: 1240px)  { 
+   
      /*услуги копирайт и рерайт  */
      .card-wrapper-writing{
         justify-content: center;
@@ -1966,6 +1964,13 @@ input::placeholder, textarea::placeholder {
      .card-img{
         display: none;
      }
+     .pricesite-text{
+        padding-right: 0;
+     }
+     
+     .site-description span:first-child, .site-field p, .pricesite-text p, .setwidthspanpricedescription, .panel-title, .panel, .about-block div, .p-block span, .footer-row , .offer-description {
+        letter-spacing: .4px;
+    }
     /* about */
     .p-wrapper{
         display: grid;
@@ -2203,6 +2208,7 @@ input::placeholder, textarea::placeholder {
     .container-background{
         height: 580px;
         position: relative;
+        background-position: center;
     }
     
     .title-image{
@@ -2271,7 +2277,7 @@ input::placeholder, textarea::placeholder {
         padding-bottom: 15px;
         font-size: 15px;
         font-weight: bolder;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         line-height: 39px;
         font-size: 28px !important;
         width: 90%;
@@ -2282,7 +2288,7 @@ input::placeholder, textarea::placeholder {
         width: 110px;
         height: 50px;
         margin-bottom: 18px;
-        border-radius: 8px;    
+        border-radius: 30px;    
         font-size: 14px;
     }
     
@@ -2421,7 +2427,7 @@ input::placeholder, textarea::placeholder {
         height: 50px;
         margin-bottom: 5px;
         margin-top: 10px; 
-        border-radius: 8px;      
+        border-radius: 20px;      
         font-size: 12px;
     }
 
@@ -2514,7 +2520,20 @@ input::placeholder, textarea::placeholder {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 0;
+        letter-spacing: .4px;
     }
+
+    
+    .benefit-1,.benefit-2,.benefit-3,.benefit-4,.benefit-5,.benefit-6,.benefit-center-img{
+        box-shadow: -1px 1px 1px 1px rgb(255 255 255 / 5%);
+        border-radius: 10px;
+    }
+
+    .field1-box img{
+        border-radius: 10px;
+    }
+
+
 
     .benefit-1{
         grid-area: 2 / 1 / 3 / 2;
@@ -2582,7 +2601,7 @@ input::placeholder, textarea::placeholder {
     }
 
     .is-selected, .benefit-center-img {
-        aspect-ratio: 16/9;
+        aspect-ratio: 21/7;
     }
     
 
@@ -2615,6 +2634,7 @@ input::placeholder, textarea::placeholder {
     .site-field h3{
         font-size: 16px;
         line-height: 22px;
+        letter-spacing: .4px;
     }
 
    
@@ -2632,7 +2652,7 @@ input::placeholder, textarea::placeholder {
 
     .field-number > div{
         left: 0px;
-        top: 0px;
+        top: -25px;
         font-size: 42px;
         line-height: 60px;
     }
@@ -2733,8 +2753,8 @@ input::placeholder, textarea::placeholder {
     }
 
     .stage-text-number{
-        left: -25px;
-        top: 15px;
+        left: -50px;
+        top: -5px;
         font-size: 42px;
     }
 
@@ -2813,20 +2833,19 @@ input::placeholder, textarea::placeholder {
         align-items: center;
         padding-bottom: 50px;
         padding-top: 70px;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
         width: fit-content;
         margin: 0 auto;
     }
     
     .pricesite-title h2{
         font-size: 28px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         line-height: 39px;
         width: 100%;
         text-align: center;
-        padding-bottom: 0;
-        
+        padding: unset;
     }
     
     .pricesite{
@@ -2891,6 +2910,7 @@ input::placeholder, textarea::placeholder {
         justify-content: flex-start;
         padding-top: 30px;  
         background: linear-gradient(176deg, rgb(49 49 72 / 90%), transparent);
+        border-radius: 10px;
     }
     
     .card__face--back {
@@ -2912,8 +2932,8 @@ input::placeholder, textarea::placeholder {
     
     .card > div h3{
         font-size: 16px;
-        margin: 0 20%;
-        letter-spacing: .5px;
+        margin: 0 10%;
+        letter-spacing: .4px;
         padding-top: 10px;
         padding-bottom: 20px;
         line-height: 20px;
@@ -2922,7 +2942,7 @@ input::placeholder, textarea::placeholder {
     
     .card > div li{
         font-size: 14px;
-        letter-spacing: .5px;
+        letter-spacing: .4px;
         line-height: 20px;
     }
     
@@ -2940,7 +2960,7 @@ input::placeholder, textarea::placeholder {
         width: 120px;
         height: 45px;
         margin-left: 20px;
-        border-radius: 12px;    
+        border-radius: 30px;    
         font-size: 12px;
     }  
       
@@ -3016,13 +3036,13 @@ input::placeholder, textarea::placeholder {
         font-size: 14px;
         line-height: 19px;
     }
-}
-
-@media (max-width: 1070px){
-    .card-wrapper{
-        grid-template-rows: repeat(1, 550px);
+    .container-radius-bottom {
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
     }
 }
+
+
 
 @media (max-width: 980px)  { 
     
@@ -3062,8 +3082,6 @@ input::placeholder, textarea::placeholder {
     }
 
     .container-radius-bottom {
-        border-bottom-left-radius: unset;
-        border-bottom-right-radius: unset;
         box-shadow: 0px 10px 7px 3px rgb(0 0 0 / 10%);
     }
     
@@ -3125,11 +3143,7 @@ input::placeholder, textarea::placeholder {
     }
 }
 
-@media (max-width: 843px)  {
-    .card-wrapper{
-        grid-template-rows: repeat(1, 495px);
-    }
-}
+
 
 @media (max-width: 800px)  { 
     .about-block{
@@ -3311,7 +3325,6 @@ input::placeholder, textarea::placeholder {
 
 @media (max-width: 735px){
     .card-wrapper {        
-        grid-template-rows: repeat(1, 510px);
         
         padding-left: 20px;
         padding-right: 20px;
@@ -3337,9 +3350,6 @@ input::placeholder, textarea::placeholder {
 }
 
 @media (max-width: 705px){
-    .card-wrapper {        
-        grid-template-rows: repeat(1, 530px);
-    }
     .field4{
         grid-area: 3 / 1 / 4 / 5;
     }
@@ -3360,18 +3370,18 @@ input::placeholder, textarea::placeholder {
     }
 
     .field1-box img{
-        height: 210px;
+        height: 190px;
     }
 
     .card-wrapper {        
-        grid-template-rows: repeat(1, 595px);
+        grid-template-rows: repeat(1, 480px);
     }
 }
 
 @media (max-width: 600px)  { 
 
     .card-wrapper {
-        grid-template-rows: repeat(1, 610px);
+        grid-template-rows: repeat(1, 520px);
     }
     .title-text {
         padding-bottom: 40px;
@@ -3449,7 +3459,6 @@ input::placeholder, textarea::placeholder {
 
     .pricesite-title h2 {
         font-size: 28px;
-        margin: 0 20px;
         line-height: 36px;
     }    
 
@@ -3459,7 +3468,7 @@ input::placeholder, textarea::placeholder {
 
     .card-wrapper{
         grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(1, 545px);        
+        grid-template-rows: repeat(1, 480px);        
         grid-row-gap: 20px;
         justify-content: unset;
         width: 300px;        
@@ -3570,7 +3579,7 @@ input::placeholder, textarea::placeholder {
         width: 120px;
     }
 
-    
+   
 
     .about-block{
         height: 280px;
@@ -3588,7 +3597,7 @@ input::placeholder, textarea::placeholder {
 
     
     .offer-container{
-        padding-top: 50px;
+        padding-top: 60px;
         padding-bottom: 25px;
     }
 
@@ -3615,7 +3624,7 @@ input::placeholder, textarea::placeholder {
         margin-left: 0;
         margin-right: 0;
         width: fit-content;
-        letter-spacing: 1px;
+        letter-spacing: .8px;
         line-height: 36px;
         font-weight: normal;
     }
@@ -3686,8 +3695,9 @@ input::placeholder, textarea::placeholder {
     }
     
     .pricesite-title{
-        padding-top: 0;
+        padding-top: 10px;
         margin: unset;
+        padding-bottom: 30px;
     }
 
     .pricesite-title h2{
@@ -3695,7 +3705,7 @@ input::placeholder, textarea::placeholder {
         flex-direction: column;
         padding-top: 50px;
         font-size: 26px;
-        letter-spacing: 2px;
+        letter-spacing: .8px;
         font-weight: normal;
     }
 
@@ -3795,7 +3805,7 @@ input::placeholder, textarea::placeholder {
 
     .card-wrapper{
         grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(1, 500px);        
+        grid-template-rows: repeat(1, 420px);        
         justify-content: start;
         padding-left: unset; 
         padding-right: unset;
@@ -3814,11 +3824,9 @@ input::placeholder, textarea::placeholder {
     
     .offer-title{
         font-size: 26px;
-        line-height: 38px;
+        line-height: 38px;        
+        padding-bottom: 30px;
     }
-
-    
-
    
     .btn-stage-set-width{
         margin-top: 20px;
@@ -3868,7 +3876,6 @@ input::placeholder, textarea::placeholder {
     .pricesite-title h2{
         font-size: 22px;
         line-height: 30px;
-        letter-spacing: 2px;
     }
 
 
