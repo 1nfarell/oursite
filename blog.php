@@ -47,9 +47,8 @@ include 'vendor/pagination.php';
         <header>
             <div id="header" class="header-wrapper">
                 <div class="header">  
-                    <div class="header-left">                        
-                        <img id="hide-logo-site" class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
-                        <a id="hide-logo" class="hide-logo" href="#ancor">                        
+                    <div class="header-left">
+                        <a id="hide-logo" class="logo" href="#ancor">                        
                             <img class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
                         </a>               
                         <div class="site-description">

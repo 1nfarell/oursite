@@ -123,6 +123,14 @@
 .main{
     display: flex;
     flex-direction: column;
+    
+}
+
+.main-color{
+    background-color: rgba(0,0,0,.5);
+    padding-bottom: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .main-title{
@@ -174,7 +182,6 @@
     width: 100%;
     height: 100%;
     opacity: .8;
-    filter: blur(1px);
 }
 
 
@@ -211,7 +218,8 @@
     color: rgba(255,255,255,.8);    
     text-align: center;
     background-color: rgba(0,0,0,.4);
-    width: 110%;
+    width: 100%;
+    padding: 10px 15px;
     position: relative;
     
 }
@@ -219,7 +227,7 @@
 .card-title h2{
     line-height: 36px;
     font-size: 26px;  
-    padding: 20px; 
+    
     font-weight: normal;
     letter-spacing: .8px;
 }
@@ -279,6 +287,9 @@ p.post-date{
 
 .main-post{
     position: relative;
+    max-width: 70vw;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .post-icon-views{
@@ -310,46 +321,58 @@ p.post-date{
     justify-content: center;
     align-items: center;
     padding-top: 100px;
-    padding-bottom: 60px;
     filter: invert(1);
 }
 
 .post img{
-    width: 1180px;
-    height: 663.75px;
+    max-width: 80vw;
+    width: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
-    border-radius: 40px;
+    border-radius: 20px;
     opacity: .8;
     filter: drop-shadow(1px 1px 2px black);
 }
 
 .post-title{
-    font-size: 52px;
+    font-size: 5vmin;
     position: absolute;
     background-color: rgba(0,0,0,.5);
-    width: 110%;
+    max-width: 80vw;
+    width: 100%;
     text-align: center;
-    line-height: 72px;
+    line-height: 6.5vmin;
     letter-spacing: 1.5px;
-    padding: 10px 0;
+    padding: 10px 40px;
 }
 
 .post-description{
-    background-color: rgba(0,0,0,.5);
-    width: 30%;
-    position: absolute;
-    left: 860px;
-    top: 640px;
-    padding: 58px;
-    z-index: 0;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+}
+
+.post__rightcontainer{
+    padding-left: 100px;
+    min-width: 300px;
+}
+
+.post-text-description, .post-text-value, .info{
+    font-size: 1.7vmin;
+    line-height: 2.5vmin;
 }
 
 .post-text-description{
     padding: 0 10px;
+    color: rgb(255 255 255 / 68%);
 }
 
 .post-general{
-    width: 760px;
+    display: flex;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 
@@ -366,11 +389,12 @@ p.post-date{
 }
 
 .post-picture-image{
-    border-radius: 40px;
+    border-radius: 20px;
     opacity: .8;
     filter: drop-shadow(2px 4px 6px black);
-    width: 590px;
-    height: 331.88px;
+    max-width: 70vmin;
+    width: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
     filter: invert(1);
 }
@@ -385,11 +409,12 @@ p.post-date{
 .post-text-header{
     position: absolute;
     background-color: rgba(0,0,0,.5);
-    width: 680px;
+    max-width: 70vmin;
+    width: 100%;
     text-align: center;
-    font-size: 32px;
-    line-height: 44px;
-    padding: 10px 0;
+    font-size: 4vmin;
+    line-height: 5.5vmin;
+    padding: 10px 15px;
 }
 
 .wrapper-block{
@@ -488,6 +513,14 @@ p.post-date{
         height: 36px;
         width: 100%;
     }
+
+    .main-post {
+        max-width: 80vw;
+    }
+    .post__rightcontainer {
+        min-width: 200px;
+        padding-left: 60px;        
+    }
 }
 @media (max-width: 980px){
     .header-box-blog {
@@ -501,6 +534,11 @@ p.post-date{
    
     .main-menu{
         display: none;
+    }
+
+    .post__rightcontainer {
+        min-width: 150px;
+        padding-left: 60px;
     }
    
 }
@@ -518,6 +556,11 @@ p.post-date{
         height:560px;
     }
 
+    .post-general {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
 }
 @media (max-width: 700px){
     .site-description {
@@ -531,6 +574,34 @@ p.post-date{
     .main-center{
         grid-auto-rows: unset;
         grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+    }
+    .main-post {
+        max-width: 90vw;
+    }
+
+    .post img {
+        max-width: 90vw;
+    }
+
+    .post__rightcontainer {
+        padding-left: 40px;
+    }
+
+    .post-description {
+        padding-bottom: 20px;
+    }
+
+    .post-text-value {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .post-text-value p, .post-text-value li {
+        padding-bottom: 10px;
+    }
+
+    .post-title {
+        max-width: 90vw;
+        padding: 10px 20px;
     }
 
 }
@@ -558,6 +629,19 @@ p.post-date{
         padding-right: 0 !important;
     }
 
+    .post__rightcontainer {
+        min-width: 100px;
+    }
+
+    .post-general {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .post-text-header {
+        padding: 10px 10px;
+    }
+
 }
 
 @media (max-width: 505px){
@@ -572,6 +656,40 @@ p.post-date{
 @media (max-width: 465px){
     .title-text {
         font-size: 26px !important;
+    }
+
+    .post__rightcontainer {
+        min-width: 90px;
+        padding-left: 20px;
+    }
+
+    .post-text-value ol{
+        padding-left: 20px;
+    }
+
+    .post-text-description, .post-text-value p {
+        text-indent: 20px;
+    }
+
+    .header{
+        height: 50px;
+    }
+
+    .header-wrapper{
+        height: 50px;   
+    }
+
+    .logo-icon {
+        width: 32px;
+        height: 40px;
+    }
+
+    .post {
+        padding-top: 70px;
+    }
+
+    .post img, .post-picture-image, .card-text-picture {
+        border-radius: 10px;
     }
 }
 @media (max-width: 420px){
@@ -624,6 +742,10 @@ p.post-date{
     .title-text {
         font-size: 22px !important;
         line-height: 30px !important;
+    }
+
+    .post__rightcontainer {
+        min-width: 70px;
     }
 
     .main-title{
