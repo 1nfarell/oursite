@@ -28,16 +28,15 @@ function generationOutput()
                                                 $sth->execute();
                                                 $image = $sth->fetch(PDO::FETCH_ASSOC); ?> src="data:image/jpeg;base64, <?= base64_encode($image['image_tmp']) ?>">
                 <h1 class="post-title" ><?= $article['title'] ?></a></h1>  
-                              
+                          
             </div>    
 
-            <div class="post-description">
-                <p class="post-text-description"><?= $article['description'] ?></p>
-            </div>
+            
             <div class="post-general">
-                
-                <div class="post-cooking-process">
-                    
+                <div class="post-cooking-process">  
+                    <div class="post-description">
+                        <p class="post-text-description"><?= $article['description'] ?></p>
+                    </div>                    
                         <?php $id_article = $article['id'];                                  
                                 $sth = $db->prepare("SELECT text, recept_text.id_article, recept_text.numeration, recept_text.header_text, images.image_name, images.image_tmp 
                                                         FROM recept_text  
@@ -63,6 +62,9 @@ function generationOutput()
                                 ?>
                     
                 </div> 
+                <div class="post__rightcontainer">
+1
+                </div>
             </div>
             <div class="info">
                     <div class="card-autor">    

@@ -36,7 +36,7 @@ include 'vendor/generator.php';
         <div class="header">  
             <div class="header-left">
                 
-                <a href="/"><img id="hide-logo-site" class="logo-icon" src="/images/logo.png" alt="Web studio MndP"></a> 
+                <a class="logo" href="/"><img id="hide-logo-site" class="logo-icon" src="/images/logo.png" alt="Web studio MndP"></a> 
                                 
                 <div class="site-description">
                     <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span> 
