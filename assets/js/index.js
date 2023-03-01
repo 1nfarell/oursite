@@ -29,17 +29,23 @@ $(document).ready(function(){
             );          
         } 
     }
+
+    
     let pag = new Pagination();
     pag.output = output;
-    pag.perPage = 3;
+    pag.perPage = 6;
     pag.setoutputRoot(document.querySelector('#main-center'))
     pag.renderNavigation(document.querySelector('.pagination'));
     pag.renderFirstPage();
     let catElements =  document.querySelectorAll('.main-menu > option');
+
+
+    let categoryTitle = document.querySelector('.main-title');
     catElements.forEach((item) => {
         item.addEventListener('click', (e) => {
             pag.category = e.target.getAttribute('value');
             pag.renderFirstPage();
+            categoryTitle.innerHTML = e.target.text.toUpperCase();
         })
     });
 });
