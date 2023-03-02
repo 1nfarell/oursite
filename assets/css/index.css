@@ -1,4 +1,4 @@
-* {    
+* {
     margin: 0;
 }
 
@@ -6,11 +6,11 @@ html{
     filter: invert(.95);
 }
 
-.icon-dropdown, .form-offer-box-title, .dropdown-content, .icon-message-invert, .dropdown .icon-message, .dropdown-show, .italic-green, .dropdown-high > .dropdown-content a, .form-offer-box-title, .form-offer-box-p, .form-offer-box label, .title-text, .logo, .site-description span:last-child, .header-ref-hide, .menu{
+.icon-dropdown, .btn-wpapper, .form-offer, .dropdown-content, .icon-message-invert, .dropdown .icon-message, .dropdown-show, .italic-green, .dropdown-high > .dropdown-content a, .form-offer-box-title, .form-offer-box-p, .form-offer-box label, .logo, .site-description span:last-child, .header-ref-hide, .menu{
     filter: invert(1);
 }
 
-.dropdown-content a:hover, .box-benefit > div span, .header-ref, .site-field p, .stage-text, .panel p, .panel li, .about-block div, .card_facefront, .accordion, .setwidthspanpricedescription, .about-block div a, .p-block span, .offer-description, .footer-row div:nth-child(2), .footer-row-column{
+.pricesite-text p, .box-benefit > div span, .site-field p, .stage-text, .panel p, .panel li, .about-block div, .card_facefront, .accordion, .setwidthspanpricedescription, .about-block div a, .p-block span, .offer-description, .footer-row div:nth-child(2), .footer-row-column{
     color: rgba(255, 255, 255, .7);
 }
 
@@ -33,10 +33,12 @@ html{
     height: 12px;
     width: 12px;
 }
+
 *::-webkit-scrollbar-track {
     background: #171717;
     border-radius: 5px;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: rgba(255,255,255,0.9);;
     border-radius: 5px;
@@ -51,20 +53,8 @@ body{
     background-color: #171717;
 }
 
-
 .pricesite-text p{
     line-height: 22px;
-}
-
-
-.footer-row-column{
-    display: flex;
-    flex-direction:column;
-    align-items: flex-start;
-}
-
-.footer-row-column span + span{
-    padding-top: 5px;
 }
 
 .container{
@@ -83,9 +73,7 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-self: center;
     max-width: 1920px;
     width: 100%;    
     height: 75px;
@@ -95,15 +83,12 @@ body{
     box-shadow: 0px 5px 7px 3px rgb(0 0 0 / 10%);
 }
 
-
 .header{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 1180px;
     height: 75px;
-    position: relative;
 }
 
 .sticky {
@@ -116,40 +101,39 @@ body{
 
 .header-left{
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
-.mainpage-ref{
-    padding-right: 20px;
+
+.header-ref-hide .dropdown + .dropdown, .header-ref + .dropdown, .dropdown + .header-ref{
+    padding-left: 20px;
 }
 
-.logo-icon{    
+.header-ref-hide .header-ref:active{
+    transform: scale(.95);
+}
+
+.logo-icon{
     width: 39px;
-    height: 52px;  
-    z-index: 10;  
+    height: 52px;
 }
-
 
 .site-description{
     display: flex;
-    flex-direction: column;
     width: 270px;
     padding-left: 20px;
 }
 
-.site-description span:first-child{
-    letter-spacing: 1px; 
-    font-size: 14px;   
-}
-
-.site-description span:last-child{
+.site-description span{
     font-size: 14px;
     line-height: 15px;
+    letter-spacing: .8px; 
 }
 
 .header-ref{
     text-decoration: none;
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
 }
 
 .header-ref:hover{
@@ -160,26 +144,18 @@ body{
     display: none !important;
 }
 
-    
 .header > div > a  + a{
     margin-left: 17px;
-}   
-
+}
 
 .header-ref-hide{
     display: flex;
-    flex-direction: row;
 }
+
 .title-icon-message{
     display: none;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;    
-}
-         
-/* Выпадающее содержимое (скрыто по умолчанию) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -188,23 +164,18 @@ body{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    right: 10px;
     top: 15px;
 }
 
-/* Ссылки внутри выпадающего списка */
 .dropdown-content a {
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
 }
 
-/* Изменение цвета выпадающих ссылок при наведении курсора */
 .dropdown-content a:hover {
-    color: rgb(39,38,61);
+    color: rgba(133, 224, 171, 1);
 }
 
-/* Показать выпадающее меню при наведении курсора */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -215,14 +186,13 @@ body{
 }
 
 .dropdown-high:hover .icon-dropdown{
-    transform: rotateX(180deg);    
-}    
+    transform: rotateX(180deg);
+}
 
 .dropdown-high{
     display: flex;
-    align-self: center;
     font-size: 14px;
-    padding-right: 20px;
+    position: relative;
 }
 
 .icon-message{
@@ -235,40 +205,27 @@ body{
 }
 
 .title-icon-message{
-    display:flex; 
-    flex-direction: row;
-    font-size: 12px; 
-    text-align: center;
-    margin: 5px auto; /* Gives that scrolling effect as the typing happens */
-    align-items: center;
-    position: relative;
-  }
-
-
-.caret-site{
+    display:flex;
+    font-size: 12px;
+    margin: 5px auto;
     padding-left: 5px;
 }
 
-.box-caret1{
-    display: flex;
-    position: absolute;
-    right: 3px;
-}
-
 .caret{
-    overflow: hidden; 
-    border-right: .15em solid orange; 
-    animation: 
+    display: flex;
+    padding-left: 5px;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    animation:
       typing 8s  0s  infinite,
-      blink-caret .5s 0s  step-end infinite; 
-    right: 0;    
+      blink-caret .5s 0s  step-end infinite;
 }
 
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
-  
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgba(133, 224, 171, 1) }
@@ -282,27 +239,20 @@ body{
     height: 970px;
     position: relative;
     background: rgba(39,38,61,1);
-    z-index: 1;
-}
-
-.container-background{
-    height: 970px;
-    position: relative;
-    overflow: hidden;
     background-image: url(/images/title.webp);
     filter: invert(1);
+    box-shadow: 0px 5px 3px 1px rgb(0 0 0 / 10%);
 }
 
 .carousel-header-box{
     position: absolute;
-    width: 100%; 
-    align-self: center;    
+    width: 100%;
     padding-top: 90px;
 }
 
 .header-box{
     display: flex;
-    flex-direction: row;
+    align-items: center;
     margin: 0 auto;
     width: 1180px; 
     height: 840px;  
@@ -313,25 +263,11 @@ body{
     cursor: grabbing;
 }
 
-.header-box > div{
-    padding-top: 30px;
-}
-
-.header-box > div:first-child{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
 .header-box-desription{
+    width: 812px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-top: 30px;
-    width: 812px;    
 }
-
 
 .title-text{
     font-weight: normal;
@@ -340,34 +276,22 @@ body{
     font-size: 42px;
     line-height: 58px;
     text-shadow: 3px 4px 5px black;
-    color: rgba(255,255,255,.96);
 }
-
 
 .btn-box-desription{
     width: 150px;
     height: 70px;
-    margin-bottom: 18px;
-    border-radius: 8px;             
+    border-radius: 8px;
     font-family: 'RussoOne-Regular';
     font-size: 16px;
     border: 0;
     cursor: pointer;
     --smooth-corners: 6.2;
-    /* mask-image: paint(smooth-corners); */
     -webkit-mask-image: paint(smooth-corners);
     transition-duration:  0.6s;
-    color: rgba(0, 0, 0, .95);
-}
-
-.btn-box-desription a{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: rgba(255,255,255,0.9);
-    transition:  .4s;     
-    font-size: 18px;
-    letter-spacing: .4px;
+    color: rgba(0, 0, 0, .95);   
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .btn-box-desription:hover{
@@ -386,59 +310,36 @@ body{
 
 .btn-wpapper{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
 }
 
-.btn-desription-service{  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);  
-    background-size: 400% 400%;      
+.btn-desription-service{   
+    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%); 
+    background-size: 400% 400%;
+}
+
+.btn-desription-price{
+    background: linear-gradient(-45deg, rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.1) 100%);   
+    background-size: 400% 400%; 
 }
 
 .btn-desription-price + .btn-desription-service{
     margin-left: 40px;
 }
 
-.btn-stage-set-width{
-    background: linear-gradient(135deg, rgba(39,38,61,1) 0%, rgba(67,62,91,1) 64%, rgba(100,90,127,1) 80%, rgba(139,122,168,1) 100%);
-    background-size: 200% 100%;
-    color: rgba(255, 255, 255, .75);
-}
-
-.btn-desription-price{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(-45deg, rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.1) 100%);
-    background-size: 400% 400%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .wrapper-title-form{
-    display: flex;
-    position: relative;
-    width: 1080px;
-    align-self: center;
-}
-
-.title-form{
     position: absolute;
-    right: -50px;
-    bottom: 220px;
-    z-index: 10;
+    width: 1180px;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-self: center;
+    align-items: center;
 }
 
 .form-offer-box-title{
     font-size: 18px;
     line-height: 25px;
-    padding-top: 20px;
-    font-weight: normal;
+    padding:  20px 20px 0 20px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -447,63 +348,51 @@ body{
     display: flex;
     flex-direction: column;
     width: 330px;
-    height: 485px;
-    position: relative;     
     border-radius: 20px;
     box-shadow: -1px -1px 1px 2px rgb(91 91 110 / 25%), 1px 1px 1px 2px rgb(91 91 110 / 25%);
     background: linear-gradient(151deg, rgb(91 91 110 / 70%), transparent);
+    z-index: 10;
 }
 
 .form-offer-box{
-    padding: 10px 25px 15px 25px;   
+    padding: 10px 25px 15px 25px;
+}
+
+.form-submit-field{
+    background: linear-gradient(-45deg,rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.6) 100%);
+    background-size: 400% 400%;
+    width: 95%;
+    border: 0;
+    color: rgba(0,0,0,1);
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: "RussoOne-Regular";
 }
 
 .form-offer-box textarea{
     height: 130px;
-    width: 95%;
-    background: linear-gradient(-45deg,rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.6) 100%);
-    background-size: 400% 400%;    
     --smooth-corners: 8;
-    -webkit-mask-image: paint(smooth-corners); 
-    border: 0;
-    color: rgba(255,255,255,1);
-    font-size: 20px;
-    line-height: 24px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    border-radius: 8px;
+    -webkit-mask-image: paint(smooth-corners);
+    resize: none;
 }
 
 .form-offer-box input{
-    height: 65px;
-    width: 95%;
-    background: linear-gradient(-45deg,rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.6) 100%);
-    background-size: 400% 400%;    
+    height: 48px;    
     --smooth-corners: 6.2;
     -webkit-mask-image: paint(smooth-corners); 
-    border: 0;
-    color: rgba(255,255,255,1);
-    font-size: 20px;
-    line-height: 24px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    border-radius: 8px;
 }
 
 .form-offer-box label{
-    display: block;
     position: absolute;
     z-index: 1;
-    font-size: 16px;
 }
 
 .form-offer-box-submit{
     display: flex;
-    flex-direction: row;
 }
 
 .form__message{
@@ -526,7 +415,7 @@ body{
     --smooth-corners: 6.2;
     -webkit-mask-image: paint(smooth-corners);
     font-size: 16px;
-    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);  
+    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);
     background-size: 400% 400%; 
     transition:  .4s;
     letter-spacing: .4px;
@@ -549,7 +438,7 @@ body{
 }
 
 .itc-slider__indicators{
-    bottom: 50px;   
+    bottom: 50px;
     z-index: 9;
 }
 
@@ -567,12 +456,6 @@ body{
     transform: scale(.5);
 }
 
-/* фон */
-
-.background-bubbles {
-    overflow: hidden;
-}
-
 /* блок преимущества */
 .container-block-1{
     display: flex;
@@ -583,10 +466,7 @@ body{
 }
 
 .container-background-block-1{
-    /* background: rgb(2,2,3);    */
     position:relative;
-    background-color: #171717;
-    overflow: hidden;
 }
 
 .lines{
@@ -598,7 +478,7 @@ body{
     margin: auto;
     width: 90vw;
 }
-  
+
 .line{
     position: absolute;
     width: 1px;
@@ -626,28 +506,28 @@ body{
 @keyframes drop{
     0%{top: -30%;}
     100%{top: 110%;}
-}  
-  
+}
+
 .line:nth-child(1){
-    margin-left: -35%;      
+    margin-left: -35%;
 }
 
 .line:nth-child(2){
-    margin-left: -12%;      
+    margin-left: -12%;
 }
 
 .line:nth-child(3){
-    margin-left: 12%;      
+    margin-left: 12%;
 }
 
 .line:nth-child(4){
-    margin-left: 35%;      
+    margin-left: 35%;
 }
 
 .line:nth-child(1)::after{
     animation-delay: 8s;
 }
-  
+
 .line:nth-child(3)::after{
     animation-delay: 16s;
 }
@@ -660,37 +540,20 @@ body{
     color: rgba(133, 224, 171, 1);
 }
 
-.wrapper-container-block-1{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-self: center;
-    align-items: center;
-}
-
-.wrapper-container-block-1 > div{
-    display: flex;
-    flex-direction: column;
-    width: 1180px;
-}
-
 .box-benefit {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
     grid-column-gap: 50px;
     grid-row-gap: 30px;
     letter-spacing: .8px;
+    width: 1180px;
 }
 
 .benefit-center-img{
     object-fit: cover;
     width: 100%;
     border-radius: 20px;
-    
-    
 }
-
 
 @keyframes fade {
     from {
@@ -703,15 +566,13 @@ body{
     }
 }
 
-.box-benefit > div span{  
-    display: flex;  
+.box-benefit > div span{
+    display: flex;
     font-size: 16px;
-    font-weight: 300;
-    padding-bottom: 20px;
     line-height: 22px;
 }
 
-.el {    
+.el {
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
     width: 50px;
     height: 3px;
@@ -733,11 +594,11 @@ body{
 
 .benefit-center-hidden{
     display: none;
+    height: 565px;
 }
 
 .title-benefit-under{
     display: block;
-    height: 100%;
 }
 
 .TitleBenefitHide{
@@ -747,86 +608,27 @@ body{
 .is-selected , .benefit-center-img{
     display: block;
     animation: fade 1s ease forwards;
-    height: 100%;
 }
-    
-.benefit-1 { 
-    grid-area: 1 / 1 / 2 / 2; 
+
+.benefit-1, .benefit-2, .benefit-3, .benefit-4, .benefit-5, .benefit-6 {
     cursor: pointer;
     position: relative;
-    background-size: 400% 400%;
     padding: 30px 30px 0px 20px;
-    border-radius: 20px;
-    box-shadow: -5px 5px 3px 2px rgb(255 255 255 / 5%);
+    border-radius: 20px;        
     background-color: #171717;
 }
 
-.benefit-2 { 
-    grid-area: 2 / 1 / 3 / 2; 
-    cursor: pointer;
-    position: relative;
-    background-size: 400% 400%;
-    padding: 30px 30px 0px 20px;
-    border-radius: 20px;
+.benefit-1, .benefit-2, .benefit-3{
     box-shadow: -5px 5px 3px 2px rgb(255 255 255 / 5%);
-    background-color: #171717;
-}
-
-.benefit-3 { 
-    grid-area: 3 / 1 / 4 / 2; 
-    cursor: pointer;
-    position: relative;
-    background-size: 400% 400%;
-    padding: 30px 30px 0px 20px;
-    border-radius: 20px;
-    box-shadow: -5px 5px 3px 2px rgb(255 255 255 / 5%);
-    background-color: #171717;
 }
 
 .benefit-center { 
-    grid-area: 1 / 2 / 4 / 4; 
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    box-shadow: 0px 5px 3px 2px rgb(255 255 255 / 5%);
+    grid-area: 1 / 2 / 4 / 4;
     filter: invert(1);
-    border-radius: 20px;
 }
 
-.benefit-4 { 
-    grid-area: 1 / 4 / 2 / 5; 
-    cursor: pointer;
-    position: relative;
-    background-size: 400% 400%;
-    padding: 30px 30px 0px 20px;
-    border-radius: 20px;
+.benefit-4, .benefit-5, .benefit-6 {
     box-shadow: 5px 5px 3px 2px rgb(255 255 255 / 5%);
-    background-color: #171717;
-}
-
-.benefit-5 { 
-    grid-area: 2 / 4 / 3 / 5; 
-    cursor: pointer;
-    position: relative;
-    background-size: 400% 400%;
-    padding: 30px 30px 0px 20px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 3px 2px rgb(255 255 255 / 5%);
-    background-color: #171717;
-}
-
-.benefit-6 { 
-    grid-area: 3 / 4 / 4 / 5; 
-    cursor: pointer;
-    position: relative;
-    background-size: 400% 400%;
-    padding: 30px 30px 0px 20px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 3px 2px rgb(255 255 255 / 5%);
-    background-color: #171717;
 }
 
 .benefit-text-left{
@@ -845,14 +647,12 @@ body{
 
 .stage-wrapper-color {
     background: #000000;
-    z-index: 1;
-    position: relative;
 }
 
 .container-radius-bottom{
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: 0px 10px 7px 3px rgb(0 0 0 / 10%);
+    overflow: hidden;
 }
 
 .container-radius-top{
@@ -861,17 +661,12 @@ body{
     border-top-right-radius: 40px;
 }
 
-
 .site-field {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, auto);   
     width: 1180px;
     grid-column-gap: 140px;
     grid-row-gap: 40px;
-    align-self: center;
-    z-index: 2;
-    }
+}
 
 .site-field > div{
     position: relative;
@@ -880,12 +675,11 @@ body{
 .field-number{
     position: absolute;
     background-color: rgba(133, 224, 171, .5);
-    border-radius: 100px;
+    border-radius: 40px;
     width: 70px;
     height: 70px;
     top: 0px;
     left: -60px;
-    z-index: -1;
 }
 
 .field-number > div{
@@ -895,41 +689,34 @@ body{
     left: 25px;
     top: 40px;
     line-height: 72px;
-    
 }
 
 .site-field h3{
     font-size: 18px;
     padding-bottom: 20px;
-    font-weight: normal; 
-    line-height: 25px;   
+    font-weight: normal;
+    line-height: 25px;
 }
 
 .site-field p{
     padding-left: 30px;
 }
 
-.field1 { 
-    grid-area: 1 / 1 / 8 / 3; 
-    
-    
+.field1 {
+    grid-area: 1 / 1 / 5 / 3;
 }
 
 .field1-box{
-    width: 100%;   
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 5px 3px 2px rgb(255 255 255 / 5%);
-    border-radius: 20px;
     filter: invert(1);
 }
 
 .field1-box img{
-    object-fit: cover;
-    width: 90%;
+    width: 100%;
     border-radius: 20px;
+    object-fit:cover;
 }
 
 .field2 { grid-area: 1 / 3 / 2 / 5; }
@@ -941,13 +728,12 @@ body{
 .field8 { grid-area: 7 / 3 / 8 / 5; }
 
 .accordion-stage{
-    transition: 0.5s; 
+    transition: 0.5s;
     font-weight: normal;
-    margin-top: 50px;
 }
 
 .accordion-stage:after {
-    content: 'РАЗВЕРНУТЬ';    
+    content: 'РАЗВЕРНУТЬ';
 }
 
 .active-field:after {
@@ -958,8 +744,7 @@ body{
     max-height: 930px;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    transition: .7s;
-    line-height: 23px;    
+    line-height: 23px;
 }
 
 .stage-box-column{
@@ -971,8 +756,6 @@ body{
     letter-spacing: .5px;
     line-height: 22px;
 }
-
-
 
 .stage-box-row{
     display: flex;
@@ -1121,7 +904,6 @@ body{
     position: relative;
 }
 
-
 .setwidthspanpricedescription{
     text-align: center;
 }
@@ -1147,7 +929,6 @@ body{
 /* блок с ценами */
 .carousel-pricesite{
     width: 100%;
-    align-self: center;    
 }
 
 .itc-slider__items{
@@ -1165,9 +946,6 @@ body{
     display: flex;
     flex-direction: column;
     width: 1180px;
-    padding: 0px 30px 0px 30px;    
-    position: relative;    
-    align-items: center;
 }
 
 .wrapper-title{
@@ -1175,7 +953,6 @@ body{
     width: 1180px;
     padding-bottom: 50px;
     text-align: center;
-   
 }
 
 .wrapper-title h3, .wrapper-title h4{
@@ -1188,21 +965,12 @@ body{
     padding-bottom: 100px;
 }
 
-
 .pricesite-title{
     padding-top: 90px;
-    padding-bottom: 90px;    
-    display: grid;
-    width: 1180px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 0px;
-    align-items: center;
-    align-self: center;
+    padding-bottom: 90px;
 }
 
 .pricesite-title h2{
-    grid-area: 1 / 1 / 2 / 2;
     font-size: 42px;
     letter-spacing: 2.5px;
     line-height: 58px;
@@ -1212,8 +980,7 @@ body{
 
 .pricesite{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    width: 1180px;
 }
 
 .pricesite-text{
@@ -1229,7 +996,6 @@ body{
 .container-card-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .card-wrapper{
@@ -1237,23 +1003,15 @@ body{
     grid-template-columns: repeat(2, 320px);
     grid-template-rows: repeat(1, 510px);
     grid-column-gap: 40px;
-    grid-row-gap: 40px;
     padding-bottom: 50px;
 }
 
-
 .card{    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    position: relative;
     cursor: pointer;    
     will-change: transform;
-    transition: transform .8s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;    
-      
+    transition: transform .8s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
 }
 
 .card-img{
@@ -1263,31 +1021,29 @@ body{
     height: 100%;
     border-radius: 20px;
 }
-  
-.card-wrapper > div:hover .card  {   
+
+.card-wrapper:hover .card{
     transform: rotateY(180deg) ;
 }
 
-.is-flipped {        
-    transform: rotateY(180deg)  ;    
+.is-flipped {
+    transform: rotateY(180deg)  ;
 }
 
 .card__face {
-    position: absolute;   
-    width: 100%;
+    position: absolute;
     height: 100%;
-    -webkit-backface-visibility: hidden;
+    width: 100%;
     backface-visibility: hidden;
-    
 }
 
-.card_facefront{   
+.card_facefront{
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     justify-content: center;
     padding-left: 40px;
     padding-right: 20px;
-    padding-top: 30px;    
+    padding-top: 30px;
 }
 
 .card__face ul{
@@ -1296,27 +1052,20 @@ body{
 }
 
 .card__face--front {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     text-align: center;
-    border-radius: 20px;
-     background-size: 120% 100%;  
     box-shadow: -10px -10px 7px 3px rgb(0 0 0 / 10%);
 }
 
-.card__face--front > div{   
+.card__face--front > div{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     height: 100%;
-    background-color: rgba(1,1,1,.4);
-    border-radius: 20px;
     filter: invert(1);
 }
 
 .card__face--back {
     background: linear-gradient(360deg, rgba(67,62,91,1) 0, rgb(30 6 70) 100%);
-    border-radius: 20px; 
+    border-radius: 20px;
     transform: rotateX(180deg) rotateZ(180deg) translate3d(0,0,0);
 }
 
@@ -1324,8 +1073,8 @@ body{
     font-size: 28px;
     letter-spacing: .5px;
     padding: 20px 0;
-    font-weight: 300; 
-    z-index: 1;   
+    font-weight: 300;
+    z-index: 1;
 }
 
 .card > div li{
@@ -1340,31 +1089,24 @@ body{
 }
 
 .btn-card-price{
-    
     height: 55px;
     margin-left: 20px;
-    width: 130px;   
-    border-radius: 15px;     
+    width: 130px;
+    border-radius: 15px;
     color: rgba(255,255,255,0.9);
     font-family: 'RussoOne-Regular';
     font-size: 16px;
     border: 0;
     cursor: pointer;
     --smooth-corners: 6.2;
-    /* mask-image: paint(smooth-corners); */
     -webkit-mask-image: paint(smooth-corners);
     transition: .4s;
 }
 
 .btn-card-pricesite{
-    background:linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);    
+    background:linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);
     background-size: 400% 400%;
 }
-
-.carousel-backgroung-color{
-    z-index: 2;
-}
-
 
 .indicators-bottom-up{
     bottom: 2px
@@ -1376,7 +1118,6 @@ body{
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     padding-bottom: 50px;
-
 }
 
 .card-wrapper-writing div{
@@ -1385,13 +1126,13 @@ body{
     padding: 30px;
     border-radius: 20px;
     box-shadow: -5px -5px 7px 3px rgb(255 255 255 / 5%);
-    
 }
 
 .card-wrapper-writing div h4{
     font-size: 26px;
     padding-bottom: 10px;
 }
+
 .card-wrapper-writing div li{
     letter-spacing: .3px;
 }
@@ -1420,7 +1161,6 @@ body{
 }
 
 .accordion {
-
     background: #000000;
     font-size: 16px;
     cursor: pointer;
@@ -1439,7 +1179,6 @@ body{
     background: linear-gradient(-45deg, rgba(39,38,61,.7) 0%, rgba(67,62,91,.5) 64%, rgba(100,90,127,.3) 80%, rgba(139,122,168,.1) 100%);
     background-size: 400% 400%;
     border-radius: 5px;
-    
 }
 
 .active, .accordion:hover[text]{
@@ -1465,7 +1204,7 @@ body{
     transition: max-height 0.3s ease-out;
     opacity: 0;
     transition: .7s;
-    line-height: 23px;    
+    line-height: 23px;
     margin-left: 20px;
     margin-right: 20px;
     padding: 0 18px;
@@ -1475,7 +1214,6 @@ body{
     font-weight: normal;
     font-size: 16px;
 }
-
 
 .active + .panel{
     margin: 20px;
@@ -1498,6 +1236,7 @@ body{
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 40px;
 }
+
 .offer-container{
     display: flex;
     flex-direction: row;
@@ -1510,12 +1249,13 @@ body{
 
 .offer-container a{
     color: rgba(133, 224, 171, 1);
-    font-weight: normal;     
+    font-weight: normal;
 }
 
 .offer-container i {
     font-size: 18px;
-}   
+}
+
 .offer-title{
     width: 600px;
     padding-right: 145px;
@@ -1534,7 +1274,7 @@ body{
     line-height: 22px;
 }
 
-.footer-row{    
+.footer-row{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -1550,9 +1290,19 @@ body{
 .footer-row div:nth-child(2){
     display: flex;
     flex-direction: column;
-    text-align: center;   
-    justify-content: flex-end; 
+    text-align: center;
+    justify-content: flex-end;
     align-items: flex-end;
+}
+
+.footer-row-column{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+
+.footer-row-column span + span{
+    padding-top: 5px;
 }
 
 .p-wrapper{
@@ -1589,7 +1339,7 @@ body{
 }
 
 .p-block span{
-    padding-bottom: 10px;    
+    padding-bottom: 10px;
 }
 
 .p-block-img{
@@ -1620,7 +1370,6 @@ body{
     padding-bottom: 20px;
 }
 
-
 .about-block div img{
     object-fit: cover;
     width: 300px;
@@ -1631,38 +1380,23 @@ body{
     filter: invert(1);
 }
 
-
 .about-block div a{
     display: flex;
     flex-direction: column;
     text-decoration: none;
 }
-/* копирайт и рерайт */
-.card-wrapper-writing-title{
-    font-size: 24px;
-    line-height: 36px;
-    padding-bottom: 15px;
-}
 
-.container-padding-top{
-    margin-top: 100px;
-}
-
-
-@media (min-width: 1240px)  {
+@media (min-width: 1920px)  {
     .container{
         max-width: unset;
     }
     .header-wrapper{
         max-width: unset;
     }
-    
 }
 
-
-
 @media (max-width: 1240px)  { 
-   
+
      /*услуги копирайт и рерайт  */
      .card-wrapper-writing{
         justify-content: center;
@@ -1676,10 +1410,11 @@ body{
      .card-img{
         display: none;
      }
+
      .pricesite-text{
         padding-right: 0;
      }
-     
+
      .site-description span:first-child, .site-field p, .pricesite-text p, .setwidthspanpricedescription, .panel-title, .panel, .about-block div, .p-block span, .footer-row , .offer-description {
         letter-spacing: .4px;
     }
@@ -1687,9 +1422,9 @@ body{
     .pricesite-text p{
         line-height: 20px;
     }
+
     /* about */
     .p-wrapper{
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
         grid-column-gap: 0px;
@@ -1697,8 +1432,8 @@ body{
     }
 
     .p-block span{
-        font-size: 14px; 
-        line-height: 20px;       
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .about-block{
@@ -1711,7 +1446,7 @@ body{
         max-width: 1240px;
         width: 100%;
         flex-direction: column;
-        
+
     }
     .offer-title{
         padding-left: 20px;
@@ -1730,15 +1465,6 @@ body{
         line-height: 20px;
     }
 
- 
-    .slogan-header-description{
-        padding-left: 0;
-        justify-content: center;        
-    }
-
-  
-
-   
     /* футтер */
     .footer-row{
         max-width: 1240px;
@@ -1756,66 +1482,27 @@ body{
     }
         
     .container{
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        justify-content: space-between;
         min-width: 0;
         max-width: 1240px;
-        width: 100%;
-        margin: 0 auto;
     }
     
     /* хэдер */
     .header-wrapper{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        width: 100%;    
-        height: 65px;        
-    }      
+        height: 65px;
+    }
     
     .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         max-width: 1240px;
         width: 100%;
         height:65px;
-        position: relative;
     }
 
     .header > div:last-child{
         padding-right: 170px;
     }
-    
-    .sticky {
-        position: fixed;
-        top: 0;  
-    }
-    
+
     .header-left{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        padding-bottom: 5px;
         padding-left: 170px;
-    }
-    
-    .logo-icon{
-        z-index: 10;  
-    }
-    
-    .show-logo{
-        display: flex !important;
-        flex-direction: column;
-        height: inherit;
-        justify-content: flex-end;
     }
     
     .hide-logo-site{
@@ -1858,9 +1545,7 @@ body{
     .dropdown-show{
         display: block !important;
     }
-    
 
-    
     .menu{
         display: flex;
     }
@@ -1869,60 +1554,27 @@ body{
         display: none;
     }
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
     .dropdown .icon-message{
         padding-right: 15px;
     }
       
-    /* Выпадающее содержимое (скрыто по умолчанию) */
     .dropdown-content {
-        display: none;
-        position: absolute;
-        border-radius: 20px;
-        background: rgb(39,38,61);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+        background: rgba(0,0,0,.9);
+        top: 25px;
         right: 10px;
+        box-shadow: 0px 8px 16px 0px rgb(255 255 255 / 20%);
     }
-    
-    /* Ссылки внутри выпадающего списка */
-    .dropdown-content a {
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-    
-    /* Изменение цвета выпадающих ссылок при наведении курсора */
+
     .dropdown-content a:hover {
         background-color: rgba(255,255,255,.8);
         color: rgb(39,38,61);
     }
     
-    /* Показать выпадающее меню при наведении курсора */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    
     /* блок с хэдер */
     
     .container-header{
-        display: flex;
-        flex-direction: column;
         width: 100%;
         height: 580px;
-        position: relative;
-        z-index:unset;
-    }
-    
-    .container-background{
-        height: 580px;
-        position: relative;
         background-position: center;
     }
     
@@ -1932,13 +1584,6 @@ body{
         width: 110%;
         height: 110%;
     }
-    
-    .carousel-header-box{
-        position: absolute;
-        width: 100%; 
-        align-self: center;    
-        padding-top: 90px;
-    }    
   
     .btn-set-radius{
         width: 50px;
@@ -1948,86 +1593,32 @@ body{
         margin-right: 150px;
     }
     
-    .itc-slider__btn{
-        top: 20px;
-    }
-    
     .header-box{
-        display: flex;
-        flex-direction: row;
-        margin: 0;      
         max-width: 1240px;
         width: 100%;
         height: 440px;
     }   
 
-    .header-box > div:last-child{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: fit-content;
-        padding-right: 50px;
-    }
-    
-    .header-box > div{
-        padding-top: 0;
-        
-    }
-    
-    .header-box span{
-        font-size: 17px;
-    }
-    
     .header-box-desription{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top: 30px;
         padding-left: 170px;
         width: fit-content;
         padding-right: 340px;
     }
     
     .title-text{
-        padding-bottom: 15px;
-        font-size: 15px;
-        font-weight: bolder;
         letter-spacing: 2px;
         line-height: 39px;
-        font-size: 28px !important;
-        width: 90%;
+        font-size: 28px;
     }
-        
-    
+
     .btn-box-desription{
         width: 110px;
         height: 50px;
-        margin-bottom: 18px;
-        border-radius: 30px;    
-        font-size: 14px;
-    }
-    
-    .btn-box-desription a{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .btn-box-desription span{
-        font-size: 14px;
-    }
-    
-    .btn-wpapper{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        border-radius: 30px;
     }
     
     .btn-desription-service{  
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;  
-        font-size: 12px;  
+        font-size: 12px;
     }
     
     .btn-desription-price + .btn-desription-service{
@@ -2035,83 +1626,42 @@ body{
     }
     
     .btn-desription-price{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         font-size: 12px;
-        padding-left: 10px;
-        padding-right: 10px;
     }
 
     .wrapper-title-form{
-        display: flex;
-        position: relative;
         max-width: 1240px;
         width: 100%;
-        align-self: center;
-    }
-    
-    .title-form{
-        position: absolute;
-        right: 150px;
-        bottom: 100px;        
-        z-index: 10;
-    }
-    
-    .height-form-offer{
-        height: 200px !important;
-        margin-bottom: 20px; 
+        margin-right: 340px;
     }
     
     .form-offer-box-title{
         font-size: 14px;
         font-weight: 300;
         line-height: 19px;
-        padding-top: 0;
     }
-   
     
     .form-offer{
-        display: flex;
-        flex-direction: column;
         width: 215px;
-        height: 310px;
-        margin-top: 0;
-        position: relative;         
-        border-radius: 20px;   
-        -webkit-transform: none; 
-        transform: none;
-        box-shadow: -1px -1px 1px 2px rgb(91 91 110 / 25%), 1px 1px 1px 2px rgb(91 91 110 / 25%);
-        background: linear-gradient(151deg, rgb(91 91 110 / 70%), transparent);
+        height: 330px;
     }
     
     .form-offer-box{
-        padding: 20px 15px 0px 15px;
-        transform: none;
+        padding: 10px 25px 0px 15px;
     }
 
     .form-offer-box textarea{
-        height: 60px;
-        width: 90%;
+        height: 60px;      
+    }
+
+    .form-submit-field{
         font-size: 14px;
         line-height: 19px;
-    }
-    
-    .offer-box-title{
-        width: 100%;
-        font-size: 17px;
-        padding-bottom: 20px;
+        margin-bottom: 10px;
     }
     
     .form-offer-box input{
-        height: 35px;
-        width: 167px;
-        font-size: 15px;
-        line-height: 24px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-bottom: 10px;
+        height: 20px;        
     }   
     
     .form-offer-box label{
@@ -2130,7 +1680,7 @@ body{
         font-size: 12px;
         width: 100px;
         margin-bottom: 5px;
-        align-self: center;        
+        align-self: center;
     }
 
     .form__message p{
@@ -2141,89 +1691,20 @@ body{
         width: 110px;
         height: 50px;
         margin-bottom: 5px;
-        margin-top: 10px; 
-        border-radius: 20px;      
+        margin-top: 10px;
+        border-radius: 20px;
         font-size: 12px;
     }
 
     .itc-slider__indicators{
         bottom: 0;
-    }
-
-    /* блок "то что нужно!" */
-    .slogan{
-        grid-template-columns: repeat(1, 1fr);
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 100px;
-        grid-row-gap: 10px;
-    }
-
-    .slogan0{
-        display: none;
-    }
-
-    .slogan1 {  
-        padding-right: 0;
-    }
-
-    .slogan2 {  
-        padding-left: 0;
-    }
-
-    .slogan3 {  
-        padding-right: 0;
-    }
-
-    .slogan-header{
-        width: 100%;
-        text-align: center;
-        font-size: 28px;
-        letter-spacing: 3px;
-        line-height: 39px;
-    }
-
-    .header-description-title{
-        text-align: center;
-        font-size: 14px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 40px;
-    }
-
-    .slogan div{
-        grid-area: auto;
     }   
 
-    .slogan-title{
-        font-size: 16px;
-    }
-
-    .slogan-description{
-        font-size: 14px;
-    }
-
-    /* блок преимущества */    
+    /* блок преимущества */
     .container-block-1{
         display: flex;
-        flex-direction: column;  
-        padding: 0 150px; 
-    }
-
-    .wrapper-container-block-1{
-        display: flex;
         flex-direction: column;
-        width: 100%;
-        align-self: center;
-        align-items: center;
-    }
-
-    .wrapper-container-block-1 > div{
-        display: flex;
-        flex-direction: column;
-        max-width: 1240px;
-        width: 100%;
-        padding: 0;
+        padding: 0 150px;
     }
 
     .box-benefit {
@@ -2236,9 +1717,9 @@ body{
         padding-right: 20px;
         padding-bottom: 0;
         letter-spacing: .4px;
+        width: unset;
     }
 
-    
     .benefit-1,.benefit-2,.benefit-3,.benefit-4,.benefit-5,.benefit-6,.benefit-center-img{
         box-shadow: -1px 1px 1px 1px rgb(255 255 255 / 5%);
         border-radius: 10px;
@@ -2247,8 +1728,6 @@ body{
     .field1-box img{
         border-radius: 10px;
     }
-
-
 
     .benefit-1{
         grid-area: 2 / 1 / 3 / 2;
@@ -2263,7 +1742,7 @@ body{
         grid-area: 2 / 2 / 3 / 3;
     }
     .benefit-5{
-        grid-area: 3 / 2 / 4 / 3; 
+        grid-area: 3 / 2 / 4 / 3;
     }
     .benefit-6{
         grid-area: 4 / 2 / 5 / 3;
@@ -2273,7 +1752,7 @@ body{
         font-size: 14px;
     }
 
-    .box-benefit > div span{    
+    .box-benefit > div span{
         font-weight: 300;
         font-size: 14px;
         padding-bottom: 20px;
@@ -2297,13 +1776,7 @@ body{
         margin-left: 30px;
     }
 
-    .container-block-2{
-        background: #7AA899;
-        height: 500px;
-    }
-
-
-    .benefit-center{       
+    .benefit-center{
         grid-area: 1 / 1 / 2 / 3;
     }
 
@@ -2312,28 +1785,19 @@ body{
         width: 100%;
         justify-content: center;
         align-items: center;
-        overflow: hidden;  
+        overflow: hidden;
     }
 
     .is-selected, .benefit-center-img {
         aspect-ratio: 21/7;
     }
-    
 
     .TitleBenefitHide {
         display: none !important;
     }
 
-    .is-selected{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
     /* блок этапы разработки' */
-    
+
     .panel-field{
         max-height: 357px;
     }
@@ -2353,8 +1817,6 @@ body{
         letter-spacing: .4px;
     }
 
-    
-
     .field-number{
         width: 50px;
         height: 50px;
@@ -2370,21 +1832,21 @@ body{
     }
 
     .wrapper-title{
-        width: 100%;        
+        width: 100%;
     }
 
     .wrapper-title h3, .wrapper-title h4{
         font-size: 28px;
         padding: 0 20px;
     }
-   
+
     .stage-wrapper{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0 150px;
     }
-   
+
     .stage-title{
         display: flex;
         flex-direction: column;
@@ -2429,7 +1891,7 @@ body{
         right: -73px;
     }
 
-    .arrow-circe-position .circe-pricedesign {        
+    .arrow-circe-position .circe-pricedesign {
         bottom: 170px;
         right: -25px;
     }
@@ -2440,8 +1902,6 @@ body{
     }
 
     .stage-text{
-        display: flex;
-        flex-direction: column;
         width: 145px;
         height: 140px;
         padding-left: 10px;
@@ -2449,8 +1909,8 @@ body{
         padding-top: 12px;
         font-size: 14px;
         line-height: 19px;
-    }   
-    
+    }
+
     .imgwidth{
         padding-top: 0 !important;
         width: 150px !important;
@@ -2459,7 +1919,7 @@ body{
     .imgwidth2 {
         width: 145px !important;
     }
-    
+
     .arrow-div{
         width: 130px;
     }
@@ -2500,17 +1960,12 @@ body{
         left: 0 !important;
         justify-content: center !important;
     }
-
-    .accordion-stage{
-        margin-top: 0;
-    }
     
-    /* блок с ценами */    
+    /* блок с ценами */
     .carousel-pricesite{
         width: 100%;
         align-self: center;
-    }
-    
+    }    
         
     .container-pricesite{
         display: flex;
@@ -2518,26 +1973,18 @@ body{
         width: 100%;
         padding-bottom: 0;
         align-items: center;    
-    }
-    
+    }    
     
     .wrapper-pricesite{
-        display: flex;
-        flex-direction: column;
         max-width: 1240px;
-        width: 100%;  
-        position: relative;    
-        align-items: unset;
+        width: 100%;
+        padding: 0;
     }
 
     .wrapper-title-padding {
         padding-top: 20px;
         padding-bottom: 40px;
     }
-
-    .itc-slider__btn-position {
-        top: 40px !important;
-    }        
     
     .pricesite-title{
         display: flex;
@@ -2555,13 +2002,13 @@ body{
         font-size: 28px;
         letter-spacing: 2px;
         line-height: 39px;
-        width: 100%;
-        text-align: center;
         padding: unset;
     }
     
     .pricesite{
         flex-direction: column;
+        max-width: 1240px;
+        width: 100%;
     }
 
     .pricesite-text {
@@ -2574,54 +2021,23 @@ body{
     }
 
     .container-card-wrapper {
-        align-items: unset;
-        width: 100vmin;
+        align-items: center;
     }
+
     .card-wrapper{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 500px);
-        grid-row-gap: 40px;    
-        justify-content: center;
+        grid-row-gap: 40px;
         grid-auto-rows: 290px;
         grid-column-gap: 35px;
         padding-bottom: 50px;
-        padding-left: 5%;
-        padding-right: 5%;
     }
     
-   
-    
-    .card{    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        
-    }    
-     
-    .card__face {
-       
-        position: absolute;   
-        width: inherit;
-        height: inherit;
-        -webkit-backface-visibility: unset;
-        backface-visibility: unset;
-    }
-    
-    .card_facefront{    
+    .card_facefront{
         padding: 3px 10px 5px 10px;
     }
     
     .card__face--front {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: flex-start;
-        padding-top: 30px;  
+        padding-top: 30px;
         background: linear-gradient(176deg, rgb(49 49 72 / 90%), transparent);
         border-radius: 10px;
     }
@@ -2639,7 +2055,7 @@ body{
     }
       
     .card-icon{
-        height: 50px;        
+        height: 50px;
         margin-bottom: 15px;
     }
     
@@ -2659,12 +2075,6 @@ body{
         line-height: 20px;
     }
     
-    .card > div button{
-        margin-top: 20px;
-        margin-left: 0;
-        /*box-shadow: 0px 2px 7px 2px rgb(0 0 0 / 50%) inset;*/
-    }
-    
     .btn-overflow{    
         padding: 0 5px;
     }
@@ -2673,9 +2083,9 @@ body{
         width: 120px;
         height: 45px;
         margin-left: 20px;
-        border-radius: 30px;    
+        border-radius: 30px;
         font-size: 12px;
-    }  
+    }
       
     .icon-btn{
         position: absolute;
@@ -2689,13 +2099,11 @@ body{
         bottom: 40px
     }
     
-    /* блок ЧаВо */ 
-    .wrapper-block{        
+    /* блок ЧаВо */
+    .wrapper-block{
         max-width: 1240px;
         width: 100%;
     }
-
-  
 
     .wrapper-accordion{
         grid-template-columns: repeat(1, 1fr);
@@ -2707,7 +2115,6 @@ body{
         font-size: 16px;
     }
 
-    
     .accordion-field-text{
         grid-area: auto;
     }
@@ -2716,9 +2123,7 @@ body{
         font-size: 14px;
         line-height: 20px;
     }
-    .btn-stage-set-width{
-        margin-top: 40px;
-    }
+
     .container-block {
         padding-left: 150px;
         padding-right: 150px;
@@ -2731,13 +2136,14 @@ body{
         font-size: 14px;
     }
 
-    .card-wrapper > div:hover .card  {
-        transform: unset;     
+    .card-wrapper:hover .card  {
+        transform: unset;
     }
 
-    .is-flipped {        
-        transform: unset;    
+    .is-flipped {
+        transform: unset;
     }
+
     .card__face--front > div{
         background-color: unset;
         border-bottom-left-radius: unset;
@@ -2757,11 +2163,7 @@ body{
     }
 }
 
-
-
-@media (max-width: 980px)  { 
-    
-    
+@media (max-width: 980px)  {
     .card-wrapper-writing {
         display: grid;
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
@@ -2770,6 +2172,7 @@ body{
         padding-bottom: 50px;
         padding: 0 20px;
     }
+
     .btn-card-price{
         width: 120px;
     }
@@ -2786,29 +2189,27 @@ body{
         padding: 16px 0;
     }
 
-    .card{ 
-        transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;    
+    .card{
+        transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
     }
-    
+
     .container-radius-top{
-        box-shadow: 0px -10px 7px 3px rgb(0 0 0 / 10%);
         border-top-left-radius: unset;
         border-top-right-radius: unset;
     }
 
-    .container-radius-bottom {
-        box-shadow: 0px 10px 7px 3px rgb(0 0 0 / 10%);
-    }
-    
     .about-wrapper, .p-wrapper{
         margin: 0 20px;
     }
+
     .stage-wrapper {
         padding: 0 30px;
     }
+
     .container-block-1{
-        padding: 0 30px; 
+        padding: 0 30px;
     }
+
     .site-field{
         padding: 0 20px;
         width: unset;
@@ -2818,10 +2219,7 @@ body{
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
- 
-    .title-form {        
-        right: 50px;
-    }
+
     .card-wrapper{
         grid-template-rows: repeat(1, 465px);
     }
@@ -2832,10 +2230,8 @@ body{
 
     .header-box-desription {
         padding-left: 50px;
-        padding-right: 230px;
     }
 
-   
     .wrapper-accordion{
         padding: 0 20px;
     }
@@ -2845,22 +2241,26 @@ body{
         padding-right: 30px;
     }
 
-   
-
     .header-left{
         padding-left: 50px;
     }
 
-   
     .card__face--back{
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .wrapper-title-form {
+        margin-right: 100px;
+    }
 }
 
+@media (max-width: 800px)  {
 
+    .header-box-desription {
+        padding-left: 20px;
+    }
 
-@media (max-width: 800px)  { 
     .about-block{
         height: 300px;
     }
@@ -2868,7 +2268,6 @@ body{
     .arrow-div {
         width: 100px;
     }
-   
 
     .footer-row{
         display: grid;
@@ -2876,7 +2275,7 @@ body{
         gap: 50px;
     }
 
-    .footer-row div:nth-child(2){        
+    .footer-row div:nth-child(2){
         padding-left: 20px;
         padding-right: 20px;
         align-items: flex-start;
@@ -2889,7 +2288,7 @@ body{
     }
 
     .container-block-1{
-        padding: 0; 
+        padding: 0;
     }
 
     .stage-wrapper {
@@ -2905,8 +2304,6 @@ body{
         padding: 0 20px;
     }
 
-   
-
     .stage-wrapper-color {
         padding-left: 0px;
         padding-right: 0px;
@@ -2916,19 +2313,10 @@ body{
         padding-left: 0px;
         padding-right: 0px;
     }
-   
+
     .btn-overflow {
         padding: 0 5px;
     }
-    .icon-message{
-        width: 25px;
-        height: 25px;
-    }
- 
-    .site-description span:first-child{
-        font-size: 14px;
-    }
-    
 
     .container-background, .container-header {
         height: 570px;
@@ -2942,31 +2330,13 @@ body{
         padding-right: 20px;
     }
 
-   
     .itc-slider__indicators {
         bottom: -10px;
     }
 
-   
-
     .wrapper-title-form{
-        position: absolute;
-        top: 450px;
-        justify-content: center;
+        margin-right: 40px;
     }
-   
-    .title-form{
-        padding-right: 20px;
-        right: 0px;
-        bottom: -10px; 
-    }
-
-
-
-    .pricesite-title h2 {
-        text-align: center;
-    }
-
 
     .box-benefit{
         padding-left: 20px;
@@ -2976,7 +2346,6 @@ body{
     .stage-text {
         height: 135px;
         width: 110px;
-        padding-left: 10px;
         padding-top: 13px;
         font-size: 13px;
         line-height: 18px;
@@ -2995,7 +2364,7 @@ body{
         padding-top: 2px;
     }
 
-    .text-right-pricedesign {        
+    .text-right-pricedesign {
         right: -115px !important;
     }
 
@@ -3035,14 +2404,19 @@ body{
     .wrapper-title-padding {
         padding-top: 20px;
         padding-bottom: 50px;
-    }    
-}   
+    }
+}
 
 @media (max-width: 735px){
-    .card-wrapper {        
-        
-        padding-left: 20px;
-        padding-right: 20px;
+    .card-wrapper {
+        width: 100%;
+    }
+
+    .container-card-wrapper {
+        overflow-x: scroll;
+        margin: 0 20px;
+        align-items: unset;
+        padding-bottom: 20px;
     }
 
     .site-field{
@@ -3053,13 +2427,13 @@ body{
     .field1-box img{
         height: 430px;
     }
+
     .field1 {
         grid-area: 1 / 1 / 3 / 3;
     }
     .field4 {
         grid-area: 3 / 1 / 4 / 5;
     }
-
     .field5{
         grid-area: 4 / 1 / 5 / 5;
     }
@@ -3085,16 +2459,14 @@ body{
     .field1-box img{
         height: unset;
     }
-    
 }
 
 @media (max-width: 650px){
-
     .is-selected, .benefit-center-img{
         aspect-ratio: 4/3;
     }
     .googleform{
-        width: 100vw !important;         
+        width: 100vw !important;
     }
     .field1 {
         grid-area: 1 / 1 / 2 / 3;
@@ -3108,13 +2480,12 @@ body{
         height: 350px;
     }
 
-
-    .card-wrapper {        
+    .card-wrapper {
         grid-template-rows: repeat(1, 480px);
     }
 }
 
-@media (max-width: 600px)  { 
+@media (max-width: 600px)  {
     .field1-box img{
         height: 370px;
     }
@@ -3122,44 +2493,23 @@ body{
     .card-wrapper {
         grid-template-rows: repeat(1, 520px);
     }
-    .title-text {
-        padding-bottom: 40px;
-        margin-left: 0;
-        margin-right: 0;
-        width: unset;
-    } 
-
-
-
-    
-
-    .btn-box-desription {
-        width: 110px;
-    }
-
 }
 
-@media (max-width: 550px)  { 
+@media (max-width: 550px)  {
     .field1-box img{
         height: unset;
-    }
-    .container-card-wrapper {
-        overflow-x: scroll;
-        margin: 0 20px;
-        width: unset;
     }
     .btn-card-price{
         width: 120px;
     }
-    
-    .offer-title{
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-        font-size: 30px;
-        line-height: 36px;
-        width: unset;
+
+    .wrapper-title-form{
+        display: none;
     }
+
+    .offer-title{
+        font-size: 30px;
+        line-height: 36px;    }
 
     .offer-description{
         padding-left: 20px;
@@ -3170,7 +2520,7 @@ body{
 
     .carousel-header-box{
         padding-top: unset;
-    }   
+    }
 
     .header-description-title {
         line-height: 20px;
@@ -3178,48 +2528,22 @@ body{
 
     .title-text{
         padding-top: 40px;
-        padding-bottom: 40px;
         text-align: center;
     }
 
     .btn-wpapper{
         justify-content: center;
-    }
-
-   
-
-    .slogan{
-        grid-row-gap: 10px;
-        padding-top: 60px;
-    }
-
-    .slogan-header {
-        font-size: 28px;
-        line-height: 39px;
-    }
-
-    .pricesite-title h2 {
-        font-size: 28px;
-        line-height: 36px;
-    }    
-
-    .height-form-offer {
-        height: 200px !important;
-    }
+    }      
 
     .card-wrapper{
         grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(1, 450px);        
+        grid-template-rows: repeat(1, 450px);
         grid-row-gap: 20px;
         justify-content: unset;
-        width: 300px;        
+        width: 300px;
         margin-left: 0;
         padding-left: 0;
         padding-bottom: 50px;
-    }
-
-    .container-card-wrapper{
-        padding-bottom: 40px;
     }
 
     .stage-title h2{
@@ -3228,13 +2552,8 @@ body{
     }
 
     .header-box-desription{
-        padding-left: 20px;
-        padding-right: 20px;
-        height: 100%;
-        justify-content: space-evenly
+        padding: 0 5%;
     }
-
-    
 
     .indicators-bottom-up{
         bottom: 50px !important;
@@ -3247,73 +2566,27 @@ body{
         bottom: 5%;
     }
 
-    .header-box > div:first-child{
-        justify-content: unset;
-    }
-
     .btn-desription-price + .btn-desription-service {
-        margin-left: 20px;       
+        margin-left: 20px;
     }
-
-   
 
     .btn-box-desription {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .displaynoneminwidth{
         display: none;
     }
-
-
-    .header-box > div:last-child{
-        padding-right: unset;
+    .header-box{
+        align-items: center;
     }
-     
-
-    .form-offer-box {
-        padding: 18px 15px 0 15px;
-    }
-    
-    .height-form-offer h2 {
-        font-size: 16px;
-        padding-bottom: 10px;
-        line-height: 18px;
-    }
-
- 
-
-    .form-offer-box input {
-        width: 90%;
-    }
-
-    .btn-form-offer-box{
-        height: 55px;
-    }
-
-    .form-offer {
-        display: none;    
-    }
-
-
-    .form__message {
-        padding-left: 5px;
-    }
-    
-
-    
-    .title-form{
-        padding-left: 20px; 
-        padding-right: 20px;
-    }    
 
     .container-header, .container-background, .header-box{
         height: 100vh;
+        max-height: 970px;
     }
-
-
-}  
+}
 
 @media (max-width: 505px){
     .field1-box img{
@@ -3386,89 +2659,30 @@ body{
         padding-bottom: 25px;
     }
 
-    
-
     .offer-description{
         text-align: left;
     }
 
-  
-
-    .btn-form-offer-box{
-        width: 130px;
-        height: 50px;
-        margin-top: 5px;
-    }
-    
-    .btn-box-desription{
-        height: 50px !important;
-        margin-top: 0;
-    }
-    
     .title-text {
-        margin-left: 0;
-        margin-right: 0;
-        width: fit-content;
         letter-spacing: .8px;
         line-height: 36px;
-        font-weight: normal;
+        font-size: 26px;
     }
 
     .header-box-desription{
         padding-top: 50px;
     }
 
-    .title-text{
-        font-size: 26px !important;
-        
-    }
-
     .panel{
         margin: 0;
         padding: 0;
-    }
-   
-  
-
-
-
-    .title-form {
-        display: flex;
-        flex-direction: row;
-        padding-left: 0;
-        padding-right: 0;        
-        bottom: -350px;
-        margin: 0 auto;
-        right: unset;
-    }
-
-    .wrapper-title-form {
-        top: 450px;
     }
 
     .wrapper-accordion{
         padding: 0 5px;
     }
 
-    .title-form div + div {
-        margin-left: 20px;
-    }
-
-    
-
-    .height-form-offer {
-        height: 215px !important;
-    }
-
-    .form-offer-box {
-        padding: 20px;
-    }
-
-    .form-offer-box input {
-        width: 90%;
-    }
-
-    .site-description{        
+    .site-description{
         width: 180px;
     }
 
@@ -3476,7 +2690,7 @@ body{
         padding-bottom: 30px;
         padding-left: 0;
     }
-    
+
     .pricesite-title{
         padding-top: 10px;
         margin: unset;
@@ -3484,45 +2698,22 @@ body{
     }
 
     .pricesite-title h2{
-        display: flex;
-        flex-direction: column;
         padding-top: 50px;
-        font-size: 26px;
         letter-spacing: .8px;
         font-weight: normal;
-    }
-
-    .slogan{
-        padding-top: 50px;
-        grid-row-gap: 10px;
-        padding-bottom: 25px;
-    }
-
-    .slogan-header{
-        font-size: 26px;
-        text-align: left;
-        margin-right: 20px;
-        width: fit-content;
-        letter-spacing: 2px;
-        font-weight: normal;
-    }
+    }    
 
     .title-benefit-under {
         flex-direction: column;
     }
 
-    .accordion-stage{
-        margin-top: 25px;
-        margin-bottom: 30px;
-    }
     .box-benefit{
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
         grid-template-rows: none;
     }
 
-  
     .is-selected{
-        flex-direction: column;    
+        flex-direction: column;
     }
 
     .benefit-center{
@@ -3530,24 +2721,9 @@ body{
         grid-area: unset;
     }
 
-    .benefit-1{
+    .benefit-1, .benefit-2, .benefit-3, .benefit-4, .benefit-5, .benefit-6{
         grid-area: unset;
-    }
-    .benefit-2{
-        grid-area: unset;
-    }
-    .benefit-3{
-        grid-area: unset;
-    }
-    .benefit-4{
-        grid-area: unset;
-    }
-    .benefit-5{
-        grid-area: unset;
-    }
-    .benefit-6{
-        grid-area: unset;
-    }
+    }   
 
     .benefit-center-img {
         object-fit: cover;
@@ -3562,25 +2738,14 @@ body{
         max-height: 220px;
     }
 
-  
-
-
     .stage-wrapper .itc-slider__indicators {
         bottom: 30px;
     }
-
-    .itc-slider__btn {
-        top: 20px;
-    }
-
-  
 
     .header-description-title {
         line-height: 22px;
         text-align: left;
     }
-
-    
 
     .indicators-bottom-up{
         bottom: 5px !important;
@@ -3588,9 +2753,9 @@ body{
 
     .card-wrapper{
         grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(1, 440px);        
+        grid-template-rows: repeat(1, 440px);
         justify-content: start;
-        padding-left: unset; 
+        padding-left: unset;
         padding-right: unset;
     }
 
@@ -3604,17 +2769,13 @@ body{
     .site-field p {
         text-align: left;
     }
-    
+
     .offer-title{
         font-size: 26px;
-        line-height: 38px;        
+        line-height: 38px;
         padding-bottom: 30px;
     }
-   
-    .btn-stage-set-width{
-        margin-top: 30px;
-    }
-    
+
 }
 
 @media (max-width: 465px){
@@ -3627,64 +2788,18 @@ body{
         line-height: 30px;
     }
 
-    .form-offer {
-        width: 90vw;
-        --smooth-corners: unset;
-        -webkit-mask-image: unset;
-    }
-
-    .form-offer-box input{
-        --smooth-corners: unset;
-        -webkit-mask-image: unset;
-    }
-
-    .btn-form-offer-box {
-        width: 110px;
-        height: 50px;
-    }
-
-    .height-form-offer {
-        height: 155px !important;        
-    }
-
-    .title-form {        
-        bottom: -460px;
-        flex-direction: column;
-    }
-
-    .title-form div + div {
-        margin-top: 20px;
-        margin-left: 0;
-    }
     .pricesite-title h2{
         font-size: 22px;
         line-height: 30px;
     }
 
-
-
-   
     .title-text{
-        width: 100%;
-        letter-spacing: 1px;
-        font-size: 22px  !important;
-        padding-bottom: 20px;
-        line-height: 30px;
-    }
-
-    .slogan-header{
         font-size: 22px;
         line-height: 30px;
-        letter-spacing: 2px;
-        font-weight: normal;
     }
 
     .header-box-desription {
         padding-top: 60px;
-    }
-
-    .wrapper-title-form {
-        top: 540px;
     }
 
     .field1{
@@ -3696,17 +2811,14 @@ body{
 }
 
 @media (max-width: 390px){
-    .card-wrapper{      
+    .card-wrapper{
         justify-content: start;
         grid-auto-rows: 210px;
-        padding-left: unset; 
+        padding-left: unset;
         padding-right: unset;
     }
-
-   
-
     .site-description{
-        display: none;        
+        display: none;
     }
 
     .btn-card-price{
@@ -3716,46 +2828,6 @@ body{
     .header-box-desription {
         padding-top: 30px;
     }
-}
-
-
-
-@media (max-width: 365px){
-   
-    .itc-slider__btn {
-        top: 30px;
-    }   
-}
-
-@media (max-width: 345px){
-    .title-text {
-        padding-bottom: 20px;
-    }
-    
-    .title-form {
-        bottom: -470px;
-    }
-}
-
-
-@media (max-width: 330px){
-
-    .height-form-offer {
-        height: 190px !important;        
-    } 
-
-    .wrapper-title-form {
-        top: 540px;
-    }  
-
-    .form-offer-box {
-        padding: 20px;
-    }
-
-    .title-form {
-        bottom: -500px;
-    }
-    
 }
 
 @font-face {
