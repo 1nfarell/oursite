@@ -31,12 +31,8 @@ $(document).ready(function(){
     }
     let pag = new Pagination();
     pag.output = output;
-<<<<<<< HEAD
     pag.perPage = 6;
     pag.maxPage = 2;
-=======
-    pag.perPage = 3;
->>>>>>> ff67f1287620f32edf99b97a9377cc4ce599bbc5
     pag.setoutputRoot(document.querySelector('#main-center'))
     pag.renderNavigation(document.querySelector('.pagination'));
     pag.renderFirstPage();

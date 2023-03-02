@@ -6,6 +6,11 @@
     text-decoration: none;
 }
 
+.container-header{
+    height: 350px;
+    background-position: center;
+}
+
 .header-nav-1{
     display: flex;
     border-radius: 30px;
@@ -32,93 +37,25 @@
 
 .filters{
     display: flex;
-    padding: 40px 0;
-    min-width: 1180px;
+    max-width: 1180px;
+    width: 100%;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 40px;
     border-top: 1px solid rgba(255,255,255,.2);
     border-bottom: 1px solid rgba(255,255,255,.2);
+    justify-content: center;
 }
-
-.filter + .filter{
-    padding-left: 20px;
-}
-
-.filter select{
-    border-radius: 30px;
-    height: 50px;
-    width: 180px;
-    font-family: "RussoOne-Regular";
-    font-size: 14px;
-    border: 0;
-    color: rgba(255,255,255,.9);
-    text-align: center;
-    background: linear-gradient(269deg, rgba(139,122,168,1) 0%, rgba(39,38,61,1) 100%);
-    background-size: 400% 400%;
-    box-shadow: -5px -5px 7px 3px rgb(0 0 0 / 10%);
-    
-}
-
-
-.filterCategories option{
-    background: rgb(39,38,61);   
-}
-
-.filter-long-string{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.filter-long-string input{
-    height: 40px;
-    width: 200px;
-    background: linear-gradient(269deg, rgba(139,122,168,1) 0%, rgba(39,38,61,1) 100%);
-    background-size: 400% 400%;
-    box-shadow: -5px -5px 7px 3px rgb(0 0 0 / 10%);
-    border-radius: 30px;
-    border: 0;
-    padding-left: 50px;
-    caret-color: rgba(255,255,255,.5);
-    color: rgba(255,255,255,.9);
-}
-
-.filter-long-string input::placeholder{
-    color: rgba(255,255,255,.5);
-}
-
-.search-menu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.search-menu div + div{
-    padding-left: 20px;
-}
-
-.SearchIcon{
-    position: absolute;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-}
-
-.DeleteIcon{
-    width: 20px;
-    height: 20px;
-}
-
-.DelSearch{
-    display: flex;
-    position: absolute;
-    right: 15px;
-}
-
 /* блок со статьями */
 
+.main-menu option:hover{
+    color: rgba(133, 224, 171, 1);
+}
+
+.main-menu option:active{
+    transform: scale(.95);
+}
 
 .main{
     display: flex;
@@ -148,15 +85,10 @@
     width: 100%;
 }
 
-
-
 .main-menu{
     display: flex;
     padding-left: 20px;
     padding-right: 15px;
-    margin-right: 40px;
-    border-right: 1px solid rgba(255,255,255,.2); 
-    width: 47%;
     flex-wrap: wrap;
     line-height: 22px;
 }
@@ -165,6 +97,9 @@
     padding-right: 20px;
 }
 
+.main-menu option:first-child{
+    padding-right: 20px;
+}
 
 .main-field{
     background: #000000;
@@ -423,50 +358,35 @@ p.post-date{
 
 
 /*хедер в блог*/
-.carousel-header-box {
-    padding-top: unset;
-}
 .header-box-blog{
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    width: 1180px;
     height: 970px;
+    max-width: 1180px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
-
 .title-text {
-    padding-right: 10%;
+    padding-top: 40px;
     line-height: 58px;
     letter-spacing: 3.5px;
 }
 
-.header-box-desription-blog{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.title-description-box-blog{
-    grid-template-columns: 250px;
-    display: grid;
-    gap: 60px;
-    
-}
-.title-description{
-    border-left: 2px rgba(133, 224, 171, 1) solid;
-    padding-left: 10px;
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: normal;
-}
-
 @media (max-width: 1240px){
-    .carousel-header-box{
-        display: flex;
-        justify-content: center;
-        max-width: 1240px;
-        width: 100%;
-        
+    .header{
+        height: 50px;
+    }
+
+    .header-wrapper{
+        height: 50px;   
+    }
+
+    .logo-icon {
+        width: 32px;
+        height: 40px;
     }
     .main-title{
         font-size: 28px;
@@ -488,29 +408,12 @@ p.post-date{
         line-height: 39px !important;
         padding-right: 2%;
     }
-    .title-description-box-blog {
-        grid-template-columns: 180px;
-        display: grid;
-        gap: 25px;
-    }
     .container-block-1{
         padding:0 20px;
         align-items: unset;
     }
     .header-box-blog {
         height: 580px;
-        width: 100%;
-        padding: 0 170px
-    }
-    .title-description-box-blog{
-    }
-
-    .filters{
-        min-width: unset;
-    }
-    .filter-long-string input{
-        min-width: 170px; 
-        height: 36px;
         width: 100%;
     }
 
@@ -522,19 +425,7 @@ p.post-date{
         padding-left: 60px;        
     }
 }
-@media (max-width: 980px){
-    .header-box-blog {
-        padding: 0 50px;
-    }
-    .main-menu{
-
-    }
-}
 @media (max-width: 910px){
-   
-    .main-menu{
-        display: none;
-    }
 
     .post__rightcontainer {
         min-width: 150px;
@@ -545,16 +436,7 @@ p.post-date{
 
 
 @media (max-width: 800px){
-    .header-box-blog {
-        padding: 0 20px;
-        
-    }
-    .container-header{
-        height:560px;
-    }
-    .container-background{
-        height:560px;
-    }
+    
 
     .post-general {
         padding-left: 20px;
@@ -607,21 +489,7 @@ p.post-date{
 }
 
 @media (max-width: 550px){
-    .header-box-desription-blog {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .title-description-box-blog {
-        grid-template-columns: 1fr;
-        padding-top: 30px;
-        width: 100%;
-        gap: 10px;
-    }
 
-    .title-description{
-        font-size: 14px;
-        line-height: 19px;
-    }
     .site-description {
         display: none;
     }
@@ -671,18 +539,7 @@ p.post-date{
         text-indent: 20px;
     }
 
-    .header{
-        height: 50px;
-    }
-
-    .header-wrapper{
-        height: 50px;   
-    }
-
-    .logo-icon {
-        width: 32px;
-        height: 40px;
-    }
+   
 
     .post {
         padding-top: 70px;
@@ -694,44 +551,8 @@ p.post-date{
 }
 @media (max-width: 420px){
     
-    .title-description-box-blog {
-        grid-template-columns: 1fr;        
-    }
-    .container-header{
-        height:650px;
-    }
-    .container-background{
-        height:650px;
-    }
     .header-box-blog {
         height: 100%;
-    }
-
-    .carousel-header-box {
-        height: 100%;
-    }
-
-    .filter-long-string input{
-        min-width: 100px;
-        width: 100%;
-        
-    }
-    .filter-long-string{
-        padding-left: 20px;
-    }
-
-    .SearchIcon{
-        left: 26px;
-    }
-    .filter select{
-        min-width: 100px;
-        width: 100%;
-        white-space: pre-wrap;
-        text-align: left;
-        padding-left: 10px;
-    }
-    .filter{
-        width: 50%;
     }
     .main-center {
         grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );

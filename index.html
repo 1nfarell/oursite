@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Создание и Разработка Сайтов в Волгограде - MNDP</title>
 
-    <link rel="stylesheet" href="/assets/css/itc-slider.min.css">
+    
     <link rel="stylesheet" href="/assets/css/index.css">
-
+    <link rel="stylesheet" href="/assets/css/itc-slider.min.css">
     <meta name="application-name" content="Создание и Разработка Сайтов в Волгограде - MNDP">
 
     <meta property="og:type" content="website">
@@ -30,15 +30,14 @@
     <link rel="manifest" href="/images/site.webmanifest">
 </head>
 <body>
-    
     <div class="container" id="ancor">
         <!-- хедер  -->
         <header>
             <div id="header" class="header-wrapper">
                 <div class="header">
-                    <div class="header-left">                        
+                    <div class="header-left">
                         <a rel="nofollow" id="hide-logo" class="logo" href="#ancor">
-                            <img class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
+                            <img loading=lazy class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
                         </a>
                         <div class="site-description">
                             <!-- <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span> -->
@@ -49,7 +48,7 @@
                         <a rel="nofollow" class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a>
                         <div class="dropdown dropdown-high">
                             РАЗРАБОТКА САЙТОВ
-                            <img class="icon-dropdown" src="/images/plus.png" alt="меню">
+                            <img loading=lazy class="icon-dropdown" src="/images/plus.png" alt="меню">
                             <div class="dropdown-content">
                                 <a rel="nofollow" class="header-ref" href="#stage">ЭТАПЫ РАБОТЫ</a>
                                 <a rel="nofollow" class="header-ref" href="#price">УСЛУГИ</a>
@@ -60,7 +59,7 @@
                         </div>
                         <!-- <div class="dropdown dropdown-high">
                             РАБОТА С ТЕКСТОМ
-                            <img class="icon-dropdown" src="/images/plus.png" alt="меню">
+                            <img loading=lazy class="icon-dropdown" src="/images/plus.png" alt="меню">
                             <div class="dropdown-content">
                                 <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
                                 <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>
@@ -70,7 +69,7 @@
                     </div>
                     <div class="menu">
                         <div class="dropdown dropdown-show">
-                            <img class="icon-message" src="/images/menu.png" alt="меню">
+                            <img loading=lazy class="icon-message" src="/images/menu.png" alt="меню">
                             <div class="dropdown-content">
                                 <a rel="nofollow" class="header-ref" href="/">ГЛАВНАЯ</a>
                                 <a rel="nofollow" class="header-ref" href="#stage">ЭТАПЫ РАБОТЫ</a>
@@ -83,16 +82,11 @@
                                 <a class="header-ref" href="/blog">БЛОГ</a> -->
                             </div>
                         </div>
-                        <div class="title-icon-message caret-site">
-                            <i>хочу</i>
-                            <div class="box-caret1">
-                                <span class="caret">
-                                    <i>сайт!</i>
-                                </span>
-                            </div>
+                        <div class="title-icon-message">
+                            <i>хочу</i><i class="caret">сайт!</i>
                         </div>
-                        <a rel="nofollow" href="tg://resolve?domain=maksbeketsky"><img class="icon-message" src="/images/header-telegram.png" alt="написать в telegram"></a>
-                        <a rel="nofollow" href="https://wa.me/79195473332?text=Добрый&#32день.&#32Какой&#32вопрос&#32Вас&#32интересует?"><img class="icon-message" src="/images/header-whatsup.png" alt="написать в whatsup"></a>
+                        <a rel="nofollow" href="tg://resolve?domain=maksbeketsky"><img loading=lazy class="icon-message" src="/images/header-telegram.png" alt="сделать заказ в telegram"></a>
+                        <a rel="nofollow" href="https://wa.me/79195473332?text=Добрый&#32день.&#32Какой&#32вопрос&#32Вас&#32интересует?"><img loading=lazy class="icon-message" src="/images/header-whatsup.png" alt="сделать заказ в whatsup"></a>
                     </div>
                 </div>
             </div>
@@ -100,33 +94,25 @@
         <!-- main  -->
         <main>
             <!-- первый блок  -->
-            <div class="container-header background-bubbles container-radius-bottom">
-                
-                <div class="container-background">
-                </div>
+            <div class="container-header container-radius-bottom">                
                 <!-- <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Разработка сайтов и дизайна</h1> -->
                 <div class="wrapper-title-form">
-                    <div class="title-form">
-                        <div class="form-offer">
-                            <div class="form-offer-box">
-                                <div class="form-offer-box-title">Закажите создание сайта  <i class="italic-green">сейчас!</i></div>
-                            </div>
-                            <form id="form-submit" class="form-offer-box">
-                                <label for="name">Текст сообщения</label> 
-                                <textarea cols="30" rows="10" name="name" id="name" type="text" placeholder="" autocomplete="off" maxlength="125" required></textarea>
-                                <label for="mail">Почта для обратной связи</label>
-                                <input name="mail" id="mail" type="email" placeholder="" autocomplete="off" maxlength="35" required>
-
-                                <div class="form-offer-box-submit">
-                                    <button id="pressbtnform" class="btn-form-offer-box" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
-                                    <div class="form__message">
-                                        <!-- Всплывающие сообщения об отправке -->
-                                        <div class="preloader"></div>
-                                        <p class="contact-form__message"></p>
-                                    </div>
+                    <div class="form-offer">                        
+                        <div class="form-offer-box-title">Закажите создание сайта  <i class="italic-green">сейчас!</i></div>                        
+                        <form id="form-submit" class="form-offer-box">
+                            <label for="name">Текст сообщения</label>
+                            <textarea class="form-submit-field" name="name" id="name" type="text" placeholder="" autocomplete="off" maxlength="125"  required></textarea>
+                            <label for="mail">Почта для обратной связи</label>
+                            <input class="form-submit-field" name="mail" id="mail" type="email" placeholder="" autocomplete="off" maxlength="35" required>
+                            <div class="form-offer-box-submit">
+                                <button id="pressbtnform" class="btn-form-offer-box" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                                <div class="form__message">
+                                    <!-- Всплывающие сообщения об отправке -->
+                                    <div class="preloader"></div>
+                                    <p class="contact-form__message"></p>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="itc-slider carousel-header-box" data-slider="itc-slider" data-autoplay="true" data-interval="10000" data-loop="true">
@@ -134,30 +120,26 @@
                         <div class="itc-slider__items">
                             <div class="itc-slider__item">
                                 <div class="header-box">
-                                    <div>
-                                        <div class="header-box-desription">                                            
-                                            <div class="title-text">РАСКРОЙ ВЕСЬ ПОТЕНЦИАЛ БИЗНЕСА В ИНТЕРНЕТЕ</div>
-                                            <div class="btn-wpapper">
-                                                <button class="btn-box-desription btn-desription-price" type="button" onclick="location.href='/form';">СДЕЛАТЬ ЗАКАЗ</button>
-                                                <button class="btn-box-desription btn-desription-service" type="button" onclick="location.href='#price';">ПЕРЕЙТИ К УСЛУГАМ</button>
-                                            </div>                                            
+                                    <div class="header-box-desription">
+                                        <h1 class="title-text">КАЧЕСТВЕННАЯ РАЗРАБОТКА САЙТА С ГАРАНТИЕЙ РЕЗУЛЬТАТА</h1>
+                                        <div class="btn-wpapper">
+                                            <button class="btn-box-desription btn-desription-price" type="button" onclick="location.href='/form';">СДЕЛАТЬ ЗАКАЗ</button>
+                                            <button class="btn-box-desription btn-desription-service" type="button" onclick="location.href='#price';">ПЕРЕЙТИ К УСЛУГАМ</button>
                                         </div>
-                                    </div>
+                                    </div>                                   
                                 </div>
                             </div>
                             <div class="itc-slider__item">
                                 <div class="header-box">
-                                    <div>
-                                        <div class="header-box-desription">                                            
-                                            <h1 class="title-text">КАЧЕСТВЕННАЯ РАЗРАБОТКА САЙТА С ГАРАНТИЕЙ РЕЗУЛЬТАТА</h1>                                                
-                                            <div class="btn-wpapper">
-                                                <button class="btn-box-desription btn-desription-price" type="button" onclick="location.href='/form';">СДЕЛАТЬ ЗАКАЗ</button>
-                                                <button class="btn-box-desription btn-desription-service" type="button" onclick="location.href='#price';">ПЕРЕЙТИ К УСЛУГАМ</button>
-                                            </div>                                            
+                                    <div class="header-box-desription">
+                                        <div class="title-text">РАСКРОЙ ВЕСЬ ПОТЕНЦИАЛ БИЗНЕСА В ИНТЕРНЕТЕ</div>
+                                        <div class="btn-wpapper">
+                                            <button class="btn-box-desription btn-desription-price" type="button" onclick="location.href='/form';">СДЕЛАТЬ ЗАКАЗ</button>
+                                            <button class="btn-box-desription btn-desription-service" type="button" onclick="location.href='#price';">ПЕРЕЙТИ К УСЛУГАМ</button>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
                     <ol class="itc-slider__indicators">
@@ -169,69 +151,58 @@
             <!-- основные блоки  -->
             <div class="container-background-block-1">
                 <!-- преимущества и выгоды  -->
-                <div class="container-block-1">
-                    <div id="benefit" class="wrapper-container-block-1">
-                        <div>
-                            <div class="pricesite-title">
-                                <h2>6 причин почему заказать создание сайта лучше в MNDP</h2>
-                            </div>
-                            <div class="box-benefit">
-                                <div class="benefit-1">
-                                    <div class="el"></div>
-                                    <span>Разрабатываем сайты для любых целей: от лендингов до корпоративных.</h3>
-                                </div>
-                                <div class="benefit-2">
-                                    <div class="el"></div>
-                                    <span>Создаем быстрые, адаптивные сайты для всех устройств.</span>
-                                </div>
-                                <div class="benefit-3">
-                                    <div class="el"></div>
-                                    <span>Не используем шаблоны, чтобы обеспечить масштабируемость и настройку сайта в будущем.</span>
-                                </div>
-                                <div class="benefit-4">
-                                    <div class="el el-right"></div>
-                                    <span class="benefit-text-left">Делаем эффективные сайты под конкретную целевую аудиторию с уникальным дизайном.</span>
-                                </div>
-                                <div class="benefit-5">
-                                    <div class="el el-right"></div>
-                                    <span class="benefit-text-left">Создаем фирменный стиль, дизайн, включая логотипы и баннеры.</span>
-                                </div>
-                                <div class="benefit-6">
-                                    <div class="el el-right"></div>
-                                    <span class="benefit-text-left">Пишем качественный текст, продающие заголовки, рассчитанные на целевую аудиторию.</span>
-                                </div>
-                                <div class="benefit-center">
-                                    <div class="benefit-center-hidden">
-                                        <img class="benefit-center-img" src="/images/benefit-1.webp" alt="разработка лендингов, сайтов-визиток, корпоративных сайтов, интернет каталогов, промо сайтов">
-
-                                    </div>
-                                    <div class="benefit-center-hidden">
-                                        <img class="benefit-center-img" src="/images/benefit-2.webp" alt="создание сайта под телефон">
-                                        
-                                    </div>
-                                    <div class="benefit-center-hidden">
-                                        <img class="benefit-center-img" src="/images/benefit-3.webp" alt="создание сайта без использования шаблонов">
-
-                                    </div>
-                                    <div class="benefit-center-hidden">
-                                        <img class="benefit-center-img" src="/images/benefit-4.webp" alt="создание сайта и веб дизайна">
-
-                                    </div>
-                                    <div class="benefit-center-hidden">
-                                        <img class="benefit-center-img" src="/images/benefit-5.webp" alt="фирменный стиль, дизайн, логотипы и баннеры">
-
-                                    </div>
-                                    <div class="benefit-center-hidden">
-                                        <img class="benefit-center-img" src="/images/benefit-6.webp" alt="копирайтинг и рерайтинг">
-                                        
-                                    </div>
-                                    <div class="title-benefit-under">
-                                        <img class="benefit-center-img" src="/images/benefit-0.webp" alt="создание сайта">
-
-                                    </div>
-                                </div>
-                            </div>
+                <div id="benefit" class="container-block-1">                    
+                    <div class="pricesite-title">
+                        <h2>6 причин почему заказать создание сайта лучше в MNDP</h2>
+                    </div>
+                    <div class="box-benefit">
+                        <div class="benefit-1">
+                            <div class="el"></div>
+                            <span>Разрабатываем сайты для любых целей: от лендингов до корпоративных.</h3>
                         </div>
+                        <div class="benefit-2">
+                            <div class="el el-right"></div>
+                            <span class="benefit-text-left">Создаем быстрые, адаптивные сайты для всех устройств.</span>
+                        </div>
+                        <div class="benefit-3">
+                            <div class="el"></div>
+                            <span>Не используем шаблоны, чтобы обеспечить масштабируемость и настройку сайта в будущем.</span>
+                        </div>
+                        <div class="benefit-4">
+                            <div class="el el-right"></div>
+                            <span class="benefit-text-left">Делаем эффективные сайты под конкретную целевую аудиторию с уникальным дизайном.</span>
+                        </div>
+                        <div class="benefit-5">
+                            <div class="el"></div>
+                            <span>Создаем фирменный стиль, дизайн, включая логотипы и баннеры.</span>
+                        </div>
+                        <div class="benefit-6">
+                            <div class="el el-right"></div>
+                            <span class="benefit-text-left">Пишем качественный текст, продающие заголовки, рассчитанные на целевую аудиторию.</span>
+                        </div>
+                        <div class="benefit-center">
+                            <div class="benefit-center-hidden">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-1.webp" alt="разработка лендингов, сайтов-визиток, корпоративных сайтов, интернет каталогов, промо сайтов">
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-2.webp" alt="закажите сайт-визитку в волгограде">                                
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-3.webp" alt="закажите лендинг в волгограде">
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-4.webp" alt="закажите создание сайта в волгограде">
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-5.webp" alt="закажите фирменный стиль, дизайн, логотипы и баннеры">
+                            </div>
+                            <div class="benefit-center-hidden">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-6.webp" alt="закажите копирайтинг и рерайтинг">                                
+                            </div>
+                            <div class="title-benefit-under">
+                                <img loading=lazy class="benefit-center-img" src="/images/benefit-0.webp" alt="закажите редизайн сайта">
+                            </div>
+                        </div>                            
                     </div>
                 </div>
                 <!-- этапы разработки -->
@@ -242,18 +213,18 @@
                     <div class="site-field panel-field">
                         <div class="field1">
                             <div class="field1-box">
-                                <img src="/images/stage-1.webp" alt="процесс создания сайта">
+                                <img loading=lazy src="/images/stage-1.webp" alt="процесс создания сайта">
                             </div>
                         </div>
-                        
+
                         <div class="field2">
                             <div class="field-number">
                                 <div>1</div>
                             </div>
                             <h3>Заключение договора и оформление технического задания</h3>
-                            <p>ТЗ и смета составляются одновременно и прикладываются к договору, который 
+                            <p>ТЗ и смета составляются одновременно и прикладываются к договору, который
                                 подтверждает выполнение обязательств с обеих сторон.
-                                Тех. задание описывает проектные задачи, что позволяет исполнителям работать с пониманием требований. 
+                                Тех. задание описывает проектные задачи, что позволяет исполнителям работать с пониманием требований.
                                 Не указанные в ТЗ изменения могут повлечь дополнительные расходы.</p>
                         </div>
                         <div class="field3">
@@ -301,10 +272,10 @@
                                 <div>6</div>
                             </div>
                             <h3>Тестирование и запуск</h3>
-                            <p>Перед запуском сайта, его отлаживают и проверяют на тестовом сервере. После отладки переносят на хостинг. 
-                                Если нет хостинга, то разработчики могут порекомендовать 
-                                или организовать перенос. Старый сайт остается доступен во время разработки нового. 
-                                Также необходимо выбрать имя домена и купить его. 
+                            <p>Перед запуском сайта, его отлаживают и проверяют на тестовом сервере. После отладки переносят на хостинг.
+                                Если нет хостинга, то разработчики могут порекомендовать
+                                или организовать перенос. Старый сайт остается доступен во время разработки нового.
+                                Также необходимо выбрать имя домена и купить его.
                                 Обратите внимание, что популярные имена, особенно из одного слова, могут быть уже заняты.</p>
 
                         </div>
@@ -320,7 +291,7 @@
                                 Это позволит отслеживать посещаемость, поисковые запросы, устройства, географию и другие параметры.</p>
                         </div>
                     </div>
-                    <button class="btn-box-desription btn-desription-service accordion-stage btn-stage-set-width" title="развернуть свернуть текст" type="button"></button>
+                    <button class="btn-box-desription btn-desription-service accordion-stage " title="развернуть свернуть текст" type="button"></button>
                     <div class="itc-slider carousel-pricesite displaynoneminwidth" data-slider="itc-slider" data-autoplay="false" data-loop="false">
                         <div class="itc-slider__wrapper">
                             <div class="itc-slider__items">
@@ -440,87 +411,83 @@
                     <div id="container-pricesite" class="pricesite-title">
                         <h2>Услуги по созданию сайта</h2>
                     </div>
-                    <div class="carousel-pricesite carousel-backgroung-color">
+                    <div class="carousel-pricesite">
                         <div class="container-pricesite">
                             <!-- блок с ценами на сайт -->
-                            <div class="wrapper-pricesite">
-                                <div class="pricesite">
-                                    <div class="pricesite-text"> 
-                                        <p><i class="italic-green">Добро пожаловать в мир веб-разработки!</i> Мы - команда профессионалов, готовых воплотить все самые смелые идеи в жизнь.</p>
-                                        <p>Наша команда специализируется на создании уникальных, интуитивно понятных, функциональных сайтов, 
-                                            которые соответствуют потребностям и требованиям бизнеса.</p>
-                                        <p>Понимаем, что каждый проект уникален, требует индивидуального подхода, 
-                                            поэтому тщательно изучаем потребности, цели каждого заказчика, чтобы создать сайт, 
-                                            который наилучшим образом отразит бизнес и привлечет аудиторию. 
-                                        </p>    
-                                        <p> Наша цель - создать ценный актив, который поможет достичь бизнес-целей. 
-                                            Обращайтесь к нам, мы с радостью поможем достичь успеха в онлайн-мире!</p>                                       
-                                    </div>
-                                    <div class="container-card-wrapper">
-                                        <div class="card-wrapper">                                        
-                                            <div>                                        
-                                                <div class="card">
-                                                    <div class="card__face card__face--front">
-                                                        <div>
-                                                            <img class="card-img" src="/images/card-1.webp" alt="заказать создание сайта">
-                                                            <h3>РАЗРАБОТКА САЙТОВ ЛЮБЫХ ТИПОВ</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card__face card__face--back card-design">
-                                                        <div class="card_facefront">
-                                                            ВКЛЮЧАЕТ:
-                                                            <ul>
-                                                                <li>сбор информации</li>
-                                                                <li>создание макета</li>
-                                                                <li>создание дизайна</li>
-                                                                <li>создание контента (доп.)</li>
-                                                                <li>верстка, разработка</li>
-                                                                <li>наполнение готовым контентом</li>
-                                                                <li>тестирование сайта</li>
-                                                                <li>подбор, регистрация домена</li>
-                                                                <li>размещение на хостинге</li>
-                                                                <li>продвижение сайта (доп.)</li>
-                                                                <li>сопровождение, поддержка (доп.)</li>
-                                                            </ul>
-                                                            <button class="btn-card-price btn-card-pricesite" type="button">300 Р/ЧАС</button>
-                                                        </div>
-                                                    </div>
+                            <div class="pricesite">
+                                <div class="pricesite-text">
+                                    <p><i class="italic-green">Добро пожаловать в мир веб-разработки!</i> Мы - команда профессионалов, готовых воплотить все самые смелые идеи в жизнь.</p>
+                                    <p>Наша команда специализируется на создании уникальных, интуитивно понятных, функциональных сайтов,
+                                        которые соответствуют потребностям и требованиям бизнеса.</p>
+                                    <p>Понимаем, что каждый проект уникален, требует индивидуального подхода,
+                                        поэтому тщательно изучаем потребности, цели каждого заказчика, чтобы создать сайт,
+                                        который наилучшим образом отразит бизнес и привлечет аудиторию.
+                                    </p>
+                                    <p> Наша цель - создать ценный актив, который поможет достичь бизнес-целей.
+                                        Обращайтесь к нам, мы с радостью поможем достичь успеха в онлайн-мире!</p>
+                                </div>
+                                <div class="container-card-wrapper">
+                                    <div class="card-wrapper">                                            
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img loading=lazy class="card-img" src="/images/card-1.webp" alt="заказать создание сайта">
+                                                    <h3>РАЗРАБОТКА САЙТОВ ЛЮБЫХ ТИПОВ</h3>
                                                 </div>
                                             </div>
-                                            <div>
-                                                <div class="card">
-                                                    <div class="card__face card__face--front">
-                                                        <div>
-                                                            <img class="card-img" src="/images/card-2.webp" alt="услуги дизайнера">
-                                                            <h3>ДИЗАЙН</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card__face card__face--back card-design">
-                                                        <div class="card_facefront">
-                                                            УСЛУГИ:
+                                            <div class="card__face card__face--back">
+                                                <div class="card_facefront">
+                                                    ВКЛЮЧАЕТ:
+                                                    <ul>
+                                                        <li>сбор информации</li>
+                                                        <li>создание макета</li>
+                                                        <li>создание дизайна</li>
+                                                        <li>создание контента (доп.)</li>
+                                                        <li>верстка, разработка</li>
+                                                        <li>наполнение готовым контентом</li>
+                                                        <li>тестирование сайта</li>
+                                                        <li>подбор, регистрация домена</li>
+                                                        <li>размещение на хостинге</li>
+                                                        <li>продвижение сайта (доп.)</li>
+                                                        <li>сопровождение, поддержка (доп.)</li>
+                                                    </ul>
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">300 Р/ЧАС</button>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="card">
+                                            <div class="card__face card__face--front">
+                                                <div>
+                                                    <img loading=lazy class="card-img" src="/images/card-2.webp" alt="услуги дизайнера">
+                                                    <h3>ДИЗАЙН</h3>
+                                                </div>
+                                            </div>
+                                            <div class="card__face card__face--back">
+                                                <div class="card_facefront">
+                                                    УСЛУГИ:
+                                                    <ul>
+                                                        <li>флаеры, визитки, рекламные баннеры, листовки, иконки</li>
+                                                        <li>логотипы в нескольких вариантах</li>
+                                                        <li>фирменный стиль
                                                             <ul>
-                                                                <li>флаеры, визитки, рекламные баннеры, листовки, иконки</li>
-                                                                <li>логотипы в нескольких вариантах</li>
-                                                                <li>фирменный стиль
-                                                                    <ul>
-                                                                        <li>оформление визуального образа компании</li>
-                                                                        <li>мокапы логотипа на продуктах компании</li>
-                                                                    </ul>
-                                                                </li>
+                                                                <li>оформление визуального образа компании</li>
+                                                                <li>мокапы логотипа на продуктах компании</li>
                                                             </ul>
-                                                            <button class="btn-card-price btn-card-pricesite" type="button">300 Р/ЧАС</button>
-                                                        </div>
-                                                    </div>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn-card-price btn-card-pricesite" type="button">300 Р/ЧАС</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <span class="setwidthspanpricedescription">* Cтоимость работ будет уточнена после обсуждения деталей проекта</span>
+                                        
                                     </div>
+                                    <span class="setwidthspanpricedescription">* Cтоимость работ будет уточнена после обсуждения деталей проекта</span>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- чаво -->
                 <div id="ask"  class="container-block-1 stage-wrapper-color container-radius-bottom ask-padding-bottom">
@@ -529,7 +496,7 @@
                             <h2>Популярные вопросы при заказе разработки сайта</h2>
                         </div>
                         <div class="wrapper-accordion">
-                            
+
                             <div class="accordion-field-text">
                                 <button class="accordion">Какие сайты предлагаем?</button>
                                 <div class="panel">
@@ -551,30 +518,30 @@
                                                 <li>Сайты любой цели для предоставления информации пользователям.</li>
                                             </ul>
                                         </li>
-                                    </ul>    
-                                </div>                              
+                                    </ul>
+                                </div>
                                 <button class="accordion">Сколько времени длится разработка?</button>
                                 <div class="panel">
                                     <h3 class="panel-title">Как определяются сроки?</h3>
 
-                                    <p>Количество времени требуемое для разработки зависит от тематики, 
-                                        объема, сложности, тестирования, а также качества связи с клиентом. При оглашении 
-                                        сроков указывается приблизительный временной промежуток, точная дата 
+                                    <p>Количество времени требуемое для разработки зависит от тематики,
+                                        объема, сложности, тестирования, а также качества связи с клиентом. При оглашении
+                                        сроков указывается приблизительный временной промежуток, точная дата
                                         согласовывается после полного понимания требований.</p>
 
                                 </div>
                                 <button class="accordion">Как сделать заказ?</button>
                                 <div class="panel">
                                     <h3 class="panel-title">Как заказать создание сайта?</h3>
-                                    <p>Свяжитесь с нами по мессенджерам или предварительно заполните бриф. Мы детально его изучим, 
-                                        после свяжемся с Вами для обсуждения проекта, определимся с видом сайта, целями, уточним 
-                                        стоимость и сроки. После согласования, составим техническое задание, заключим договор. 
+                                    <p>Свяжитесь с нами по мессенджерам или предварительно заполните бриф. Мы детально его изучим,
+                                        после свяжемся с Вами для обсуждения проекта, определимся с видом сайта, целями, уточним
+                                        стоимость и сроки. После согласования, составим техническое задание, заключим договор.
                                         Результат работы - успешно выполненный проект.</p>
-                                </div>    
+                                </div>
                                 <button class="accordion">Как определяется стоимость проекта?</button>
                                 <div class="panel">
                                     <h3 class="panel-title">Стоимость создания сайта.</h3>
-                                    <p>Цена зависит от вида и объема, сложности проекта, дизайна, дополнительных услуг. 
+                                    <p>Цена зависит от вида и объема, сложности проекта, дизайна, дополнительных услуг.
                                         Точная цена устанавливается после составления задания и указывается в договоре.</p>
 
                                 </div>
@@ -582,16 +549,16 @@
                                 <div class="panel">
                                     <h3 class="panel-title">Гарантии выполнения проекта.</h3>
                                     <p>Наши услуги основываются на договоре с юридической силой. Договор обеспечивает безопасность клиента и исполнителя.
-                                        Мы контролируем все этапы самостоятельно, несем ответственность за выполнение, вам не нужно искать 
-                                        дополнительных исполнителей. Это более удобно и надежно для заказчика. 
-                                        Также предлагаем бесконечные бесплатные правки (если это объективные недочеты), если к выполненной работе замечания. 
-                                        Оплачиваете только изменения, выходящие за рамки первоначального заказа. Объективными недочетами считаются неверно 
+                                        Мы контролируем все этапы самостоятельно, несем ответственность за выполнение, вам не нужно искать
+                                        дополнительных исполнителей. Это более удобно и надежно для заказчика.
+                                        Также предлагаем бесконечные бесплатные правки (если это объективные недочеты), если к выполненной работе замечания.
+                                        Оплачиваете только изменения, выходящие за рамки первоначального заказа. Объективными недочетами считаются неверно
                                         выполненные проектные задачи или допущенные ошибки.</p>
                                 </div>
                                 <button class="accordion">Какие дополнительные услуги можно у нас заказать?</button>
                                 <div class="panel">
                                     <h3 class="panel-title">Дополнительные услуги.</h3>
-                                    <p>Копирайтинг, рерайтинг, создание логотипа, разработка дизайна, доработка, 
+                                    <p>Копирайтинг, рерайтинг, создание логотипа, разработка дизайна, доработка,
                                         техническая поддержка. Цена определяется индивидуально.</p>
 
                                 </div>
@@ -613,7 +580,7 @@
                                 </div> -->
                                 <div>
                                     <a rel="nofollow" href="https://окна-открытие.рф">
-                                        <img  src="/images/p-okna.jpg" alt="разработка дизайна, верстка и наполнение сайта оконного завода Открытие">
+                                        <img loading=lazy src="/images/p-okna.jpg" title="Разработка сайта Открытие" alt="разработка дизайна, верстка и наполнение сайта оконного завода Открытие">
                                         Разработка сайта "Открытие"
                                     </a>
                                 </div>
@@ -631,31 +598,31 @@
                         <div class="about-wrapper">
                             <div class="about-block">
                                 <div>
-                                    <img src="/images/v-1.webp" alt="Логотип и визитка для магазина RD">
+                                    <img loading=lazy src="/images/v-1.webp"  alt="Логотип и визитка для магазина RD">
                                     Логотип и визитка "RD"
                                 </div>
                                 <div>
-                                    <img src="/images/v-2.webp" alt="Визитка DUNE">
+                                    <img loading=lazy src="/images/v-2.webp"  alt="Визитка DUNE">
                                     Визитка "DUNE"
                                 </div>
                                 <div>
-                                    <img src="/images/v-3.webp" alt="Подарочная упаковка">
+                                    <img loading=lazy src="/images/v-3.webp"  alt="Подарочная упаковка">
                                     Подарочная упаковка
                                 </div>
                                 <div>
-                                    <img src="/images/v-4.webp" alt="Визитка Небанально">
+                                    <img loading=lazy src="/images/v-4.webp"  alt="Визитка Небанально">
                                     Визитка "Небанально"
                                 </div>
                                 <div>
-                                    <img src="/images/v-5.jpg" alt="Логотип и иконки DUNE">
+                                    <img loading=lazy src="/images/v-5.jpg"  alt="Логотип и иконки DUNE">
                                     Логотип и иконки "DUNE"
                                 </div>
                                 <div>
-                                    <img src="/images/v-6.jpg" alt="Принт на футболку CRAYZHEAD">
+                                    <img loading=lazy src="/images/v-6.jpg"  alt="Принт на футболку CRAYZHEAD">
                                     Принт на футболку "CRAYZHEAD"
                                 </div>
                                 <div>
-                                    <img src="/images/v-7.jpg" alt="Логотип CRAYZHEAD">
+                                    <img loading=lazy src="/images/v-7.jpg"  alt="Логотип CRAYZHEAD">
                                     Логотип "CRAYZHEAD"
                                 </div>
                             </div>
@@ -671,45 +638,45 @@
                         <div class="p-wrapper">
                             <div class="p-block">
                                 <div class="p-block-ref">
-                                    <img class="p-block-img" src="/images/maxime.jpg" alt="руководитель студии">
+                                    <img loading=lazy class="p-block-img" src="/images/maxime.jpg"  alt="руководитель студии">
                                     <div class="block-ref">
                                         <!-- <a href="https://vk.com/beketsky"><img class="icon-message icon-message-invert" src="/images/vk.png" alt="написать в вконтакте"></a> -->
                                         <a rel="nofollow" href="tg://resolve?domain=maksbeketsky"><img class="icon-message" src="/images/header-telegram.png" alt="написать в telegram"></a>
-                                        <a rel="nofollow" href="https://wa.me/79195473332?text=Добрый&#32день.&#32Какой&#32вопрос&#32Вас&#32интересует?"><img class="icon-message" src="/images/header-whatsup.png" alt="написать в whatsup"></a>    
-                                    </div>    
-                                </div>                                
+                                        <a rel="nofollow" href="https://wa.me/79195473332?text=Добрый&#32день.&#32Какой&#32вопрос&#32Вас&#32интересует?"><img class="icon-message" src="/images/header-whatsup.png" alt="написать в whatsup"></a>
+                                    </div>
+                                </div>
                                 <div class="p-block-description">
                                     <span>Бекецкий Максим Сергеевич, 25 лет.</span>
-                                    <span>Project manager, SEO-specialist</span>                                    
+                                    <span>Project manager, SEO-specialist</span>
                                     <span>Образование:</span>
                                     <span>2022, Волгоградский государственный технический университет, Волгоград. Инженерно-экономический факультет, Программная инженерия.</span>
                                 </div>
                             </div>
                             <div class="p-block">
                                 <div class="p-block-ref">
-                                    <img class="p-block-img" src="/images/polina.webp" alt="дизайнер студии">
+                                    <img loading=lazy class="p-block-img" src="/images/polina.webp"  alt="дизайнер студии">
                                     <div class="block-ref">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="p-block-description">
                                     <span>Литвинова Полина Валентиновна, 22 года.</span>
-                                    <span>Web designer, graphic designer</span>                                    
+                                    <span>Web designer, graphic designer</span>
                                     <span>Образование:</span>
                                     <span>2022, школа графического, веб дизайна WAYUP.</span>
                                 </div>
                             </div>
                             <div class="p-block">
                                 <div class="p-block-ref">
-                                    <img class="p-block-img" src="/images/zorin.webp" alt="JS разработчик">
+                                    <img loading=lazy class="p-block-img" src="/images/zorin.webp"  alt="JS разработчик">
                                     <div class="block-ref">
 
                                     </div>
                                 </div>
                                 <div class="p-block-description">
                                     <span>Зорин Даниил, 25 лет.</span>
-                                    <span>React JS developer</span>                                    
-                                    <span>Работает в сфере разработки с 2018 года</span>                                    
+                                    <span>React JS developer</span>
+                                    <span>Работает в сфере разработки с 2018 года</span>
                                     <span>Образование:</span>
                                     <span>2020, Волгоградский государственный технический университет, Волгоград. Инженерно-экономический факультет, Программная инженерия.</span>
                                 </div>
@@ -727,7 +694,7 @@
                         <div class="offer-description">
                             <div>
                                 Тогда заполните
-                                <a rel="nofollow" style="font-size:16px" href="/form"><i>бриф к разработке сайта,</i></a>  
+                                <a rel="nofollow" style="font-size:16px" href="/form"><i>бриф к разработке сайта,</i></a>
                                 либо скачайте, заполните документ на своем ПК и отправьте нам на почту.
                                 Мы определим проектные задачи и свяжемся с Вами для уточнения деталей. Ждем Вашей заявки!
                             </div>
@@ -769,11 +736,11 @@
             </div>
         </footer>
     </div>
-    
+
     <!-- jquery -->
     <script src="/assets/js/jquery-3.6.1.min.js"></script>
-    <!-- itc-slider -->    
-    <script src="/assets/js/itc-slider.min.js" defer></script> 
+    <!-- itc-slider -->
+    <script src="/assets/js/itc-slider.min.js" defer></script>
     <!-- все скрипты -->
     <script src="/assets/js/script.js" defer></script>
     <!-- отправка данных с формы в телегу -->

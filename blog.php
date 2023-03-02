@@ -39,9 +39,7 @@ include 'vendor/pagination.php';
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="manifest" href="/images/site.webmanifest">    
 </head>
-<body>
-    
-    
+<body> 
     <div class="container" id="ancor">
         <!-- хедер  -->
         <header>
@@ -77,61 +75,37 @@ include 'vendor/pagination.php';
                             </div>
                         </div>
                         <a class="header-ref" href="/blog">БЛОГ</a> 
-                                   
-                    </div>
-                    <div class="search-menu">
-                        <div class="filter-long-string"> 
-                            <img class="SearchIcon" src="images/search.svg"> 
-                            <input type="text" id="search" class="search" placeholder="Ищи здесь!">
-                            <div class="DelSearch">
-                                <img  id="btnDelSearch" class="DeleteIcon" style="display:none;" src="images/iconDelete.svg"> 
-                            </div>          
-                        </div>          
-                        
-                        <div class="menu">
-                            <div class="dropdown dropdown-show">
-                                <img class="icon-message" src="/images/menu.png" alt="меню">
-                                <div class="dropdown-content">
-                                    <a class="header-ref" href="/">ГЛАВНАЯ</a> 
-                                    <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
-                                    <a class="header-ref" href="/#price">УСЛУГИ</a>
-                                    <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
-                                    <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
-                                    <a class="header-ref" href="/#about">О НАС</a>  
-                                    <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
-                                    <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>
-                                    <a class="header-ref" href="/blog">БЛОГ</a>   
-                                </div>
+                    </div>  
+                    <div class="menu">
+                        <div class="dropdown dropdown-show">
+                            <img class="icon-message" src="/images/menu.png" alt="меню">
+                            <div class="dropdown-content">
+                                <a class="header-ref" href="/">ГЛАВНАЯ</a> 
+                                <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
+                                <a class="header-ref" href="/#price">УСЛУГИ</a>
+                                <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
+                                <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
+                                <a class="header-ref" href="/#about">О НАС</a>  
+                                <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
+                                <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>
+                                <a class="header-ref" href="/blog">БЛОГ</a>   
                             </div>
                         </div>
-                    </div>                 
+                    </div>                                     
                 </div>
             </div>  
         </header>   
         <!-- main  -->
         <main>   
             <!-- первый блок  -->
-            <div class="container-header background-bubbles container-radius-bottom"> 
+            <div class="container-header"> 
                 
-                <div class="container-background">
-                </div>
                 <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Создание успешных веб-сайтов: искусство разработки, дизайна и интернет-маркетинга</h1>
-                
-                <div class="carousel-header-box">   
-                    <div class="header-box-blog">
-
-                            <div class="header-box-desription-blog">
-                                <h2 class="title-text">МАСТЕР-КЛАСС: РАЗРАБОТКА, ДИЗАЙН И ИНТЕРНЕТ-МАРКЕТИНГ</h2>
-                                <div class="title-description-box-blog">
-                                    <h3 class="title-description"><em class="italic-green">Полный подход  к созданию веб-сайтов.</em></h3>
-                                    <h3 class="title-description"><em class="italic-green">Возможность получить глубокие знания и навыки.</em></h3>
-                                    <h3 class="title-description"><em class="italic-green">Возможность выделиться среди конкурентов.</em></h3>
-                                </div>
-
-                            </div>
-
-                    </div>
-                </div>            
+                 
+                <div class="header-box-blog">
+                    <h2 class="title-text">МАСТЕР-КЛАСС: РАЗРАБОТКА, ДИЗАЙН И ИНТЕРНЕТ-МАРКЕТИНГ</h2>                    
+                </div>
+                           
             </div>  
             <!-- основные блоки  -->      
             <div class="container-background-block-1">  
@@ -141,13 +115,7 @@ include 'vendor/pagination.php';
                         <div class="main-menu">
                                     
                             <?php selectCategories(); ?>  
-                        </div>  
-                        <div class="filter"> 
-                            <select id="filtersort" class="filterCategories"> 
-                                <option value="sortdefault">Самые новые</option>          
-                                <option value="sortdate">Самые старые</option>
-                            </select>           
-                        </div>                          
+                        </div>              
                     </div> 
                 </div>    
                 <!-- main -->
