@@ -1,13 +1,35 @@
 <?php
-
+$shouldCountView = false;
+if(!isset($_COOKIE['suid_' . md5($_GET['id'])])) {
+    setcookie('suid_' . md5($_GET['id']), date('d,m,Y H:i:s', time()),time()+(24*3600));
+    $shouldCountView = true;
+}
 require_once 'StaticConnection.php';
 
 //вывод статей на  страницу post.php
-function generationOutput()
+function generationOutput($shouldCountView)
 {
     $id = $_GET['id'];
 
+
+
+
+    // $ip = isset($_SERVER['HTTP_CLIENT_IP']) 
+    // ? $_SERVER['HTTP_CLIENT_IP'] 
+    // : (isset($_SERVER['HTTP_X_FORWARDED_FOR']) 
+    //   ? $_SERVER['HTTP_X_FORWARDED_FOR'] 
+    //   : $_SERVER['REMOTE_ADDR']);
+
+    //$sth = $db->prepare("SELECT ")
+    
     $db = StaticConnection::getConnection();
+
+    if($shouldCountView) {
+        $state = $db->prepare("UPDATE articles SET views = views + 1 WHERE id = :id");
+        $state->bindValue('id', $id);
+        $state->execute();
+    }
+
     $sth = $db->prepare("SELECT DISTINCT articles.id, title, description, users.id AS id_user, users.full_name, views, date, categories.name 
     FROM articles             
     JOIN categories ON articles.id_categories = categories.id   

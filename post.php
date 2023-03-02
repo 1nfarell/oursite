@@ -95,7 +95,7 @@ include 'vendor/outputPost.php';
     <div class="wrapper-block">
         <div class="main main-color">        
             <div class="main-post">
-                <?php generationOutput(); ?>                              
+                <?php generationOutput($shouldCountView); ?>                              
             </div>    
         </div>
     </div> 
