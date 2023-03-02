@@ -34,6 +34,7 @@ $(document).ready(function(){
     let pag = new Pagination();
     pag.output = output;
     pag.perPage = 6;
+    pag.maxPage = 2;
     pag.setoutputRoot(document.querySelector('#main-center'))
     pag.renderNavigation(document.querySelector('.pagination'));
     pag.renderFirstPage();
