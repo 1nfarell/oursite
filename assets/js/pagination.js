@@ -8,7 +8,11 @@ class Pagination {
         }
         this.#maxPage = maxPage;
     }
-    perPage = 2;    
+    perPage = 2;
+    #sortBy = 'date';
+    sortByViews() {
+        this.#sortBy = 'views';
+    }
     #indicator;
     category = "all";
     #outputRoot = document.querySelector('.pag-items');
@@ -25,7 +29,7 @@ class Pagination {
         }
         this.#currentPage = iNumber;
         this.#getData(this.#currentPage);
-        this.#indicator.text = this.#currentPage; 
+        this.#indicator && (this.#indicator.text = this.#currentPage); 
     }
     visiblePagesCap = 3;
     #navigationLeftArrow = "&laquo;"
@@ -76,6 +80,7 @@ class Pagination {
         formData.append('page', page,);
         formData.append( 'perPage', this.perPage);
         formData.append( 'category', this.category);
+        formData.append( 'sort_by', this.#sortBy);
         let fun = this.#renderData;
         let context = this;
         xhttp.onreadystatechange = function() {

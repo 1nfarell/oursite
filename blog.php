@@ -109,6 +109,18 @@ include 'vendor/pagination.php';
             </div>  
             <!-- основные блоки  -->      
             <div class="container-background-block-1">  
+            <div class="container-block-1">
+                    <div class="wrapper-block">
+                        
+                    <div class="most-viewed__title">ПРОСМАТРИВАЕМЫЕ</div>
+                        <div class="main">
+                            <div class="most-viewed main-center">
+                                    
+                            </div> 
+                        </div>
+                        
+                    </div>
+                </div>
                 <div class="container-block-1">
                     <div class="main-title">ВСЕ СТАТЬИ</div>
                     <div class="filters">
