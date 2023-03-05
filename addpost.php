@@ -124,7 +124,7 @@ include 'vendor/generator.php';
                     <div class="inputReceptDescription" id="Wrapper_add_text">  <!-- поля с текстом -->  </div>
                 </div>
             </div>
-            <input class="saveButton" id="saveButton" type="submit" value="Сохранить рецепт"  />  
+            <input class="saveButton" id="saveButton" type="submit" value="Сохранить"  />  
         </form>            
                                 
         <?php addPost();?>                    
