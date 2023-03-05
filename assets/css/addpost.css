@@ -1,0 +1,121 @@
+.auth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lbl-registr{
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.wrapper-block{
+    padding-top: 100px;
+}
+
+.wrapper-block p{
+    font-size: 18px;
+}
+.wrapper-block--addpost__title{
+    padding-bottom: 20px; 
+    font-size: 18px; 
+    text-align: center;
+}
+.formAdd{
+    max-width: 1140px;
+    width: 100%;
+}
+
+ input[type="file" i].imageRecept,  input[type="file" i].addpicture{
+    margin: 10px;
+    font-family: "RussoOne-Regular";
+    font-size: 16px;
+    width: 100%;
+}
+.header_text, .nameRecept{
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    padding-right: 10px;
+    font-family: "RussoOne-Regular";
+    font-size: 16px;
+    width: 100%;
+}
+
+.saveButton, .add_button_picture, .selectCategories, .auth input, .login-btn, .register-btn{
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    padding-right: 10px;
+    font-family: "RussoOne-Regular";
+    font-size: 16px;
+    width: 200px;
+}
+
+.textRecept, .descriptionRecept{
+    height: 200px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    padding-right: 10px;
+    font-family: "RussoOne-Regular";
+    font-size: 16px;
+    width: 100%;
+}
+/* хедер в кабинете */
+
+
+.header-nav-1 a{
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+}
+
+.container-header{
+    height: 350px;
+    background-position: center;
+}
+
+.header-nav-1{
+    display: flex;
+    border-radius: 30px;
+    padding: 0 20px;
+    height: 50px;
+    width: 80px;
+    align-items: center;
+    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);
+    background-size: 400% 400%;
+}
+
+.header-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 10px;
+    justify-content: center;
+}
+
+.header-right-form-button a, .ref {
+    color: rgba(255,255,255,.8);
+}
+
+.table-field a{
+    color: rgba(255,255,255,.8);
+}
+@media (max-width: 1240px){
+    
+    .textRecept, .descriptionRecept, .header_text, .nameRecept, input[type="file" i].imageRecept, input[type="file" i].addpicture  {
+        width: 90%;
+    }
+}
+
+@media (max-width: 980px){
+    .container-block-1 {
+        padding: 0 30px;
+    }
+
+    .dropdown .icon-message {
+        padding-right: 0px;
+    }
+}

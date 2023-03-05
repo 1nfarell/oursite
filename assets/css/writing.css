@@ -1,0 +1,79 @@
+.benefit-center {
+    grid-area: 1 / 1 / 4 / 3;
+}
+
+.benefit-4, .benefit-5, .benefit-6 {
+    box-shadow: -5px 5px 3px 2px rgb(255 255 255 / 5%);
+}
+
+.card-wrapper-writing{
+    display: grid;
+    grid-template-columns: repeat(4, 265px);
+    grid-template-rows: repeat(2, 270px);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding-bottom: 50px;
+    margin: 0 20px;
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+.card-wrapper-writing div{
+    background: linear-gradient(-45deg, rgba(139,122,168,.7) 0%, rgba(100,90,127,.5) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.5) 100%);background-size: 400% 400%;
+    box-shadow: 10px 10px 7px 3px rgb(0 0 0 / 10%);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: -5px 5px 3px 2px rgb(255 255 255 / 5%);
+}
+
+.card-wrapper-writing-title{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.card-wrapper-writing div p{
+    letter-spacing: .3px;
+}
+
+.box-benefit{
+    padding-bottom: 100px;
+}
+
+@media (max-width: 1240px)  { 
+     /*услуги копирайт и рерайт  */
+     .box-benefit{
+        padding-bottom: 80px;
+    }
+    .card-wrapper-writing{
+        overflow-x: scroll;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-wrapper-writing div p{
+        font-size: 14px;
+        line-height: 19px;
+    }
+     
+    .card-wrapper-writing div{
+        border-radius: 10px;
+        box-shadow: -1px -1px 3px 1px rgb(255 255 255 / 20%);
+    }
+
+    .benefit-4, .benefit-5, .benefit-6 {
+        box-shadow: -1px 1px 1px 1px rgb(255 255 255 / 10%), 1px -1px 1px 1px rgb(255 255 255 / 10%);
+    }
+
+    .benefit-center {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+}
+
+@media (max-width: 505px){
+    .benefit-center {
+        grid-row: 1 !important;
+        grid-area: unset;
+    }
+}

@@ -22,7 +22,7 @@ include 'vendor/outputPost.php';
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="Web Studio MNDP">
+    <meta property="og:site_name" content="MNDP">
     <meta property="og:image" content="/images/banner.jpg">
     <meta name="robots" content="index,follow">
    
@@ -46,10 +46,11 @@ include 'vendor/outputPost.php';
                     <img class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
                 </a>               
                 <div class="site-description">
-                    <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span>  
+                    <span>ВЕБ-СТУДИЯ MNDP</span>  
                 </div> 
             </div>           
-            <div class="header-ref-hide">                           
+            <div class="header-ref-hide">
+                <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a>                            
                 <div class="dropdown dropdown-high">                                
                     РАЗРАБОТКА САЙТОВ
                     <img class="icon-dropdown" src="/images/plus.png" alt="меню">
@@ -76,6 +77,7 @@ include 'vendor/outputPost.php';
                 <div class="dropdown dropdown-show">
                     <img class="icon-message" src="/images/menu.png" alt="меню">
                     <div class="dropdown-content">
+                        <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a> 
                         <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
                         <a class="header-ref" href="/#price">УСЛУГИ</a>
                         <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>

@@ -108,7 +108,9 @@ body{
 .header-ref-hide .dropdown + .dropdown, .header-ref + .dropdown, .dropdown + .header-ref{
     padding-left: 20px;
 }
-
+.header-ref-hide div{
+    cursor: pointer;
+}
 .header-ref-hide .header-ref:active{
     transform: scale(.95);
 }
@@ -117,6 +119,8 @@ body{
     width: 39px;
     height: 52px;
 }
+
+.logo-icon::selection{ background: transparent; }
 
 .site-description{
     display: flex;
@@ -127,7 +131,7 @@ body{
 .site-description span{
     font-size: 14px;
     line-height: 15px;
-    letter-spacing: .8px; 
+    letter-spacing: .8px;
 }
 
 .header-ref{
@@ -150,6 +154,10 @@ body{
 
 .header-ref-hide{
     display: flex;
+}
+
+.header-ref-hide a::selection, .header-ref-hide div::selection, .icon-dropdown::selection, .icon-message::selection, .btn-form-offer-box::selection, .form-offer-box label::selection, .menu::selection, .menu i::selection, .form-offer-box-title::selection, .form-offer-box-title i::selection, .block-ref::selection, .p-block-img::selection, .about-block div img::selection, .card > div h3::selection, .benefit-center img::selection, .card-img::selection, .field1-box img::selection{
+    background: transparent;
 }
 
 .title-icon-message{
@@ -271,7 +279,6 @@ body{
 
 .title-text{
     font-weight: normal;
-    padding-bottom: 40px;
     letter-spacing: 3px;
     font-size: 42px;
     line-height: 58px;
@@ -281,6 +288,7 @@ body{
 .btn-box-desription{
     width: 150px;
     height: 70px;
+    padding: 0 10px;
     border-radius: 8px;
     font-family: 'RussoOne-Regular';
     font-size: 16px;
@@ -289,7 +297,7 @@ body{
     --smooth-corners: 6.2;
     -webkit-mask-image: paint(smooth-corners);
     transition-duration:  0.6s;
-    color: rgba(0, 0, 0, .95);   
+    color: rgba(0, 0, 0, .95);
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -312,14 +320,14 @@ body{
     display: flex;
 }
 
-.btn-desription-service{   
-    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%); 
+.btn-desription-service{
+    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);
     background-size: 400% 400%;
 }
 
 .btn-desription-price{
-    background: linear-gradient(-45deg, rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.1) 100%);   
-    background-size: 400% 400%; 
+    background: linear-gradient(-45deg, rgba(139,122,168,.6) 0%, rgba(100,90,127,.6) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.1) 100%);
+    background-size: 400% 400%;
 }
 
 .btn-desription-price + .btn-desription-service{
@@ -342,6 +350,7 @@ body{
     padding:  20px 20px 0 20px;
     text-align: center;
     text-transform: uppercase;
+    cursor: default;
 }
 
 .form-offer{
@@ -381,9 +390,9 @@ body{
 }
 
 .form-offer-box input{
-    height: 48px;    
+    height: 48px;
     --smooth-corners: 6.2;
-    -webkit-mask-image: paint(smooth-corners); 
+    -webkit-mask-image: paint(smooth-corners);
 }
 
 .form-offer-box label{
@@ -435,11 +444,6 @@ body{
 :active, :hover, :focus {
     outline: 0;
     outline-offset: 0;
-}
-
-.itc-slider__indicators{
-    bottom: 50px;
-    z-index: 9;
 }
 
 .itc-slider__indicator{
@@ -556,13 +560,12 @@ body{
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-        visibility: hidden;
-    }
-    to {      
+    100% {
         opacity: 1;
-        visibility: visible;
+    }
+
+    0%{
+        opacity: .5;
     }
 }
 
@@ -595,6 +598,7 @@ body{
 .benefit-center-hidden{
     display: none;
     height: 565px;
+    width: 100%;
 }
 
 .title-benefit-under{
@@ -607,14 +611,14 @@ body{
 
 .is-selected , .benefit-center-img{
     display: block;
-    animation: fade 1s ease forwards;
+    animation: fade 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 .benefit-1, .benefit-2, .benefit-3, .benefit-4, .benefit-5, .benefit-6 {
     cursor: pointer;
     position: relative;
-    padding: 30px 30px 0px 20px;
-    border-radius: 20px;        
+    padding: 30px 30px 30px 20px;
+    border-radius: 20px;
     background-color: #171717;
 }
 
@@ -711,6 +715,7 @@ body{
     flex-direction: column;
     align-items: center;
     filter: invert(1);
+    width: 480px;
 }
 
 .field1-box img{
@@ -741,7 +746,7 @@ body{
 }
 
 .panel-field {
-    max-height: 930px;
+    max-height: 880px;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     line-height: 23px;
@@ -755,6 +760,11 @@ body{
     font-weight: normal;
     letter-spacing: .5px;
     line-height: 22px;
+    cursor: grab;
+}
+
+.stage-box-column:active{
+    cursor: grabbing;
 }
 
 .stage-box-row{
@@ -1006,7 +1016,7 @@ body{
     padding-bottom: 50px;
 }
 
-.card{    
+.card{
     height: 100%;
     transform-style: preserve-3d;
     cursor: pointer;    
@@ -1108,34 +1118,7 @@ body{
     background-size: 400% 400%;
 }
 
-.indicators-bottom-up{
-    bottom: 2px
-}
 
-.card-wrapper-writing{
-    display: grid;
-    grid-template-columns: repeat(2, 350px);
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    padding-bottom: 50px;
-}
-
-.card-wrapper-writing div{
-    background: linear-gradient(-45deg, rgba(139,122,168,.7) 0%, rgba(100,90,127,.5) 57%, rgba(67,62,91,.6) 75%, rgba(39,38,61,.5) 100%);background-size: 400% 400%;
-    box-shadow: 10px 10px 7px 3px rgb(0 0 0 / 10%);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: -5px -5px 7px 3px rgb(255 255 255 / 5%);
-}
-
-.card-wrapper-writing div h4{
-    font-size: 26px;
-    padding-bottom: 10px;
-}
-
-.card-wrapper-writing div li{
-    letter-spacing: .3px;
-}
 
 /* блок ЧаВо */
 
@@ -1396,13 +1379,9 @@ body{
 }
 
 @media (max-width: 1240px)  { 
-
-     /*услуги копирайт и рерайт  */
-     .card-wrapper-writing{
-        justify-content: center;
-        padding-bottom: 0;
-     }
-
+    .benefit-center-hidden{
+        height: unset;
+    }
      .ask-padding-bottom{
         padding-bottom: 100px !important;
      }
@@ -1503,11 +1482,7 @@ body{
 
     .header-left{
         padding-left: 170px;
-    }
-    
-    .hide-logo-site{
-        display: none;
-    }
+    }   
     
     .hide-logo{
         display: none;
@@ -1651,7 +1626,7 @@ body{
     }
 
     .form-offer-box textarea{
-        height: 60px;      
+        height: 60px;
     }
 
     .form-submit-field{
@@ -1661,7 +1636,7 @@ body{
     }
     
     .form-offer-box input{
-        height: 20px;        
+        height: 20px;
     }   
     
     .form-offer-box label{
@@ -1696,10 +1671,6 @@ body{
         font-size: 12px;
     }
 
-    .itc-slider__indicators{
-        bottom: 0;
-    }   
-
     /* блок преимущества */
     .container-block-1{
         display: flex;
@@ -1711,8 +1682,8 @@ body{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, auto);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+        grid-column-gap: 40px;
+        grid-row-gap: 20px;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 0;
@@ -1721,9 +1692,10 @@ body{
     }
 
     .benefit-1,.benefit-2,.benefit-3,.benefit-4,.benefit-5,.benefit-6,.benefit-center-img{
-        box-shadow: -1px 1px 1px 1px rgb(255 255 255 / 5%);
+        box-shadow: -1px 1px 1px 1px rgb(255 255 255 / 10%), 1px -1px 1px 1px rgb(255 255 255 / 10%);
         border-radius: 10px;
     }
+    .field1-box{width: unset}
 
     .field1-box img{
         border-radius: 10px;
@@ -1755,7 +1727,6 @@ body{
     .box-benefit > div span{
         font-weight: 300;
         font-size: 14px;
-        padding-bottom: 20px;
         line-height: 19px;
     }
         
@@ -1789,7 +1760,7 @@ body{
     }
 
     .is-selected, .benefit-center-img {
-        aspect-ratio: 21/7;
+        aspect-ratio: 4/1;
     }
 
     .TitleBenefitHide {
@@ -1799,7 +1770,7 @@ body{
     /* блок этапы разработки' */
 
     .panel-field{
-        max-height: 357px;
+        max-height: 405px;
     }
 
     .site-field{
@@ -1951,21 +1922,15 @@ body{
     }
 
     .stage-indicators-bottom-up{
-        bottom: 55px !important;
-        left: 0 !important;
-        justify-content: center !important;
+        bottom: 40px !important;
     }
 
-    .indicators-bottom-up{
-        left: 0 !important;
-        justify-content: center !important;
-    }
     
     /* блок с ценами */
     .carousel-pricesite{
         width: 100%;
         align-self: center;
-    }    
+    }
         
     .container-pricesite{
         display: flex;
@@ -1973,7 +1938,7 @@ body{
         width: 100%;
         padding-bottom: 0;
         align-items: center;    
-    }    
+    }
     
     .wrapper-pricesite{
         max-width: 1240px;
@@ -2094,11 +2059,7 @@ body{
         bottom: 60px;
         left: 575px;
     }
-    
-    .indicators-bottom-up{
-        bottom: 40px
-    }
-    
+
     /* блок ЧаВо */
     .wrapper-block{
         max-width: 1240px;
@@ -2164,15 +2125,6 @@ body{
 }
 
 @media (max-width: 980px)  {
-    .card-wrapper-writing {
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
-        grid-column-gap: 30px;
-        grid-row-gap: 20px;
-        padding-bottom: 50px;
-        padding: 0 20px;
-    }
-
     .btn-card-price{
         width: 120px;
     }
@@ -2330,10 +2282,6 @@ body{
         padding-right: 20px;
     }
 
-    .itc-slider__indicators {
-        bottom: -10px;
-    }
-
     .wrapper-title-form{
         margin-right: 40px;
     }
@@ -2388,18 +2336,6 @@ body{
 
     .card_facefront {
         padding: 15px 15px 5px 15px;
-    }
-
-    .stage-indicators-bottom-up {
-        bottom: 50px !important;
-    }
-
-    .indicators-bottom-up{
-        bottom: 45px
-    }
-
-    .stage-wrapper .itc-slider__indicators {
-        bottom: 40px;
     }
     .wrapper-title-padding {
         padding-top: 20px;
@@ -2463,7 +2399,7 @@ body{
 
 @media (max-width: 650px){
     .is-selected, .benefit-center-img{
-        aspect-ratio: 4/3;
+        aspect-ratio: 3/1;
     }
     .googleform{
         width: 100vw !important;
@@ -2533,7 +2469,7 @@ body{
 
     .btn-wpapper{
         justify-content: center;
-    }      
+    }
 
     .card-wrapper{
         grid-template-columns: repeat(2, 300px);
@@ -2555,15 +2491,10 @@ body{
         padding: 0 5%;
     }
 
-    .indicators-bottom-up{
-        bottom: 50px !important;
-    }
-
     .itc-slider__indicators {
         margin: 0 15%;
         justify-content: center;
         left: 0;
-        bottom: 5%;
     }
 
     .btn-desription-price + .btn-desription-service {
@@ -2582,8 +2513,13 @@ body{
         align-items: center;
     }
 
-    .container-header, .container-background, .header-box{
+    .container-header, .container-background{
         height: 100vh;
+        max-height: 970px;
+    }
+
+    .header-box{
+        height: 90vh;
         max-height: 970px;
     }
 }
@@ -2701,7 +2637,7 @@ body{
         padding-top: 50px;
         letter-spacing: .8px;
         font-weight: normal;
-    }    
+    }
 
     .title-benefit-under {
         flex-direction: column;
@@ -2723,7 +2659,7 @@ body{
 
     .benefit-1, .benefit-2, .benefit-3, .benefit-4, .benefit-5, .benefit-6{
         grid-area: unset;
-    }   
+    }
 
     .benefit-center-img {
         object-fit: cover;
@@ -2747,9 +2683,6 @@ body{
         text-align: left;
     }
 
-    .indicators-bottom-up{
-        bottom: 5px !important;
-    }
 
     .card-wrapper{
         grid-template-columns: repeat(2, 300px);
