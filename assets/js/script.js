@@ -58,42 +58,7 @@ for(let index = 1; index <= benefitAmount; ++index) {
                 benefitScrollTimeout = setTimeout(autoscrollerBenifits, 40000);
             });
     }          
-    //         if($('.benefit-center-hidden:nth-of-type(2)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(2)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
-    //         {   
-    //             $('.benefit-center-hidden').removeClass('is-selected');
-                
-    //             $('.benefit-center-hidden:nth-of-type(2)').addClass('is-selected');
-    //             $('.title-benefit-under').addClass('TitleBenefitHide');
-    // }});
-    // $('.benefit-3').click(function(){ 
-    //     if($('.benefit-center-hidden:nth-of-type(3)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(3)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
-    //         {
-    //             $('.benefit-center-hidden').removeClass('is-selected');
-    //             $('.benefit-center-hidden:nth-of-type(3)').addClass('is-selected');
-    //             $('.title-benefit-under').addClass('TitleBenefitHide');
-    // }});
-    // $('.benefit-4').click(function(){ 
-    //     if($('.benefit-center-hidden:nth-of-type(4)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(4)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
-    //         {
-    //             $('.benefit-center-hidden').removeClass('is-selected');
-    //             $('.benefit-center-hidden:nth-of-type(4)').addClass('is-selected');
-    //             $('.title-benefit-under').addClass('TitleBenefitHide');
-    // }});
-    // $('.benefit-5').click(function(){ 
-    //     if($('.benefit-center-hidden:nth-of-type(5)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(5)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
-    //         {
-    //             $('.benefit-center-hidden').removeClass('is-selected');
-    //             $('.benefit-center-hidden:nth-of-type(5)').addClass('is-selected');
-    //             $('.title-benefit-under').addClass('TitleBenefitHide');
-    // }});
-    // $('.benefit-6').click(function(){ 
-    //     if($('.benefit-center-hidden:nth-of-type(6)').hasClass('is-selected')) { $('.benefit-center-hidden:nth-of-type(6)').removeClass('is-selected'); $('.title-benefit-under').removeClass('TitleBenefitHide');} else
-    //         {
-    //             $('.benefit-center-hidden').removeClass('is-selected');
-    //             $('.benefit-center-hidden:nth-of-type(6)').addClass('is-selected');
-    //             $('.title-benefit-under').addClass('TitleBenefitHide');
-    // }});
-
+   
     
 //блок этапы свернуть\развернуть
 

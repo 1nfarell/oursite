@@ -24,7 +24,7 @@ include 'vendor/outputPost.php';
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="Web Studio MNDP">
+    <meta property="og:site_name" content="MNDP">
     <meta property="og:image" content="/images/banner.jpg">
     <meta name="robots" content="index,follow">
 
@@ -40,28 +40,29 @@ include 'vendor/outputPost.php';
 <body>
     <div class="container" id="ancor">
 
-        <!-- хедер  -->
-        <header>
-            <div id="header" class="header-wrapper">
-                <div class="header">
-                    <div class="header-left">
-                        <a id="hide-logo" class="logo" href="#ancor">
-                            <img class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
-                        </a>
-                        <div class="site-description">
-                            <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span>
-                        </div>
-                    </div>
-                    <div class="header-ref-hide">
-                        <div class="dropdown dropdown-high">
-                            РАЗРАБОТКА САЙТОВ
-                            <img class="icon-dropdown" src="/images/plus.png" alt="меню">
-                            <div class="dropdown-content">
-                                <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
-                                <a class="header-ref" href="/#price">УСЛУГИ</a>
-                                <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
-                                <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
-                                <a class="header-ref" href="/#about">О НАС</a>
+ <!-- хедер  -->
+ <header>
+        <div id="header" class="header-wrapper">
+            <div class="header">  
+                <div class="header-left"> 
+                    <a id="hide-logo" class="logo" href="#ancor">                        
+                        <img class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
+                    </a>               
+                    <div class="site-description">
+                        <span>ВЕБ-СТУДИЯ MNDP</span>  
+                    </div> 
+                </div>           
+                <div class="header-ref-hide">
+                    <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a>                            
+                    <div class="dropdown dropdown-high">                                
+                        РАЗРАБОТКА САЙТОВ
+                        <img class="icon-dropdown" src="/images/plus.png" alt="меню">
+                        <div class="dropdown-content">                                
+                            <a class="header-ref" href="/#stage">ЭТАПЫ РАБОТЫ</a>
+                            <a class="header-ref" href="/#price">УСЛУГИ</a>
+                            <a class="header-ref" href="/#ask">ОТВЕТЫ НА ВОПРОСЫ</a>
+                            <a class="header-ref" href="/#portfolio">ПОРТФОЛИО</a>
+                            <a class="header-ref" href="/#about">О НАС</a>  
                             </div>
                         </div>
                         <div class="dropdown dropdown-high">
@@ -103,14 +104,13 @@ include 'vendor/outputPost.php';
                     </div>
                 </div>
             </div>
-
             <div class="wrapper-block">
                 <div class="pricesite-title">
                     <h2>Читайте и другие статьи в блоге MNDP</h2>
                 </div>
                 <div class="main">
                     <div id="main-center" class="main-center">
-
+                    
                     </div>
                 </div>
             </div>

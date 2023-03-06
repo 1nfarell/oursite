@@ -1,58 +1,33 @@
-/* хедер в кабинете */
 
-
-.header-nav-1 a{
-    color: rgba(255,255,255,.9);
-    text-decoration: none;
-}
-
-.container-header{
-    height: 350px;
-    background-position: center;
-}
-
-.header-nav-1{
-    display: flex;
-    border-radius: 30px;
-    padding: 0 20px;
-    height: 50px;
-    width: 80px;
-    align-items: center;
-    background: linear-gradient(-45deg, rgba(39,38,61,.6) 0%, rgba(67,62,91,.6) 64%, rgba(100,90,127,.6) 80%, rgba(139,122,168,.1) 100%);
-    background-size: 400% 400%;
-}
-
-.header-profile{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 10px;
-}
-
-.header-right-form-button a{
-    color: rgba(255,255,255,.9);
-}
 /* фильтры */
 
 
 .filters{
     display: flex;
-    max-width: 1180px;
     width: 100%;
     align-items: center;
     padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-    border-top: 1px solid rgba(255,255,255,.2);
-    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding-bottom: 10px;
+    /* border-top: 1px solid rgba(255,255,255,.2); */
     justify-content: center;
+    /* background-color: #ffffff14; */
 }
 /* блок со статьями */
-
-.main-menu option:hover{
-    color: rgba(133, 224, 171, 1);
+.main-menu option{
+    border-radius: 30px;
+    padding: 10px 15px;
+    color: black;
+    background-color: #ffffff;
+    border: 0;
 }
 
+.menu{
+    display: none;
+}
+.main-menu option:hover{
+    cursor: pointer;
+}
+.main-menu option::selection { background: transparent; }
 .main-menu option:active{
     transform: scale(.95);
 }
@@ -66,14 +41,24 @@
 .main-color{
     background-color: rgba(0,0,0,.5);
     padding-bottom: 60px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .main-title{
     font-size: 42px;
     text-align: center;
-    padding: 50px 0 ;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    background-color: black;
+
+}
+
+.offer-border{
+    background-color: black;
 }
 
 .most-viewed__title {
@@ -84,27 +69,28 @@
 
 .main-center{
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-    grid-row-gap: 50px;
-    grid-column-gap: 80px;
-    grid-auto-rows: 260px;
+    grid-template-columns: repeat( auto-fit, minmax(360px, 1fr) );
+    grid-row-gap: 40px;
+    grid-column-gap: 50px;
+    grid-auto-rows: 300px;
     width: 100%;
+    padding-bottom: 50px;
 }
 
 .main-menu{
     display: flex;
-    padding-left: 20px;
-    padding-right: 15px;
     flex-wrap: wrap;
     line-height: 22px;
 }
 
 .main-menu option + option{
-    padding-right: 20px;
+    margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 .main-menu option:first-child{
-    padding-right: 20px;
+    margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 .main-field{
@@ -134,6 +120,8 @@
     filter: invert(1);
 }
 
+.card-text-picture::selection, .post img::selection , .post-picture-image::selection, .card-icon-id::selection, .card-icon-autor::selection, .post-icon-date::selection{background: transparent;}
+
 .card-id{
     display: flex;
     flex-direction: row;
@@ -152,6 +140,7 @@
 .card-id-name{
     padding-left: 5px;
     font-size: 14px;
+    text-shadow: 0px 1px 3px black;
 }
 
 .card-title{
@@ -160,7 +149,7 @@
     text-align: center;
     background-color: rgba(0,0,0,.4);
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 0px;
     position: relative;
     
 }
@@ -168,7 +157,7 @@
 .card-title h2{
     line-height: 36px;
     font-size: 26px;  
-    
+    text-shadow: 0px 3px 5px black;
     font-weight: normal;
     letter-spacing: .8px;
 }
@@ -195,10 +184,14 @@
     filter: invert(1);
 }
 
+.card-text-autor{
+    text-shadow: 0px 1px 3px black;
+}
+
 .card-autor a{
     text-decoration: none;
-    color: rgba(255,255,255,.9);  
     padding-left: 5px;
+    color: rgba(255,255,255,0.8);
 }
 
 .post-date{
@@ -222,6 +215,7 @@ div.post-date{
 
 p.post-date{
     padding-left: 5px;
+    text-shadow: 0px 1px 1px black;
 }
 
 /* пост */
@@ -254,6 +248,7 @@ p.post-date{
 
 .post-id-name{
     padding-left: 5px;
+    font-size: 14px;
 }
 
 .post{
@@ -285,6 +280,8 @@ p.post-date{
     line-height: 6.5vmin;
     letter-spacing: 1.5px;
     padding: 10px 40px;
+    text-shadow: 3px 4px 5px black;
+    color: white;
 }
 
 .post-description{
@@ -306,7 +303,10 @@ p.post-date{
 
 .post-text-description{
     padding: 0 10px;
-    color: rgb(255 255 255 / 68%);
+}
+
+.pricesite-title{
+    padding-bottom: 50px;
 }
 
 .post-general{
@@ -355,12 +355,9 @@ p.post-date{
     text-align: center;
     font-size: 4vmin;
     line-height: 5.5vmin;
-    padding: 10px 15px;
+    padding: 10px 0px;
 }
 
-.wrapper-block{
-    padding-bottom: 50px;
-}
 
 
 /*хедер в блог*/
@@ -375,19 +372,43 @@ p.post-date{
     text-align: center;
 }
 
+.container-radius-top{
+    box-shadow: unset;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
+.container-header{
+    height: 360px !important; 
+    background-image: url(/images/title-blog.webp) !important;
+    background-position: center !important;
+}
+
 .title-text {
-    padding-top: 40px;
     line-height: 58px;
     letter-spacing: 3.5px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 75px;
 }
 
 @media (max-width: 1240px){
+    .menu{
+        display: flex;
+    }
     .header{
         height: 50px;
     }
-
+    .container-block-1-paddingunset{
+        padding: unset !important;
+    }
     .header-wrapper{
         height: 50px;   
+    }
+
+    .footer-row div:nth-child(1){
+        padding-left: 0;
     }
 
     .logo-icon {
@@ -403,16 +424,19 @@ p.post-date{
     }
     .main-center {
         grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-        grid-auto-rows: 240px;
+        grid-auto-rows: 260px;
         grid-row-gap: 20px;
         grid-column-gap: 40px;
+        width: fit-content;
+        align-self: center;
     }
     .dropdown .icon-message {
         padding-right: 0;
     }
     .title-text{
         line-height: 39px !important;
-        padding-right: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .container-block-1{
         padding:0 20px;
@@ -430,6 +454,17 @@ p.post-date{
         min-width: 200px;
         padding-left: 60px;        
     }
+    .main-menu{
+        justify-content: center;
+    }
+    .main-title {
+        padding: 30px 0;
+        margin-bottom: 40px;
+    }
+
+    .container-header {
+        height: 350px !important;
+    }
 }
 @media (max-width: 910px){
 
@@ -440,13 +475,20 @@ p.post-date{
    
 }
 
-
 @media (max-width: 800px){
     
-
+    
     .post-general {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .footer-row {
+        gap: 20px;
+    }
+
+    .footer-row div:nth-child(1), .footer-row div:nth-child(2) {
+        padding-left: 0;
     }
 
 }
@@ -455,12 +497,37 @@ p.post-date{
         width: 150px;
     }
 
+    .header-box-blog {
+        height: 300px;
+    }
+
+    .main-menu{
+        flex-wrap: nowrap;
+        margin: 0 20px;
+    }
+
+    .filters{
+        overflow-x: scroll;
+        justify-content: unset;
+        height: 100px;
+        padding: 0;
+    }
+
+    .main-menu option:first-child{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .main-menu option + option{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     .card-id-name, .card-text-autor, .post-date{
         font-size: 12px;
     }
    
     .main-center{
-        grid-auto-rows: unset;
         grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
     }
     .main-post {
@@ -499,9 +566,6 @@ p.post-date{
     .site-description {
         display: none;
     }
-    .title-text {
-        padding-right: 0 !important;
-    }
 
     .post__rightcontainer {
         min-width: 100px;
@@ -510,10 +574,6 @@ p.post-date{
     .post-general {
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    .post-text-header {
-        padding: 10px 10px;
     }
 
 }
@@ -557,12 +617,11 @@ p.post-date{
 }
 @media (max-width: 420px){
     
-    .header-box-blog {
-        height: 100%;
-    }
+    
     .main-center {
         grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
     }
+
 }
 
 @media (max-width: 402px){

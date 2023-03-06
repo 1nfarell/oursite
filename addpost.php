@@ -16,6 +16,7 @@ include 'vendor/generator.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/addpost.css">
     <title>Добавить статью - Студия Веб Дизайна MNDP</title>
     
     <meta name="robots" content="noindex">
@@ -32,14 +33,12 @@ include 'vendor/generator.php';
 
 <!-- header -->
 <header>
-    <div id="header" class="header-wrapper" style="background: rgb(88,60,135); background: -moz-linear-gradient(270deg, rgba(88,60,135,1) 0%, rgba(41,36,60,0.700717787114846) 20%); background: -webkit-linear-gradient(270deg, rgba(88,60,135,1) 0%, rgba(41,36,60,0.700717787114846) 20%); background: linear-gradient(270deg, rgba(88,60,135,1) 0%, rgba(41,36,60,0.700717787114846) 20%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#583c87',endColorstr='#29243c',GradientType=1); background-size: 400% 400%;">
+    <div id="header" class="header-wrapper">
         <div class="header">  
             <div class="header-left">
-                
-                <a class="logo" href="/"><img id="hide-logo-site" class="logo-icon" src="/images/logo.png" alt="Web studio MndP"></a> 
-                                
+                <a class="logo" href="/"><img id="hide-logo" class="logo-icon" src="/images/logo.png" alt="Web studio MndP"></a>
                 <div class="site-description">
-                    <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span> 
+                    <span>ВЕБ-СТУДИЯ MNDP</span> 
                     
                 </div> 
             </div>           
@@ -94,39 +93,38 @@ include 'vendor/generator.php';
     <!-- main -->
 <div class="container-block-1">    
     <div class="wrapper-block">
-        <p style="padding-bottom: 20px; font-size: 18px; color: #5b5b5b;">Добавить рецепт</p>
+        <p class="wrapper-block--addpost__title">Добавить статью</p>
         <form class="formAdd" name="formAddPost" method="POST" enctype="multipart/form-data"   action="">
             <div class="CategoriesArea">
-                <p class="formP">Выберите категорию</p> 
+                <p class="formP">1. Выберите категорию</p> 
                 <select class="selectCategories" name="categories" required> 
                     <option disabled selected></option>
                     <?php selectCategories(); ?>
                 </select>
             </div>
             <div class="nameReceptArea">        
-                <p class="formP">Название рецепта</p> 
-                <input  class="nameRecept" name="title" type="text" placeholder="Название рецепта" maxlength="70"  required/>           
+                <p class="formP">2. Название статьи (TITLE / H1)</p> 
+                <input  class="nameRecept" name="title" type="text" placeholder="Название статьи. Макс. длина 70 символов" maxlength="70"  required/>           
             </div>             
             <div class="descriptionArea">
-                <p class="formP">Краткое описание</p>                
-                <textarea class="descriptionRecept" name="description" type="text" placeholder="Краткое описание" maxlength="180"  required></textarea> 
+                <p class="formP">3. Краткое описание (DESCRIPTION)</p>                
+                <textarea class="descriptionRecept" name="description" type="text" placeholder="Краткое описание. Макс. длина 180 символов" maxlength="180"  required></textarea> 
             </div>
             <div class="imageReceptArea">
-                <p class="formP">Картинка для обложки</p>
-                <label class="custom-file-upload">
-                <input class="imageRecept" type="file" name="myimage" accept="image/*" required/>Загрузить
-                </label>
+                <p class="formP">4. Картинка на главной (.WEBP --ar 16:9)</p>
+                <input class="imageRecept" type="file" name="myimage" accept="image/*" required/>
+               
             </div>
             <div class="inputRecept"> 
                 <div class="inputReceptPicture">
                     <div class="add_picture_button">
-                        <p class="formP">Напишите рецепт. Процесс приготовления разбейте по пунктам и добавьте изображения.</p>
+                        <p class="formP">5. Напишите статью</p>
                         <input class="add_button_picture" id="INeedMoreImages" type="button" value="Добавить поле"/> 
                     </div>
                     <div class="inputReceptDescription" id="Wrapper_add_text">  <!-- поля с текстом -->  </div>
                 </div>
             </div>
-            <input class="saveButton" id="saveButton" type="submit" value="Сохранить рецепт"  />  
+            <input class="saveButton" id="saveButton" type="submit" value="Сохранить"  />  
         </form>            
                                 
         <?php addPost();?>                    
@@ -216,8 +214,8 @@ include 'vendor/generator.php';
         let count = 1;
         
         
-        let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Пункт №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="Заголовок" maxlength="60" required /><textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Опишите процесс приготовления.."  required></textarea> </div></div> ');
-                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение</p> <label class="custom-file-upload"><input  class="addpicture" name="picture'+y+'" type="file" accept="image/*" required/>Загрузить</label> </div><!-- поля с картинками --> </div>');
+        let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Заголовок №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="H2 Заголовок. Макс. длина 60 символов" maxlength="60" required /><textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Текст.."  required></textarea> </div></div> ');
+                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение (.WEBP --ar 16:9 width: 600px)</p><input  class="addpicture" name="picture'+y+'" type="file" accept="image/*" required/> </div><!-- поля с картинками --> </div>');
                 Wraptext = $("#Wrapper_add_text");
                 $(Wraptext).append(el);
                 el.append(buttons);
@@ -230,8 +228,8 @@ include 'vendor/generator.php';
                 
                 FieldCount++;
                 //добавляем поле
-                let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Пункт №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="Заголовок" maxlength="60" required />  <textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Опишите процесс приготовления.." required></textarea> </div></div> ');
-                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение</p> <label class="custom-file-upload"><input  class="addpicture" name="picture'+y+'" type="file" accept="image/*" required/>Загрузить</label><input id="removeclassimage'+y+'" class="removeclassimage" type="button" value="Удалить поле"/> </div><!-- поля с картинками --> </div>');
+                let el = $('<div id="wrapper_Text'+y+'"  class="wrapper_Text" name="wrapper_Text">  <div class="text"> <p class="formP"> Заголовок №'+(count)+'</p> <input id="header_text'+y+'"  class="header_text" name="header_text'+y+'"  type="text" placeholder="H2 Заголовок. Макс. длина 60 символов" maxlength="60" required />  <textarea class="textRecept" name="text'+y+'"  type="text" placeholder="Текст.." required></textarea> </div></div> ');
+                let buttons = $('<div class="area_add_picture" id="Wrapper_add_image"><div  class="wrapper_Image" name="wrapperImage"> <p class="formP">Прикрепите изображение (.WEBP --ar 16:9 width: 600px)</p> <input  class="addpicture" name="picture'+y+'" type="file" accept="image/*" required/><input id="removeclassimage'+y+'" class="removeclassimage" type="button" value="Удалить поле"/> </div><!-- поля с картинками --> </div>');
                 Wraptext = $("#Wrapper_add_text");
                 $(Wraptext).append(el);
                 el.append(buttons);

@@ -15,7 +15,7 @@ include 'vendor/generator.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/addpost.css">
     <title>Личный кабинет - Студия Веб Дизайна MNDP</title>
     
     <meta name="robots" content="noindex">
@@ -30,31 +30,29 @@ include 'vendor/generator.php';
   
 <!-- header -->
 <header>
-    <div id="header" class="header-wrapper" style="background: rgb(88,60,135); background: -moz-linear-gradient(270deg, rgba(88,60,135,1) 0%, rgba(41,36,60,0.700717787114846) 20%); background: -webkit-linear-gradient(270deg, rgba(88,60,135,1) 0%, rgba(41,36,60,0.700717787114846) 20%); background: linear-gradient(270deg, rgba(88,60,135,1) 0%, rgba(41,36,60,0.700717787114846) 20%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#583c87',endColorstr='#29243c',GradientType=1); background-size: 400% 400%;">
+    <div id="header" class="header-wrapper">
         <div class="header">  
             <div class="header-left">
-                
-                <a class="logo" href="/"><img id="hide-logo-site" class="logo-icon" src="/images/logo.png" alt="Web studio MndP"></a> 
-                                
+                <a class="logo" href="/"><img id="hide-logo" class="logo-icon" src="/images/logo.png" alt="Web studio MndP"></a>                                 
                 <div class="site-description">
-                    <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span> 
-                    
+                    <span>ВЕБ-СТУДИЯ MNDP</span> 
                 </div> 
             </div>           
             <div class="header-ref-hide">                           
                
                 <a class="header-ref mainpage-ref" href="/">ГЛАВНАЯ</a> 
-                <a class="header-ref" href="/blog">БЛОГ</a> 
+                
                 <div class="dropdown dropdown-high">                                
                     ТЕКСТ
                     <img class="icon-dropdown" src="/images/plus.png" alt="меню">
                     <div class="dropdown-content">                                
                         <a class="header-ref" href="/copywriting">КОПИРАЙТ ТЕКСТА</a>
-                        <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a>                                  
+                        <a class="header-ref" href="/rewriting">РЕРАЙТ ТЕКСТА</a> 
+                                                         
                     </div>
-                </div>
-                
-                            
+                    
+                </div> 
+                <a class="header-ref" href="/blog">БЛОГ</a>      
                 </div>
                 <div class="menu">
                     <div class="dropdown dropdown-show">

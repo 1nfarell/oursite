@@ -11,22 +11,22 @@ include 'vendor/pagination.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Создание успешных веб-сайтов - Студия Веб Дизайна MNDP</title>
+    <title>Создание успешных веб-сайтов - MNDP</title>
 
     <link rel="stylesheet" href="/assets/css/itc-slider.min.css">
 
-
-    <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    
     <link rel="stylesheet" href="/assets/css/pagination.css">
-    <meta name="application-name" content="Создание успешных веб-сайтов - Студия Веб Дизайна MNDP">
+    <meta name="application-name" content="Создание успешных веб-сайтов - MNDP">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mndp-studio.ru/">
-    <meta property="og:title" content="Создание успешных веб-сайтов - Студия Веб Дизайна MNDP">
+    <meta property="og:title" content="Создание успешных веб-сайтов - MNDP">
     <meta property="og:description" content="Узнайте, как комбинировать разработку, дизайн и интернет-маркетинг для создания успешных и прибыльных веб-сайтов.">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="Web Studio MNDP">
+    <meta property="og:site_name" content="MNDP">
     <meta property="og:image" content="/images/banner.jpg">
     <meta name="robots" content="index,follow">
    
@@ -50,7 +50,7 @@ include 'vendor/pagination.php';
                             <img class="logo-icon" src="/images/logo.png" alt="Web studio MndP">
                         </a>               
                         <div class="site-description">
-                            <span>СТУДИЯ ВЕБ-ДИЗАЙНА MNDP</span>  
+                            <span>ВЕБ-СТУДИЯ MNDP</span>  
                         </div> 
                     </div>           
                     <div class="header-ref-hide">   
@@ -98,48 +98,37 @@ include 'vendor/pagination.php';
         <!-- main  -->
         <main>   
             <!-- первый блок  -->
-            <div class="container-header"> 
-                
+            <div class="container-header">
                 <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Создание успешных веб-сайтов: искусство разработки, дизайна и интернет-маркетинга</h1>
                  
                 <div class="header-box-blog">
                     <h2 class="title-text">МАСТЕР-КЛАСС: РАЗРАБОТКА, ДИЗАЙН И ИНТЕРНЕТ-МАРКЕТИНГ</h2>                    
-                </div>
-                           
+                </div>  
+                <div class="filters">
+                      <div class="main-menu">                                    
+                          <?php selectCategories(); ?>  
+                      </div>              
+                </div>           
             </div>  
             <!-- основные блоки  -->      
             <div class="container-background-block-1">  
-            <div class="container-block-1">
-                    <div class="wrapper-block">
-                        
-                    <div class="most-viewed__title">ПРОСМАТРИВАЕМЫЕ</div>
-                        <div class="main">
-                            <div class="most-viewed main-center">
-                                    
-                            </div> 
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="container-block-1">
+                <div class="container-block-1 container-block-1-paddingunset">                    
                     <div class="main-title">ВСЕ СТАТЬИ</div>
-                    <div class="filters">
-                        <div class="main-menu">
-                                    
-                            <?php selectCategories(); ?>  
-                        </div>              
-                    </div> 
                 </div>    
                 <!-- main -->
                 <div class="container-block-1">
                     <div class="wrapper-block">
-                        
-                        <div class="main">   
-                                  
+                        <div class="most-viewed__title">ПРОСМАТРИВАЕМЫЕ</div>
+                            <div class="main">
+                                <div class="most-viewed main-center">
+
+                                </div> 
+                            </div>                        
+                        </div>
+                        <div class="main">
                             <div id="main-center" class="main-center">
                                 
-                            </div> 
-                                            
+                            </div>         
                         </div>
                         
                         <!-- пагинация (pagination.css, pagination.js)-->
