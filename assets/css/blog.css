@@ -61,6 +61,12 @@
     background-color: black;
 }
 
+.most-viewed__title {
+    font-size: 42px;
+    text-align: center;
+    padding: 50px 0 ;
+}
+
 .main-center{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(360px, 1fr) );

@@ -1,11 +1,8 @@
 $(document).ready(function(){
     function output(field, outputData){
-        //console.log(outputData);
         
         $(field).empty();
         for (let key in outputData){ 
-            //console.log(date);
-            //date = new Date(outputData[key]['date']).toLocaleDateString('ru');
             $(field).append('                                                                                          \
                 <div class="main-field">                                                                               \
                     <a class="card-picture-teg-a" href="post.php?title='+`${outputData[key]['title']}`+'&id='+`${outputData[key]['id']}`+'">      \
@@ -23,6 +20,11 @@ $(document).ready(function(){
                         <a href="">                                \
                             <p class="card-text-autor">'+`${outputData[key]['full_name']}`+'</p>                       \
                         </a></div>\
+                        \
+                        <div class="post-date">    \
+                            <img class="post-icon-date" src="images\\eye.png">\
+                            <p class="post-text-views">'+ outputData[key]['views']+ '</p>\
+                        </div>\
                     <div class="post-date">\
                     <img class="post-icon-date" src="images\\date.png">\
                     <p class="post-date">'+`${outputData[key]['date']}`+'</p></div></div></div>'
@@ -30,12 +32,20 @@ $(document).ready(function(){
         } 
     }
 
+    let mostViewed = new Pagination();
+    mostViewed.setoutputRoot(document.querySelector('.most-viewed'));
+    mostViewed.output = output;
+    mostViewed.perPage = 2;
+    mostViewed.maxPage = 1;
+    mostViewed.sortByViews();
+    
+    mostViewed.renderFirstPage();
     
     let pag = new Pagination();
     pag.output = output;
     pag.perPage = 6;
     pag.maxPage = 2;
-    pag.setoutputRoot(document.querySelector('#main-center'))
+    pag.setoutputRoot(document.querySelector('#main-center'));
     pag.renderNavigation(document.querySelector('.pagination'));
     pag.renderFirstPage();
     let catElements =  document.querySelectorAll('.main-menu > option');

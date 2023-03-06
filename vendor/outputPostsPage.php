@@ -9,6 +9,8 @@ function getSortField(string $method = 'date')
     switch ($method) {
         case 'date':
             return 'articles.date';
+        case 'views':
+            return 'articles.views';
     }
 }
 
@@ -22,7 +24,7 @@ function getPosts($offset, $limit, $sortField, array $categorIdArray = [])
     ";"
     );
     $countH->execute();
-    $sth = $db->prepare("SELECT DISTINCT articles.id, title, users.id AS id_user, users.full_name, date, categories.id AS categID, categories.name AS categName   
+    $sth = $db->prepare("SELECT DISTINCT articles.id, title, users.id AS id_user, users.full_name, date, categories.id AS categID, categories.name AS categName,  articles.views AS views  
     FROM articles             
     JOIN categories ON articles.id_categories = categories.id   
     JOIN users ON articles.id_username = users.id " .
@@ -31,6 +33,7 @@ function getPosts($offset, $limit, $sortField, array $categorIdArray = [])
     ORDER BY $sortField DESC LIMIT $offset,$limit");
     $sth->execute();
 
+    $valuecard_json = [];
     if ($sth->rowCount() > 0){
         while($article = $sth->fetch(PDO::FETCH_ASSOC)){ 
             
@@ -50,6 +53,7 @@ function getPosts($offset, $limit, $sortField, array $categorIdArray = [])
                 'categName' => $article['categName'],
                 'title' => $article['title'],
                 'full_name' => $article['full_name'],
+                'views' => $article['views'],
                 'date' => date("d.m.Y",strtotime($article['date'])),  
             ]; 
             $valuecard_json = $valuecard;      
@@ -67,5 +71,6 @@ $catId = [];
 if(isset($_POST['category']) && $_POST['category'] != "all") {
     $catId = [$_POST['category']];
 }
-echo getPosts(($pageNumber - 1) * $perPage, $perPage, getSortField(), $catId);
+$sortField = isset($_POST['sort_by']) ? getSortField($_POST['sort_by']) : getSortField();
+echo getPosts(($pageNumber - 1) * $perPage, $perPage, $sortField, $catId);
 

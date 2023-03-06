@@ -98,19 +98,17 @@ include 'vendor/pagination.php';
         <!-- main  -->
         <main>   
             <!-- первый блок  -->
-            <div class="container-header"> 
-                
+            <div class="container-header">
                 <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Создание успешных веб-сайтов: искусство разработки, дизайна и интернет-маркетинга</h1>
                  
                 <div class="header-box-blog">
                     <h2 class="title-text">МАСТЕР-КЛАСС: РАЗРАБОТКА, ДИЗАЙН И ИНТЕРНЕТ-МАРКЕТИНГ</h2>                    
-                </div>
+                </div>  
                 <div class="filters">
-                        <div class="main-menu">
-                                    
-                            <?php selectCategories(); ?>  
-                        </div>              
-                    </div>           
+                      <div class="main-menu">                                    
+                          <?php selectCategories(); ?>  
+                      </div>              
+                </div>           
             </div>  
             <!-- основные блоки  -->      
             <div class="container-background-block-1">  
@@ -120,13 +118,17 @@ include 'vendor/pagination.php';
                 <!-- main -->
                 <div class="container-block-1">
                     <div class="wrapper-block">
-                        
-                        <div class="main">   
-                                  
+                        <div class="most-viewed__title">ПРОСМАТРИВАЕМЫЕ</div>
+                            <div class="main">
+                                <div class="most-viewed main-center">
+
+                                </div> 
+                            </div>                        
+                        </div>
+                        <div class="main">
                             <div id="main-center" class="main-center">
                                 
-                            </div> 
-                                            
+                            </div>         
                         </div>
                         
                         <!-- пагинация (pagination.css, pagination.js)-->

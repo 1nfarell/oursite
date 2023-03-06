@@ -105,5 +105,16 @@ for(let index = 1; index <= benefitAmount; ++index) {
         } else {
         panel.style.maxHeight = "fit-content";}});}
 
+// textarea symb count
 
+    let textarea = document.getElementById('name');
+    function countChars(e) {
+        let charCount = e.target.value.length;
+        let charCouterEl = document.getElementsByClassName('form-submit-field__counter')[0];
+        let maxLength = e.target.getAttribute('maxlength');
+        charCouterEl.innerHTML = `<span style="color:${charCount >= maxLength ? '#05f5f5' : '#050505'}" >\
+                                        ${charCount}/${maxLength}
+                                    </span>`
+    }
+    textarea.addEventListener('input', countChars);
 
