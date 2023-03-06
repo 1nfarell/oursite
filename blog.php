@@ -118,7 +118,8 @@ include 'vendor/pagination.php';
                 <!-- main -->
                 <div class="container-block-1">
                     <div class="wrapper-block">
-                        <div class="most-viewed__title">ПРОСМАТРИВАЕМЫЕ</div>
+                        <div>
+                            <div class="most-viewed__title">САМЫЕ ПОПУЛЯРНЫЕ</div>
                             <div class="main">
                                 <div class="most-viewed main-center">
 
