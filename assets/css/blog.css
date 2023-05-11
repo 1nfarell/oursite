@@ -117,7 +117,7 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    filter: invert(1);
+    
 }
 
 .card-text-picture::selection, .post img::selection , .post-picture-image::selection, .card-icon-id::selection, .card-icon-autor::selection, .post-icon-date::selection{background: transparent;}
@@ -134,7 +134,7 @@
 .card-icon-id{
     width: 20px;
     height: 20px;
-    filter: invert(1);
+    
 }
 
 .card-id-name{
@@ -181,7 +181,7 @@
 .card-icon-autor{
     width: 20px;
     height: 20px;
-    filter: invert(1);
+    
 }
 
 .card-text-autor{
@@ -206,7 +206,7 @@
 .post-icon-date{
     width: 20px;
     height: 20px;
-    filter: invert(1);
+    
 }
 
 div.post-date{
@@ -257,7 +257,8 @@ p.post-date{
     justify-content: center;
     align-items: center;
     padding-top: 100px;
-    filter: invert(1);
+    
+    flex-direction: column;
 }
 
 .post img{
@@ -337,7 +338,7 @@ p.post-date{
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
-    filter: invert(1);
+    
 }
 
 .post-picture{

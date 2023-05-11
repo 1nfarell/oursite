@@ -43,6 +43,11 @@ function generationOutput($shouldCountView)
         while ($article = $sth->fetch(PDO::FETCH_ASSOC)) {
 ?>
             <div class="post">
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/blog.php">Все посты</a></li>
+                <li><?= $article['title'] ?></li>
+            </ul>
                 <img class="post-image" <?= $id_article = $article['id'];
                                         $sth = $db->prepare("SELECT recipe_picture_boolean, images.id_article, images.image_name, images.image_tmp
                                                 FROM images            
@@ -53,11 +58,7 @@ function generationOutput($shouldCountView)
 
             </div>
 
-            <ul class="breadcrumb">
-                <li><a href="/">Главная</a></li>
-                <li><a href="/blog.php">Все посты</a></li>
-                <li><?= $article['title'] ?></li>
-            </ul>
+           
             <div class="post-general">
 
                 <div class="post-cooking-process">

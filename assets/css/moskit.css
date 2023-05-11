@@ -1,0 +1,459 @@
+.moskit-remont--img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+.pohozhiitovar__container + .pohozhiitovar__container{
+    margin-left: 30px;
+}
+
+.pohozhiitovar__box{
+    width: 204px;
+}
+
+.pohozhiitovar__img{
+    height: 204px !important;
+    width: 202px;
+}
+
+.pohozhiitovar__description{
+    top: 135px !important;
+    height: 69px !important;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.container__balkon-wrapper--pohozhiitovar{
+    display: flex;
+    flex-direction: row;
+}
+
+.balkon-wrapper--pohozhiitovar{
+    padding-bottom: 20px !important;
+}
+.balkon-wrapper-planshetwdth{
+    position: relative;
+}
+
+.moskit-title-price{
+    position: absolute;
+    right: 20px;
+    padding-top: 20px;
+    
+}
+.moskit-title-price__price{
+    font-size: 36px;
+    color: #f7654a;
+    text-shadow: 1px 1px 1px wheat;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
+.img-preview-fullwidth{
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
+    cursor: pointer;
+}
+
+.kroshki{
+    padding: 0 20px;
+    
+}
+
+.header-btn_setcolor{
+    color: #F7654A;
+}
+
+.kroshki .breadcrumb-item{
+    font-size: 16px;
+    
+}
+.kroshki .breadcrumb-item a{
+    color: steelblue;
+}
+
+@media (min-width: 1080px) {
+    .img-preview-fullwidth{
+        width: 1140px;
+        height: 414px;
+        
+    }
+}
+@media (max-width: 1080px) and (min-width: 500px)  {
+    .container__balkon-wrapper--pohozhiitovar{
+        overflow-x: scroll;
+    }
+    
+    .pohozhiitovar__container + .pohozhiitovar__container{
+        margin-left: 30px !important;
+    }
+    .balkon-wrapper--pohozhiitovar{
+        flex-direction: row;
+    }
+    .pohozhiitovar__container + .pohozhiitovar__container{
+        margin-left: 30px;
+    }
+    
+    .pohozhiitovar__box{
+        width: 204px;   
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin-right: 0 !important;
+    }
+    
+    .pohozhiitovar__img{
+        height: 204px !important;
+        width: 202px !important;
+    }
+    
+    .pohozhiitovar__description{
+        top: 135px !important;
+        height: 69px !important;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        position: absolute !important;
+        width: 100%;
+       
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        
+        font-weight: 600;
+       
+        padding-bottom: 0 !important;
+        text-align: left;
+        background: #ffffff !important;
+        opacity: 0.8 !important;
+    }
+    .moskit-title-price{
+        padding-top: 10px;
+    }
+    .moskit-title-price__price{
+        padding: 0;
+        font-size: 28px;
+    }
+    .img-preview-fullwidth{
+        max-width: 1040px;
+        width: 100%;
+        max-height: 414px;
+    }
+    .balkon-wrapper, .container__balkon-wrapper{
+        min-width: unset;
+        max-width: unset;
+    }
+    .main{
+        width: 100% !important;
+    }
+    .catalog-moskit-wrapper{
+        width: 90% !important;
+    }
+   
+    .otziv-iframe{
+        align-self: center !important;
+        width: 100% !important;
+    }
+
+    .banner-orange-in{
+        width: 90%;
+    }
+   
+    .moskit-banner-lenta{
+        top: 55px ;
+        height: 60px;
+        width: 270px ;
+        left: 0; bottom: 0; right: 0;
+        margin: 0 auto;
+    }
+    .banner-buy{
+        height: 370px;
+    }
+    .form-span-title{
+        line-height: 32px;
+    }
+
+    .balkon-text.banner-buy{
+        margin-top: 20px;
+    }
+    .balkon-wrapper-planshetwdth{
+        flex-direction: row;
+    }
+    .balkon-wrapper-mobilwdth{
+        padding-top: unset;
+        width: 50%;
+    }
+    .img-preview-box{
+        width: 50%;
+        padding-right: 20px;
+    }
+    .carousel-item{
+        height: 100%;
+    }
+    .moskit-besplatno{
+        height: 120px;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .menu{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header{
+        width: 100%;
+    }
+    .header--container__center {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .header--container{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .header-center a{
+        flex-direction: column;
+        display: flex;
+    }
+
+    .header-namefirm{
+        text-align: center;
+    }
+
+    .header-namefirm:first-child{
+        font-size: 12px;
+        padding-right: 0px;
+    }
+
+    .header-center{
+        width: 120px;
+        padding-top: 0;
+    }
+
+    .header-namefirm{
+        font-size: 22px;
+    }
+
+    .header-left {
+        padding-left: 0;
+    }
+
+    .header-right{
+        padding-right: 0px;
+    }
+    .footer-down > div{
+        width: 90%;
+    }
+}
+
+@media (max-width: 720px) and (min-width: 500px)  {
+  
+    .moskit-title-price{
+        padding-top: 5px;
+    }
+    .moskit-title-price__price{
+        padding: 0;
+        font-size: 22px;
+    }
+    .dropdown-menu{
+        overflow-y: scroll;
+        max-height: calc(100vh - 150px);
+        border: 1px solid rgba(0,0,0,.09);
+        height: fit-content;
+    }
+    
+    .dropdown-item{
+        font-size: 12px;
+        padding: 0.25rem 1rem;
+    }
+
+    .menu-links label {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu-links > ul {
+        display: none;
+        font-size: 14px;
+        white-space: normal;
+        text-align: center;
+        line-height: 15px;
+    }
+
+    input#btn-menu:checked ~ label + ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+        z-index: 40;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        padding: 25px 20px 10px 20px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #FFFFFF;
+        box-shadow: 0px 7px 7px 0px rgb(0 0 0 / 10%);
+        align-items: center;
+    }
+
+    .menu-links{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        white-space: nowrap;
+        justify-content: flex-end;
+        margin-left: 0;
+        align-items: flex-end;
+    }
+
+    .spanshow{
+        display: flex !important;
+        margin-left: 0 !important;
+        margin-right: 14px;
+    }
+
+    .spanhidden{
+        display: none !important;
+    }
+
+    .icon-menu{
+        object-fit: contain;
+        width: 18px;
+    }
+
+    .menu-links ul a + a {
+        box-shadow: -2px 0px 0px 0px rgb(0 0 0 / 5%);
+        /* border-left: 1px solid #999999; */
+    }
+
+    .menu-links span{
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .menu-links span:hover{
+        color: #005FA3;
+    }
+
+    .menu-links a{
+        text-decoration: none;
+        color: #404149;
+        padding-left: 15px;
+    }
+
+    
+    .menu-links a:hover{
+        color: #005FA3;
+    }
+    
+    .menu-catalog{
+        margin-right: 0;
+    }
+    
+    .menu-catalog a:hover{
+        color: #005FA3;
+    }
+    
+    .menu-catalog-links{
+        text-decoration: none; 
+        color: #F7654A;   
+        background-color: #ffffff;
+        border: 0;
+        padding: 0;
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+    
+    .menu-catalog-links:hover{
+        background-color: #ffffff;
+        color: #005FA3;
+    }
+    
+    .menu-catalog-links:focus{
+        background-color: #ffffff;
+        color: #ee2906;
+    } 
+
+    .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .header-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px)  {
+      .img-preview-fullwidth{
+        width: 100%;
+        max-width: 500px;
+        max-height: 200px;
+    }
+    .moskit-remont--img{
+        width: 100%;
+        max-width: 390px;
+        max-height: 300px;
+    }
+    .moskit-title-price__price{
+        font-size: 18px;
+        padding: 0;
+    }
+    .moskit-title-price {
+        position: absolute;
+        right: 20px;
+        padding-top: 0px;
+        padding-right: 10px;
+    }
+
+    .pohozhiitovar__container + .pohozhiitovar__container{
+        margin-left: 30px !important;
+    }
+    .balkon-wrapper--pohozhiitovar{
+        flex-direction: row;
+    }
+    .pohozhiitovar__container + .pohozhiitovar__container{
+        margin-left: 30px;
+    }
+    
+    .pohozhiitovar__box{
+        width: 204px;   
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin-right: 0 !important;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .pohozhiitovar__img{
+        height: 204px !important;
+        width: 202px !important;
+    }
+    
+    .pohozhiitovar__description{
+        top: 135px !important;
+        height: 69px !important;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        position: absolute !important;
+        width: 100%;
+       
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        
+        font-weight: 600;
+       
+        padding-bottom: 0 !important;
+        text-align: left;
+        background: #ffffff !important;
+        opacity: 0.8 !important;
+    }
+}

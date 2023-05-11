@@ -20,11 +20,6 @@ $(document).ready(function(){
                         <a href="">                                \
                             <p class="card-text-autor">'+`${outputData[key]['full_name']}`+'</p>                       \
                         </a></div>\
-                        \
-                        <div class="post-date">    \
-                            <img class="post-icon-date" src="images\\eye.png">\
-                            <p class="post-text-views">'+ outputData[key]['views']+ '</p>\
-                        </div>\
                     <div class="post-date">\
                     <img class="post-icon-date" src="images\\date.png">\
                     <p class="post-date">'+`${outputData[key]['date']}`+'</p></div></div></div>'

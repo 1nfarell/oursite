@@ -1,15 +1,14 @@
-//телеграмм бот
-//
+
 (function ($) {
   
 
-  $("#form-submit").submit(function (event) {
+  $(".contact-form").submit(function (event) {
     event.preventDefault();
     
     // Сообщения формы
-    let successSendText = "Успешно";
-    let errorSendText = "Ошибка!";
-    let requiredFieldsText = "Заполните поля";
+    let successSendText = "Сообщение успешно отправлено";
+    let errorSendText = "Сообщение не отправлено. Попробуйте еще раз!";
+    let requiredFieldsText = "Заполните поля с именем и телефоном";
 
     // Сохраняем в переменную класс с параграфом для вывода сообщений об отправке
     let message = $(this).find(".contact-form__message");
@@ -36,15 +35,13 @@
         let respond = $.parseJSON(res);
 
         if (respond === "SUCCESS") {
-          message.text(successSendText).css("color", "rgba(133, 224, 171, 1)");
+          message.text(successSendText).css("color", "#21d4bb");
           setTimeout(() => {
             message.text("");
-            $('form').get(0).reset();
+            $('#Modal').modal('hide');
+            $('.contact-form').get(0).reset();
             document.getElementById('pressbtnform').disabled = false;
-          }, 4000);
-
-          
-           
+          }, 4000);           
           
         } else if (respond === "NOTVALID") {
           message.text(requiredFieldsText).css("color", "#d42121");

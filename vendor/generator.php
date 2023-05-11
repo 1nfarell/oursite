@@ -129,7 +129,9 @@ function selectCategories(){
     $db = StaticConnection::getConnection();
     $sth = $db->prepare("SELECT DISTINCT * FROM categories");
     $sth->execute();
-    
+    ?>
+    <option value="all">Все статьи</option>
+    <?php
     if ($sth->rowCount() > 0){
         while($article = $sth->fetch(PDO::FETCH_ASSOC)){ 
             ?>

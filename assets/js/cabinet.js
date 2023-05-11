@@ -20,8 +20,8 @@ $.ajax({
     data: dataForm,
     success: function(data){
         SelectData = JSON.parse(data); 
-        function getTable(){ $(field).append('<div class="field">\
-                                    <table id="table-field" class="table-field">\
+        function getTable(){ $(field).append('<div class="field table-responsive">\
+                                    <table id="table-field" class="table table-hover table-striped">\
                                         <tr>\
                                             <th class="table-field-th id">ID</th>\
                                             <th class="table-field-th title">Название</th>\

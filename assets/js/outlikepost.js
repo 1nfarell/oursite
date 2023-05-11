@@ -14,17 +14,17 @@ $.ajax({
         
         function output(){
             for (let key in outputData){    
-                document.title = `${outputData[key]['title']}` + ' - Блог MNDP';
+                document.title = `${outputData[key]['title']}` + ' - Блог Открытие';
                 var meta=document.getElementsByTagName("meta");
                 for (var i=0; i<meta.length; i++) {
                     if (meta[i].name.toLowerCase()=="description") {
                         meta[i].content=document.getElementsByClassName("post-text-description")[0].innerHTML;
                     }
                     if (meta[i].name.toLowerCase()=="application-name") {
-                        meta[i].content=`${outputData[key]['title']}` + ' - Блог MNDP';
+                        meta[i].content=`${outputData[key]['title']}` + ' - Блог Открытие';
                     }
                     if (meta[i].getAttribute("property")=='og:title') {
-                        meta[i].content=`${outputData[key]['title']}` + ' - Блог MNDP';
+                        meta[i].content=`${outputData[key]['title']}` + ' - Блог Открытие';
                     }
                     if (meta[i].getAttribute("property")=="og:description") {
                         meta[i].content=document.getElementsByClassName("post-text-description")[0].innerHTML;
