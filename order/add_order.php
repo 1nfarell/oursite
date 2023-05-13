@@ -34,7 +34,7 @@ function add_Order(){
             $sth->execute($array);
 
             $db_order = StaticConnection::getConnection_db_order();
-            $st = $db_order->prepare("INSERT INTO order_status(number_order, status, time_status) VALUES ('$number_order', '$order__status', '$time_last_status')");
+            $st = $db_order->prepare("INSERT INTO order_status(number_order, status, time_status, account) VALUES ('$number_order', '$order__status', '$time_last_status', '$account')");
             $st->execute($array);
 
             $result = true;

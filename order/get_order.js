@@ -290,10 +290,19 @@ function table_delete_btn (e){
 // Копирование номера заказа в буфер
 function get_click_alert(sel){
     let fd = sel.textContent;
-
+    const resultsEl = document.querySelector('.past-input');
     navigator.clipboard.writeText(fd)
     .then(() => {
-        alert('Номер заказа скопирован в буфер!', 'success')
+        
+        navigator.clipboard.readText()
+        .then(text => {        
+            resultsEl.value = text;
+            alert(`Номер заказа `+fd+` скопирован в буфер и вставлен в строку поиска заказов!`, 'success')
+        })
+        .catch(err => {
+            // возможно, пользователь не дал разрешение на чтение данных из буфера обмена
+            console.log('Something went wrong', err);
+        });
     })
     .catch(err => {
         console.log('Что-то пошло не по плану..', err);

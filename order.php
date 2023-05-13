@@ -172,8 +172,8 @@ if (!$_SESSION['user']) {
                     <div class="balkon-wrapper">
                         <form id="search-form" method="POST">
                             <div class="input-group input-group-lg">
-                                <span class="input-group-text" id="inputGroup-sizing-lg">№</span>
-                                <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
+                                <span class="input-group-text past-btn" id="inputGroup-sizing-lg">№</span>
+                                <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
                                 <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
                             </div>
                         </form>
