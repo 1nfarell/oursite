@@ -60,7 +60,7 @@
 }
 
 .header-btn_setcolor{
-    color: #F7654A;
+    color: #F7654A !important;
 }
 
 .kroshki .breadcrumb-item{

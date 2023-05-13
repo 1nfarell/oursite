@@ -414,7 +414,11 @@ input#btn-menu {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        background-color: #F7F7F7;
+        width: 1140px;
+        height: 300px;
         margin: 0 auto;
+        position: relative;
         bottom: 150px;
         align-items: flex-start;
     }
@@ -1205,11 +1209,15 @@ input#btn-menu {
     
     .field{
         display: flex;
+        flex-direction: row;
         align-items: flex-start;
         justify-content: space-evenly;
+        background-color: #F7F7F7;
+        width: 350px;
+        height: 85px;
         margin: 0 auto;
+        position: relative;
         bottom: 50px;
-        
     }
     
     .field-in{
@@ -1776,7 +1784,7 @@ input#btn-menu {
     }
 }
 
-@media (max-width: 500px)  { 
+@media (max-width: 499px)  { 
     .contant-info-left__title{
         font-size: 18px ;
     }
@@ -2137,9 +2145,14 @@ input#btn-menu {
     
     .field{
         display: flex;
+        flex-direction: row;
         align-items: flex-start;
         justify-content: space-evenly;
+        background-color: #F7F7F7;
+        width: 280px;
+        height: 85px;
         margin: 0 auto;
+        position: relative;
         bottom: 50px;
         
     }

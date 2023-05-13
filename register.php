@@ -1,7 +1,7 @@
 <?php
     session_start();
     if ($_SESSION['user']) {
-        header('Location: /blog.php');
+        header('Location: /login.php');
     }
 ?>
 
@@ -27,12 +27,7 @@
 </head>
 <body>
 <!-- header -->
-<div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
-    <div id="body" style="visibility: hidden;" class="container-main">
+    <div id="body" class="container-main">
         <header id="header">
             
             <div class="header--container">
@@ -47,23 +42,23 @@
                     <div class="header">
                         <div class="header-left">
                             <div class="header-time">
-                                <img class="icon time" src="/images/time.svg" alt="режим работы Открытие">
-                                <span title="Режим работы Оконного завода Открытие">Пн-Пт с 08:00 до 18:00</span>
+                                <!-- <img class="icon time" src="/images/time.svg" alt="режим работы Открытие">
+                                <span title="Режим работы Оконного завода Открытие">Пн-Пт с 08:00 до 18:00</span> -->
                             </div>
                             <div class="header-addres">
-                                <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
-                                <a href="#ouradress" title="Адрес офиса Оконного завода Открытие">Наш офис в г. Волжском</a>
+                                <!-- <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
+                                <a href="#ouradress" title="Адрес офиса Оконного завода Открытие">Наш офис в г. Волжском</a> -->
                             </div>
                         </div>                       
                         <div class="header-right">
                             <div>
-                                <img class="icon phone" src="/images/phone.svg" alt="Позвонить в офис Открытие">
+                                <!-- <img class="icon phone" src="/images/phone.svg" alt="Позвонить в офис Открытие">
                                 <a id="main-telegram_href" rel="nofollow" href=""><img class="icon viber" src="/images/telegram.svg" title="Нажми, чтобы перейти в чат telegram" alt="сделать заказ москитной сетки на окно в telegram"></a>
                                 <a id="main-whatsup_href" rel="nofollow" href=""> <img class="icon whatsup" title="Нажми, чтобы перейти в чат whatsup" src="/images/whatsup.svg" alt="сделать заказ москитной сетки на окно в whatsup"></a>
-                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_1" class="tel"></span>
+                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_1" class="tel"></span> -->
                             </div>
                             <div>
-                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_2" class="tel"></span>
+                                <!-- <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_2" class="tel"></span> -->
                             </div>
                         </div>
                     </div>
@@ -184,24 +179,10 @@
         }
     </script>
     <script src="/assets/js/jquery.mask.min.js"></script>
-    <script src="/assets/js/telegramform.js"></script>
-   <!-- изменение номеров телефона в шапке -->
-   <script src="/assets/js/main_set_contact_tel.js"></script>
-   <!-- Всплывающие окна на странице / Копирование номера телефона в буфер -->
-   <script src="/assets/js/main_alert_get_number.js"></script>
     <script>
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });
-    </script>
-
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
     </script>
 </body>
 </html>

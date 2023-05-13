@@ -48,23 +48,24 @@ if (!$_SESSION['user']) {
                     <div class="header">
                         <div class="header-left">
                             <div class="header-time">
-                                <img class="icon time" src="/images/time.svg" alt="режим работы Открытие">
-                                <span title="Режим работы Оконного завода Открытие">Пн-Пт с 08:00 до 18:00</span>
+                                <!-- <img class="icon time" src="/images/time.svg" alt="режим работы Открытие">
+                                <span title="Режим работы Оконного завода Открытие">Пн-Пт с 08:00 до 18:00</span> -->
                             </div>
                             <div class="header-addres">
-                                <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
-                                <a href="#ouradress" title="Адрес офиса Оконного завода Открытие">Наш офис в г. Волжском</a>
+                                <!-- <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
+                                <a href="#ouradress" title="Адрес офиса Оконного завода Открытие">Наш офис в г. Волжском</a> -->
                             </div>
                         </div>                       
-                        <div class="header-right">
-                            <div>
-                                <img class="icon phone" src="/images/phone.svg" alt="Позвонить в офис Открытие">
-                                <a id="main-telegram_href" rel="nofollow" href=""><img class="icon viber" src="/images/telegram.svg" title="Нажми, чтобы перейти в чат telegram" alt="сделать заказ москитной сетки на окно в telegram"></a>
-                                <a id="main-whatsup_href" rel="nofollow" href=""> <img class="icon whatsup" title="Нажми, чтобы перейти в чат whatsup" src="/images/whatsup.svg" alt="сделать заказ москитной сетки на окно в whatsup"></a>
-                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_1" class="tel"></span>
+                        <div class="header-right">                           
+                            <div class="header-right-form">
+                                <form>
+                                    <p><?= $_SESSION['user']['full_name'] ?></p>
+                                </form>
                             </div>
-                            <div>
-                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_2" class="tel"></span>
+                            <div class="header-right-form-out">                    
+                                <?php if(isset($_SESSION['user'])): ?> 
+                                    <a href="vendor/logout.php">Выход</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -110,9 +111,10 @@ if (!$_SESSION['user']) {
                             <input type="checkbox" name="menu" id="btn-menu" />
                             <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
                             <ul>
-                            <a  href="/cabinet.php">Личный кабинет</a>        
-                            <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a>             
-                            <a  href="/status.php" title="Проекты Волжского Оконного завода ОТКРЫТИЕ">Отслеж. заказа</a>
+                            <!-- <a  href="/cabinet.php">Личный кабинет</a>        
+                            <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
+                            <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
+                            <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
                             </ul>
                         </div>             
                     </div>
@@ -145,6 +147,7 @@ if (!$_SESSION['user']) {
                                 <select name="price_order--status" class="form-select form-select-default" required>
                                     <option disabled selected>Выберите статус оплаты</option>
                                     <option value="Не оплачен">Не оплачен</option>
+                                    <option value="Предоплата">Предоплата</option>
                                     <option value="Рассрочка">Рассрочка</option>
                                     <option value="Оплачен">Оплачен</option>
                                 </select>
@@ -167,111 +170,22 @@ if (!$_SESSION['user']) {
                         </form> 
                     </div>
                     <div class="balkon-wrapper">
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-text" id="inputGroup-sizing-lg">НОМЕР ЗАКАЗА</span>
-                            <input type="text" class="form-control request__input--search"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
-                            <button class="btn btn-outline-secondary" type="button">НАЙТИ</button>
-                        </div>
-                    </div>   
-                    
-                    <p style="padding-bottom: 20px; padding-left: 20px; font-size: 18px">Все заказы</p>
-                    
+                        <form id="search-form" method="POST">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text" id="inputGroup-sizing-lg">№</span>
+                                <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
+                                <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
+                            </div>
+                        </form>
+                    </div>  
+                     
+                    <div class="container--row">                    
+                        <div style="padding-bottom: 20px; padding-left: 20px; font-size: 18px">Все заказы</div>
+                        <button type="button" onclick="reload_page()" class="btn btn-outline-success btn-static">Обновить страницу</button>
+                    </div>
                     <div id="table__order" class="balkon-wrapper table-responsive">
                         <!-- вывод таблицы -->
                     </div>
-                   
-                    <!-- <div class="balkon-wrapper table-responsive">                         -->
-                        <!-- <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                <th scope="col">Номер заказа</th>
-                                <th scope="col">Название изделия</th>
-                                <th scope="col">К оплате</th>
-                                <th scope="col">Статус оплаты</th>
-                                <th scope="col">Дата оформления</th>                             
-                                <th scope="col">Дата последнего статуса</th>
-                                <th scope="col">Текущий статус</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider">
-                                <tr>
-                                    <th scope="row">61111414</th>
-                                    <td>Пластик. окна, Пластик. окна, Пластик. окна, Пластик. окна, Пластик. окна, Пластик. окна</td>                                    
-                                    <td>10 000</td>
-                                    <td>
-                                        <select class="form-select form-select-default" aria-label=".form-select-sm пример">
-                                            <option selected>Выберите статус</option>
-                                            <option value="Не оплачен">Не оплачен</option>
-                                            <option value="Рассрочка">Рассрочка</option>
-                                            <option value="Оплачен">Оплачен</option>
-                                        </select>
-                                    </td>
-                                    <td>01.01.01</td>                                    
-                                    <td>01.01.01</td>
-                                    <th scope="row">
-                                        <select class="form-select form-select-default" aria-label=".form-select-sm пример">
-                                            <option selected>Выберите статус</option>
-                                            <option value="Обработка">Обработка</option>
-                                            <option value="Сборка">Сборка</option>
-                                            <option value="Доставка">Доставка</option>
-                                            <option value="Выполнен">Выполнен</option>
-                                        </select>
-                                    </th> 
-                                    <tr>
-                                        <td colspan="7">
-                                            <table class="table table-sm table-borderless mb-4 ">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="col-sm-9" scope="col">Адрес доставки</th>                                                   
-                                                   
-                                                        <th class="col-sm-1" scope="col">Дата доставки</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="table-group-divider">                                                  
-                                                    <tr >
-                                                        <td class="col-sm-11">
-                                                            <div class="input-group mb-3">
-                                                            <input type="text" class="form-control request__input--search"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg" value="1-й Индустриальный проезд, 18к15, г. Волжский, Волгоградская обл.">
-                                                            </div>  
-                                                        </td>
-                                                        <td class="col-sm-1"><input id="startDate" class="form-control form-control-default" type="date" /></td>         
-                                                    </tr>               
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>                                    
-                                    <tr>
-                                        <td colspan="2">
-                                            <table class="table table-sm table-borderless mb-4">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Статус заказа</th>
-                                                        <th scope="col">Дата присвоения статуса</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="table-group-divider">
-                                                    <tr>
-                                                        <td >В работе</td>
-                                                        <td>01.01.01</td>
-                                                        
-                                                    </tr>  
-                                                    <tr>
-                                                        <td>Доставка</td>
-                                                        <td>01.01.01</td>
-                                                    </tr> 
-                                                    <tr>
-                                                        <td>Выполнен</td>
-                                                        <td>01.01.01</td>
-                                                    </tr>                          
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr> 
-                                </tr> 
-                                                                 
-                            </tbody>
-                        </table> -->
-                    <!-- </div>                                   -->
                 </div>    
             </div>
         </main> 
@@ -323,35 +237,20 @@ if (!$_SESSION['user']) {
 <script src="assets/js/main.js"></script>
 <script src="order/add_order.js"></script>
 <script src="order/get_order.js"></script>
-
 <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- Липкий заголовок -->
+<script>
+    window.onscroll = function() {myFunction()};
 
-    <!-- Липкий заголовок -->
-    <script>
-        window.onscroll = function() {myFunction()};
+    var header = document.getElementById("header");
 
-        var header = document.getElementById("header");
-
-        function myFunction() {
-            if ($(this).scrollTop() > 0) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
+    function myFunction() {
+        if ($(this).scrollTop() > 0) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
         }
-    </script>
-    <script src="/assets/js/jquery.mask.min.js"></script>
-    <script src="/assets/js/telegramform.js"></script>
-   <!-- изменение номеров телефона в шапке -->
-   <script src="/assets/js/main_set_contact_tel.js"></script>
-   <!-- Всплывающие окна на странице / Копирование номера телефона в буфер -->
-   <script src="/assets/js/main_alert_get_number.js"></script>
-    <script>
-        $(function () {
-        $('input[type="tel"]').mask('8 (000) 000-00-00');
-        });
-    </script>
-
-   
+    }
+</script> 
 </body>
 </html>

@@ -5,7 +5,7 @@ require_once 'StaticConnection_db_order.php';
 function get_order_status(){
     $number_order = $_POST['number_order'];
     $db_order = StaticConnection::getConnection_db_order();
-    $sth = $db_order->prepare("SELECT id_status, number_order, status, time_status 
+    $sth = $db_order->prepare("SELECT id_status, number_order, status, time_status, account 
     FROM order_status WHERE number_order = '$number_order' ORDER BY id_status");
     $sth->execute();
 
@@ -15,6 +15,7 @@ function get_order_status(){
                 'number_order' =>  $order_status['number_order'],
                 'status' => $order_status['status'],
                 'time_status' => $order_status['time_status'],
+                'account' => $order_status['account'],
             ]; 
             
             $value_order_status_json = $value_order_status;

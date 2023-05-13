@@ -1896,7 +1896,7 @@ p{
     #info-contact-email{font-size: 12px;}
 }
 
-@media (max-width: 500px)  {
+@media (max-width: 499px)  {
     .moskit-besplatno {
         max-height: 100px;
     }

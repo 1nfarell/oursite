@@ -3,7 +3,7 @@ require_once 'StaticConnection_db_order.php';
 
 // вывод списка в таблицу в order.php
 function get_status_myorder(){
-    $number_order = $_POST['number_order'];
+    $number_order = $_GET['number_order'];
     $db_order = StaticConnection::getConnection_db_order();
     $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh 
     FROM orders WHERE number_order = '$number_order'");

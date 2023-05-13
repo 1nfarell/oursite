@@ -43,7 +43,6 @@ function title_date_status_body(respond){
     return arr;
 }
 
-
 function adress_montazh(respond){
     let arr = "";
     arr = arr + '\
@@ -85,29 +84,34 @@ function getTable(respond, date_montazh_format){
     let table_status_name = document.querySelector('.table_request--status_name');
     let table_status_detail = document.querySelector('#status--detail');
     let message_main_order = document.querySelector('#message_main_order');
+    let qr_box = document.querySelector('.qr_box');
 
     if(respond[0]['order__status'] == 'В обработке'){
             $(dot).addClass(function (index) {
                 if (index < 1) return "dot-in";});
             $(message_main_order).text('Благодарим вас за покупку! Ваш заказ № '+`${respond[0]['number_order']}`+' принят в обработку. Спасибо, что выбираете нас!');
+            $(qr_box).css({"visibility":"hidden"})
     }   else if(respond[0]['order__status'] == 'Сборка'){
             $(dot).addClass(function (index) {
                 if (index < 2) return "dot-in";});
             $(message_main_order).text('Уважаемый клиент, мы рады сообщить, что приступили к Вашему заказу. Спасибо, что выбираете нас!');
+            $(qr_box).css({"visibility":"hidden"})
     }   else if(respond[0]['order__status'] == 'Доставка'){
             $(dot).addClass(function (index) {
                 if (index < 3) return "dot-in";});
-            $(message_main_order).text('Уважаемый клиент, мы рады сообщить, что Ваш заказ собран и совсем скоро будет доставлен. Спасибо, что выбираете нас!');  
+            $(message_main_order).text('Уважаемый клиент, мы рады сообщить, что Ваш заказ собран и совсем скоро будет доставлен. Спасибо, что выбираете нас!'); 
+            $(qr_box).css({"visibility":"hidden"}) 
     }   else if(respond[0]['order__status'] == 'Выполнен') {
             $(dot).addClass(function (index) {
                 if (index < 4) return "dot-in";});
-            $(message_main_order).text('Благодарим вас за покупку! Оставьте отзыв на купленные товары и вы поможете другим покупателям с выбором.');   
-
+            $(message_main_order).append(`Благодарим вас за покупку! <a style="color: steelblue;" href='https://clck.ru/34Ph9X'>Оставьте отзыв на купленные товары</a> и вы поможете другим покупателям с выбором.`);   
+            $(qr_box).css({"visibility":"visible"})
     }   else if(respond[0]['order__status'] == 'Отменен') {
         $(table_dot).remove();
         $(table_status_name).remove();
         $(table_status_detail).remove();
         $(message_main_order).text('Заказ № '+`${respond[0]['number_order']}`+' аннулирован. Приносим извинения за доставленные неудобства. По всем вопросам: 8 (937) 730-7007');
+        $(qr_box).css({"visibility":"hidden"})
     };
 }
 
@@ -118,42 +122,84 @@ function getTableRemove(){
     $(id_date_montazh).children().remove();
 }
 
-(function ($) {  
+function set_date_order(respond){
+    if(respond[0]['date_montazh'] == null){                    
+                        
+        date_montazh_format = "00.00.0000";
 
-    $("#search-form").submit(function (event) {
-      event.preventDefault();
-     
-      let fd = $('#status__input--search').val();
-      
-      $.ajax({
-        url: "order/get_status_myorder.php",
-        type: "POST",
-        data: {"number_order": fd},
-        success: function success(res) { 
-            //Посмотреть на статус ответа, если ошибка
-            let respond = $.parseJSON(res);
-            if (respond) { 
-                getTableRemove(); 
-                
-                if(respond[0]['date_montazh'] == null){                    
+        getTable(respond, date_montazh_format);
+        
+        $(id_date_montazh).children().hide();                    
+        
+    } else {
+        var date_montazh = new Date(respond[0]['date_montazh']);
+        date_montazh_format = date_montazh.toLocaleDateString() + " с 09:00 до 17:00 (известим о точном времени по телефону за день до доставки)";
+        getTable(respond, date_montazh_format);
+    }
+    
+    setTimeout(() => {       
+    alert('Спасибо, что пользуетесь нашими услугами!', 'success')
+    }, 3000); 
+}
+
+(function ($) {  
+    //вывод при заходе по ссылке
+    var search = window.location.search;
+    var paramsStr = search.slice(1);
+    paramsStr = paramsStr.split('&');
+    var res = paramsStr.map(param => param.split('='));
+    var queParams = Object.fromEntries(res);
+    console.log(queParams)
+    console.log(queParams.path)
+    if(queParams.number_order !== undefined){
+        let no = queParams.number_order;
+
+        $.ajax({
+            url: "order/get_status_myorder.php",
+            type: "GET",
+            data: {"number_order": no},
+            success: function success(res) { 
+                //Посмотреть на статус ответа, если ошибка
+                let respond = $.parseJSON(res);
+                if (respond) { 
+                    getTableRemove(); 
                     
-                    date_montazh_format = "00.00.0000";
-                    getTable(respond, date_montazh_format);
-                  
-                    $(id_date_montazh).children().hide();
-                } else {
-                    var date_montazh = new Date(respond[0]['date_montazh']);
-                    date_montazh_format = date_montazh.toLocaleDateString() + " с 10:00 до 14:00";
-                    getTable(respond, date_montazh_format);
-                }
-                
-                setTimeout(() => {       
-                alert('Спасибо, что пользуетесь нашими услугами!', 'success')
-                }, 3000); 
-                
-            } else alert('Такого заказа не существует', 'success');
-        }
-      });
+                    set_date_order(respond);
+                    
+                } else alert('Такого заказа не существует', 'success');
+            }
+        });
+    }
+
+    //вывод по кнопке поиска
+    $("#search-form").submit(function (event) {
+        event.preventDefault();
+        
+        let fd = $('#status__input--search').val();
+        
+        $.ajax({
+            url: "order/get_status_myorder.php",
+            type: "GET",
+            data: {"number_order": fd},
+            success: function success(res) { 
+                //Посмотреть на статус ответа, если ошибка
+                let respond = $.parseJSON(res);
+              
+                if (respond) { 
+                    getTableRemove(); 
+
+                    //передача параметра в url
+                    var baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                    var newUrl = baseUrl + '?number_order=' + fd;
+                    history.pushState(null, null, newUrl);
+
+                    set_date_order(respond);
+                    
+                } else alert('Такого заказа не существует', 'success');
+            }
+        });
     });
-  })(jQuery);
-  
+
+})(jQuery);
+
+

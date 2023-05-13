@@ -110,9 +110,8 @@
                             <input type="checkbox" name="menu" id="btn-menu" />
                             <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
                             <ul>
-                            <a  href="/#ourcompany">О компании</a>        
-                            <a  href="/#ourservices" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Услуги</a>             
-                            <a  href="/#ourproject" title="Проекты Волжского Оконного завода ОТКРЫТИЕ">Наши проекты</a>
+                            <a  href="/">Главная</a>
+                            <a class = "header-btn_setcolor"  href="https://clck.ru/34Ph9X" title="Оставить отзыв на Яндекс Картах">Оставить отзыв</a>
                             </ul>
                         </div>             
                     </div>
@@ -151,10 +150,12 @@
                                     </div>
                                 </div>    
                             </div> 
-                            <div>
+                            <div class="qr_box" style="visibility:hidden">
                                 <!-- для qr кода на отзывы -->
-                               
-
+                               <img loading="lazy" class="qr_status" src="/images-catalog/clck.png" alt="окна открытие яндекс карточка">
+                               <img loading="lazy" class="img_status" src="/images-catalog/moskit-1.png">
+                               <div class="title_qr">Оставьте свой отзыв на Яндекс Картах</div>
+                               <div class="description_qr">(наведите камеру телефона на QR-code, чтобы перейти в отзывы на Яндекс Картах)</div>
                             </div>  
                         </div>             
                     </div>     

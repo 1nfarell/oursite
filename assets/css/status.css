@@ -1,13 +1,68 @@
-.request__input--search{
-
+.container--row{
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    justify-content: space-between;
 }
 
+.header-right-form-out a{
+    color: steelblue;
+}
+
+#search-form{
+    width: 100%;
+}
+
+.qr_box{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.qr_status{
+    height: 270px;
+    position: absolute;
+    right: 350px;
+    top: -20px;
+    width: fit-content;
+}
+
+.img_status{
+    position: absolute;    
+    right: 20px;
+    top: 189px;  
+    width: 350px;
+    height: fit-content;
+}
+.title_qr{
+    position: absolute;
+    right: 370px;
+    top: 255px;
+    font-size: 28px;
+    width: 240px;
+    text-align: center;
+    font-weight: bold;
+}
+.description_qr{
+    position: absolute;
+    right: 350px;
+    top: 360px;
+    font-size: 16px;
+    width: 270px;
+    text-align: center;
+}
+.btn-delete{
+    margin-left: 10px !important;
+}
 .balkon-wrapper--row{
     display: flex;
     flex-direction: row;
 }
 
-
+#table__order{
+    display: flex;
+    flex-direction: column;
+}
 
 .feild-center{
     width: 100%;
@@ -234,6 +289,9 @@
 }
 
 @media (max-width: 1080px) and (min-width: 500px){
+    .qr_box{
+        display: none;
+    }
     .container__status_qrcode{
         display: flex;
         flex-direction: column;
@@ -259,6 +317,9 @@
 }
 
 @media (max-width: 500px){
+    .qr_box{
+        display: none;
+    }
     .container__status_qrcode > div{
         max-width: 418px;
         width: 100%;

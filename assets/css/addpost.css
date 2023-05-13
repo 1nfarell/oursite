@@ -97,7 +97,12 @@
 }
 
 .header-right-form-button a, .ref {
-    color: rgba(255,255,255,.8);
+    color: steelblue;
+}
+
+.field{
+    bottom: unset !important;
+    height: unset !important;
 }
 
 .table-field a{
