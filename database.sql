@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `articles` (
   `id` int NOT NULL,
-  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_categories` int NOT NULL,
   `id_username` int DEFAULT NULL,
   `views` int DEFAULT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `articles`
@@ -58,8 +58,8 @@ INSERT INTO `articles` (`id`, `title`, `description`, `id_categories`, `id_usern
 
 CREATE TABLE `categories` (
   `id` int NOT NULL,
-  `name` tinytext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `name` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `categories`
@@ -81,10 +81,10 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 
 CREATE TABLE `comments` (
   `id` int NOT NULL,
-  `comment` tinytext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
+  `comment` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_article` int NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE `images` (
   `image_tmp` longblob NOT NULL,
   `id_article` int DEFAULT NULL,
   `recipe_picture_boolean` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `images`
@@ -153,7 +153,7 @@ CREATE TABLE `recept_text` (
   `numeration` int NOT NULL,
   `id_article` int NOT NULL,
   `header_text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `recept_text`
@@ -180,11 +180,11 @@ INSERT INTO `recept_text` (`id`, `text`, `numeration`, `id_article`, `header_tex
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
-  `full_name` varchar(355) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `login` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `full_name` varchar(355) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `login` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `users`

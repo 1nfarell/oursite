@@ -1,10 +1,10 @@
 <?php
-
 session_start();
     
 if (!$_SESSION['user']) {
     header('Location: /login.php');
 };
+
 ?>
 
 <!doctype html>
@@ -16,7 +16,7 @@ if (!$_SESSION['user']) {
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/addpost.css">
-    
+    <link rel="stylesheet" href="/assets/css/order.css">
     <link rel="stylesheet" href="/assets/css/status.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
     <link rel="stylesheet" href="/assets/css/moskit.css">
@@ -48,8 +48,13 @@ if (!$_SESSION['user']) {
                     <div class="header">
                         <div class="header-left">
                             <div class="header-time">
-                                <!-- <img class="icon time" src="/images/time.svg" alt="режим работы Открытие">
-                                <span title="Режим работы Оконного завода Открытие">Пн-Пт с 08:00 до 18:00</span> -->
+                                <form id="search-form" method="POST">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text past-btn" id="inputGroup-sizing-lg">№</span>
+                                        <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
+                                        <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
+                                    </div>
+                                </form>
                             </div>
                             <div class="header-addres">
                                 <!-- <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
@@ -169,16 +174,7 @@ if (!$_SESSION['user']) {
                             <button id="btn-form--add_order" type="submit" class="btn btn-primary ">Добавить заказ</button>
                         </form> 
                     </div>
-                    <div class="balkon-wrapper">
-                        <form id="search-form" method="POST">
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-text past-btn" id="inputGroup-sizing-lg">№</span>
-                                <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
-                                <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
-                            </div>
-                        </form>
-                    </div>  
-                     
+                                         
                     <div class="container--row">                    
                         <div style="padding-bottom: 20px; padding-left: 20px; font-size: 18px">Все заказы</div>
                         <button type="button" onclick="reload_page()" class="btn btn-outline-success btn-static">Обновить страницу</button>
@@ -237,6 +233,7 @@ if (!$_SESSION['user']) {
 <script src="assets/js/main.js"></script>
 <script src="order/add_order.js"></script>
 <script src="order/get_order.js"></script>
+
 <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
 <!-- Липкий заголовок -->
 <script>

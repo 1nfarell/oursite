@@ -120,6 +120,12 @@
         padding: 0 30px;
     }
 
+    .header-right{
+        display: flex;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
     .dropdown .icon-message {
         padding-right: 0px;
     }

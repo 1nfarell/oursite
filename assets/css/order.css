@@ -1,0 +1,133 @@
+.wrapper-block {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.auth input, .login-btn, .register-btn{
+    border-radius: 5px;
+}
+
+#search-form div input, #search-form div button, #search-form div span{
+    height: 35px !important;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+#search-form div input{
+    width: 220px;
+}
+@media (max-width: 1080px) and (min-width: 500px){
+    .header-right-form > form > p{
+        margin-bottom: 0 !important;
+    }
+
+    #btn-form--add_order{
+        width: 100% !important;
+    }
+
+    .wrapper-block {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .header-right {
+        flex-direction: row !important;
+    }
+    #search-form div input, #search-form div button, #search-form div span{
+        height: 25px !important;
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+    #search-form div input{
+        width: 120px;
+    }
+}
+
+@media (max-width: 500px){
+    #search-form div input, #search-form div button, #search-form div span{
+        height: 25px !important;
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+    #search-form div input{
+        min-width: 35px;
+        max-width: 100px;
+        width: 100%;
+    }
+    .wrapper-block p{
+        text-align: center;
+    }
+    .wrapper-block {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .header-namefirm:first-child{
+        display: none;
+    }
+    .header-center{
+        padding-left: 15px;
+        justify-content: flex-start;
+        position: absolute;
+    }
+    .header-right-form > form > p{
+        margin-bottom: 0 !important;
+    }
+    .header-right {
+        justify-content: flex-end;
+    }
+    .header-left {
+        margin-top: 0;
+      
+    }
+    
+   
+    .header-right > div+div {
+        margin-left: 5px;
+    }
+
+    .menu-links{
+        width: 100%;
+    }
+   
+    .header{
+        height: 30px;
+        width: 100%;
+        padding-right: 15px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    input#btn-menu:checked ~ label + ul{
+        top: 60px;
+        padding-top: 15px;
+    }
+
+    .menu{
+            justify-content: unset;
+    }
+}
+
+@media (max-width: 400px){
+    .header-center{
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    .header-right{
+        flex-direction: column-reverse !important;
+        align-items: flex-end !important;
+        margin: 0 !important;
+    }
+
+    .header-left{
+        padding-left: 15px;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    #search-form div{
+        flex-wrap: nowrap;
+    }
+    input#btn-menu:checked ~ label + ul {
+        top: 90px;
+    }
+}

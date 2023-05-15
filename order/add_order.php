@@ -20,7 +20,7 @@ function add_Order(){
         $order__status = ("В обработке");
         $time_last_status = date("d.m.Y");
         $account = $_SESSION['user']['full_name'];
-        var_dump($account);
+     
         $sthh = $db_order->prepare("SELECT number_order FROM orders WHERE number_order = '$number_order'");
         $sthh->execute();
 

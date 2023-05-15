@@ -1,7 +1,8 @@
-const counter_step = 5; //шаг бесконечного скрола (изменять на такое же значение и в get_order.php)
+
+const counter_step = 10; //шаг бесконечного скрола (изменять на такое же значение и в get_order.php)
 let data_order = $(this).serialize();
 let field_table__order = $('#table__order');
-var counter_pass = 0;
+var counter_pass = 10;
 var temp = 0;
 var rr = new Array();
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
@@ -429,6 +430,7 @@ function table_history_status_btn(no){
             }
         })   
 }
+
 //условия отключения полей при изменении заказа
 function add_disabled_field_table(SelectData){
 
@@ -461,6 +463,40 @@ function add_disabled_field_table(SelectData){
         }
     }
 }
+let counter_pass_first = 0;
+//вывод заказов сразу при загрузке страницы
+$.ajax({
+    url: 'order/get_order.php',
+    method: 'POST',
+    data: {data_order,                    
+            "counter_pass":counter_pass_first,
+        },
+    success: function(data){
+        
+        SelectData = JSON.parse(data);                  
+        temp =  SelectData;  
+        if(temp !=null){     
+
+            function getTable(SelectData){ $(field_table__order).append(`
+            <form class="table_form"><table class="table table-hover table-disabled">
+                    <thead>
+                        <tr>
+                        <th scope="col">Номер заказа</th>
+                        <th scope="col">Название изделия</th>
+                        <th scope="col">К оплате</th>
+                        <th scope="col">Статус оплаты</th>
+                        <th scope="col">Дата оформления</th>
+                        <th scope="col">Дата последнего статуса</th>
+                        <th scope="col">Текущий статус</th>
+                        </tr>
+                    </thead>
+                    ${table_mainValue(SelectData)}
+                </table></form>`);
+            }                
+            getTable(SelectData);                    
+            add_disabled_field_table(SelectData);
+        }  
+}});
 //бесконечный скролл и вывод таблиц заказов
 window.addEventListener("scroll", function(){
            

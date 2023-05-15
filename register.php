@@ -12,10 +12,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/catalog.css">
-    <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/addpost.css">
+    <link rel="stylesheet" href="/assets/css/order.css">
+    <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/moskit.css">
+    
     <title>Регистрация</title>
     
     <meta name="robots" content="noindex">
@@ -98,16 +100,14 @@
                 <form class="auth">
                     <label class="lbl-registr">Регистрация</label>
                     <label>Фамилия и Имя</label>
-                    <input type="text" name="full_name" placeholder="Фамилия и имя" maxlength="30" required pattern="[a-zA-ZА-Яа-яЁё\s]{3,}">
+                    <input type="text" name="full_name" class="form-control" placeholder="Фамилия и имя" maxlength="30" required pattern="[a-zA-ZА-Яа-яЁё\s]{3,}">
                     <label>Логин</label>
-                    <input type="text" name="login" placeholder="Логин" maxlength="20" required pattern="[a-zA-ZА-Яа-яЁё0-9\s]{3,}">
-                    <label>Почта</label>
-                    <input type="email" name="email" placeholder="Почта" maxlength="40" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                    <input type="text" name="login" class="form-control" placeholder="Логин" maxlength="20" required pattern="[a-zA-ZА-Яа-яЁё0-9\s]{3,}">                    
                     <label>Пароль</label>
-                    <input type="password" name="password" placeholder="Пароль" maxlength="16" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*_-])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^_&*-]{6,}">
+                    <input type="password" name="password" class="form-control" placeholder="Пароль" maxlength="16" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*_-])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^_&*-]{6,}">
                     <label>Подтверждение пароля</label>
-                    <input type="password" name="password_confirm" placeholder="Подтвердите пароль" maxlength="16" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*_-])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^_&*-]{6,}">
-                    <button type="submit" class="register-btn">Зарегистрироваться</button>
+                    <input type="password" class="form-control" name="password_confirm" placeholder="Подтвердите пароль" maxlength="16" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*_-])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^_&*-]{6,}">
+                    <button type="submit" class="register-btn btn btn-secondary">Зарегистрироваться</button>
                     <p>
                         У вас уже есть аккаунт? - <a class="ref" href="/login.php">авторизируйтесь</a>!
                     </p>

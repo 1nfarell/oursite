@@ -5,7 +5,6 @@ require_once 'StaticConnection.php';
 
 $full_name = $_POST['full_name'];
 $login = $_POST['login'];
-$email = $_POST['email'];
 $password = $_POST['password'];
 $password_confirm = $_POST['password_confirm'];
 
@@ -40,10 +39,6 @@ if ($full_name === '') {
     $error_fields[] = 'full_name';
 }
 
-if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $error_fields[] = 'email';
-}
-
 if ($password_confirm === '') {
     $error_fields[] = 'password_confirm';
 }
@@ -66,7 +61,7 @@ if ($password === $password_confirm) {
 
         $password = md5($password);
 
-        $sth = $db->prepare("INSERT INTO users (id, full_name, login, email, password) VALUES (default, '$full_name', '$login', '$email', '$password')");
+        $sth = $db->prepare("INSERT INTO users (id, full_name, login, password) VALUES (default, '$full_name', '$login', '$password')");
         $sth->execute();
 
     $response = [

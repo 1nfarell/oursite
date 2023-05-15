@@ -21,7 +21,7 @@ $('.login-btn').click(function (e) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '/cabinet.php';
+                document.location.href = '/order.php';
             } else {
 
                 if (data.type === 1) {
@@ -52,7 +52,6 @@ $('.register-btn').click(function (e) {
     let login = $('input[name="login"]').val(),
         password = $('input[name="password"]').val(),
         full_name = $('input[name="full_name"]').val(),
-        email = $('input[name="email"]').val(),
         password_confirm = $('input[name="password_confirm"]').val();
 
     let formData = new FormData();
@@ -60,7 +59,6 @@ $('.register-btn').click(function (e) {
     formData.append('password', password);
     formData.append('password_confirm', password_confirm);
     formData.append('full_name', full_name);
-    formData.append('email', email);
 
 
 

@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- База данных: `db_order`
@@ -33,15 +33,15 @@ CREATE TABLE `orders` (
   `description_order` text NOT NULL COMMENT 'наименование заказа',
   `price_order` int NOT NULL COMMENT 'стоимость заказа',
   `price_order__status` text NOT NULL COMMENT 'статус заказа',
-  `today_date_order` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'время добавления заказа',
-  `order__status` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'категория статуса',
-  `time_last_status` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'время последнего изменения статуса',
+  `today_date_order` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'время добавления заказа',
+  `order__status` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'категория статуса',
+  `time_last_status` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'время последнего изменения статуса',
   `adress_order` text NOT NULL COMMENT 'адрес заказчика',
-  `contact_name_order` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'фио',
+  `contact_name_order` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'фио',
   `contact_order` text NOT NULL COMMENT 'контакты заказчика',
-  `date_montazh` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci COMMENT 'дата доставки заказа',
+  `date_montazh` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'дата доставки заказа',
   `account` text NOT NULL COMMENT 'имя аккаунта добавившего заказ'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Дамп данных таблицы `orders`
@@ -68,11 +68,11 @@ INSERT INTO `orders` (`id_order`, `number_order`, `description_order`, `price_or
 
 CREATE TABLE `order_status` (
   `id_status` int NOT NULL,
-  `number_order` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'номер заказа по договору',
-  `status` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'статус ваполнения заказа',
-  `time_status` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'время присвоения статуса',
+  `number_order` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'номер заказа по договору',
+  `status` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'статус ваполнения заказа',
+  `time_status` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'время присвоения статуса',
   `account` text NOT NULL COMMENT 'аккаунт который присвоил статус'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Дамп данных таблицы `order_status`
