@@ -11,11 +11,9 @@ function add_changes_date_montazhValue(){
         
             $date_montazh_order =  (string)$_POST["date_montazh_order"];
             $number_order =  $_POST["number_order"];   
-            $array = array('number_order' => $number_order, 'date_montazh_order' => $date_montazh_order);
-            // $sth = $db_order->prepare("INSERT INTO orders(date_montazh) VALUES ('$date_montazh_order') WHERE number_order = '$number_order'");
             $sth = $db_order->prepare("UPDATE orders SET date_montazh = '$date_montazh_order' WHERE number_order = '$number_order'");
             
-            $sth->execute($array);
+            $sth->execute();
            
             $result = true;
         } 

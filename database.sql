@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 08 2023 г., 11:10
+-- Время создания: Май 19 2023 г., 07:09
 -- Версия сервера: 8.0.29
--- Версия PHP: 7.4.29
+-- Версия PHP: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `articles` (
   `id` int NOT NULL,
-  `title` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
   `id_categories` int NOT NULL,
   `id_username` int DEFAULT NULL,
   `views` int DEFAULT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `articles`
@@ -48,7 +48,7 @@ INSERT INTO `articles` (`id`, `title`, `description`, `id_categories`, `id_usern
 (231, 'Как повысить рейтинг вашего сайта и вывести на первую страницу поиска?', 'Узнайте, как повысить рейтинг своего сайта и вывести его на первые строчки поисковой выдачи!', 6, 2, 2, '2023-03-04 21:38:43'),
 (233, 'SEO vs. PPC: какой метод продвижения выбрать для вашего бизнеса?', 'Сравните преимущества и недостатки SEO и PPC, чтобы выбрать наилучший метод продвижения для вашего бизнеса.', 6, 2, 2, '2023-03-06 00:16:39'),
 (234, '5 советов по оптимизации контента для улучшения SEO', 'Создавайте контент, оптимизированный для поисковых систем, чтобы улучшить свой рейтинг в поисковой выдаче и привлечь больше трафика на свой сайт.', 6, 2, 2, '2023-03-06 00:22:42'),
-(235, 'Как выбрать ключевые слова для SEO продвижения? ', 'Узнайте, как правильно выбрать ключевые слова для своего сайта и улучшить рейтинг сайта в поисковой выдаче.', 6, 2, 1, '2023-03-06 00:49:23');
+(235, 'Как выбрать ключевые слова для SEO продвижения? ', 'Узнайте, как правильно выбрать ключевые слова для своего сайта и улучшить рейтинг сайта в поисковой выдаче.', 6, 2, 2, '2023-03-06 00:49:23');
 
 -- --------------------------------------------------------
 
@@ -58,8 +58,8 @@ INSERT INTO `articles` (`id`, `title`, `description`, `id_categories`, `id_usern
 
 CREATE TABLE `categories` (
   `id` int NOT NULL,
-  `name` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `name` tinytext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `categories`
@@ -81,10 +81,10 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 
 CREATE TABLE `comments` (
   `id` int NOT NULL,
-  `comment` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` tinytext CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
   `id_article` int NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE `images` (
   `image_tmp` longblob NOT NULL,
   `id_article` int DEFAULT NULL,
   `recipe_picture_boolean` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `images`
@@ -153,7 +153,7 @@ CREATE TABLE `recept_text` (
   `numeration` int NOT NULL,
   `id_article` int NOT NULL,
   `header_text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `recept_text`
@@ -180,11 +180,11 @@ INSERT INTO `recept_text` (`id`, `text`, `numeration`, `id_article`, `header_tex
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
-  `full_name` varchar(355) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `login` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `full_name` varchar(355) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `login` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
   `password` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `users`

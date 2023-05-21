@@ -97,6 +97,7 @@
                                 Москитные сетки
                             </button>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
                                 <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
                                 <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
                                 <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
@@ -130,7 +131,7 @@
                             <form id="search-form" method="POST">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text" id="inputGroup-sizing-lg">№</span>
-                                    <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
+                                    <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search" placeholder="Введите номер договора, например: 834934"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
                                     <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
                                 </div>
                             </form>

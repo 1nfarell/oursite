@@ -2,7 +2,7 @@ let id_table_status_search = $('#status-container');
 let id_title_date_status = $('#title_date_status');
 let id_adress_montazh = $('#adress_montazh');
 let id_date_montazh = $('#date_montazh');
-
+let id_status_detail = $('#status--detail');
 
 function table_status_body(respond){
     let arr = "";
@@ -28,7 +28,7 @@ function table_status_body(respond){
             <div class="balkon-wrapper--row table_request--status_name">\
                 <span>В обработке</span>\
                 <span>Сборка</span>\
-                <span>Доставка</span>\
+                <span class="dostavka_gotov">Доставка</span>\
                 <span>Выполнен</span>\
             </div></div>'
     return arr;
@@ -85,6 +85,7 @@ function getTable(respond, date_montazh_format){
     let table_status_detail = document.querySelector('#status--detail');
     let message_main_order = document.querySelector('#message_main_order');
     let qr_box = document.querySelector('.qr_box');
+    let status_name_gotov = document.querySelector('.dostavka_gotov');
 
     if(respond[0]['order__status'] == 'В обработке'){
             $(dot).addClass(function (index) {
@@ -100,7 +101,14 @@ function getTable(respond, date_montazh_format){
             $(dot).addClass(function (index) {
                 if (index < 3) return "dot-in";});
             $(message_main_order).text('Уважаемый клиент, мы рады сообщить, что Ваш заказ собран и совсем скоро будет доставлен. Спасибо, что выбираете нас!'); 
-            $(qr_box).css({"visibility":"hidden"}) 
+            $(qr_box).css({"visibility":"visible"}) 
+    }   else if(respond[0]['order__status'] == 'Готово к отгрузке'){
+            $(dot).addClass(function (index) {
+                if (index < 3) return "dot-in";});
+            $(message_main_order).text('Уважаемый клиент, мы рады сообщить, что Ваш заказ готов к выдачи. Забрать заказ можно в рабочие дни с 9:00 до 17:00. Спасибо, что выбираете нас!'); 
+            $(qr_box).css({"visibility":"visible"}) 
+            $(status_name_gotov).css({"width":"125px"})
+            $(status_name_gotov).text('Готово к отгрузке')
     }   else if(respond[0]['order__status'] == 'Выполнен') {
             $(dot).addClass(function (index) {
                 if (index < 4) return "dot-in";});
@@ -169,8 +177,12 @@ function set_date_order(respond){
                 } else alert('Такого заказа не существует', 'success');
             }
         });
+    } else {
+        $(id_title_date_status).text('Поиск заказа по номеру договора');
+        $(id_status_detail).append(`<p class="status_detail--p">Для того, <strong>чтобы отследить заказ</strong>, укажите номер договора, который указан в вашем договоре и кликните по кнопке "Найти".</p>`);
+        $(id_status_detail).append(`<p class="status_detail--p">Если <strong>информация о заказе не найдена</strong>, то попробуйте зайти попозже и попробовать снова, мы стараемся обрабатывать заказы как можно скорее.`);
     }
-
+    let status_detail_p = ('.status_detail--p');
     //вывод по кнопке поиска
     $("#search-form").submit(function (event) {
         event.preventDefault();
@@ -187,7 +199,8 @@ function set_date_order(respond){
               
                 if (respond) { 
                     getTableRemove(); 
-
+                    $(id_title_date_status).text('');
+                    $(status_detail_p).remove();
                     //передача параметра в url
                     var baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
                     var newUrl = baseUrl + '?number_order=' + fd;

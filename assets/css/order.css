@@ -1,3 +1,69 @@
+#body{
+    background-color: #e9ecef;
+}
+
+.main{
+    background-color: #ffffff;
+}
+.table{
+    vertical-align: middle;
+}
+
+.table_col_width--name{
+    width: 350px;
+} 
+
+.table_col_width--zakaz,  .table_col_width--time_last_status, .table_col_width--time_last_status_oplat, .table_col_width--sum_order, .table_col_width--last_oplata, .th_ostatok, .th_oplata, .table_col_width--montazh{
+    width: 110px;
+}
+.td_oplata{
+    width: 100px;
+}
+.table-sm>:not(caption)>*>* {
+    padding: 0.25rem 10px;
+}
+
+.table_col_width--fio{
+    width: 290px;
+    padding-left: 0 !important;
+}
+.table_col_width--contact {
+    width: 150px;
+}
+
+
+.table_col_width--dostavka{
+    width: 175px;
+    padding-right: 0 !important;
+}
+.table_col_width--order__status{
+    padding-right: 0 !important;
+    width: 180px;
+}
+.table_col_width--adres{
+    width: 370px
+}
+.table_col_width--btn-delete > button{
+    margin-left: 0 !important;
+}
+.table_col_width--btn-hist_oplata, .table_col_width--btn-hist_tek_status, .table_col_width--btn-delete{
+    width: 170px;
+}  
+.table_col_width--btn-hist_oplata > button, .table_col_width--btn-hist_tek_status > button, .table_col_width--btn-delete > button{
+    width: 100%;
+}                                                          
+ .table_header--color{
+    box-shadow: 0px 14px 20px 0px #8c989b;
+    -webkit-box-shadow: 0px 14px 20px 0px #8c989b;
+    -moz-box-shadow: 0px 14px 20px 0px #8c989b;
+ }                               
+ .balkon-wrapper {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+ }
+.table_col_width--oformlen{
+    vertical-align: baseline;
+}
 .wrapper-block {
     padding-top: 50px;
     padding-bottom: 50px;

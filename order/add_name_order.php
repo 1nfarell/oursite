@@ -10,11 +10,11 @@ function add_name_order(){
             //добавление основных полей из формы
         
             $description_order =  $_POST["description_order"];
-            $number_order =  $_POST["number_order"];   
-            $array = array('number_order' => $number_order, 'description_order' => $description_order);
+            $number_order =  $_POST["number_order"];  
+         
             $sth = $db_order->prepare("UPDATE orders SET description_order = '$description_order' WHERE number_order = '$number_order'");
             
-            $sth->execute($array);
+            $sth->execute();
            
             $result = true;
         } 

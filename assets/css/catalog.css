@@ -12,6 +12,18 @@
     border-color: unset;
 }
 
+.besplatno-box{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+}
+
+.besplatno-box > span{
+    padding-top: 15px;
+    font-size: 12px;
+    color: gray;
+}
+
 .balkon-text ol > li:before {
     content: counter(item) ". ";
     font-weight: bold;
@@ -597,9 +609,7 @@ p{
 .carousel-title-size .carousel-control-prev-icon{
     filter: invert(0);
 }
-.moskit-besplatno{
-    max-height: 145px;
-}
+
 
 @media (min-width: 1080px)  { 
     .color-size-wrapper{
@@ -1206,8 +1216,8 @@ p{
         color: #F7654A;
         font-size: 20px;
         position: absolute;
-        right: -110px;
-        bottom: 40px;
+        right: -95px;
+        bottom: 48px;
     }
     .moskit-big-sale{
         position: absolute;
@@ -1279,7 +1289,7 @@ p{
         height: 45px;
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 15px;
         font-size: 16px;
         color: #FFFFFF;
         transition: .3s;
@@ -1897,6 +1907,10 @@ p{
 }
 
 @media (max-width: 499px)  {
+    .balkon--wrapper__overflow{
+        overflow-x: scroll;
+        width: 100%;
+    }
     .moskit-besplatno {
         max-height: 100px;
     }

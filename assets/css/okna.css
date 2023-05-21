@@ -1,0 +1,121 @@
+@media (max-width: 1600px){
+    .catalog-balkon-wrapper > .list-group-container{
+        display: none;
+    }    
+}
+.catalog-balkon-wrapper > .list-group-container{
+    position: fixed;
+    margin-left: -195px;
+}
+#list-example{
+    text-align: left;
+}
+.list-group-item.active {
+    background-color: steelblue;
+    border-color: steelblue;
+
+}
+.list-group-item{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+   
+    box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
+}
+
+
+.imgintext{
+    margin-right: 20px;
+}
+.okna-garant{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.okna-garant-box{
+    display: flex;
+    align-items: center;
+
+}
+.carousel-profil-wrapper{
+    width: 100%;
+    height: 450px;
+}
+
+#carouselExampleCaptions{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+}
+
+.carousel-box-profil{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+}
+
+.carousel-caption{
+    color: black;
+}
+
+.carousel-box-profil--item{
+    width: 100%;
+    height: 450px;    
+}
+
+#carouselExampleCaptions .carousel-indicators button  {
+    background-color: rgb(0, 0, 0);
+}
+
+#carouselExampleCaptions .carousel-control-prev-icon{
+    filter: invert(0);
+}
+
+#carouselExampleCaptions .carousel-control-next-icon{
+    filter: invert(1);
+}
+
+.img-profil{
+    height: 300px;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 100px;
+}
+
+#carouselExampleCaptions .carousel-indicators{
+    margin-bottom: 0;
+}
+
+#carouselExampleCaptions .carousel-caption{
+    top: -20px;
+    bottom: unset;
+    text-align: left;
+    padding-bottom: 0;
+    color: #404149;
+}
+
+.profil-img-box{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1080px){
+    #carouselExampleCaptions .d-none{
+        display: block !important;
+    }
+
+
+    .carousel-profil-wrapper{
+        margin-top: 30px;
+    }
+}

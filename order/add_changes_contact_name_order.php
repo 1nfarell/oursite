@@ -11,10 +11,9 @@ function add_changes_contact_name_order(){
         
             $contact_name_order =  $_POST["contact_name_order"];
             $number_order =  $_POST["number_order"];   
-            $array = array('number_order' => $number_order, 'contact_name_order' => $contact_name_order);
             $sth = $db_order->prepare("UPDATE orders SET contact_name_order = '$contact_name_order' WHERE number_order = '$number_order'");
             
-            $sth->execute($array);
+            $sth->execute();
            
             $result = true;
         } 

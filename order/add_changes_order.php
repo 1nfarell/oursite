@@ -3,6 +3,7 @@ require_once 'StaticConnection_db_order.php';
 session_start();
 // добавление в базу из формы в order.php
 function add_changes_order(){
+       
 
         if($_POST['order__status']){
             
@@ -15,11 +16,8 @@ function add_changes_order(){
             $time_last_status = date("d.m.Y");  
             $account = $_SESSION['user']['full_name'];      
             $array = array('number_order' => $number_order, 'order__status' => $order__status, 'time_last_status' => $time_last_status, 'account' => $account);
-            $sth = $db_order->prepare("UPDATE orders SET time_last_status = '$time_last_status', order__status = '$order__status' WHERE number_order = '$number_order'");
-            
-            $sth->execute($array);
-
-            $db_order = StaticConnection::getConnection_db_order(); 
+            $sth = $db_order->prepare("UPDATE orders SET time_last_status = '$time_last_status', order__status = '$order__status' WHERE number_order = '$number_order'");            
+            $sth->execute();
          
             $st = $db_order->prepare("INSERT INTO order_status(number_order, status, time_status, account) VALUES (:number_order, :order__status, :time_last_status, :account)");
             

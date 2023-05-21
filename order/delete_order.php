@@ -10,8 +10,11 @@ function deleteOrder(){
         WHERE number_order = '$number_order'");
         $sth->execute();  
 
-        $db_order = StaticConnection::getConnection_db_order();
         $sth = $db_order->prepare("DELETE FROM order_status
+        WHERE number_order = '$number_order'");
+        $sth->execute(); 
+
+        $sth = $db_order->prepare("DELETE FROM balance_orders
         WHERE number_order = '$number_order'");
         $sth->execute(); 
     

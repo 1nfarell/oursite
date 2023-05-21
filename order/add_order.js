@@ -30,8 +30,13 @@
   
             setTimeout(() => {
               $('#form--add_order').get(0).reset();
+
+              let input_predoplata = $('#input_predoplata');
+              $(input_predoplata).css({'display':'none'});
+              
               document.getElementById('btn-form--add_order').disabled = false;         
-              alert('Заказ '+alertTrigger2+' добавлен в базу!', 'success')
+              alert('Заказ '+alertTrigger2+' добавлен в базу!', 'success');
+              document.location.reload(); 
             }, 3000); 
   
           } else if (respond === "NOEMPTY") {

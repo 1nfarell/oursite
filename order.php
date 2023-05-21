@@ -103,6 +103,7 @@ if (!$_SESSION['user']) {
                                 Москитные сетки
                             </button>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
                                 <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
                                 <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
                                 <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
@@ -131,7 +132,7 @@ if (!$_SESSION['user']) {
             <div class="main">     
                 <div class="catalog-balkon-wrapper catalog-moskit-wrapper">
                     
-                    <p style="padding-bottom: 20px; padding-left: 20px; font-size: 18px">Добавить заказ</p>
+                    <p style="padding-bottom: 20px; padding-left: 30px; font-size: 22px">Добавить заказ</p>
                     <div class="balkon-wrapper">
                         
                         <form id="form--add_order" method="POST">
@@ -144,12 +145,12 @@ if (!$_SESSION['user']) {
                                 <input name="description_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
                             </div>
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">К оплате</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">Сумма заказа</span>
                                 <input name="price_order" type="number" class="form-control" aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)" maxlength="20" required>
                                 <span id="input-group-text_dollar" class="input-group-text">₽</span>
                             </div>   
                             <div class="input-group mb-3">               
-                                <select name="price_order--status" class="form-select form-select-default" required>
+                                <select name="price_order--status" onchange="changeVarianPay(this);" id="price_order_stat" class="form-select form-select-default" required>
                                     <option disabled selected>Выберите статус оплаты</option>
                                     <option value="Не оплачен">Не оплачен</option>
                                     <option value="Предоплата">Предоплата</option>
@@ -157,7 +158,11 @@ if (!$_SESSION['user']) {
                                     <option value="Оплачен">Оплачен</option>
                                 </select>
                             </div>
-                            
+                            <div id="input_predoplata" style="display:none;" class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Предоплата</span>
+                                <input name="sum_pay" type="number" class="form-control" aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)" maxlength="20" >
+                                <span id="input-group-text_dollar" class="input-group-text">₽</span>
+                            </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">ФИО заказчика</span>
                                 <input name="contact_name_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
@@ -168,7 +173,7 @@ if (!$_SESSION['user']) {
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Адрес</span>
-                                <input name="adress_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                <input name="adress_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255">
                             </div>
                            
                             <button id="btn-form--add_order" type="submit" class="btn btn-primary ">Добавить заказ</button>
@@ -176,7 +181,7 @@ if (!$_SESSION['user']) {
                     </div>
                                          
                     <div class="container--row">                    
-                        <div style="padding-bottom: 20px; padding-left: 20px; font-size: 18px">Все заказы</div>
+                        <div style="padding-bottom: 20px; padding-left: 30px; font-size: 22px">Все заказы</div>
                         <button type="button" onclick="reload_page()" class="btn btn-outline-success btn-static">Обновить страницу</button>
                     </div>
                     <div id="table__order" class="balkon-wrapper table-responsive">

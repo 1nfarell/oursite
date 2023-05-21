@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
     <link rel="stylesheet" href="/assets/css/moskit.css">
+    <link rel="stylesheet" href="/assets/css/okna.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -101,6 +102,7 @@
                                 Москитные сетки
                             </button>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
                                 <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
                                 <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
                                 <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
@@ -126,12 +128,12 @@
         </header>
         <main>
             <div class="main">
-                <div class="catalog-balkon-wrapper catalog-moskit-wrapper">
-                    <div class="kroshki">
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                    <div class="kroshki " id="list-item-0">
                         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/">Главная</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Окна</li>
+                            <li class="breadcrumb-item active" aria-current="page" >Окна</li>
                             </ol>
                         </nav>
                     </div>
@@ -149,7 +151,7 @@
                                     <div class="modal-dialog">
                                       <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Замер сетки самостоятельно.</h5>
+                                            <h5 class="modal-title" >Замер окна самостоятельно.</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body" >
@@ -183,19 +185,52 @@
                         </div>
                     </div>
                     <div class="wrapper-block-title">
-                        <h2 class="catalog-moskit-title">Окна под заказ</h2>
+                        <h2 class="catalog-moskit-title" id="list-item-1">Окна под заказ</h2>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper color-size-center">
                         <div class="balkon-text color-title-text">
-                            <p><strong>Оконный завод Открытие изготавливает окна</strong> любого типа, конфигурации и конструкции. <strong>Заказывая окна в Волжском  под заказ</strong> вы получаете качественное изделие по конкурентной цене.</p>
+                            <p><strong>Оконный завод Открытие изготавливает пластиковые окна ПВХ и алюминиевые окна</strong> любого типа, конфигурации и конструкции. <strong>Заказывая окна в Волжском  под заказ</strong> вы получаете качественное изделие по конкурентной цене.</p>
+                            <div>
+                                <div class="okna-garant-box">                                    
+                                    <img loading=lazy src="/images-catalog/okna-garant.png" class="okna-garant d-block">
+                                    <p>Мы более 20 лет <strong>производим качественные окна</strong> и даем 10 лет гарантии на нашу продукцию.</p>
+                                </div>
+                                <div class="okna-garant-box">                                    
+                                    <img loading=lazy src="/images-catalog/okna-garant.png" class="okna-garant d-block">
+                                    <p><strong>Выполняем окна любой формы и размера в промышленном масштабе</strong>: панорамные, порталы, арочные, алюминиевые конструкции, раздвижные окна и двери.</p>
+                                </div>
+                                <div class="okna-garant-box">                                    
+                                    <img loading=lazy src="/images-catalog/okna-garant.png" class="okna-garant d-block">
+                                    <p>Окна, выполненные оконным заводом «Открытие» отвечают всем требованиям ГОСТа.</p>
+                                </div>                                
+                            </div>
                         </div>
-                        <div class="color-size-wrapper">
-                            <!-- <img loading=lazy class="moskit-besplatno" src="/images-catalog/moskit-besplatno.png" alt="бесплатно при заказе москитной сетки"> -->
+                        <div class="color-size-wrapper besplatno-box">
+                            <img loading=lazy class="moskit-besplatno" src="/images-catalog/moskit-besplatno.png" alt="бесплатно при заказе окон">
+                            <span>*Замер, доставка и монтаж бесплатно при заказе от 30 000р. </span>
+                        </div>
+                    </div>
+                    <div class="col-13 list-group-container">
+                        <div id="list-example" class="list-group">
+                            <a class="list-group-item disabled" href="#list-item-0">Навигация по странице</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-1">Окна под заказ</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-2">Виды окон</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-3">Профильные системы</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-4">Доп. элементы к окнам</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-5">Маркизы для окон</a>                          
+                          <a class="list-group-item list-group-item-action" href="#list-item-6">Покраска профиля</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-7">Москитные сетки</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-8">Жалюзи и Рольставни</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-9">Ремонт окон</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-10">Наши гарантии</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-11">Наши заказчики</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-12">Отзывы и наши работы</a>
+                          <a class="list-group-item list-group-item-action" href="#list-item-13">Похожие изделия</a>
                         </div>
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Виды окон</h3>
+                        <h3 class="wrapper-block-h" id="list-item-2">Виды окон</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="container__balkon-wrapper container--overflow__xscroll">
@@ -203,32 +238,36 @@
                             <div class="balkon-text-row balkon-text-row-moskit balkon-text-row-moskit-padding">
                                 <div class="container__catalog-box">
                                     <div class="main-catalog-box main-catalog-width">
-                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-ramnaya-setka.png" alt="рамная москитная сетка под заказ">
+                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-ramnaya-setka.png" alt="пластиковых окна под заказ">
 
                                         <span class="box-title box-absolute box-color opacityspan-moskit">ПЛАСТИКОВЫЕ ОКНА</span>
                     <!-- .container--sale :контейнер с ценой скидки;  .price--sale :класс со стилями для старой цены-->
                                         <div class="container--sale" >
-                                            <img loading=lazy class="moskit-big-sale" src="/images-catalog/moskit-big-sale.png" alt="скидка на москитные сетки">
-                                            <span title="цена москитной сетки" class="container--sale__price" data-bs-toggle="modal" data-bs-target="#Modal"> от 702 р </span>
+                                            <img loading=lazy class="moskit-big-sale" src="/images-catalog/moskit-big-sale.png" alt="скидка на пластиковые окна">
+                                            <span title="цена пластикового окна" class="container--sale__price" data-bs-toggle="modal" data-bs-target="#Modal"> от 7 800 р </span>
                                             <span class="container--sale__persent"> -22% </span>
                                         </div>
-                                        <span  data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit price--sale">от 900 р</span>
+                                        <span  data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit price--sale">от 10 000 р</span>
                                     </div>
                                     <div class="balkon-text padding-picture balkon-text-width">
                                         <h4>Пластиковые окна</h4>
-                                        <p>Рамная москитная сетка защитит Вас от насекомых и пыли, установить такую стеку можно без затруднений в любой проем. <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/ramnaya">Подробнее о рамных москитных сетках.</a></p>
+                                        <p>Изготовим пластиковые окна по индивидуальному заказу. Глухие, поворотные, поворотно-откидные, раздвижные окна на выбор. 
+                                            Одностворчатые, двухстворчатые, трёхстворчатые и больше!</p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/plastic-okno">Перейти к пластиковым окнам.</a>
                                     </div>
                                 </div>
                                 <div class="container__catalog-box">
                                     <div  class="main-catalog-box main-catalog-width">
-                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-razdvizhnaya-setka.png" alt="раздвижная москитная сетка под заказ">
+                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-razdvizhnaya-setka.png" alt="алюминиевые окна под заказ">
 
                                         <span class="box-title box-absolute box-color opacityspan-moskit">АЛЮМИНИЕВЫЕ ОКНА</span>
-                                        <span title="цена раздвижной москитной сетки" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 1 500 р</span>
+                                        <span title="алюминиевые окна цена" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 10 000 р</span>
                                     </div>
                                     <div class="balkon-text padding-picture balkon-text-width">
                                         <h4>Алюминиевые окна</h4>
-                                        <p>Раздвижные москитные сетки для лоджий и балконов. Могут монтироваться как внутри, так и снаружи помещения. <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/razdvizhnaya">Подробнее о раздвижных москитных сетках.</a></p>
+                                        <p>Изготовим алюминиевые окна из холодного или теплого профиля. Профиль из алюминия прочнее, поэтому идеален для, витражей, 
+                                            панорамного остекления и даже светопрозрачной кровли! </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/aluminii-system">Перейти к алюминиевым окнам.</a>
                                     </div>
                                 </div>
                             </div>
@@ -237,26 +276,60 @@
                             <div class="balkon-text-row balkon-text-row-moskit balkon-text-row-moskit-padding">
                                 <div class="container__catalog-box">
                                     <div class="main-catalog-box main-catalog-width">
-                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-raspashnaya-setka.png" alt="распашная москитная сетка под заказ">
+                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-raspashnaya-setka.png" alt="раздвижные окна под заказ">
 
-                                        <span class="box-title box-absolute box-color opacityspan-moskit">НЕСТАНДАРТНЫЕ ОКНА</span>
-                                        <span title="цена распашной москитной сетки" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 1 500 р</span>
+                                        <span class="box-title box-absolute box-color opacityspan-moskit">РАЗДВИЖНЫЕ ОКНА</span>
+                                        <span title="раздвижные окна цена" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 10 000 р</span>
                                     </div>
                                     <div class="balkon-text padding-picture balkon-text-width">
-                                        <h4>Нестандартные окна</h4>
-                                        <p>Распашные сетки монтируются на любые двери, выглядят современно и не портят вид и не ограничивают обзор. <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/raspashnaya">Подробнее о распашных москитных сетках.</a></p>
+                                        <h4>Раздвижные окна</h4>
+                                        <p>Изготовим раздвижные окна из алюминия и ПВХ для 
+                                            остекления балконов и лоджий, террас и веранд, беседок и павильонов - для большего притока воздуха и лучшей эргономики пространства.</p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/portal-okno">Перейти к раздвижным окнам.</a>
                                     </div>
                                 </div>
                                 <div class="container__catalog-box">
                                     <div  class="main-catalog-box main-catalog-width">
-                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-rulon-setka.png" alt="рулонная москитная сетка под заказ">
+                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-rulon-setka.png" alt="панорамные окна под заказ">
 
                                         <span class="box-title box-absolute box-color opacityspan-moskit">ПАНОРАМНЫЕ ОКНА</span>
-                                        <span title="цена рулонной москитной сетки" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 2 400 р</span>
+                                        <span title="панорамные окна цена" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 10 000 р</span>
                                     </div>
                                     <div class="balkon-text padding-picture balkon-text-width">
                                         <h4>Панорамные окна</h4>
-                                        <p>Просты в эксплуатации и не требуют съёма на зиму, при необходимости можно быстро убрать в кассету. <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/rulonnaya">Подробнее о рулонных (роллетных) москитных сетках.</a></p>
+                                        <p>Изготовим окна для остекления балконов и лоджий, загородных домов, квартир, террас и веранд, 
+                                            зимних садов и офисов, с фурнитурой и стеклопакетами известных брендов. </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/panoramma-okno">Перейти к панорамным окнам.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="balkon-wrapper balkon-wrapper__catalog">
+                            <div class="balkon-text-row balkon-text-row-moskit balkon-text-row-moskit-padding">
+                                <div class="container__catalog-box">
+                                    <div class="main-catalog-box main-catalog-width">
+                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-raspashnaya-setka.png" alt="модульные окна под заказ">
+
+                                        <span class="box-title box-absolute box-color opacityspan-moskit">ПАВИЛЬОНЫ И КИОСКИ НА ЗАКАЗ</span>
+                                        <span title="модульные окна цена" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 45 000 р</span>
+                                    </div>
+                                    <div class="balkon-text padding-picture balkon-text-width">
+                                        <h4>Павильоны и киоски из ПВХ и алюминия</h4>
+                                        <p>Изготовим на заказ недорогие павильоны и киоски из алюминия и пластика ПВХ различных форм и конфигураций индивидуально под назначение использования. </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/portal-okno">Перейти к модульным окнам.</a>
+                                    </div>
+                                </div>
+                                <div class="container__catalog-box">
+                                    <div  class="main-catalog-box main-catalog-width">
+                                        <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-rulon-setka.png" alt="остекление балконов и лоджий под заказ">
+
+                                        <span class="box-title box-absolute box-color opacityspan-moskit">ОСТЕКЛЕНИЕ БАЛКОНОВ И ЛОДЖИЙ</span>
+                                        <span title="остекление балконов и лоджий цена" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 45 000 р</span>
+                                    </div>
+                                    <div class="balkon-text padding-picture balkon-text-width">
+                                        <h4>Остекление балконов и лоджий</h4>
+                                        <p>Изготовим теплое и холодное остекление балкона и остекление лоджии под заказ с профилем, фурнитурой и стеклопакетами известных брендов. </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/balkon">Перейти к балконам и лоджиям.</a>
                                     </div>
                                 </div>
                             </div>
@@ -267,12 +340,13 @@
                                     <div class="main-catalog-box main-catalog-width">
                                         <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-plise.png" alt="Москитная сетка плиссе под заказ">
 
-                                        <span class="box-title box-absolute box-color opacityspan-moskit">РАЗДВИЖНЫЕ ОКНА</span>
+                                        <span class="box-title box-absolute box-color opacityspan-moskit">НЕСТАНДАРТНЫЕ ОКНА</span>
                                         <span title="цена москитной сетки плиссе" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 10 000 р</span>
                                     </div>
                                     <div class="balkon-text padding-picture balkon-text-width">
-                                        <h4>Раздвижные окна</h4>
-                                        <p>Экономия места, лёгкость эксплуатации и эстетичный внешний, самое элегантное решение для закрытия проёма. <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/plisse">Подробнее о москитных сетках плиссе.</a></p>
+                                        <h4>Пластиковые окна нестандартной формы</h4>
+                                        <p>Арочные, треугольные, круглые, трапециевидные, эркерные. Наши технологии позволяют изготовить пластиковые окна практически любой формы. </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/plisse">Перейти к нестандартным окнам.</a>
                                     </div>
                                 </div>
                                 <div class="container__catalog-box">
@@ -280,84 +354,219 @@
                                         <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/moskit-vnutri-setka.png" alt="вставная москитная сетка внутреннего монтажа под заказ">
 
                                         <span class="box-title box-absolute box-color opacityspan-moskit">МЯГКИЕ ОКНА ДЛЯ ВЕРАНД И ТЕРРАС</span>
-                                        <span title="цена вставной москитной сетки" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 2 000 р</span>
+                                        <span title="цена вставной москитной сетки" data-bs-toggle="modal" data-bs-target="#Modal" class="box-price box-absolute opacityspan-price-moskit">от 1 600 руб</span>
                                     </div>
                                     <div class="balkon-text padding-picture balkon-text-width">
                                         <h4>Мягкие окна для веранд и террас</h4>
-                                        <p>Конструкция москитной сетки
-                                            исключает выпадение ее из оконного проема на улицу.
-                                            Легко ставится и снимается изнутри помещения.  <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/vstavnaya">Подробнее о вставных москитных сетках.</a></p>
+                                        <p>Изготовим мягкие окна из ПВХ (Гибкие окна) для веранд, террас, беседок, открытых летних зон кафе или других 
+                                            не застекленных строений.  </p>
+                                            <a class="moskit_setki--podrobnee" href="/catalog/soft-okno">Перейти к мягким окнам.</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Опции и аксессуары</h3>
+                        <h3 class="wrapper-block-h" id="list-item-3">Профильные системы</h3>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="balkon-wrapper color-size-center">
+                        <div class="">
+                           
+                            <div class="balkon-text color-title-text">                            
+                                
+                                <p><img loading=lazy class="imgintext"  width="150" src="/images-catalog/brusbox.png"  vspace="4" hspace="4" alt="профиль brusbox" align="left">
+                                    <strong>Компания «BRUSBOX»</strong> – один из крупнейших производителей ПВХ профиля и подоконной доски в России, основана в марте 2004 года. 
+                                    «BRUSBOX» представил на рынке принципиально новый профиль, разработанный российскими специалистами на базе немецких технологий.</p>
+                                <p><strong>Пластиковые окна Brusbox</strong> – это качественная разработка, сочетающая в себе комплекс технологий, которые позволяют насладиться 
+                                    уютом и комфортом в Вашем доме по доступной цене.</p> 
+                                <p><strong>Основные преимущества пластиковых окон Brusbox</strong> заключаются в 
+                                    надежной теплоизоляции и высокой шумоизоляции. Они полностью соответствуют ГОСТ 30673-99 и были разработаны специально для России, 
+                                    учитывая специфику погодных условий и потребности покупателей.
+                                </p>
+                                <b>Гарантии качества.</b>
+                                <p>                                    
+                                    В лаборатории контроля качества профиля проводятся испытания образцов продукции в соответствии с системой ГОСТов. 
+                                    Испытывается прочность сварного шва, полученного при соединении двух кусков профиля. Профиль испытывается на ударную вязкость.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="color-size-wrapper besplatno-box carousel-profil-wrapper">
+                            <div id="carouselExampleCaptions" class="carousel slide carousel-fade " data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner carousel-box-profil">
+                                  <div class="carousel-item bg-body active carousel-box-profil--item">
+                                    <div class="profil-img-box">
+                                        <img src="http://brusbox.ru/wp/wp-content/uploads/2017/05/aclass-slide.png" class="d-block img-profil" alt="...">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5><strong>BRUSBOX ACLASS</strong></h5>
+                                      <p>Оптимальна для изготовления оконных конструкций всех основных типов и форм. Система обладает высоким коэффициентом сопротивления теплопередаче.</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item bg-body carousel-box-profil--item">
+                                    <div class="profil-img-box">
+                                        <img src="http://brusbox.ru/wp/wp-content/uploads/2017/05/60-4-slide.png" class="d-block img-profil" alt="...">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5><strong>BRUSBOX 60-4</strong></h5>
+                                      <p>Имеет 4 внутренние камеры и отличается одним из самых высоких показателей сопротивления теплопередачи в своём классе.</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item bg-body carousel-box-profil--item">
+                                    <div class="profil-img-box">
+                                        <img src="http://brusbox.ru/wp/wp-content/uploads/2017/05/70-6white-slide.png" class="d-block img-profil" alt="...">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5><strong>BRUSBOX 70-6</strong></h5>
+                                      <p>Обеспечивает повышенную тепло- и звукоизоляцию оконных конструкций и является лидером в своём сегменте по соответствующим характеристикам.</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item bg-body carousel-box-profil--item">
+                                    <div class="profil-img-box">
+                                        <img src="http://brusbox.ru/wp/wp-content/uploads/2017/05/aero-slide.png" class="d-block img-profil" alt="...">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5><strong>BRUSBOX AERO</strong></h5>
+                                      <p>Наиболее востребованная система профилей в сегменте как корпоративного, так и частного строительства за счет оптимального соотношения ее цены и качества.</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item bg-body carousel-box-profil--item">
+                                    <div class="profil-img-box">
+                                        <img src="http://brusbox.ru/wp/wp-content/uploads/2017/05/superaero-slide.png" class="d-block img-profil" alt="...">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5><strong>BRUSBOX SUPER AERO</strong></h5>
+                                      <p>Использование данной серии профильных систем - оптимальное сочетание высоких показателей энергоэффективности и доступной цены окон.</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item bg-body carousel-box-profil--item">
+                                    <div class="profil-img-box">
+                                        <img src="http://brusbox.ru/wp/wp-content/uploads/2017/05/GLIDE-1.png" class="d-block img-profil" alt="...">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5><strong>BRUSBOX GLIDE</strong></h5>
+                                      <p>Раздвижная система создает великолепный внешний вид и придает максимальную функциональность даже самому узкому балкону или лоджии.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Предыдущий</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Следующий</span>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-block-title">
+                        <h3 class="wrapper-block-h" id="list-item-4">Дополнительные опции при заказе окон</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper container--overflow__xscroll">
                         <div class="balkon-text-row balkon-text-row-moskit">
                             <div class="balkon-text-row-column">
                                 <div class="main-catalog-box-type blockcenter">
-                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/moskit-fiberglass.png" alt="полотно для москитной сетки обычное fiberglass">
+                                    <img loading=lazy class="height-image balkon-image-type" src="/images/komplect-okno-2.webp" alt="Подоконник для окна">
 
                                 </div>
                                 <div class="balkon-text padding-picture-type">
-                                    <h4>Москитные сетки</h4>
-                                    <p>Оптимальное соотношение качества и цены. Обладает высокими прочностными характеристиками.</p>
+                                    <h4>Подоконники</h4>
+                                    <p>Подоконник для окон ПВХ защищает нижнюю часть стены от намокания при открытом 
+                                        окне и служит преградой от утечки теплого воздуха из помещения. </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/moskit_setki/plisse">Перейти к Подоконникам.</a>
                                 </div>
                             </div>
                             <div class="balkon-text-row-column">
                                 <div  class="main-catalog-box-type blockcenter">
-                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/moskit-petscreen.png" alt="полотно для москитной сетки антикошка PetScreen">
+                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/okna-otkosu-plast.png" alt="Откосы ПВХ для окна">
 
                                 </div>
                                 <div class="balkon-text padding-picture-type">
-                                    <h4>Откосы</h4>
-                                    <p>В данной сетке используются более толстые нити и их невозможно порвать когтями животных.</p>
+                                    <h4>Откосы ПВХ</h4>
+                                    <p>Предназначение откосов защитить монтажные швы от попадания влаги и разрушения, образования конденсата, обеспечить тепло- и шумоизоляцию, герметичность. </p>
+                                    <a class="moskit_setki--podrobnee" href="/catalog/komplect-okno">Перейти к Откосам.</a>
+                                        
+                                  
                                 </div>
                             </div>
                             <div class="balkon-text-row-column">
                                 <div  class="main-catalog-box-type blockcenter">
-                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/moskit-ultraview.png" alt="полотно для москитной сетки ультравью Phifer">
+                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/okna-olliv.png" alt="отливы на окно">
+
                                 </div>
                                 <div class="balkon-text padding-picture-type">
-                                    <h4>Рольставни</h4>
-                                    <p>В данной сетке используется более тонкая нить, благодаря этому сетка пропускает на 25% больше света и воздуха.</p>
+                                    <h4>Отливы</h4>
+                                    <p>Основной задачей отлива является защита от проникновения влаги в помещение. 
+                                        Он защищает монтажные швы и придает привлекательный внешний вид оконной конструкции. </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/komplect-okno">Перейти к Отливам.</a>
                                 </div>
                             </div>
                             <div class="balkon-text-row-column">
                                 <div  class="main-catalog-box-type blockcenter">
-                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/moskit-aluminiisetka.png" alt="полотно для москитной сетки алюминиевое">
+                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/okna-nashelnik.png" alt="нащельники на окно">
+
+                                </div>
+                                <div class="balkon-text padding-picture-type">
+                                    <h4>Нащельники</h4>
+                                    <p>Нащельник крепится на стыки между рамой и оконным проемом по периметру, маскируя швы, 
+                                        остатки смеси, рабочего материала, гипсокартона, а также прячет неровности.                                        
+                                        </p>
+                                        <a class="moskit_setki--podrobnee" href="/catalog/komplect-okno">Перейти к Нащельникам.</a>
+                                </div>
+                            </div>
+                            <div class="balkon-text-row-column">
+                                <div  class="main-catalog-box-type blockcenter">
+                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/okna-kozirek.png" alt="Козырьки на окно">
 
                                 </div>
                                 <div class="balkon-text padding-picture-type">
                                     <h4>Козырьки</h4>
-                                    <p>Сетка из алюминиевых нитей, не поддается коррозии, стойка к термическому воздействию и почти не видна. </p>
-                                </div>
-                            </div>
-                            <div class="balkon-text-row-column">
-                                <div  class="main-catalog-box-type blockcenter">
-                                    <img loading=lazy class="height-image balkon-image-type" src="/images-catalog/moskit-aluminiisetka.png" alt="полотно для москитной сетки алюминиевое">
-
-                                </div>
-                                <div class="balkon-text padding-picture-type">
-                                    <h4>Жалюзи</h4>
-                                    <p>Сетка из алюминиевых нитей, не поддается коррозии, стойка к термическому воздействию и почти не видна. </p>
+                                    <p>
+                                        Козырек защищает окно от осадков, что немаловажно зимой, когда попавшая на стекло вода замерзает. 
+                                        Влага, проникшая внутрь рамы, быстро выводит ее из строя.
+                                    </p>
+                                    <a class="moskit_setki--podrobnee" href="/catalog/komplect-okno">Перейти к Козырькам.</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Цвет рамы пластикового окна</h3>
+                        <h3 class="wrapper-block-h" id="list-item-5">Маркизы для окон</h3>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="balkon-wrapper ">
+                        <div class="balkon-text color-text">
+                        <p>
+                            Солнцезащитные маркизы для окон - это защита от солнца, грязи, дождя и пыли, а также элегантное украшение фасада и яркая деталь в облике здания.
+                        </p>
+                        <a class="moskit_setki--podrobnee" href="/catalog/komplect-okno">Подробнее о Маркизах.</a>   
+                        </div>
+                    </div>
+                    <div class="wrapper-block-title">
+                        <h3 class="wrapper-block-h" id="list-item-6">Цвет рамы пластикового окна</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper color-size-center">
                         <div class="balkon-text color-text">
-                            <h4>Покраска рамы пластикового окна под заказ</h4>
-                           <p>Вы можете <strong>заказать покраску рамки москитной сетки</strong> в любой цвет. Благодаря чему, москитная сетка станет частью экстерьера вашего дома.
-                           Чтобы не переплачивать за нестандартный цвет предлагаем москитные сетки белого, коричневого и серого цвета.</p>
+                            <h4>Покраска оконного профиля под заказ</h4>
+                           <p>Вы можете <strong>заказать покраску и ламинацию на окнах любой формы и конструкции в любой цвет.</strong>
+                            У нас, Вы получите надежное покрытие, которое выгодно выделит окна среди однотипных белых ПВХ. 
+                            </p>
+                            <p>Наша <strong>краска не истирается и не отслаивается.</strong> Мы наносим краску и ламинирующую пленку по эффективному проверенному шаблону.</p>
+                            <p>В результате работы, покрытия вступают в сильное взаимодействие с пластиковым профилем и могут выдержать любые негативные воздействия, 
+                                такие как: сильные ультрафиолетовые лучи, высокие температуры, повышенная влажность или сухость.</p>
                         </div>
                         <div class="color-size-wrapper">
                             <div class="balkon-text color-size color-white">
@@ -375,7 +584,7 @@
                         </div>
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Москитные сетки</h3>
+                        <h3 class="wrapper-block-h" id="list-item-7">Москитные сетки</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper color-size-center">
@@ -384,28 +593,65 @@
                         </div>
                         <div class="balkon-text padding-picture-garant">
                             <h4>Москитные сетки на окна</h4>
-                           <p><strong>Заказывая фотопечать на москитной сетке</strong> Вы получаете оригинальный способ преобразить ваше жилье или офис,
-                            а также отличную возможность для предпринимателей разместить логотип, рекламу или любое
-                            другое изображение, которое привлечет внимание прохожих к офису. </p>
-                            <p>Еще один важный момент. Москитная сетка с фотопечатью защитит жилище от глаз прохожих, что актуально для жителей первых этажей.</p>
+                           <p><strong>Заказать москитную сетку</strong> - хороший способ обеспечить комфортные условия в квартире, офисе, на даче или 
+                            в другом помещении. У нас можно заказать сетки для защиты от комаров на двери
+                            или окна разных форм и размеров. <strong>Изготовим под заказ сетки</strong> рамочные, раздвижные, 
+                            плиссе, рулонные (роллеты), вставные или распашные, чтобы защитить помещение от комаров и пуха. 
+                            <strong>Собственное производство</strong> позволяет оперативно выполнять заказы с доставкой и 
+                            установкой антимоскитных сеток в Волжском и Волгоградской области. </p>
+                            <a class="moskit_setki--podrobnee" href="/catalog/moskit">Перейти к москитным сеткам.</a>
+                            
                         </div>
 
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Ремонт окон</h3>
+                        <h3 class="wrapper-block-h" id="list-item-8">Жалюзи, рольставни и роллеты на окна</h3>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="balkon-wrapper balkon--wrapper__overflow">
+                        <div class="balkon-text-row balkon-text-row-moskit balkon-text-row-moskit-padding">
+                            
+                            <div class="container__catalog-box">
+                                <div  class="main-catalog-box main-catalog-width">
+                                    <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images/jaluzi-2.webp" alt="Жалюзи на окно">
+
+                                </div>
+                                <div class="balkon-text padding-picture balkon-text-width">
+                                    <h4>Жалюзи на окна</h4>
+                                    <p>Для оформления оконного проема как жилых, так и коммерческих помещений предлагаем жалюзи
+                                         на окна в различных вариантах, что позволяет подобрать их к любому интерьеру и типу окон. </p>
+                                    <a class="moskit_setki--podrobnee" href="/catalog/jaluzi">Перейти к Жалюзи.</a>
+                                </div>
+                            </div>
+                            <div class="container__catalog-box">
+                                <div  class="main-catalog-box main-catalog-width">
+                                    <img loading=lazy class="main-catalog-images balkon-image-moskit contast" src="/images-catalog/onka-rollet.png" alt="Рольставни на окно">
+                                </div>
+                                <div class="balkon-text padding-picture balkon-text-width">
+                                    <h4>Рольставни на окна</h4> 
+                                    <p>Рольставни на окна обеспечивают дополнительную защиту от злоумышленников, 
+                                        а также позволяют сократить потребление энергии за счет поддержания комфортной температуры в доме.</p>
+                                    <a class="moskit_setki--podrobnee" href="/catalog/jaluzi">Перейти к Рольставни и роллеты.</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="wrapper-block-title">
+                        <h3 class="wrapper-block-h" id="list-item-9">Ремонт окон</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper color-size-center">
                         <div class="balkon-text color-text">
                             <h4>Ремонт и замена фурнитуры окна на новую</h4>
-                            <p>Если у вас вышел из строя какой-либо элемент москитной сетки, не спешите выбрасывать ее.
-                            Практически каждый компонент может быть заменен, включая полотно, уголки, импост, крепления или шнур.
-                            Замена этих элементов значительно продлит срок службы москитной сетки.</p>
-
-                            <p>Вы можете <strong>получить скидку до 50% от стоимости новой сетки при заказе</strong> ремонта москитной сетки (перетяжка москитной сетки, замена уголков, креплений). </p>
+                            <p>Окна ПВХ выходят из строя по разным причинам: неправильный монтаж и эксплуатация, механические повреждения. Мы справляемся с задачами любой сложности.</p>
+                            <p>Если у вас вышел из строя какой-либо элемент окна, то <strong>мы можем</strong> Вам помочь:                           
+                                <strong>заменить стеклопакеты</strong> (повреждённые — на новые, однокамерные — на инновационные),
+                                <strong>утеплить окна</strong>, сделать <strong>регулировку фурнитуры,</strong> полную или частичную её замену, 
+                                <strong>замену или ремонт откосов, подоконников.</strong></p>
                         </div>
                         <div class="color-size-wrapper">
-                            <img loading=lazy class="moskit-remont--img" src="/images-catalog/moskit-remont.png" alt="заказать ремонт москитной сетки в Волжском">
+                            <img loading=lazy class="moskit-remont--img" src="/images-catalog/okna-remont.png" alt="заказать ремонт москитной сетки в Волжском">
                         </div>
                     </div>
                     <div class="balkon-wrapper">
@@ -413,7 +659,7 @@
 
                             <span class="form-span form-span-title">Подберем и рассчитаем идеальное окно прямо сейчас</span>
                             <form id="contact-form_block" method="POST" class=" form-buy" autocomplete="off">
-                                <input name="category" id="category_form-id" type="text" class="form-control form-buy__displaynone_moskit_category" placeholder="Категория" aria-label="Username" maxlength="70" value="Окно" readonly>
+                                <input name="category" id="category_form-id" type="text" class="form-control form-buy__displaynone_moskit_category" placeholder="Категория" aria-label="Username" maxlength="70" value="Окна" readonly>
                                 <input name="name" type="text" class="form-control input-buy" placeholder="Имя" aria-label="Username" maxlength="70">
 
                                 <input name="phone" type="tel" class="form-control input-buy" id="floatingInput" placeholder="Номер телефона">
@@ -428,7 +674,7 @@
                         </div>
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Почему нам доверяют</h3>
+                        <h3 class="wrapper-block-h" id="list-item-10">Почему нам доверяют</h3>
                         <img src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper">
@@ -438,7 +684,7 @@
                         </div>
                         <div class="balkon-text padding-picture-garant">
                             <h4>Гарантия качества на каждом этапе</h4>
-                            <p>Чтобы москитные сетки служили долго и надежно мы проверяем выполнение стандартов
+                            <p>Чтобы окна служили долго и надежно мы проверяем выполнение стандартов
                                 и правил на всех этапах работ - от поставки материала и производства до службы
                                  доставки и монтажа. Уверенность в качестве нашей продукции и материалах наших
                                   партнеров дает нам возможность предоставлять гарантию как на продукцию, так
@@ -451,7 +697,7 @@
                             <div class="balkon-text-row-column">
 
                                 <div class="balkon-text padding-picture-type margin-top-type">
-                                    <p class="padding-picture-type-p"><b>Более 20 лет</b> производим, продаем и устанавливаем москитные сетки для окон, балконов и дверей.</p>
+                                    <p class="padding-picture-type-p"><b>Более 20 лет</b> производим, продаем и устанавливаем окна из ПВХ и алюминия.</p>
                                     <img loading=lazy class="moskit-num" src="/images-catalog/moskit-num-1.png">
                                 </div>
                             </div>
@@ -480,14 +726,14 @@
                             <div class="balkon-text-row-column">
 
                                 <div class="balkon-text padding-picture-type margin-top-type">
-                                    <p class="padding-picture-type-p"><b>Предоставляем гарантии</b> на москитные сетки и работы по их установке - 12 месяцев.</p>
+                                    <p class="padding-picture-type-p"><b>Предоставляем гарантии</b> на изготовленные окна и работы по их установке - 12 месяцев.</p>
                                     <img loading=lazy class="moskit-num" src="/images-catalog/moskit-num-5.png">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Наши заказчики</h3>
+                        <h3 class="wrapper-block-h" id="list-item-11">Наши заказчики</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="balkon-wrapper ">
@@ -532,7 +778,7 @@
 
                         <div class="containrt--wrapper__column">
                             <div class="wrapper-block-title">
-                                <h3 class="wrapper-block-h">Отзывы</h3>
+                                <h3 class="wrapper-block-h" id="list-item-12">Отзывы</h3>
                                 <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                             </div>
                             <div class="balkon-wrapper">
@@ -541,7 +787,7 @@
                         </div>
                     </div>
                     <div class="wrapper-block-title">
-                        <h3 class="wrapper-block-h">Похожие изделия</h3>
+                        <h3 class="wrapper-block-h" id="list-item-13">Похожие изделия</h3>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="container__balkon-wrapper container--overflow__xscroll container__balkon-wrapper--pohozhiitovar">
@@ -614,7 +860,7 @@
                                 <label for="floatingInput">Номер телефона</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Москитные сетки" readonly>
+                                <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Окна" readonly>
                                 <label for="floatingInput">Категория</label>
                             </div>
                             <div>
@@ -649,7 +895,7 @@
                     <div class="banner-orange-in">
                         <div class="banner-orange-in-text" id="ouradress">
                             <span class="banner-orange-title">СДЕЛАЙТЕ ЗАКАЗ ПРЯМО СЕЙЧАС</span>
-                            <span class="banner-orange-description">ПОДБЕРЕМ И РАССЧИТАЕМ ИДЕАЛЬНУЮ СЕТКУ!</span>
+                            <span class="banner-orange-description">ПОДБЕРЕМ И РАССЧИТАЕМ ИДЕАЛЬНОЕ ОКНО!</span>
                         </div>
                         <div>
                             <button data-bs-toggle="modal" data-bs-target="#Modal" class="banner-orange-btn banner-moskit-btn" type="button">СДЕЛАТЬ ЗАКАЗ</button>

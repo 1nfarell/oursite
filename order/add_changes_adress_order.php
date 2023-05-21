@@ -11,10 +11,9 @@ function add_changes_adress_order(){
         
             $adress_order =  $_POST["adress_order"];
             $number_order =  $_POST["number_order"];   
-            $array = array('number_order' => $number_order, 'adress_order' => $adress_order);
             $sth = $db_order->prepare("UPDATE orders SET adress_order = '$adress_order' WHERE number_order = '$number_order'");
             
-            $sth->execute($array);
+            $sth->execute();
            
             $result = true;
         } 
