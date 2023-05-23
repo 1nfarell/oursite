@@ -29,11 +29,17 @@ const alert = (message, type) => {
 }
 //именение поля статуса оптаты
 function table_price_change_orderValue(sel, no, pb, po, sp){
-        pco = sel.value;
-    $.ajax({
+    
+    pco = sel.value;
+
+    if(pco == "Не оплачен" && confirm("Сумма оплаты и остаток оплаты будут обнулены, а история оплаты будет удалена навсегда. Продолжить?")){
+        let time_last_pay = 'Нет';
+
+        $.ajax({
         url: "order/add_changes_price_order.php",
         type: "POST",
-        data:{"price_change_order": pco,
+        data:{"time_last_pay": time_last_pay,
+            "price_change_order": pco,
             "price_order": po,
             "payment_balance": pb,
             "number_order": no,
@@ -58,6 +64,36 @@ function table_price_change_orderValue(sel, no, pb, po, sp){
                 sel.disabled = false;          
                 alert('Статус оплаты не изменен. Попробуйте еще раз!', 'success')          
             }}});
+    } else {
+        $.ajax({
+            url: "order/add_changes_price_order.php",
+            type: "POST",
+            data:{"price_change_order": pco,
+                "price_order": po,
+                "payment_balance": pb,
+                "number_order": no,
+                "sum_pay": sp,
+            },
+            beforeSend: () => { 
+                sel.disabled = true; 
+            },  
+            success: function success(res) {       
+                //Посмотреть на статус ответа, если ошибка
+                let respond = $.parseJSON(res);
+                
+                if (respond === "SUCCESS") { 
+                    setTimeout(() => {                
+                    sel.disabled = false;         
+                    alert('Успешно. Статус оплаты заказа '+no+', изменен на '+pco+'!', 'success')
+                    }, 3000);                 
+                } else if (respond === "NOTVALID") {
+                    sel.disabled = false;          
+                    alert('Не получилось изменить статус оплаты заказа '+no+'!', 'success')     
+                } else {
+                    sel.disabled = false;          
+                    alert('Статус оплаты не изменен. Попробуйте еще раз!', 'success')          
+                }}});
+    }
 }
 //именение поля статуса заказа
 function table_statusValue(sel, no){
@@ -148,8 +184,7 @@ function table_nameValue (sel, no){
 }
 //именение поля сумма заказа
 function table_priceValue (sel, no, bp, poo){
-    console.log(poo) 
-    console.log(bp) 
+   
     fd = sel.value;
     $.ajax({
         url: "order/add_price_order.php",
@@ -218,6 +253,11 @@ function table_sum_payValue(sel, no, pb, po){
 //именение поля адреса
 function table_adress_orderValue (sel, no){
     fd = sel.value;
+
+    if(fd == ''){
+        fd = 'Самовывоз'
+    }
+
     $.ajax({
         url: "order/add_changes_adress_order.php",
         type: "POST",
@@ -272,6 +312,39 @@ function table_contact_nameValue (sel, no){
                 sel.disabled = false;          
                 alert('Адрес не изменен. Попробуйте еще раз!', 'success')          
             }}});
+}
+//именение поля монтаж
+function table_montazh_orderValue (sel, no){
+    fd = sel.value;
+
+    if(fd == ''){
+        fd = 'Без монтажа'
+    }
+    $.ajax({
+        url: "order/add_changes_montazh_order.php",
+        type: "POST",
+        data:{"montazh_order": fd,
+            "number_order": no,
+        },
+        beforeSend: () => { 
+            sel.disabled = true; 
+        },  
+        success: function success(res) {       
+            //Посмотреть на статус ответа, если ошибка
+            let respond = $.parseJSON(res);
+            
+            if (respond === "SUCCESS") { 
+                setTimeout(() => {                
+                sel.disabled = false;         
+                alert('Успешно. Пункт монтаж для заказа '+no+' изменен на '+fd+'!', 'success')
+                }, 3000);                 
+            } else if (respond === "NOTVALID") {
+                sel.disabled = false;          
+                alert('Не получилось изменить пункт монтаж для заказа '+no+'!', 'success')     
+            } else {
+                sel.disabled = false;          
+                alert('Монтаж не изменен. Попробуйте еще раз!', 'success')          
+            }}});   
 }
 //именение поля даты монтажа
 function table_date_montazhValue (sel, no){
@@ -414,9 +487,9 @@ function table_mainValue(SelectData){
                                 <input type="text" onchange = "table_adress_orderValue(this, '${SelectData[key]['number_order']}')" class="form-control request__input--search adress_order-disabled"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg" value="${SelectData[key]['adress_order']}">
                             </td>
                             <td class="table_col_width--montazh">
-
+                                <input type="text" onchange = "table_montazh_orderValue(this, '${SelectData[key]['number_order']}')" class="form-control request__input--search montazh_order-disabled"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg" value="${SelectData[key]['montazh_order']}">
                             </td>
-                            <td class="table_col_width--dostavka"><input id="startDate" onchange = "table_date_montazhValue(this, '${SelectData[key]['number_order']}')" class="form-control form-control-default date_montazh-disabled" value="${SelectData[key]['date_montazh']}" type="date" /></td>
+                            <td class="table_col_width--dostavka input--dostavka"><input id="startDate" onchange = "table_date_montazhValue(this, '${SelectData[key]['number_order']}')" class="form-control form-control-default date_montazh-disabled" value="${SelectData[key]['date_montazh']}" type="date" /></td>
                         </tr>
                     </tbody>
                 </table>
@@ -429,8 +502,7 @@ function table_mainValue(SelectData){
                         <tr>
                             <th class="table_col_width--btn-hist_oplata" scope="col"></th>
                             <th class="table_col_width--btn-hist_tek_status" scope="col"></th>
-                            <th class="table_col_width--btn-delete" scope="col"></th>
-                            <th class="table_col_width--time_last_status_oplat" scope="col">Изм. стат. опл.</th>
+                            <th class="table_col_width--btn-delete" scope="col"></th>                           
                             <th scope="col">Статус оплаты</th>
                             <th class="table_col_width--time_last_status" scope="col">Изм. тек. стат.</th>
                             <th scope="col">Текущий статус готовности</th>
@@ -448,10 +520,7 @@ function table_mainValue(SelectData){
                             <td class="table_col_width--btn-delete">
                                 <button class="btn btn-outline-secondary btn-delete" style="display:none" onclick="table_delete_btn('${SelectData[key]['number_order']}')" type="button">Удалить заказ</button>
                             </td>
-                            <td class="table_col_width--time_last_status_oplat">                               
-                        
-                            </td>
-                            <td class=""> 
+                            <td class="table_col_width--price_change_order"> 
                                 <select  name="price_change_order" onchange = "table_price_change_orderValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}', '${SelectData[key]['sum_pay']}')" class="form-select form-select-default price_change-disabled" aria-label=".form-select-sm пример">
                                     <option disabled selected>${SelectData[key]['price_order__status']}</option>
                                     <option value="Не оплачен">Не оплачен</option>
@@ -479,7 +548,7 @@ function table_mainValue(SelectData){
             </td>
         </tr> 
         <tr>            
-            <td colspan="3">
+            <td colspan="2">
                 <table id="table_datastatusValue${SelectData[key]['number_order']}" class="table table-sm table-borderless mb-1">
                     
                 </table>
@@ -487,7 +556,7 @@ function table_mainValue(SelectData){
                     
                 </table>  
             </td>
-            <td class="table_col_width--oformlen" colspan="3">
+            <td class="table_col_width--oformlen" colspan="4">
                 <div style="text-align:right">Оформлен: ${SelectData[key]['account']} | ${SelectData[key]['today_date_order']}</div>                                    
             </td>           
         </tr>
@@ -633,7 +702,11 @@ function add_disabled_field_table(SelectData){
         let adress_order_disabled = table[0].querySelector('.adress_order-disabled'); //адрес
         let date_montazh_disabled = table[0].querySelector('.date_montazh-disabled'); //дата монтажа
         let td_oplata_disabled = table[0].querySelector('.td_oplata-disabled'); //оплата
-        let td_ostatok_disabled = table[0].querySelector('.td_ostatok-disabled'); //остаток оплаты
+        let td_ostatok_disabled = table[0].querySelector('.td_ostatok-disabled'); //остаток оплаты 
+        let montazh_order_disabled = table[0].querySelector('.montazh_order-disabled'); 
+       
+
+        
 
         if(SelectData[i]['order__status'] == 'Сборка'){
             $(priceValue_disabled).prop('disabled', true);           
@@ -654,6 +727,8 @@ function add_disabled_field_table(SelectData){
             $(contact_order_disabled).prop('disabled', true);
             $(adress_order_disabled).prop('disabled', true);
             $(date_montazh_disabled).prop('disabled', true);  
+            $(montazh_order_disabled).prop('disabled', true);
+            
             if(SelectData[i]['price_order__status'] == 'Оплачен'){
                 $(price_change_disabled).prop('disabled', true);
     
@@ -669,6 +744,8 @@ function add_disabled_field_table(SelectData){
             $(contact_order_disabled).prop('disabled', true);
             $(adress_order_disabled).prop('disabled', true);
             $(date_montazh_disabled).prop('disabled', false);
+            $(montazh_order_disabled).prop('disabled', true);
+            
 
             if(SelectData[i]['price_order__status'] == 'Оплачен'){
                 $(price_change_disabled).prop('disabled', true);
@@ -683,7 +760,7 @@ function add_disabled_field_table(SelectData){
              
             table[0].querySelector('.th_oplata').style.display = "none"; //оплата
             table[0].querySelector('.th_ostatok').style.display = "none";//остаток оплаты
-            table[0].querySelector('.td_oplata').style.visible = "none";
+            table[0].querySelector('.td_oplata').style.display = "none";
             table[0].querySelector('.td_ostatok').style.display = "none";               
         } 
         else
@@ -715,7 +792,15 @@ function add_disabled_field_table(SelectData){
                 table[0].querySelector('.th_ostatok').style.display = "none";//остаток оплаты
                 table[0].querySelector('.td_oplata').style.display = "none";
                 table[0].querySelector('.td_ostatok').style.display = "none";    
-        }  
+        } 
+        
+        if(SelectData[i]['adress_order'] == 'Самовывоз'){
+            table[0].querySelector('.table_col_width--dostavka').style.display = "none";  
+            table[0].querySelector('.input--dostavka').style.display = "none";
+        } else {
+            table[0].querySelector('.table_col_width--dostavka').style.display = "table-cell";  
+            table[0].querySelector('.input--dostavka').style.display = "table-cell";
+        }
     }
 }
 let counter_pass_first = 0;
@@ -802,7 +887,7 @@ function reload_page(){
                     let tel = document.querySelectorAll('td.tel')[0];
                     let last_oplata_color = document.querySelectorAll('td.last_oplata_color')[0];
                     let ostatok = document.querySelectorAll('td.td_ostatok')[0];
-                    console.log(last_oplata_color)
+                  
                     $(table_header__color).css({'background-color':'steelblue'});
                     $(table_number_order).css({'color':'white'});
                     $(tel2).css({'color':'white'});

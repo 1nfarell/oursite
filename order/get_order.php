@@ -7,7 +7,7 @@ function get_Order(){
     $counter_pass = $_POST["counter_pass"];
    
     $db_order = StaticConnection::getConnection_db_order();
-    $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account, time_last_pay
+    $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account, time_last_pay, montazh_order
     FROM orders ORDER BY id_order DESC LIMIT $counter_pass, $counter_element"); 
     $sth->execute();
 
@@ -29,6 +29,7 @@ function get_Order(){
                 'date_montazh' => $order['date_montazh'],
                 'account' => $order['account'],
                 'time_last_pay' => $order['time_last_pay'],
+                'montazh_order' => $order['montazh_order'],
             ]; 
             
             $value_order_json = $value_order;

@@ -20,12 +20,19 @@ function add_Order(){
         if($adress_order == ''){
             $adress_order = 'Самовывоз';
         }
+        
+        $montazh_order = $_POST['montazh_order'];
+
+        if($montazh_order == ''){
+            $montazh_order = 'Без монтажа';
+        }
 
         $contact_name_order = $_POST['contact_name_order'];
         $contact_order =  $_POST["contact_order"];
         $today_order = date("d.m.Y"); 
         $order__status = ("В обработке");
         $time_last_status = date("d.m.Y");
+        $time_last_pay = date("d.m.Y");
         $account = $_SESSION['user']['full_name'];
      
         $sthh = $db_order->prepare("SELECT number_order FROM orders WHERE number_order = '$number_order'");
@@ -33,9 +40,9 @@ function add_Order(){
 
         if($sthh->rowCount() == 0){           
 
-            $array = array('number_order' => $number_order ,'description_order' => $description_order, 'price_order' => $price_order, 'price_order__status' => $price_order__status, 'today_date_order' => $today_order, 'order__status' => $order__status, 'time_last_status' => $time_last_status, 'adress_order' => $adress_order, 'contact_order' => $contact_order, 'contact_name_order' => $contact_name_order, 'account' => $account);
+            $array = array('number_order' => $number_order ,'description_order' => $description_order, 'price_order' => $price_order, 'price_order__status' => $price_order__status, 'today_date_order' => $today_order, 'order__status' => $order__status, 'time_last_status' => $time_last_status, 'adress_order' => $adress_order, 'contact_order' => $contact_order, 'contact_name_order' => $contact_name_order, 'account' => $account, 'montazh_order' => $montazh_order,);
 
-            $sth = $db_order->prepare("INSERT INTO orders(number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, account) VALUES (:number_order, :description_order, :price_order, $price_order - $sum_pay, :price_order__status, :today_date_order, :order__status, :time_last_status, :adress_order, :contact_order, :contact_name_order, :account)");
+            $sth = $db_order->prepare("INSERT INTO orders(number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, account, montazh_order) VALUES (:number_order, :description_order, :price_order, $price_order - $sum_pay, :price_order__status, :today_date_order, :order__status, :time_last_status, :adress_order, :contact_order, :contact_name_order, :account, :montazh_order)");
             $sth->execute($array);
            
             $st = $db_order->prepare("INSERT INTO order_status(number_order, status, time_status, account) VALUES ('$number_order', '$order__status', '$time_last_status', '$account')");
@@ -56,6 +63,9 @@ function add_Order(){
             if($sum_pay != '' && $sum_pay <= $price_order && $price_order__status != 'Оплачен'){
                
                 $stt = $db_order->prepare("INSERT INTO balance_orders(number_order, sum_pay, time_pay, account) VALUES ('$number_order', '$sum_pay', '$today_order', '$account')");
+                $stt->execute();
+
+                $stt = $db_order->prepare("UPDATE orders SET time_last_pay = '$time_last_pay' WHERE number_order = '$number_order'");
                 $stt->execute();
             }
             $result = true;

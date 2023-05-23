@@ -5,7 +5,7 @@ require_once 'StaticConnection_db_order.php';
 function get_order_search(){
     $number_order = $_POST['number_order'];
     $db_order = StaticConnection::getConnection_db_order();
-    $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account
+    $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account, time_last_pay, montazh_order
     FROM orders WHERE number_order = '$number_order'"); 
     $sth->execute();
 
@@ -25,6 +25,8 @@ function get_order_search(){
                 'contact_name_order' => $order['contact_name_order'],
                 'date_montazh' => $order['date_montazh'],
                 'account' => $order['account'],
+                'time_last_pay' => $order['time_last_pay'],
+                'montazh_order' => $order['montazh_order'],
             ]; 
             
             $value_order_json = $value_order;

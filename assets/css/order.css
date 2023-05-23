@@ -13,6 +13,11 @@
     width: 350px;
 } 
 
+.on_status, .on_pay{
+    background-color: steelblue !important;
+    color: #ffffff;
+}
+
 .table_col_width--zakaz,  .table_col_width--time_last_status, .table_col_width--time_last_status_oplat, .table_col_width--sum_order, .table_col_width--last_oplata, .th_ostatok, .th_oplata, .table_col_width--montazh{
     width: 110px;
 }
@@ -30,7 +35,9 @@
 .table_col_width--contact {
     width: 150px;
 }
-
+.table_col_width--price_change_order{
+    width: 190px;
+}
 
 .table_col_width--dostavka{
     width: 175px;
@@ -53,9 +60,9 @@
     width: 100%;
 }                                                          
  .table_header--color{
-    box-shadow: 0px 14px 20px 0px #8c989b;
-    -webkit-box-shadow: 0px 14px 20px 0px #8c989b;
-    -moz-box-shadow: 0px 14px 20px 0px #8c989b;
+    box-shadow: 0px 14px 20px 0px #8c989b78;
+    -webkit-box-shadow: 0px 14px 20px 0px #8c989b78;
+    -moz-box-shadow: 0px 14px 20px 0px #8c989b78;
  }                               
  .balkon-wrapper {
     padding-left: 30px !important;

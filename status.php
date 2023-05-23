@@ -191,7 +191,7 @@
                                 <div>
                                     <span style="text-decoration:underline;" class="footerminus">Адрес</span>
                                     <span id="copyadress" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18к15, г. Волжский, Волгоградская обл.</span>
-                                
+                                    <span id="copyadress2" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18, г. Волжский, Волгоградская обл., офис 104, этаж 1</span>
                                 </div>
                             </div>
                         </div>

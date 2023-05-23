@@ -38,6 +38,9 @@ function add_price_change_order(){
                 $sttt = $db_order->prepare("UPDATE orders SET payment_balance =  '$price_order' WHERE number_order = '$number_order'");
                 $sttt->execute();
 
+                $time_last_pay =  $_POST["time_last_pay"];
+                $stt = $db_order->prepare("UPDATE orders SET time_last_pay = '$time_last_pay' WHERE number_order = '$number_order'");
+                $stt->execute();
             }
            
             $result = true;

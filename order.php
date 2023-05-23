@@ -138,21 +138,21 @@ if (!$_SESSION['user']) {
                         <form id="form--add_order" method="POST">
                             <div class="input-group mb-3">
                                 <span  class="input-group-text" id="inputGroup-sizing-default">Номер заказа</span>
-                                <input id="input-form--add_order" name="number_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="20" required >
+                                <input id="input-form--add_order" name="number_order" type="text" class="form-control" aria-label="Номер заказа" aria-describedby="inputGroup-sizing-default" maxlength="20" required >
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Наименование</span>
-                                <input name="description_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                <input name="description_order" type="text" class="form-control" aria-label="Наименование" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Сумма заказа</span>
-                                <input name="price_order" type="number" class="form-control" aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)" maxlength="20" required>
+                                <input name="price_order" type="number" class="form-control" aria-label="Сумма оплаты в рублях (с точкой и двумя десятичными знаками)" maxlength="20" required>
                                 <span id="input-group-text_dollar" class="input-group-text">₽</span>
                             </div>   
                             <div class="input-group mb-3">               
                                 <select name="price_order--status" onchange="changeVarianPay(this);" id="price_order_stat" class="form-select form-select-default" required>
                                     <option disabled selected>Выберите статус оплаты</option>
-                                    <option value="Не оплачен">Не оплачен</option>
+                                    <option style="display:none" value="Не оплачен">Не оплачен</option>
                                     <option value="Предоплата">Предоплата</option>
                                     <option value="Рассрочка">Рассрочка</option>
                                     <option value="Оплачен">Оплачен</option>
@@ -160,20 +160,24 @@ if (!$_SESSION['user']) {
                             </div>
                             <div id="input_predoplata" style="display:none;" class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Предоплата</span>
-                                <input name="sum_pay" type="number" class="form-control" aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)" maxlength="20" >
+                                <input name="sum_pay" type="number" class="form-control" aria-label="Предоплата в рублях (с точкой и двумя десятичными знаками)" maxlength="20" >
                                 <span id="input-group-text_dollar" class="input-group-text">₽</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">ФИО заказчика</span>
-                                <input name="contact_name_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                <input name="contact_name_order" type="text" class="form-control" aria-label="ФИО заказчика" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Контакты</span>
-                                <input name="contact_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                <input name="contact_order" type="text" class="form-control" aria-label="Контакты" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
                             </div>
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Адрес</span>
-                                <input name="adress_order" type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default" maxlength="255">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Адрес доставки</span>
+                                <input name="adress_order" type="text" class="form-control" aria-label="Адрес" placeholder="не указывать, если самовывоз" aria-describedby="inputGroup-sizing-default" maxlength="255">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Монтажник</span>
+                                <input name="montazh_order" type="text" class="form-control" aria-label="Монтаж" placeholder="не указывать, если без монтажа" aria-describedby="inputGroup-sizing-default" maxlength="255">
                             </div>
                            
                             <button id="btn-form--add_order" type="submit" class="btn btn-primary ">Добавить заказ</button>
@@ -212,7 +216,7 @@ if (!$_SESSION['user']) {
                                 <div>
                                     <span style="text-decoration:underline;" class="footerminus">Адрес</span>
                                     <span id="copyadress" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18к15, г. Волжский, Волгоградская обл.</span>
-                                
+                                    <span id="copyadress2" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18, г. Волжский, Волгоградская обл., офис 104, этаж 1</span>
                                 </div>
                             </div>
                         </div>
