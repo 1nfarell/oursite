@@ -5,11 +5,26 @@ require_once 'StaticConnection_db_order.php';
 function get_Order(){ 
     $counter_element = 10; //шаг бесконечного скрола (изменять на такое же значение и в get_order.js) 
     $counter_pass = $_POST["counter_pass"];
-   
+    
+    
     $db_order = StaticConnection::getConnection_db_order();
-    $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account, time_last_pay, montazh_order
-    FROM orders ORDER BY id_order DESC LIMIT $counter_pass, $counter_element"); 
-    $sth->execute();
+
+    $change_select_order = $_POST["change_select_order"];
+
+    if ($change_select_order == ''){
+        // если не выбран фильрт по статусу заказа
+        $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account, time_last_pay, montazh_order
+        FROM orders ORDER BY id_order DESC LIMIT $counter_pass, $counter_element"); 
+        $sth->execute();
+
+    } else if ($change_select_order != '') {
+        //если выбран фильрт по статусу заказа
+        $sth = $db_order->prepare("SELECT DISTINCT id_order, number_order, description_order, price_order, payment_balance, price_order__status, today_date_order, order__status, time_last_status, adress_order, contact_order, contact_name_order, date_montazh, account, time_last_pay, montazh_order
+        FROM orders WHERE order__status = '$change_select_order' ORDER BY id_order DESC LIMIT $counter_pass, $counter_element"); 
+        $sth->execute();
+    }
+
+   
 
     if ($sth->rowCount() > 0){
         while($order = $sth->fetch(PDO::FETCH_ASSOC)){ 

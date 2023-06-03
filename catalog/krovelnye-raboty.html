@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/assets/css/aos.css"> 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -30,13 +31,9 @@
     
 </head>
 <body>
-    <div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
+    
     <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Кровельные Работы под заказ в Волжском, Цены на Ремонт, Монтаж, Перекрытие</h1>
-    <div id="body" style="visibility: hidden;" class="container-main">
+    <div id="body" class="container-main">
         <header id="header">
             
             <div class="header--container">
@@ -77,34 +74,56 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
                                 <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
                                 <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
                                 <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
                                 <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
+                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
                             </ul>
                         </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Москитные сетки
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
+                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
+                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
+                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
+                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
+                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
+                            </ul>
+                        </div>
+
                         <div class ="menu-links" >
-                            <span class="spanshow" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Заказать сейчас</span>
+                            <span class="spanshow header-btn_setcolor" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Заказать сейчас</span>
                             <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label>
                             <ul>
                                 <a  href="/">Главная</a> 
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <span class="spanhidden" data-bs-toggle="modal" data-bs-target="#Modal">Заказать сейчас</span>
+                                <span class="spanhidden header-btn_setcolor" data-bs-toggle="modal" data-bs-target="#Modal">Заказать сейчас</span>
                             </ul>
-                        </div>             
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,76 +131,79 @@
         <main>                
             
             <div class="main">
-                <div class="main-wrapper-about">
-                    <h2>КРОВЕЛЬНЫЕ РАБОТЫ</h2>
-                    <img src="/images/orange-dash.svg" class="orange-dash d-block" alt="полоска разделитель">
-                </div>
-                <div class="main-wrapper-box">
-                    <div class="main-catalog-boxs-krovlelnie">
-                        <div class="main-catalog-box-krovlelnie">
-                            <picture>
-                                <source  srcset="/images-catalog/krovelnye-raboty-1.avif" type="image/avif">     
-                                <img class="main-catalog-images-krovlelnie" src="/images-catalog/krovelnye-raboty-1.webp" alt="МОНТАЖ МЯГКОЙ КРОВЛИ">
-                            </picture>
-                            <span class="box-title">МОНТАЖ МЯГКОЙ КРОВЛИ</span>
-                            <span class="box-noprice" data-bs-toggle="modal" data-bs-target="#Modal">Узнать стоимость</span>
-                        </div>
-                        <div class="main-catalog-box-krovlelnie">
-                            <picture>
-                                <source  srcset="/images-catalog/krovelnye-raboty-2.avif" type="image/avif">     
-                                <img class="main-catalog-images-krovlelnie" src="/images-catalog/krovelnye-raboty-2.webp" alt="МОНТАЖ МЕТАЛЛОЧЕРЕПИЦЫ">
-                            </picture>
-                            <span class="box-title">МОНТАЖ МЕТАЛЛОЧЕРЕПИЦЫ</span>
-                            <span class="box-noprice" data-bs-toggle="modal" data-bs-target="#Modal">Узнать стоимость</span>
-                        </div>
-                        <div class="main-catalog-box-krovlelnie">
-                            <picture>
-                                <source  srcset="/images-catalog/krovelnye-raboty-3.avif" type="image/avif">     
-                                <img class="main-catalog-images-krovlelnie" src="/images-catalog/krovelnye-raboty-3.webp" alt="МОНТАЖ ПРОФНАСТИЛА">
-                            </picture>
-                            <span class="box-title">МОНТАЖ ПРОФНАСТИЛА</span>
-                            <span class="box-noprice" data-bs-toggle="modal" data-bs-target="#Modal">Узнать стоимость</span>
-                        </div>
-                        
-                                    
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                  
+                    <div class="wrapper-block-title">
+                        <h2 class="wrapper-block-h" id="list-item-2">КРОВЕЛЬНЫЕ РАБОТЫ</h2>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
-                    <div class="main-wrapper-description" >
-                        <h3>О проведение кровельных работ</h3>
-                        <p>
-                            Проведение кровельных работ — сложный и кропотливый процесс. 
-                            Если неправильно осуществить монтаж или ремонт кровли, дом не будет сохранять 
-                            в своих стенах тепло. Кроме того, могут образоваться протечки, что приведет к 
-                            потере герметичности конструкции и в конечном итоге к механическому разрушению 
-                            различных элементов постройки. Избежать этого можно, обратившись к компетентным специалистам.
-                        </p>  
-                        <p>
-                            Чтобы не оставлять такой важный процесс, как выполнение кровельных работ, 
-                            исключительно на усмотрение мастеров, полезно представлять себе, из каких 
-                            этапов он состоит и что характерно для каждой стадии.
-                        </p> 
-                        <h4>Разбираемся в вопросе</h4>
-                        <p>
-                            Строительные кровельные работы ведутся в соответствии с нормами ГОСТ и СНИП. 
-                            Таким образом обеспечивается не только надежность, но и безопасность работ, 
-                            которые сопряжены с постоянным нахождением на высоте и подъемом различных грузов. 
-                            В понятие «кровельные работы» ремонт и уход входят точно так же, как проектирование 
-                            и возведение кровли. Их проведение в России традиционно откладывают на осень, однако 
-                            по возможности лучше позаботиться о кровле заранее, тем более что квалифицированных 
-                            кровельщиков осенью зачастую не хватает.
-                        </p>
-                        <h4>Подготовительные работы</h4>                                                
-                        <p>
-                            В ходе подготовительных работ важно создать продуманный проект кровли, 
-                            тогда смета на кровельные работы будет подробной и обоснованной. Помните, 
-                            что кровля состоит не только из покрытия. Кроме него в смету войдут составляющие 
-                            несущей конструкции, комплектующие для водоотводной системы, утеплитель и пароизоляция. 
-                            Также не забудьте о расходах на транспорт и на проведение собственно кровельных работ. 
-                            Все материалы должны быть правильно подобраны и в срок доставлены на строительную площадку. 
-                            После этого можно приступать к монтажу.
-                        </p>                           
-                        <p>
-                            Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
-                        </p>  
+                    <div class="main-wrapper-box">
+                        <div class="main-catalog-boxs-krovlelnie">
+                            <div class="main-catalog-box-krovlelnie">
+                                <picture>
+                                    <source  srcset="/images-catalog/krovelnye-raboty-1.avif" type="image/avif">     
+                                    <img class="main-catalog-images-krovlelnie" src="/images-catalog/krovelnye-raboty-1.webp" alt="МОНТАЖ МЯГКОЙ КРОВЛИ">
+                                </picture>
+                                <span class="box-title">МОНТАЖ МЯГКОЙ КРОВЛИ</span>
+                                <span class="box-noprice" data-bs-toggle="modal" data-bs-target="#Modal">Узнать стоимость</span>
+                            </div>
+                            <div class="main-catalog-box-krovlelnie">
+                                <picture>
+                                    <source  srcset="/images-catalog/krovelnye-raboty-2.avif" type="image/avif">     
+                                    <img class="main-catalog-images-krovlelnie" src="/images-catalog/krovelnye-raboty-2.webp" alt="МОНТАЖ МЕТАЛЛОЧЕРЕПИЦЫ">
+                                </picture>
+                                <span class="box-title">МОНТАЖ МЕТАЛЛОЧЕРЕПИЦЫ</span>
+                                <span class="box-noprice" data-bs-toggle="modal" data-bs-target="#Modal">Узнать стоимость</span>
+                            </div>
+                            <div class="main-catalog-box-krovlelnie">
+                                <picture>
+                                    <source  srcset="/images-catalog/krovelnye-raboty-3.avif" type="image/avif">     
+                                    <img class="main-catalog-images-krovlelnie" src="/images-catalog/krovelnye-raboty-3.webp" alt="МОНТАЖ ПРОФНАСТИЛА">
+                                </picture>
+                                <span class="box-title">МОНТАЖ ПРОФНАСТИЛА</span>
+                                <span class="box-noprice" data-bs-toggle="modal" data-bs-target="#Modal">Узнать стоимость</span>
+                            </div>
+                            
+                                        
+                        </div>
+                        <div class="main-wrapper-description" >
+                            <h3>О проведение кровельных работ</h3>
+                            <p>
+                                Проведение кровельных работ — сложный и кропотливый процесс. 
+                                Если неправильно осуществить монтаж или ремонт кровли, дом не будет сохранять 
+                                в своих стенах тепло. Кроме того, могут образоваться протечки, что приведет к 
+                                потере герметичности конструкции и в конечном итоге к механическому разрушению 
+                                различных элементов постройки. Избежать этого можно, обратившись к компетентным специалистам.
+                            </p>  
+                            <p>
+                                Чтобы не оставлять такой важный процесс, как выполнение кровельных работ, 
+                                исключительно на усмотрение мастеров, полезно представлять себе, из каких 
+                                этапов он состоит и что характерно для каждой стадии.
+                            </p> 
+                            <h4>Разбираемся в вопросе</h4>
+                            <p>
+                                Строительные кровельные работы ведутся в соответствии с нормами ГОСТ и СНИП. 
+                                Таким образом обеспечивается не только надежность, но и безопасность работ, 
+                                которые сопряжены с постоянным нахождением на высоте и подъемом различных грузов. 
+                                В понятие «кровельные работы» ремонт и уход входят точно так же, как проектирование 
+                                и возведение кровли. Их проведение в России традиционно откладывают на осень, однако 
+                                по возможности лучше позаботиться о кровле заранее, тем более что квалифицированных 
+                                кровельщиков осенью зачастую не хватает.
+                            </p>
+                            <h4>Подготовительные работы</h4>                                                
+                            <p>
+                                В ходе подготовительных работ важно создать продуманный проект кровли, 
+                                тогда смета на кровельные работы будет подробной и обоснованной. Помните, 
+                                что кровля состоит не только из покрытия. Кроме него в смету войдут составляющие 
+                                несущей конструкции, комплектующие для водоотводной системы, утеплитель и пароизоляция. 
+                                Также не забудьте о расходах на транспорт и на проведение собственно кровельных работ. 
+                                Все материалы должны быть правильно подобраны и в срок доставлены на строительную площадку. 
+                                После этого можно приступать к монтажу.
+                            </p>                           
+                            <p>
+                                Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
+                            </p>  
+                        </div>
                     </div>
                 </div>
             </div>
@@ -326,15 +348,6 @@
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });
-    </script>
-
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
     </script>
 </body>
 </html>

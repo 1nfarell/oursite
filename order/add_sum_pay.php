@@ -12,9 +12,9 @@ function add_sum_pay(){
             $payment_balance =  (integer)$_POST["payment_balance"];
             $sum_pay =  (integer)$_POST["sum_pay"];
             $number_order =  $_POST["number_order"];
-            $time_pay = date("d.m.Y");
+            $time_pay = date("d.m.y, G:i");
             $account = $_SESSION['user']['full_name'];
-            $time_last_pay = date("d.m.Y");
+            $time_last_pay = date("d.m.y, G:i");
 
             if($sum_pay <= $payment_balance){
 

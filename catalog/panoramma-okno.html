@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="/assets/css/aos.css"> 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -42,15 +43,10 @@
     
 </head>
 <body>
-    <div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
+   
     <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Панорамное остекление в Волжском по низкой цене</h1>
-    <div id="body" style="visibility: hidden;" class="container-main">
-        <header id="header">
-            
+    <div id="body" class="container-main">
+        <header id="header">            
             <div class="header--container">
                 <div class="header-center">
                     <a href="/">
@@ -89,102 +85,134 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
                                 <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
                                 <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
                                 <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
                                 <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
+                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
                             </ul>
                         </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Москитные сетки
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
+                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
+                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
+                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
+                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
+                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
+                            </ul>
+                        </div>
+
                         <div class ="menu-links" >
-                            <span class="spanshow" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                            <span class="spanshow header-btn_setcolor" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label>
                             <ul>
                                 <a  href="/">Главная</a> 
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <span class="spanhidden" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                                <span class="spanhidden header-btn_setcolor" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             </ul>
-                        </div>             
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main>                
             
-            <div class="main">
-                <div class="main-wrapper-about">
-                    <h2>ПАНОРАМНЫЕ ОКНА</h2>
-                    <img src="/images/orange-dash.svg" class="orange-dash d-block" alt="полоска разделитель">
-                </div>
-                <div class="main-wrapper-box-portal">
-                    <div class="main-catalog-boxs-portal">
-                        <div class="main-catalog-box-portal">
-                            <picture>
-                                <source srcset="/images-catalog/panoramma-okno-1.avif" type="image/avif">     
-                                <img class="main-catalog-images-portal" src="/images-catalog/panoramma-okno-1.webp" alt="Изображение ПЛАСТИКОВОГО ОКНА ДВУХСТВОРЧАТОГО">
-                            </picture>
-                            <span class="box-title">ПАНОРАМНЫЕ ОКНА</span>
-                            <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-noprice">Узнать стоимость</span>
-                        </div>
-                                                           
-                    </div>
-                    <div class="main-wrapper-box-description padding-panorama">
-                        <div class="main-wrapper-box-description-row ">
-                            <div class="main-wrapper-description-box video-box">
-                                <video controls="controls" style="border-radius:10px;">
-                                    <source src="/images-catalog/panorama.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                                </video>
-                            </div>
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>О продукции</h3>
-                                <p>
-                                    Панорамные окна – это конструкции размером на всю или большую площадь стены. 
-                                    Их еще называют «французскими» – в честь страны, где они появились впервые. 
-                                    Панорамные конструкции устанавливают в офисных помещениях и торговых центрах, 
-                                    жилых и загородных домах.
-                                </p>   
-                                <h4>Какие бывают панорамные окна</h4>
-                                <p>
-                                    <li>стандартные. Обычное окно больших размеров</li>
-                                    <li>эркерные. Декорирование эркера в помещении окном</li> 
-                                    <li>угловые. Панорамные окна на стыке двух стен</li> 
-                                    <li>садовые. Используются в дополнительных помещениях – садовых домиках, 
-                                        беседках или флигелях.</li>
-                                </p>
-                                <h3>Преимущества панорамных окон</h3>
-                                <p>
-                                    Панорамные окна в квартире или загородном доме с панорамным видом не 
-                                    сравнятся с картиной или обоями и станут «визитной карточкой» любого 
-                                    интерьера. 
-                                    В спальне такую конструкцию можно использовать для аналогичных целей, 
-                                    только дополнительно нужно позаботиться о методах охраны личного 
-                                    пространства – жалюзи, легкие занавески, рулонные шторы или раздвижная 
-                                    ширма. А панорамное окно в загородном коттедже и вовсе подарит ощущение 
-                                    полного единения с природой, что так ценится собственниками подобной 
-                                    недвижимости.
-                                </p>
-                                <p>
-                                    Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
-                                </p>   
-                            </div>
-                        </div>                
+            <div class="main">                
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper" data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                    <div class="kroshki " id="list-item-0">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="/catalog/okna">Окна</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" >Панорамные окна</li>
+                            </ol>
+                        </nav>
                     </div>
                   
+                    <div class="wrapper-block-title">
+                        <h2 class="wrapper-block-h" id="list-item-2">ПАНОРАМНЫЕ ОКНА</h2>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="main-wrapper-box-portal">
+                        <div class="main-catalog-boxs-portal">
+                            <div class="main-catalog-box-portal">
+                                <picture>
+                                    <source srcset="/images-catalog/panoramma-okno-1.avif" type="image/avif">     
+                                    <img class="main-catalog-images-portal" src="/images-catalog/panoramma-okno-1.webp" alt="Изображение ПЛАСТИКОВОГО ОКНА ДВУХСТВОРЧАТОГО">
+                                </picture>
+                                <span class="box-title">ПАНОРАМНЫЕ ОКНА</span>
+                                <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-noprice">Узнать стоимость</span>
+                            </div>
+                                                            
+                        </div>
+                        <div class="main-wrapper-box-description padding-panorama">
+                            <div class="main-wrapper-box-description-row ">
+                                <div class="main-wrapper-description-box video-box">
+                                    <video controls="controls" style="border-radius:10px;">
+                                        <source src="/images-catalog/panorama.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                    </video>
+                                </div>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>О продукции</h3>
+                                    <p>
+                                        Панорамные окна – это конструкции размером на всю или большую площадь стены. 
+                                        Их еще называют «французскими» – в честь страны, где они появились впервые. 
+                                        Панорамные конструкции устанавливают в офисных помещениях и торговых центрах, 
+                                        жилых и загородных домах.
+                                    </p>   
+                                    <h4>Какие бывают панорамные окна</h4>
+                                    <ul>
+                                        <li>стандартные. Обычное окно больших размеров</li>
+                                        <li>эркерные. Декорирование эркера в помещении окном</li> 
+                                        <li>угловые. Панорамные окна на стыке двух стен</li> 
+                                        <li>садовые. Используются в дополнительных помещениях – садовых домиках, 
+                                            беседках или флигелях.</li>
+                                    </ul>
+                                    <h3>Преимущества панорамных окон</h3>
+                                    <p>
+                                        Панорамные окна в квартире или загородном доме с панорамным видом не 
+                                        сравнятся с картиной или обоями и станут «визитной карточкой» любого 
+                                        интерьера. 
+                                        В спальне такую конструкцию можно использовать для аналогичных целей, 
+                                        только дополнительно нужно позаботиться о методах охраны личного 
+                                        пространства – жалюзи, легкие занавески, рулонные шторы или раздвижная 
+                                        ширма. А панорамное окно в загородном коттедже и вовсе подарит ощущение 
+                                        полного единения с природой, что так ценится собственниками подобной 
+                                        недвижимости.
+                                    </p>
+                                    <p>
+                                        Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
+                                    </p>   
+                                </div>
+                            </div>                
+                        </div>                    
+                    </div>
                 </div>
             </div>
-
 
            
             
@@ -241,58 +269,58 @@
                         </div>
                     </div>
                 </div>
-            </form>
+            </form>           
         </main>
         <footer>
-        <div class="footer">
-            <div class="banner-orange">
-                <div class="banner-orange-in">
-                    <div class="banner-orange-in-text" id="ouradress"> 
-                        <span class="banner-orange-title">ХОТИТЕ ПАНОРАМНЫЕ ОКНА?</span>
-                        <span class="banner-orange-description">ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!</span>
-                    </div>
+            <div class="footer">
+                <div class="banner-orange">
+                    <div class="banner-orange-in">
+                        <div class="banner-orange-in-text" id="ouradress"> 
+                            <span class="banner-orange-title">ХОТИТЕ ПАНОРАМНЫЕ ОКНА?</span>
+                            <span class="banner-orange-description">ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!</span>
+                        </div>
+                        <div>
+                            <button data-bs-toggle="modal" data-bs-target="#Modal" class="banner-orange-btn" type="button">
+                            <img src="/images/convert.svg" class="d-block w-10" alt="Иконка сообщения">ВАШ ЗАПРОС</button>
+                        </div>
+                    </div>   
+                </div>
+                <iframe title="Адрес офиса Оконного завода ОТКРЫТИЕ" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.04162119643!2d44.77796396961506!3d48.80018425865256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41054ce27a8c87e9%3A0x70739516e37ba014!2z0J7RgtC60YDRi9GC0LjQtQ!5e0!3m2!1sru!2sru!4v1666089532426!5m2!1sru!2sru" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="footer-down">
                     <div>
-                        <button data-bs-toggle="modal" data-bs-target="#Modal" class="banner-orange-btn" type="button">
-                        <img src="/images/convert.svg" class="d-block w-10" alt="Иконка сообщения">ВАШ ЗАПРОС</button>
-                    </div>
-                </div>   
-            </div>
-            <iframe title="Адрес офиса Оконного завода ОТКРЫТИЕ" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.04162119643!2d44.77796396961506!3d48.80018425865256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41054ce27a8c87e9%3A0x70739516e37ba014!2z0J7RgtC60YDRi9GC0LjQtQ!5e0!3m2!1sru!2sru!4v1666089532426!5m2!1sru!2sru" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="footer-down">
-                <div>
-                    <div class="contant-info-left">
-                        <span class="contant-info-left__title">Оконный завод ОТКРЫТИЕ</span>
-                        <p class="contant-info-left__description">
-                            Наша компания изготавливает и устанавливает москитные сетки в Волжском, Волгограде, Николаевске и в других городах Волгоградской области.
-                        </p>
-                        <div class="contant-info-left-time">
-                            <div>
-                                <span style="text-decoration:underline;" class="footerminus">Мы работаем</span>
-                                <span class="footertext">Пн-Пт с 08:00 до 18:00</span>
-                                <span style="text-decoration:underline;" class="footerminus">Почта</span>
-                                <span id="main-contact-email" class="tel" title="Нажми, чтобы скопировать электронную почту">contact@окна-открытие.рф</span>
-                            </div>
-                            
-                            <div>
-                                <span style="text-decoration:underline;" class="footerminus">Адрес</span>
-                                <span id="copyadress" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18к15, г. Волжский, Волгоградская обл.</span>
-                                <span id="copyadress2" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18, г. Волжский, Волгоградская обл., офис 104, этаж 1</span>
+                        <div class="contant-info-left">
+                            <span class="contant-info-left__title">Оконный завод ОТКРЫТИЕ</span>
+                            <p class="contant-info-left__description">
+                                Наша компания изготавливает и устанавливает москитные сетки в Волжском, Волгограде, Николаевске и в других городах Волгоградской области.
+                            </p>
+                            <div class="contant-info-left-time">
+                                <div>
+                                    <span style="text-decoration:underline;" class="footerminus">Мы работаем</span>
+                                    <span class="footertext">Пн-Пт с 08:00 до 18:00</span>
+                                    <span style="text-decoration:underline;" class="footerminus">Почта</span>
+                                    <span id="main-contact-email" class="tel" title="Нажми, чтобы скопировать электронную почту">contact@окна-открытие.рф</span>
+                                </div>
+                                
+                                <div>
+                                    <span style="text-decoration:underline;" class="footerminus">Адрес</span>
+                                    <span id="copyadress" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18к15, г. Волжский, Волгоградская обл.</span>
+                                    <span id="copyadress2" title="Нажми, чтобы скопировать адрес офиса Открытие" class="footertext tel">1-й Индустриальный проезд, 18, г. Волжский, Волгоградская обл., офис 104, этаж 1</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="contant-info-center">
-                        <span class="footertext">Полезная информация</span>
-                        <span class="footerminus">_____</span>
-                        <a class="footertext" href="/info/cooperation">Сотрудничество</a>
+                        <div class="contant-info-center">
+                            <span class="footertext">Полезная информация</span>
+                            <span class="footerminus">_____</span>
+                            <a class="footertext" href="/info/cooperation">Сотрудничество</a>
 
+                        </div>
                     </div>
-                </div>
-                <div class="copyright">
-                    <span>Copyright © Оконный завод Открытие, 2022-2023</span>
-                    <span> <a style="color:#ffffff" href="https://mndp-studio.ru/">Made with love by MndP.</a> contact@mndp-studio.ru</span>
-                </div>
-            </div>    
-        </div>  
+                    <div class="copyright">
+                        <span>Copyright © Оконный завод Открытие, 2022-2023</span>
+                        <span> <a style="color:#ffffff" href="https://mndp-studio.ru/">Made with love by MndP.</a> contact@mndp-studio.ru</span>
+                    </div>
+                </div>    
+            </div>  
         </footer>
         <!-- сообщение о копировании телефона -->
         <div class="AlertPlaceholder" id="liveAlertPlaceholder"></div>
@@ -327,13 +355,6 @@
         });
     </script>
 
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
-    </script>
+   
 </body>
 </html>

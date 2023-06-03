@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="/assets/css/aos.css"> 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -41,13 +42,9 @@
     
 </head>
 <body>
-    <div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
+    
     <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Заказать пластиковые окна в Волжском. Цены на пластиковые окна с установкой</h1>
-    <div id="body" style="visibility: hidden;" class="container-main">
+    <div id="body" class="container-main">
         <header id="header">
             
             <div class="header--container">
@@ -88,34 +85,56 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
                                 <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
                                 <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
                                 <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
                                 <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
+                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
                             </ul>
                         </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Москитные сетки
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
+                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
+                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
+                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
+                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
+                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
+                            </ul>
+                        </div>
+
                         <div class ="menu-links" >
-                            <span class="spanshow" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                            <span class="spanshow header-btn_setcolor" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label>
                             <ul>
                                 <a  href="/">Главная</a> 
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <span class="spanhidden" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                                <span class="spanhidden header-btn_setcolor" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             </ul>
-                        </div>             
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,453 +142,466 @@
         <main>                
             
             <div class="main">
-                <div class="main-wrapper-about">
-                    <h2>ПЛАСТИКОВЫЕ ОКНА</h2>
-                    <img src="/images/orange-dash.svg" class="orange-dash d-block" alt="полоска разделитель">
-                </div>
-                <div class="main-wrapper-box" style="width:100% ;">
-
-                    
-
-                    <div class="main-catalog-boxs-plastic">
-                        <div class="main-catalog-box-plastic widthplastic">
-                        <div id="carouselExampleCaptions" class="carousel slide carou-plastic" data-bs-ride="carousel" >
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <picture>
-                                        <source srcset="/images-catalog/plastic-okno-1.avif" type="image/avif">
-                                        <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-1.webp" alt="Купить пластиковые окна двустворчатые">
-                                    </picture>                                 
-                                </div>
-                                <div class="carousel-item">
-                                    <picture>
-                                        <source srcset="/images-catalog/plastic-okno-2.avif" type="image/avif">
-                                        <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-2.webp" alt="купить пластиковые окна трехстворчатыетые">
-                                    </picture>
-
-                                </div>
-                                <div class="carousel-item">
-                                    <picture>
-                                        <source srcset="/images-catalog/plastic-okno-3.avif" type="image/avif">
-                                        <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-3.webp" alt="Купить пластиковые окна четырехстворчатые">
-                                    </picture>
-                                </div>
-                                <div class="carousel-item">
-                                    <picture>
-                                        <source srcset="/images-catalog/plastic-okno-4.avif" type="image/avif">
-                                        <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-4.webp" alt="Купить пластиковую группу окон ">
-                                    </picture>
-                                </div>
-                                <div class="carousel-item">
-                                    <picture>
-                                        <source srcset="/images-catalog/plastic-okno-5.avif" type="image/avif">
-                                        <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-5.webp" alt="Купить пластиковую балконную дверь">
-                                    </picture>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Предыдущий</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Следующий</span>
-                            </button>
-                        </div>
-                            <span class="box-title">ПЛАСТИКОВЫЕ ОКНА</span>
-                            
-                            <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price-plastic">от 5000 р</span>
-                        </div>  
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                    <div class="kroshki " id="list-item-0">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="/catalog/okna">Окна</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" >Пластиковые окна</li>
+                            </ol>
+                        </nav>
                     </div>
+                    <div class="wrapper-block-title">
+                        <h2 class="wrapper-block-h" id="list-item-2">ПЛАСТИКОВЫЕ ОКНА</h2>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="main-wrapper-box" style="width:100% ;">
+
+                        
+
+                        <div class="main-catalog-boxs-plastic">
+                            <div class="main-catalog-box-plastic widthplastic">
+                            <div id="carouselExampleCaptions" class="carousel slide carou-plastic" data-bs-ride="carousel" >
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <picture>
+                                            <source srcset="/images-catalog/plastic-okno-1.avif" type="image/avif">
+                                            <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-1.webp" alt="Купить пластиковые окна двустворчатые">
+                                        </picture>                                 
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="/images-catalog/plastic-okno-2.avif" type="image/avif">
+                                            <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-2.webp" alt="купить пластиковые окна трехстворчатыетые">
+                                        </picture>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="/images-catalog/plastic-okno-3.avif" type="image/avif">
+                                            <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-3.webp" alt="Купить пластиковые окна четырехстворчатые">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="/images-catalog/plastic-okno-4.avif" type="image/avif">
+                                            <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-4.webp" alt="Купить пластиковую группу окон ">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="/images-catalog/plastic-okno-5.avif" type="image/avif">
+                                            <img class="main-catalog-images-plasticokno" src="/images-catalog/plastic-okno-5.webp" alt="Купить пластиковую балконную дверь">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Предыдущий</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Следующий</span>
+                                </button>
+                            </div>
+                                <span class="box-title">ПЛАСТИКОВЫЕ ОКНА</span>
                                 
-                    <div class="main-wrapper-description-aboutokno ">  
-                        <h3>Почему стоит заказать ПВХ окна "Открытие"</h3>                      
-                        <p>                                                               
-                            Мы предлагаем установку качественных, тихих и теплых пластиковых окон, изготовленных по европейским 
-                            технологиям и оснащенных долговечной фурнитурой <a style="color:#F7654A;" href="/catalog/portal-okno">Siegenia</a> или Maco. Мы гарантируем 
-                            профессиональную консультацию, качественный сервис и быструю, квалифицированную установку и 
-                            ремонт, чтобы вы могли наслаждаться уютом вашего дома, квартиры или дачи!
-                        </p>
-                        <h3>Наши преимущества!</h3>                                                             
-                            <li>Наличие собственного производства и высококвалифицированных специалистов с минимальным опытом в 10 лет!</li>
-                            <li>Производим окна ПВХ высокого качества по современным технологиям, обеспечивающим долговечность окон</li>
-                            <li>Даем гарантию 10 лет и делаем установку по ГОСТ</li>   
-                    </div>                    
-                </div>
-                <div class="main-wrapper-box-description-withoutborder">
-                    <h3>Производим любые конструкции из ПВХ и алюминия</h3>   
-                    <div class="withoutborder-grid">
-                        <div>
-                            <a style="color:#404149;" href="/catalog/plastic-okno#okno">
-                            <picture>
-                                <source srcset="/images-catalog/plastic-okno.avif" type="image/avif">
-                                <img src="/images-catalog/plastic-okno.webp" class="d-block w-10" alt="Заказать Пластиковые окна">
-                            </picture>
-                            
-                           Пластиковые окна</a> 
-                            
-                            
+                                <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price-plastic">от 5000 р</span>
+                            </div>  
                         </div>
-                        <div>
-                            <a style="color:#404149;" href="/catalog/portal-okno">
-                            <picture>
-                                <source srcset="/images-catalog/portal-okno.avif" type="image/avif">
-                                <img src="/images-catalog/portal-okno.webp" class="d-block w-10" alt="Купить Раздвижные окна">
-                            </picture>
-                            Раздвижные окна</a>
-                        </div>
-                        <div>
-                            <a style="color:#404149;" href="/catalog/panoramma-okno">
-                            <picture>
-                                <source srcset="/images-catalog/panoramma-okno.avif" type="image/avif">
-                                <img src="/images-catalog/panoramma-okno.webp" class="d-block w-10" alt="Купить Панорамные окна">
-                            </picture>
-                            Панорамные окна</a>
-                        </div>
-                        <div>
-                            <a style="color:#404149;" href="/catalog/dver-vhodnaya">
-                            <picture>
-                                <source srcset="/images-catalog/dver-dushevaya.avif" type="image/avif">
-                                <img src="/images-catalog/dver-dushevaya.webp" class="d-block w-10" alt="Купить Пластиковые двери">
-                            </picture>
-                            Пластиковые двери</a>
-                        </div>
-                        <div>
-                            <a style="color:#404149;" href="/catalog/balkon">
-                            <picture>
-                                <source srcset="/images-catalog/balkon.avif" type="image/avif">
-                                <img src="/images-catalog/balkon.webp" class="d-block w-10" alt="Заказать Остекление балкона">
-                            </picture>
-                            Остекление балкона</a>
-                        </div>
-                        <div>
-                            <a style="color:#404149;" href="/catalog/balkon">
-                            <picture>
-                                <source srcset="/images-catalog/balkon-1.avif" type="image/avif">
-                                <img src="/images-catalog/balkon-1.webp" class="d-block w-10" alt="Заказать Отделку балкона">
-                            </picture>
-                            Отделка балкона</a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-
-                </div>
-                
-                <div class="main-wrapper-box-description padding-row">
-                    <div class="description-box">
-                        <div class="description-box-plastic">
-                            <h3>Производим окна и двери нового поколения</h3>                        
+                                    
+                        <div class="main-wrapper-description-aboutokno ">  
+                            <h3>Почему стоит заказать ПВХ окна "Открытие"</h3>                      
                             <p>                                                               
-                                Пластиковые окна - это сложные конструкции, которые состоят из армирования, профилей 
-                                и уплотнителей из ПВХ. Чтобы выбрать подходящие окна, вам нужно понимать, какую цель 
-                                вы преследуете. Если вы живете в квартире, вам нужны окна, которые защитят вас от шума, 
-                                а если вы живете в частном доме, то вам нужны окна, которые будут сохранять тепло и 
-                                защищать от холода. При установке балконного блока необходимо учитывать показатель гидроизоляции. 
-                                Мы поможем вам выбрать лучший вариант, который подойдет именно для вас. 
-                                Что касается срока службы, то он зависит от производителя. Все производители проводят 
-                                специальные эксперименты на производстве, которые позволяют имитировать все возможные 
-                                нагрузки на окна и значительно ускорить время. В камерах постоянно меняется уровень влажности, 
-                                температуры и давления. В результате таких нагрузок удалось установить, что срок службы профилей 
-                                КВЕ и Brusbox может достигать до 60 лет, если соблюдать правила эксплуатации. Мы поможем вам 
-                                выбрать окна, которые будут долговечны и надежны.
-                            </p> 
+                                Мы предлагаем установку качественных, тихих и теплых пластиковых окон, изготовленных по европейским 
+                                технологиям и оснащенных долговечной фурнитурой <a style="color:#F7654A;" href="/catalog/portal-okno">Siegenia</a> или Maco. Мы гарантируем 
+                                профессиональную консультацию, качественный сервис и быструю, квалифицированную установку и 
+                                ремонт, чтобы вы могли наслаждаться уютом вашего дома, квартиры или дачи!
+                            </p>
+                            <h3>Наши преимущества!</h3>  
+                            <ul>                                                       
+                                <li>Наличие собственного производства и высококвалифицированных специалистов с минимальным опытом в 10 лет!</li>
+                                <li>Производим окна ПВХ высокого качества по современным технологиям, обеспечивающим долговечность окон</li>
+                                <li>Даем гарантию 10 лет и делаем установку по ГОСТ</li>   
+                            </ul>    
+                        </div>                    
+                    </div>
+                    <div class="main-wrapper-box-description-withoutborder">
+                        <h3>Производим любые конструкции из ПВХ и алюминия</h3>   
+                        <div class="withoutborder-grid">
+                            <div>
+                                <a style="color:#404149;" href="/catalog/plastic-okno#okno">
+                                <picture>
+                                    <source srcset="/images-catalog/plastic-okno.avif" type="image/avif">
+                                    <img src="/images-catalog/plastic-okno.webp" class="d-block w-10" alt="Заказать Пластиковые окна">
+                                </picture>
+                                
+                            Пластиковые окна</a> 
+                                
+                                
+                            </div>
+                            <div>
+                                <a style="color:#404149;" href="/catalog/portal-okno">
+                                <picture>
+                                    <source srcset="/images-catalog/portal-okno.avif" type="image/avif">
+                                    <img src="/images-catalog/portal-okno.webp" class="d-block w-10" alt="Купить Раздвижные окна">
+                                </picture>
+                                Раздвижные окна</a>
+                            </div>
+                            <div>
+                                <a style="color:#404149;" href="/catalog/panoramma-okno">
+                                <picture>
+                                    <source srcset="/images-catalog/panoramma-okno.avif" type="image/avif">
+                                    <img src="/images-catalog/panoramma-okno.webp" class="d-block w-10" alt="Купить Панорамные окна">
+                                </picture>
+                                Панорамные окна</a>
+                            </div>
+                            <div>
+                                <a style="color:#404149;" href="/catalog/dver-vhodnaya">
+                                <picture>
+                                    <source srcset="/images-catalog/dver-dushevaya.avif" type="image/avif">
+                                    <img src="/images-catalog/dver-dushevaya.webp" class="d-block w-10" alt="Купить Пластиковые двери">
+                                </picture>
+                                Пластиковые двери</a>
+                            </div>
+                            <div>
+                                <a style="color:#404149;" href="/catalog/balkon">
+                                <picture>
+                                    <source srcset="/images-catalog/balkon.avif" type="image/avif">
+                                    <img src="/images-catalog/balkon.webp" class="d-block w-10" alt="Заказать Остекление балкона">
+                                </picture>
+                                Остекление балкона</a>
+                            </div>
+                            <div>
+                                <a style="color:#404149;" href="/catalog/balkon">
+                                <picture>
+                                    <source srcset="/images-catalog/balkon-1.avif" type="image/avif">
+                                    <img src="/images-catalog/balkon-1.webp" class="d-block w-10" alt="Заказать Отделку балкона">
+                                </picture>
+                                Отделка балкона</a>
+                            </div>
                         </div>
                         
-                        <div class="description-box-plastic-pwh">
-                            <span>До 60 лет службы</span> 
-                            <span>Экономия тепла</span>
-                            <span>Экологичный продукт</span> 
-                            <span>Без конденсата</span> 
-                            <span>Теплоизоляция</span> 
-                            <span>Звукоизоляция</span>  
-                            <span>Высокая прочность</span>  
-                            <span>Защита от UV-излучения</span>    
-                        </div>
-                    </div>
                         
-                </div>
-                <div class="main-wrapper-box-description" >
-                    <div>
-                        <h3>Дополнительные опции и аксессуары</h3>
-                        <div class="box-description-grid-box">
-                            <div class="div1">
-                                <h4>Нестандартные окна</h4>
-                                <p>Производим нестандартные окна: арочные, круглые, многоугольные, одностворчатые 
-                                    (поворотно-откидная створка), двустворчатые (поворотная и глухая створка),
-                                    трехстворчатые (поворотные и глухие створки) с учетом ваших пожеланий</p>
+                        
+
+                    </div>
+                    
+                    <div class="main-wrapper-box-description padding-row">
+                        <div class="description-box">
+                            <div class="description-box-plastic">
+                                <h3>Производим окна и двери нового поколения</h3>                        
+                                <p>                                                               
+                                    Пластиковые окна - это сложные конструкции, которые состоят из армирования, профилей 
+                                    и уплотнителей из ПВХ. Чтобы выбрать подходящие окна, вам нужно понимать, какую цель 
+                                    вы преследуете. Если вы живете в квартире, вам нужны окна, которые защитят вас от шума, 
+                                    а если вы живете в частном доме, то вам нужны окна, которые будут сохранять тепло и 
+                                    защищать от холода. При установке балконного блока необходимо учитывать показатель гидроизоляции. 
+                                    Мы поможем вам выбрать лучший вариант, который подойдет именно для вас. 
+                                    Что касается срока службы, то он зависит от производителя. Все производители проводят 
+                                    специальные эксперименты на производстве, которые позволяют имитировать все возможные 
+                                    нагрузки на окна и значительно ускорить время. В камерах постоянно меняется уровень влажности, 
+                                    температуры и давления. В результате таких нагрузок удалось установить, что срок службы профилей 
+                                    КВЕ и Brusbox может достигать до 60 лет, если соблюдать правила эксплуатации. Мы поможем вам 
+                                    выбрать окна, которые будут долговечны и надежны.
+                                </p> 
                             </div>
-                            <a style="color:#404149;" href="/catalog/moskit">
-                                <div>
-                                    <h4>Москитные сетки</h4>
-                                    <p>Москитные сетки на окнах остановят насекомых и тополиный пух</p>
-                                </div>
-                            </a>
-                            <a style="color:#404149;" href="/catalog/komplect-okno">
-                                <div>
-                                    <h4>Откосы</h4>
-                                    <p >Откосы придадут оконному проему законченный и гармоничный вид</p>
-                                </div> 
-                            </a> 
-                            <a style="color:#404149;" href="/catalog/komplect-okno">                          
-                                <div>
-                                    <h4>Подоконники</h4>
-                                    <p>Подоконники улучшают теплоизоляцию и внешний вид окна</p>
-                                </div>  
-                            </a>   
-                            <a style="color:#404149;" href="/catalog/jaluzi">                      
-                                <div>
-                                    <h4>Рольставни</h4>
-                                    <p>Установите рольставни, чтобы защититься от солнечных лучей, холода и посторонних взглядов</p>
-                                </div>  
-                            </a>  
-                            <a style="color:#404149;" href="/catalog/jaluzi">                         
-                                <div>
-                                    <h4>Жалюзи на окна</h4>
-                                    <p>Предлагаем на выбор жалюзи: вертикальные, горизонтальные, день-ночь, а также жалюзи с рисунком.</p>
-                                </div>
-                            </a>  
-                            <a style="color:#404149;" href="/catalog/balkon">                          
-                                <div>
-                                    <h4>Утепление балконов</h4>
-                                    <p>Теплый балкон станет отличным дополнением к квартире, расширив ее полезную площадь</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="box-description-grid-boxs-plus">
-                          
-                        <div class="box-description-grid-box-plus">
-                            <div class="div2">
-                                <h4>Заказывая пластиковые окна у нас, вы получаете</h4>
-                                <p>Заказывая окна "Открытие", наши специалисты установят изделие, настроят работу фурнитуры, 
-                                    объяснят, как ей пользоваться, как продлить ее срок службы. Вы получаете не только оконные блоки, 
-                                    но и качественный сервис. Мы обслуживаем наши окна и после окончания гарантийного срока. 
-                                    Если у вас разбилось стекло или стала плохо открываться створка — наши специалисты помогут</p>
-                                
+                            
+                            <div class="description-box-plastic-pwh">
+                                <span>До 60 лет службы</span> 
+                                <span>Экономия тепла</span>
+                                <span>Экологичный продукт</span> 
+                                <span>Без конденсата</span> 
+                                <span>Теплоизоляция</span> 
+                                <span>Звукоизоляция</span>  
+                                <span>Высокая прочность</span>  
+                                <span>Защита от UV-излучения</span>    
                             </div>
-                            <div class="description-box-plastic-pwh ">
-                                <span class="span1">Замер делается бесплатно</span> 
-                                <span class="span1">Скидка 500р при заказе через сайт</span> 
-                                <span class="span1">Рассрочка от производителя окон</span>     
-                            </div>
-                        </div>  
-                       
-                                                    
+                        </div>
+                            
                     </div>
-
-                </div>
-                <div class="main-wrapper-box-description">
-                    <div class="main-wrapper-box-description-row">
-                        <div class="main-wrapper-description-box ">
-                            <picture>
-                                    <source  srcset="/images-catalog/profil.avif" type="image/avif">
-                                    <img class="main-catalog-images-plastic oknowidth" src="/images-catalog/profil.webp" alt="Заказать оконный профиль">
-                            </picture>
-                        </div>
-                        <div class="main-wrapper-description-box boxtextwrapper">
-                            <h3>Какой оконный профиль выбрать?</h3>
-                            <h4>Оконный профиль Brusbox</h4>
-                            <p>
-                                Профиль Brusbox изначально разрабатывался с учетом наших климатических особенностей: 
-                                сильных холодов, порывистого ветра и обилия снега, а также частой смены циклов замерзания и оттаивания. 
-                                Собранные из него окна рассчитаны на эксплуатации в российских погодных условиях и легко выдерживают
-                                морозы до -20 °C.
-                                Выпускаемая под маркой Brusbox продукция не уступает по качеству профильным системам от известных брендов.
-
-                            </p>
-                            <h4>Оконный профиль КВЕ</h4> 
-                                <p>
-                                    Марка KBE – лидирующий производитель и поставщик высокотехнологичного ПВХ-профиля для оконных
-                                     и дверных систем на российском рынке. КВЕ стали известными и популярными в России благодаря:
-                                    <li>отсутствию тяжелых металлов в составе и соответствию технологии greenline</li>
-                                    <li>возможности использования даже при температуре до -60 градусов</li>
-                                    <li>наличию различных дизайнов</li>    
-                                </p>
-                                <p>
-                                Свойства окон КВЕ и их доступная цена делают их излюбленным вариантом 
-                                при строительстве новостроек, государственных учреждений и офисных зданий. 
-                                </p>
-                        </div>
-                    </div>
-                    <div class="main-wrapper-box-description-row">
-                        <div class="main-wrapper-description-box boxtextwrapper">
-                            
-                            <h3>Какая фурнитура лучше?</h3>
-                            <p>На Ваш выбор два вида фурнитуры, которые мы устанавливаем</p>
-                            <h4>Фурнитура марки <a style="color:#F7654A;" href="/catalog/portal-okno">Siegenia</a> </h4>
-                            <p>
-                                За весь период своей плодотворной деятельности компания разработала 
-                                и внедрила широкий спектр деталей, обеспечивающих безотказность и продолжительный срок службы стеклопакетов.
-                            </p>
-                            <h4>Преимущества фурнитуры Siegenia</h4>
-                            <p>К основным достоинствам аксессуаров относят:</p>
-                            <li>Модульность. Наличие модульных элементов позволяет с легкостью модернизировать оконную систему и снабдить ее новыми функциями. 
-                                Компоненты фурнитуры Siegenia 
-                                подходят для окон любой конфигурации, в том числе арочной и изогнутой формы, благодаря чему легко заменяются по желанию клиента.</li>
-                            <li>Устойчивость к взлому. Аксессуары имеют класс противовзломности до RC3, что гарантирует надежную защиту от злоумышленников. Потребители могут не опасаться незваных гостей, 
-                                так как многие ручки от бренда оснащаются надежными механизмами Secustik, фиксирующими кнопками или ограничителями на ключе.</li>
-                            
-                           
-                            
-                        </div>
-                        <div class="main-wrapper-description-box">
-                            <picture>
-                                    <source  srcset="/images-catalog/proizvodstvo.avif" type="image/avif">
-                                    <img class="main-catalog-images-plastic oknowidth" src="/images-catalog/proizvodstvo.webp" alt="Производство окон">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="main-wrapper-box-description-row padding-row">
-                        <div class="main-wrapper-description-box ">
-                            <picture>
-                                    <source  srcset="/images-catalog/furnitura.avif" type="image/avif">
-                                    <img class="main-catalog-images-plastic oknowidth-2" src="/images-catalog/furnitura.webp" alt="Заказать оконную фурнитуру">
-                            </picture>
-                        </div>
-                        <div class="main-wrapper-description-box boxtextwrapper">
-                            <li>Стойкость к износу, коррозии и повышенной влажности. Окна, оснащенные фурнитурой Siegenia, можно открывать для проветривания 
-                                при любых погодных условиях, поскольку изделия обладают защитой от косого дождя. Специальное стойкое покрытие полностью исключает 
-                                образование коррозионных процессов и способствует долговечности аксессуаров без изменения их первоначального внешнего вида.</li>
-                            <li>Эстетика. Изделия обладают высокой эстетической привлекательностью и идеально вписываются в любой интерьер. 
-                                Их можно интегрировать как в классические оконные системы, так и в стеклопакеты с оригинальным дизайном. 
-                                Оконные ручки и многие вспомогательные 
-                                элементы представлены в широкой цветовой гамме, полностью отвечающей требованиям современной архитектуры.</li>
-                            <li>Простой монтаж. Изделия легки в установке и без труда заменяются в случае износа. В отдельных линейках, 
-                                таких как фурнитура Siegenia Titan, 
-                                предусмотрена возможность автоматического крепления, что весьма актуально для производителей окон.</li>
-                        </div>
-                    </div>
-                    <div class="main-wrapper-box-description-row padding-row">
-                        <div class="main-wrapper-description-box boxtextwrapper">
-                            
-                            <h3>Фурнитура марки Maco</h3>
-                            <p>
-                                Фурнитура Maco предназначена абсолютно для любых видов открывания пластиковых и балконных дверей, также всех известных конструкций.
-                                Как всякий фирменный брендовый продукт она легко отличима за счет:
-                            
-                                <li>Регулируемым ножницам и верних петель. Это обеспечивает большие возможности регулировки подъема и опускания створки, а также регулировку прижима</li>
-                                <li>Регулируемых цапф. Обеспечивает большие возможности регулировки благодаря специальной конструкции</li>
-                                <li>Регулируемой нижней петле, которая подходит ко всем профильным системам и имеет регулировку в 3-х направлениях</li>
-                                
-                            </p>
-                            <h3>Достоинства фурнитуры Maco</h3>
-                            <li>Элементы оцинкованы или хромированы, кроме этого 
-                            они имеют заранее нанесенное восковое покрытие, которое защищает механизмы фурнитуры от попадания влаги. </li>
-                            <li>Фурнитура рассчитана на 45 000 циклов открывания-закрывания, 
-                            то есть, если окно открывать 1 раз в день, его хватит на 120 лет безупречной работы.</li>
-                            
-                        </div>
-                        <div class="main-wrapper-description-box">
-                            <picture>
-                                    <source  srcset="/images-catalog/maco.avif" type="image/avif">
-                                    <img class="main-catalog-images-plastic oknowidth" src="/images-catalog/maco.webp" alt="ЗАмена пластиковых окон">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-                <div id="okno" class="main-wrapper-box-description">
-                    <div class="main-wrapper-box-description-row padding-row">
-                        <div class="main-wrapper-description-box video-box">
-                            <video controls="controls" style="border-radius:10px;">
-                                <source src="/images-catalog/plastic.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                            </video>
-                        </div>
-                        <div class="main-wrapper-description-box boxtextwrapper">
-                            <h3>Сколько стоит вставить пластиковые окна</h3>
-                            <p>
-                                Если вы задумали заказать пластиковое окно, вопрос цены встает в первую очередь.
-                                Мы расскажем, как заплатить за пластиковое окно дешево - практически минимальную цену.
-                                
-                            </p>
-                            <h4>1 способ: «Бюджет»</h4>
-                            <p>
-                                Компаниям, которые давно занимаются окнами, можно и нужно ставить задачу не «установить вам окно», 
-                                а найти оптимальное решение вашей проблемы, т.е. подобрать материалы, способ исполнения, фурнитуру, 
-                                чтобы стоимость окна вышла не более определенной суммы. Ответственный производитель окон всегда пойдет 
-                                вам навстречу и попытается уложиться в заданный бюджет.
-                            </p>
-                            <h4>2 способ: «Сами с усами»</h4>
-                            <p>
-                                В финальную стоимость остекления всегда входят дополнительные работы, которые могут быть вами выполнены 
-                                самостоятельно: замер, доставка, монтаж. Экономия составит до 30% от первоначальной стоимости. Дело в том, 
-                                что бесплатных «доставки и установки» не может существовать в принципе. Они просто уже включены в стоимость.
-                                Поэтому беря на себя какую-то часть работы, вы вправе рассчитывать на снижение цены.
-                            </p>
-        
-        
-                            <p>
-                                Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
-                            </p>  
-                        </div>
-                    </div>                
-                </div>
-
-
-           
-            
-
-
-
-            <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
-                <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-2">
-                                    <label class="form-check-label" for="floatingInput">
-                                        Введите контактные данные
-                                    </label>
+                    <div class="main-wrapper-box-description" >
+                        <div>
+                            <h3>Дополнительные опции и аксессуары</h3>
+                            <div class="box-description-grid-box">
+                                <div class="div1">
+                                    <h4>Нестандартные окна</h4>
+                                    <p>Производим нестандартные окна: арочные, круглые, многоугольные, одностворчатые 
+                                        (поворотно-откидная створка), двустворчатые (поворотная и глухая створка),
+                                        трехстворчатые (поворотные и глухие створки) с учетом ваших пожеланий</p>
                                 </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
-                                    <label for="floatingInput">Имя</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
-                                    <label for="floatingInput">Номер телефона</label>
-                                </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Пластиковые окна" readonly>
-                                    <label for="floatingInput">Категория</label>
-                                </div>
-                                <div>
+                                <a style="color:#404149;" href="/catalog/moskit">
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                        </svg>
-                                        <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                        <h4>Москитные сетки</h4>
+                                        <p>Москитные сетки на окнах остановят насекомых и тополиный пух</p>
+                                    </div>
+                                </a>
+                                <a style="color:#404149;" href="/catalog/komplect-okno">
+                                    <div>
+                                        <h4>Откосы</h4>
+                                        <p >Откосы придадут оконному проему законченный и гармоничный вид</p>
+                                    </div> 
+                                </a> 
+                                <a style="color:#404149;" href="/catalog/komplect-okno">                          
+                                    <div>
+                                        <h4>Подоконники</h4>
+                                        <p>Подоконники улучшают теплоизоляцию и внешний вид окна</p>
+                                    </div>  
+                                </a>   
+                                <a style="color:#404149;" href="/catalog/jaluzi">                      
+                                    <div>
+                                        <h4>Рольставни</h4>
+                                        <p>Установите рольставни, чтобы защититься от солнечных лучей, холода и посторонних взглядов</p>
+                                    </div>  
+                                </a>  
+                                <a style="color:#404149;" href="/catalog/jaluzi">                         
+                                    <div>
+                                        <h4>Жалюзи на окна</h4>
+                                        <p>Предлагаем на выбор жалюзи: вертикальные, горизонтальные, день-ночь, а также жалюзи с рисунком.</p>
+                                    </div>
+                                </a>  
+                                <a style="color:#404149;" href="/catalog/balkon">                          
+                                    <div>
+                                        <h4>Утепление балконов</h4>
+                                        <p>Теплый балкон станет отличным дополнением к квартире, расширив ее полезную площадь</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box-description-grid-boxs-plus">
+                            
+                            <div class="box-description-grid-box-plus">
+                                <div class="div2">
+                                    <h4>Заказывая пластиковые окна у нас, вы получаете</h4>
+                                    <p>Заказывая окна "Открытие", наши специалисты установят изделие, настроят работу фурнитуры, 
+                                        объяснят, как ей пользоваться, как продлить ее срок службы. Вы получаете не только оконные блоки, 
+                                        но и качественный сервис. Мы обслуживаем наши окна и после окончания гарантийного срока. 
+                                        Если у вас разбилось стекло или стала плохо открываться створка — наши специалисты помогут</p>
+                                    
+                                </div>
+                                <div class="description-box-plastic-pwh ">
+                                    <span class="span1">Замер делается бесплатно</span> 
+                                    <span class="span1">Скидка 500р при заказе через сайт</span> 
+                                    <span class="span1">Рассрочка от производителя окон</span>     
+                                </div>
+                            </div>  
+                        
+                                                        
+                        </div>
+
+                    </div>
+                    <div class="main-wrapper-box-description">
+                        <div class="main-wrapper-box-description-row">
+                            <div class="main-wrapper-description-box ">
+                                <picture>
+                                        <source  srcset="/images-catalog/profil.avif" type="image/avif">
+                                        <img class="main-catalog-images-plastic oknowidth" src="/images-catalog/profil.webp" alt="Заказать оконный профиль">
+                                </picture>
+                            </div>
+                            <div class="main-wrapper-description-box boxtextwrapper">
+                                <h3>Какой оконный профиль выбрать?</h3>
+                                <h4>Оконный профиль Brusbox</h4>
+                                <p>
+                                    Профиль Brusbox изначально разрабатывался с учетом наших климатических особенностей: 
+                                    сильных холодов, порывистого ветра и обилия снега, а также частой смены циклов замерзания и оттаивания. 
+                                    Собранные из него окна рассчитаны на эксплуатации в российских погодных условиях и легко выдерживают
+                                    морозы до -20 °C.
+                                    Выпускаемая под маркой Brusbox продукция не уступает по качеству профильным системам от известных брендов.
+
+                                </p>
+                                <h4>Оконный профиль КВЕ</h4> 
+                                    <p>
+                                        Марка KBE – лидирующий производитель и поставщик высокотехнологичного ПВХ-профиля для оконных
+                                        и дверных систем на российском рынке. КВЕ стали известными и популярными в России благодаря:</p>
+                                    <ul>
+                                        <li>отсутствию тяжелых металлов в составе и соответствию технологии greenline</li>
+                                        <li>возможности использования даже при температуре до -60 градусов</li>
+                                        <li>наличию различных дизайнов</li>  
+                                    </ul>  
+                                    
+                                    <p>
+                                    Свойства окон КВЕ и их доступная цена делают их излюбленным вариантом 
+                                    при строительстве новостроек, государственных учреждений и офисных зданий. 
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="main-wrapper-box-description-row">
+                            <div class="main-wrapper-description-box boxtextwrapper">
+                                
+                                <h3>Какая фурнитура лучше?</h3>
+                                <p>На Ваш выбор два вида фурнитуры, которые мы устанавливаем</p>
+                                <h4>Фурнитура марки <a style="color:#F7654A;" href="/catalog/portal-okno">Siegenia</a> </h4>
+                                <p>
+                                    За весь период своей плодотворной деятельности компания разработала 
+                                    и внедрила широкий спектр деталей, обеспечивающих безотказность и продолжительный срок службы стеклопакетов.
+                                </p>
+                                <h4>Преимущества фурнитуры Siegenia</h4>
+                                <p>К основным достоинствам аксессуаров относят:</p>
+                                <ul>
+                                    <li>Модульность. Наличие модульных элементов позволяет с легкостью модернизировать оконную систему и снабдить ее новыми функциями. 
+                                        Компоненты фурнитуры Siegenia 
+                                        подходят для окон любой конфигурации, в том числе арочной и изогнутой формы, благодаря чему легко заменяются по желанию клиента.</li>
+                                    <li>Устойчивость к взлому. Аксессуары имеют класс противовзломности до RC3, что гарантирует надежную защиту от злоумышленников. Потребители могут не опасаться незваных гостей, 
+                                        так как многие ручки от бренда оснащаются надежными механизмами Secustik, фиксирующими кнопками или ограничителями на ключе.</li>
+                                </ul>
+                            
+                                
+                            </div>
+                            <div class="main-wrapper-description-box">
+                                <picture>
+                                        <source  srcset="/images-catalog/proizvodstvo.avif" type="image/avif">
+                                        <img class="main-catalog-images-plastic oknowidth" src="/images-catalog/proizvodstvo.webp" alt="Производство окон">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="main-wrapper-box-description-row padding-row">
+                            <div class="main-wrapper-description-box ">
+                                <picture>
+                                        <source  srcset="/images-catalog/furnitura.avif" type="image/avif">
+                                        <img class="main-catalog-images-plastic oknowidth-2" src="/images-catalog/furnitura.webp" alt="Заказать оконную фурнитуру">
+                                </picture>
+                            </div>
+                            <div class="main-wrapper-description-box boxtextwrapper">
+                                <ul>
+                                    <li>Стойкость к износу, коррозии и повышенной влажности. Окна, оснащенные фурнитурой Siegenia, можно открывать для проветривания 
+                                        при любых погодных условиях, поскольку изделия обладают защитой от косого дождя. Специальное стойкое покрытие полностью исключает 
+                                        образование коррозионных процессов и способствует долговечности аксессуаров без изменения их первоначального внешнего вида.</li>
+                                    <li>Эстетика. Изделия обладают высокой эстетической привлекательностью и идеально вписываются в любой интерьер. 
+                                        Их можно интегрировать как в классические оконные системы, так и в стеклопакеты с оригинальным дизайном. 
+                                        Оконные ручки и многие вспомогательные 
+                                        элементы представлены в широкой цветовой гамме, полностью отвечающей требованиям современной архитектуры.</li>
+                                    <li>Простой монтаж. Изделия легки в установке и без труда заменяются в случае износа. В отдельных линейках, 
+                                        таких как фурнитура Siegenia Titan, 
+                                        предусмотрена возможность автоматического крепления, что весьма актуально для производителей окон.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-wrapper-box-description-row padding-row">
+                            <div class="main-wrapper-description-box boxtextwrapper">
+                                
+                                <h3>Фурнитура марки Maco</h3>
+                                <p>
+                                    Фурнитура Maco предназначена абсолютно для любых видов открывания пластиковых и балконных дверей, также всех известных конструкций.
+                                    Как всякий фирменный брендовый продукт она легко отличима за счет:</p>
+                                <ul>
+                                    <li>Регулируемым ножницам и верних петель. Это обеспечивает большие возможности регулировки подъема и опускания створки, а также регулировку прижима</li>
+                                    <li>Регулируемых цапф. Обеспечивает большие возможности регулировки благодаря специальной конструкции</li>
+                                    <li>Регулируемой нижней петле, которая подходит ко всем профильным системам и имеет регулировку в 3-х направлениях</li>
+                                </ul>   
+                                <h3>Достоинства фурнитуры Maco</h3>
+                                <ul>
+                                    <li>Элементы оцинкованы или хромированы, кроме этого 
+                                    они имеют заранее нанесенное восковое покрытие, которое защищает механизмы фурнитуры от попадания влаги. </li>
+                                    <li>Фурнитура рассчитана на 45 000 циклов открывания-закрывания, 
+                                    то есть, если окно открывать 1 раз в день, его хватит на 120 лет безупречной работы.</li>
+                                </ul>
+                            </div>
+                            <div class="main-wrapper-description-box">
+                                <picture>
+                                        <source  srcset="/images-catalog/maco.avif" type="image/avif">
+                                        <img class="main-catalog-images-plastic oknowidth" src="/images-catalog/maco.webp" alt="ЗАмена пластиковых окон">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="okno" class="main-wrapper-box-description">
+                        <div class="main-wrapper-box-description-row padding-row">
+                            <div class="main-wrapper-description-box video-box">
+                                <video controls="controls" style="border-radius:10px;">
+                                    <source src="/images-catalog/plastic.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                </video>
+                            </div>
+                            <div class="main-wrapper-description-box boxtextwrapper">
+                                <h3>Сколько стоит вставить пластиковые окна</h3>
+                                <p>
+                                    Если вы задумали заказать пластиковое окно, вопрос цены встает в первую очередь.
+                                    Мы расскажем, как заплатить за пластиковое окно дешево - практически минимальную цену.
+                                    
+                                </p>
+                                <h4>1 способ: «Бюджет»</h4>
+                                <p>
+                                    Компаниям, которые давно занимаются окнами, можно и нужно ставить задачу не «установить вам окно», 
+                                    а найти оптимальное решение вашей проблемы, т.е. подобрать материалы, способ исполнения, фурнитуру, 
+                                    чтобы стоимость окна вышла не более определенной суммы. Ответственный производитель окон всегда пойдет 
+                                    вам навстречу и попытается уложиться в заданный бюджет.
+                                </p>
+                                <h4>2 способ: «Сами с усами»</h4>
+                                <p>
+                                    В финальную стоимость остекления всегда входят дополнительные работы, которые могут быть вами выполнены 
+                                    самостоятельно: замер, доставка, монтаж. Экономия составит до 30% от первоначальной стоимости. Дело в том, 
+                                    что бесплатных «доставки и установки» не может существовать в принципе. Они просто уже включены в стоимость.
+                                    Поэтому беря на себя какую-то часть работы, вы вправе рассчитывать на снижение цены.
+                                </p>
+            
+            
+                                <p>
+                                    Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
+                                </p>  
+                            </div>
+                        </div>                
+                    </div>
+
+                    <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
+                        <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-2">
+                                            <label class="form-check-label" for="floatingInput">
+                                                Введите контактные данные
+                                            </label>
+                                        </div>
+                                        <div class="form-floating mb-3">                    
+                                            <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
+                                            <label for="floatingInput">Имя</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
+                                            <label for="floatingInput">Номер телефона</label>
+                                        </div>
+                                        <div class="form-floating mb-3">                    
+                                            <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Пластиковые окна" readonly>
+                                            <label for="floatingInput">Категория</label>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                                <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
+                                            <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
+                                        </div>                            
+                                        <div class="form__message">
+                                            <!-- Всплывающие сообщения об отправке -->
+                                            <div class="preloader"></div>
+                                            <p class="contact-form__message"></p>
+                                        </div>                            
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
-                                    <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
-                                </div>                            
-                                <div class="form__message">
-                                    <!-- Всплывающие сообщения об отправке -->
-                                    <div class="preloader"></div>
-                                    <p class="contact-form__message"></p>
-                                </div>                            
-                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </main>
         <footer>
             <div class="footer">
@@ -653,15 +685,6 @@
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });
-    </script>
-
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
     </script>
 </body>
 </html>

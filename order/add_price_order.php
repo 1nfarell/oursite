@@ -12,7 +12,7 @@ function add_price_order(){
             $price_order =  (integer)$_POST["price_order"];
             $number_order =  $_POST["number_order"];   
             $price_order_old = (integer)$_POST["price_order_old"]; 
-            
+            $price_order__status = $_POST["price_order__status"];
             //если (старая сумма заказа - остаток оплаты) < новой суммы заказа
             if(($price_order_old - $payment_balance) <= $price_order){
                 //новый остаток оплаты = новая сумма заказа - (старая сумма заказа - остаток оплаты)
@@ -24,7 +24,13 @@ function add_price_order(){
                 //записать изменения  остатока оплаты
                 $sthh = $db_order->prepare("UPDATE orders SET payment_balance = '$payment_balance_new' WHERE number_order = '$number_order'");
                 $sthh->execute();
-            
+
+                //при изменении суммы заказа, если статус был "оплачен" записать новый статус
+                if($price_order__status == "Оплачен"){
+                    $sth = $db_order->prepare("UPDATE orders SET price_order__status = 'Предоплата' WHERE number_order = '$number_order'");            
+                    $sth->execute();
+                };
+
                 $result = true;
             }
             // else{

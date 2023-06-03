@@ -74,22 +74,29 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
-                                <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
-                                <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
-                                <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
+                                <li><a class="dropdown-item" title="Двери входные" href="/catalog/doors/dver-vhodnaya">Двери входные</a></li>
+                                <li><a class="dropdown-item" title="Двери душевые" href="/catalog/doors/dver-dushevaya">Двери душевые</a></li>
+                                <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/doors/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
                                 <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
+                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
                             </ul>
                         </div>
                         <div class="dropdown menu-catalog">
@@ -103,16 +110,16 @@
                                 <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
                                 <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
                                 <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
-                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>                                
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
                             </ul>
-                        </div>                        
+                        </div>                      
                           
                         <div class ="menu-links" >
                             <input type="checkbox" name="menu" id="btn-menu" />
                             <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
                             <ul>
                             <a  href="/">Главная</a>
-                            <a class = "header-btn_setcolor"  href="https://clck.ru/34Ph9X" title="Оставить отзыв на Яндекс Картах">Оставить отзыв</a>
+                            <a class="header-btn_setcolor"  href="https://clck.ru/34Ph9X" title="Оставить отзыв на Яндекс Картах">Оставить отзыв</a>
                             </ul>
                         </div>             
                     </div>
@@ -131,7 +138,7 @@
                             <form id="search-form" method="POST">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text" id="inputGroup-sizing-lg">№</span>
-                                    <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search" placeholder="Введите номер договора, например: 834934"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
+                                    <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search" placeholder="Введите номер договора, например: MC/10.1.1"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
                                     <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
                                 </div>
                             </form>

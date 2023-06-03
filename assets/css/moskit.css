@@ -82,7 +82,9 @@
     .container__balkon-wrapper--pohozhiitovar{
         overflow-x: scroll;
     }
-    
+    .main-catalog-box{
+        width: unset;
+    }
     .pohozhiitovar__container + .pohozhiitovar__container{
         margin-left: 30px !important;
     }
@@ -141,7 +143,7 @@
         max-width: unset;
     }
     .main{
-        width: 100% !important;
+        width: 100% ;
     }
     .catalog-moskit-wrapper{
         width: 90% !important;
@@ -225,7 +227,7 @@
     }
 
     .header-namefirm:first-child{
-        font-size: 12px;
+        font-size: 14.5px;
         padding-right: 0px;
     }
 
@@ -235,7 +237,7 @@
     }
 
     .header-namefirm{
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .header-left {
@@ -251,7 +253,9 @@
 }
 
 @media (max-width: 720px) and (min-width: 500px)  {
-  
+    .spanshow{
+        display: none;
+    }
     .moskit-title-price{
         padding-top: 5px;
     }
@@ -312,7 +316,6 @@
     }
 
     .spanshow{
-        display: flex !important;
         margin-left: 0 !important;
         margin-right: 14px;
     }
@@ -390,9 +393,25 @@
         flex-direction: column;
         justify-content: center;
     }
+    .spanhidden{  
+        display: flex !important;
+        box-shadow: -2px 0px 0px 0px rgb(0 0 0 / 5%);
+        padding-left: 15px;
+    }
 }
 
 @media (max-width: 500px)  {
+    .main-catalog-box{
+        width: unset;
+    }
+    .spanhidden{  
+        display: flex !important;
+        box-shadow: -2px 0px 0px 0px rgb(0 0 0 / 5%);
+        padding-left: 15px;
+    }
+    .spanshow{
+        display: none !important;
+    }
       .img-preview-fullwidth{
         width: 100%;
         max-width: 500px;

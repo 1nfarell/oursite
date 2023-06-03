@@ -1,18 +1,54 @@
 #body{
     background-color: #e9ecef;
 }
+.info-btn{
+    width: fit-content;
+    height: fit-content;
+    font-weight: 100;
+    font-size: 14px;
+    padding: 8px;
+    align-self: center;
+}
+.info-btn + .info-btn{
+    margin-left: 20px;
+}
+.liModalLabel, .headerModalLabel, .dataModalLabel, .footerInfoModalLabel{
+    font-size: 14px;
+}
+.form-select option{color: #212529;}
+.form-select__changes, .price_change-disabled{
+    border-bottom-width: medium !important;
+}
 
+.modal-footer__update{
+    flex-direction: unset;
+    width: unset;
+}
+.header-table .form-control{
+    border-bottom-width: medium !important;
+}
 .main{
     background-color: #ffffff;
+}
+.container--row_menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+}
+.container__menu--filter{
+    padding-right: 20px;
 }
 .table{
     vertical-align: middle;
 }
 
-.table_col_width--name{
-    width: 350px;
+.td_oplata-disabled, .priceValue-disabled{
+    width: 100px;
 } 
-
+.modal-footer{
+    align-items: unset;
+}
 .on_status, .on_pay{
     background-color: steelblue !important;
     color: #ffffff;
@@ -60,9 +96,9 @@
     width: 100%;
 }                                                          
  .table_header--color{
-    box-shadow: 0px 14px 20px 0px #8c989b78;
-    -webkit-box-shadow: 0px 14px 20px 0px #8c989b78;
-    -moz-box-shadow: 0px 14px 20px 0px #8c989b78;
+    box-shadow: 0px 3px 5px 0px #8c989b78;
+    -webkit-box-shadow: 0px 3px 5px 0px #8c989b78;
+    -moz-box-shadow: 0px 3px 5px 0px #8c989b78;
  }                               
  .balkon-wrapper {
     padding-left: 30px !important;

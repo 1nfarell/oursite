@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="/assets/css/aos.css"> 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -42,13 +43,9 @@
 </head>
 <body>
     
-    <div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
+    
     <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Купить Портальные Системы (Раздвижные Окна) Волжский</h1>
-    <div id="body" style="visibility: hidden;" class="container-main">
+    <div id="body" class="container-main">
         <header id="header">
             
             <div class="header--container">
@@ -89,365 +86,399 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
                                 <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
                                 <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
                                 <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
                                 <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
+                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
                             </ul>
                         </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Москитные сетки
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
+                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
+                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
+                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
+                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
+                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
+                            </ul>
+                        </div>
+
                         <div class ="menu-links" >
-                            <span class="spanshow" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Рассчитать стоимость</span>
+                            <span class="spanshow header-btn_setcolor" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label>
                             <ul>
                                 <a  href="/">Главная</a> 
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <span class="spanhidden" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                                <span class="spanhidden header-btn_setcolor" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             </ul>
-                        </div>             
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main>  
             <div class="main">
-                <div class="main-wrapper-about">
-                    <h2>ПОРТАЛЬНЫЕ СИСТЕМЫ</h2>
-                    <img src="/images/orange-dash.svg" class="orange-dash d-block" alt="полоска разделитель">
-                </div>
-                <div class="main-wrapper-box-portal">
-                    <div class="main-catalog-boxs-portal">
-                        <div class="main-catalog-box-portal">
-                            <picture>
-                                <source  srcset="/images-catalog/portal-okno-1.avif" type="image/avif">     
-                                <img class="main-catalog-images-portal" src="/images-catalog/portal-okno-1.webp" alt="Изображение ПЛАСТИКОВОГО ОКНА ДВУХСТВОРЧАТОГО">
-                            </picture>
-                            <span class="box-title">ПОРТАЛЬНЫЕ СИСТЕМЫ</span>
-                            <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-noprice">Узнать стоимость</span>
-                        </div>   
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                    <div class="kroshki " id="list-item-0">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="/catalog/okna">Окна</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" >Раздвижные окна</li>
+                            </ol>
+                        </nav>
                     </div>
-                    <div class="main-wrapper-box-description">
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box video-box">
-                                <video controls="controls" style="border-radius:10px;">
-                                    <source src="/images-catalog/portal.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                                </video>
-                            </div>
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>О продукции</h3>
+                    
+                    <div class="wrapper-block-title">
+                        <h2 class="wrapper-block-h" id="list-item-2">РАЗДВИЖНЫЕ ОКНА</h2>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="main-wrapper-box-portal">
+                        <div class="main-catalog-boxs-portal">
+                            <div class="main-catalog-box-portal">
+                                <picture>
+                                    <source  srcset="/images-catalog/portal-okno-1.avif" type="image/avif">     
+                                    <img class="main-catalog-images-portal" src="/images-catalog/portal-okno-1.webp" alt="Изображение ПЛАСТИКОВОГО ОКНА ДВУХСТВОРЧАТОГО">
+                                </picture>
+                                <span class="box-title">ПОРТАЛЬНЫЕ СИСТЕМЫ</span>
+                                <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-noprice">Узнать стоимость</span>
+                            </div>   
+                        </div>
+                        <div class="main-wrapper-box-description">
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box video-box">
+                                    <video controls="controls" style="border-radius:10px;">
+                                        <source src="/images-catalog/portal.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                    </video>
+                                </div>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>О продукции</h3>
+                                    
+                                    <p>
+                                    При необходимости остекления балкона или лоджии владельцы часто делают выбор в пользу 
+                                    панорамных конструкций, сочетающих удобство в эксплуатации и стильный внешний вид. Одной 
+                                    из разновидностей таких систем являются портальные окна, которые открываются по принципу 
+                                    сдвижения створки в параллельной плоскости относительно стены или неподвижной части остекления. 
+                                    Такие конструкции можно установить в любом доме независимо от этажности и серии строительства.
+                                </p>
+                                <h3>Особенности раздвижных систем</h3>
+                                <p>
+                                Данная система открывания предусматривает расположение направляющих снизу и сверху:
+                                по ним полотно сдвигается в сторону. Когда конструкция закрыта, она совершенно герметична 
+                                и не пропускает сквозняки, лишний шум и максимально сохраняет тепло. Ролики, используемые для 
+                                передвижения конструкции, имеют опору в виде армированных деталей, благодаря чему масса полотна 
+                                равномерно ложится на направляющие. В системе могут быть не только сдвижные, но и статичные створки, 
+                                подобная разновидность отличается повышенной устойчивостью и надежностью.
+                                </p>
+                                <p>
+                                Современный рынок предлагает портальное остекление нескольких типов: холодное или теплое, с классическим, 
+                                тонированным или цветным стеклом, отечественной 
+                                или зарубежной фурнитурой. При выборе профиля имеет значение количество камер, толщина, 
+                                глубина: параметры определяются в зависимости от типа балкона и его применения.
+                                </p>
+                                <p>
+                                    У разных производителей существует множество систем, предназначенных для создания 
+                                    раздвижных конструкций (порталов). Наши окна мы комплектуем фурнитурой Siegenia (Германия), 
+                                    которая создает одни из самых качественных комплектов для раздвижных окон.
+                                </p>
+                                </div>
                                 
-                                <p>
-                                При необходимости остекления балкона или лоджии владельцы часто делают выбор в пользу 
-                                панорамных конструкций, сочетающих удобство в эксплуатации и стильный внешний вид. Одной 
-                                из разновидностей таких систем являются портальные окна, которые открываются по принципу 
-                                сдвижения створки в параллельной плоскости относительно стены или неподвижной части остекления. 
-                                Такие конструкции можно установить в любом доме независимо от этажности и серии строительства.
-                            </p>
-                            <h3>Особенности раздвижных систем</h3>
-                            <p>
-                            Данная система открывания предусматривает расположение направляющих снизу и сверху:
-                             по ним полотно сдвигается в сторону. Когда конструкция закрыта, она совершенно герметична 
-                             и не пропускает сквозняки, лишний шум и максимально сохраняет тепло. Ролики, используемые для 
-                             передвижения конструкции, имеют опору в виде армированных деталей, благодаря чему масса полотна 
-                             равномерно ложится на направляющие. В системе могут быть не только сдвижные, но и статичные створки, 
-                             подобная разновидность отличается повышенной устойчивостью и надежностью.
-                            </p>
-                            <p>
-                            Современный рынок предлагает портальное остекление нескольких типов: холодное или теплое, с классическим, 
-                            тонированным или цветным стеклом, отечественной 
-                            или зарубежной фурнитурой. При выборе профиля имеет значение количество камер, толщина, 
-                            глубина: параметры определяются в зависимости от типа балкона и его применения.
-                            </p>
-                            <p>
-                                У разных производителей существует множество систем, предназначенных для создания 
-                                раздвижных конструкций (порталов). Наши окна мы комплектуем фурнитурой Siegenia (Германия), 
-                                которая создает одни из самых качественных комплектов для раздвижных окон.
-                            </p>
                             </div>
-                            
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            
-                            <div class="main-wrapper-description-box boxtextwrapper">
+                            <div class="main-wrapper-box-description-row">
                                 
-                                <h3>О компании SIEGENIA</h3>
-                                <p>
-                                    SIEGENIA (ЗИГЕНИА) – крупнейший мировой производитель систем фурнитуры для окон, панорамных раздвижных и входных дверей, а также систем проветривания и техники для умного дома. Компания основана в 1914 году в Германии. SIEGENIA объединяет такие важные факторы, как качество жизни, здоровый микроклимат и создаёт решения, благодаря которым в помещениях становится по-настоящему комфортно.
-                                </p>
-                                <p>
-                                Ассортимент продуктов представлен брендами TITAN, ALU, PORTAL, AERO и DRIVE. Это:
-
-                                <li>Фурнитура для окон и панорамных раздвижных дверей</li>
-                                <li>Замки и фурнитура для дверей</li>
-                                <li>Системы децентрализованного проветривания</li>
-                                <li>Приводы для окон и раздвижных дверей</li>
-                                <li>Датчики и системы для умного дома</li>
-                                </p>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    
+                                    <h3>О компании SIEGENIA</h3>
+                                    <p>
+                                        SIEGENIA (ЗИГЕНИА) – крупнейший мировой производитель систем фурнитуры для окон, панорамных раздвижных и входных дверей, а также систем проветривания и техники для умного дома. Компания основана в 1914 году в Германии. SIEGENIA объединяет такие важные факторы, как качество жизни, здоровый микроклимат и создаёт решения, благодаря которым в помещениях становится по-настоящему комфортно.
+                                    
+                                    Ассортимент продуктов представлен брендами TITAN, ALU, PORTAL, AERO и DRIVE. Это:</p>
+                                    <ul>   
+                                    <li>Фурнитура для окон и панорамных раздвижных дверей</li>
+                                    <li>Замки и фурнитура для дверей</li>
+                                    <li>Системы децентрализованного проветривания</li>
+                                    <li>Приводы для окон и раздвижных дверей</li>
+                                    <li>Датчики и системы для умного дома</li>
+                                    </ul> 
+                                </div>
+                                <div class="main-wrapper-description-box">
+                                    <picture>
+                                        <source  srcset="/image-gallery/main-okno.avif" type="image/avif">
+                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/main-okno.webp" alt="Изображение Изображение механизма 1">
+                                    </picture>
+                                </div>
                             </div>
-                            <div class="main-wrapper-description-box">
-                                <picture>
-                                    <source  srcset="/image-gallery/main-okno.avif" type="image/avif">
-                                    <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/main-okno.webp" alt="Изображение Изображение механизма 1">
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box">
-                                <picture>
-                                        <source  srcset="/image-gallery/petli.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/petli.webp" alt="Изображение Изображение механизма 2">
-                                </picture>
-                            </div>
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                 <h3>Что такое фурнитура SIEGENIA ALU axxent PLUS</h3>
-                                <p>
-                                    Фурнитура SIEGENIA ALU axxent PLUS — это скрытолежащая фурнитура, коротая имеет ряд преимуществ:</p>
-                                    <li>детали полностью скрыты в профиле</li>
-                                    <li>возможно применять более узкий профиль по сравнению моделями для установки видимой петли</li>
-                                    <li>нет необходимости подрезки уплотнителя для их установки</li>
-                                    <li>конструкция исключает продувание в области петель</li>
-                                    <li>подходит для регионов с низкими температурами</li>
-                                </p>
-                                <h3>ALU axxent PLUS относится к модульной системе фурнитуры</h3>
-                                <p>
-                                    Большинство деталей из разных систем фурнитуры SIEGENIA универсальны и взаимозаменяемы. Вы получаете любую модификацию, дополнительные аксессуары и фурнитуру с нужными функциями без ожидания.
-                                </p>
-                            </div>
-                           
-                        </div>
-                        <div class="main-wrapper-box-description-row">
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box">
+                                    <picture>
+                                            <source  srcset="/image-gallery/petli.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/petli.webp" alt="Изображение Изображение механизма 2">
+                                    </picture>
+                                </div>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>Что такое фурнитура SIEGENIA ALU axxent PLUS</h3>
+                                    <ul>
+                                        Фурнитура SIEGENIA ALU axxent PLUS — это скрытолежащая фурнитура, коротая имеет ряд преимуществ:</p>
+                                        <li>детали полностью скрыты в профиле</li>
+                                        <li>возможно применять более узкий профиль по сравнению моделями для установки видимой петли</li>
+                                        <li>нет необходимости подрезки уплотнителя для их установки</li>
+                                        <li>конструкция исключает продувание в области петель</li>
+                                        <li>подходит для регионов с низкими температурами</li>
+                                    </ul>
+                                    <h3>ALU axxent PLUS относится к модульной системе фурнитуры</h3>
+                                    <p>
+                                        Большинство деталей из разных систем фурнитуры SIEGENIA универсальны и взаимозаменяемы. Вы получаете любую модификацию, дополнительные аксессуары и фурнитуру с нужными функциями без ожидания.
+                                    </p>
+                                </div>
                             
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>Преимущества петель ALU axxent PLUS</h3>
-                                <p>
-                                    <li>Петли ALU axxent PLUS рассчитаны на створки весом до 150 кг. Это означает, что можно выбрать любой стеклопакет — шумоизоляционный, бронированный, с закаленным стеклом.</li>
-                                    <li>Фурнитура подходит для створок большой площади. Ширина створки по габариту достигает 380 − 1600 мм, высота по габариту 550 − 2600 мм. Такие конструкции позволяют остеклять большие проемы, устанавливать панорамные окна.</li>
-                                    <li>Скрытолежащие петли долговечны, створка не провисает и плотно закрывается на протяжении всего срока службы.</li>
-                                    <li>Скрытые петли благодаря предустановленным штифтам врезаются во внутренний паз профиля, создают жесткое крепление, и остаются полностью скрыты внутри. Поэтому для их установки не требуется применение широких рам.</li>
-                                    <li>Остекление получается более лаконичным и стильным, хорошо вписывается в современный дизайн помещений.</li>
-                                    <li>Увеличивается площадь прозрачной части, в комнату поступает больше света, даже если используются узкие створки.</li>
-                                </p>
                             </div>
-                            <div class="main-wrapper-description-box ">
-                                <picture>
-                                    <source  srcset="/image-gallery/petli-2.avif" type="image/avif">
-                                    <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/petli-2.webp" alt="Изображение механизма 4">
-                                </picture>
+                            <div class="main-wrapper-box-description-row">
+                                
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>Преимущества петель ALU axxent PLUS</h3>
+                                    <ul>
+                                        <li>Петли ALU axxent PLUS рассчитаны на створки весом до 150 кг. Это означает, что можно выбрать любой стеклопакет — шумоизоляционный, бронированный, с закаленным стеклом.</li>
+                                        <li>Фурнитура подходит для створок большой площади. Ширина створки по габариту достигает 380 − 1600 мм, высота по габариту 550 − 2600 мм. Такие конструкции позволяют остеклять большие проемы, устанавливать панорамные окна.</li>
+                                        <li>Скрытолежащие петли долговечны, створка не провисает и плотно закрывается на протяжении всего срока службы.</li>
+                                        <li>Скрытые петли благодаря предустановленным штифтам врезаются во внутренний паз профиля, создают жесткое крепление, и остаются полностью скрыты внутри. Поэтому для их установки не требуется применение широких рам.</li>
+                                        <li>Остекление получается более лаконичным и стильным, хорошо вписывается в современный дизайн помещений.</li>
+                                        <li>Увеличивается площадь прозрачной части, в комнату поступает больше света, даже если используются узкие створки.</li>
+                                    </ul>
+                                </div>
+                                <div class="main-wrapper-description-box ">
+                                    <picture>
+                                        <source  srcset="/image-gallery/petli-2.avif" type="image/avif">
+                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/petli-2.webp" alt="Изображение механизма 4">
+                                    </picture>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box ">
-                                <picture>
-                                        <source  srcset="/image-gallery/verh-petli.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/verh-petli.webp" alt="Изображение механизма 5">
-                                </picture>
-                            </div>
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>ALU axxent PLUS относится к модульной системе фурнитуры</h3>
-                                <p>
-                                    Большинство деталей из разных систем фурнитуры SIEGENIA универсальны и взаимозаменяемы. Вы получаете любую модификацию, дополнительные аксессуары и фурнитуру с нужными функциями без ожидания.
-                                </p>
+                            
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box ">
+                                    <picture>
+                                            <source  srcset="/image-gallery/verh-petli.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/verh-petli.webp" alt="Изображение механизма 5">
+                                    </picture>
+                                </div>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>ALU axxent PLUS относится к модульной системе фурнитуры</h3>
+                                    <p>
+                                        Большинство деталей из разных систем фурнитуры SIEGENIA универсальны и взаимозаменяемы. Вы получаете любую модификацию, дополнительные аксессуары и фурнитуру с нужными функциями без ожидания.
+                                    </p>
 
-                                <h3>Преимущества петель ALU axxent PLUS</h3>
-                                <p>
-                                    <li>Петли ALU axxent PLUS рассчитаны на створки весом до 150 кг. Это означает, что можно выбрать любой стеклопакет — шумоизоляционный, бронированный, с закаленным стеклом.</li>
-                                    <li>Фурнитура подходит для створок большой площади. Ширина створки по габариту достигает 380 − 1600 мм, высота по габариту 550 − 2600 мм. Такие конструкции позволяют остеклять большие проемы, устанавливать панорамные окна.</li>
-                                    <li>Скрытолежащие петли долговечны, створка не провисает и плотно закрывается на протяжении всего срока службы.</li>
-                                    <li>Скрытые петли благодаря предустановленным штифтам врезаются во внутренний паз профиля, создают жесткое крепление, и остаются полностью скрыты внутри. Поэтому для их установки не требуется применение широких рам.</li>
-                                    <li>Остекление получается более лаконичным и стильным, хорошо вписывается в современный дизайн помещений.</li>
-                                    <li>Увеличивается площадь прозрачной части, в комнату поступает больше света, даже если используются узкие створки.</li>
-                                </p>
+                                    <h3>Преимущества петель ALU axxent PLUS</h3>
+                                    <ul>
+                                        <li>Петли ALU axxent PLUS рассчитаны на створки весом до 150 кг. Это означает, что можно выбрать любой стеклопакет — шумоизоляционный, бронированный, с закаленным стеклом.</li>
+                                        <li>Фурнитура подходит для створок большой площади. Ширина створки по габариту достигает 380 − 1600 мм, высота по габариту 550 − 2600 мм. Такие конструкции позволяют остеклять большие проемы, устанавливать панорамные окна.</li>
+                                        <li>Скрытолежащие петли долговечны, створка не провисает и плотно закрывается на протяжении всего срока службы.</li>
+                                        <li>Скрытые петли благодаря предустановленным штифтам врезаются во внутренний паз профиля, создают жесткое крепление, и остаются полностью скрыты внутри. Поэтому для их установки не требуется применение широких рам.</li>
+                                        <li>Остекление получается более лаконичным и стильным, хорошо вписывается в современный дизайн помещений.</li>
+                                        <li>Увеличивается площадь прозрачной части, в комнату поступает больше света, даже если используются узкие створки.</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>ALU axxent PLUS подходит, когда нужно установить створки с минимальной шириной:</h3>
-                                <p> Виды створок ALU axxent PLUS:
-                                    <li>поворотно откидная — от 380 мм</li>
-                                    <li>поворотная — от 210 мм (в зависимости от производителя профиля)</li>
-                                </p>
-                                <p>
-                                    Вы можете установить основное остекление максимальной ширины без импоста, а сбоку — компактную вентстворку. Узкие створки хорошо подходят для проветривания, а основную часть конструкции можно сделать глухой.
-                                    Еще один плюс, что ширина рамы для ALU axxent PLUS меньше, чем в окне с видимыми петлями
-                                </p>
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>ALU axxent PLUS подходит, когда нужно установить створки с минимальной шириной:</h3>
+                                    <p> Виды створок ALU axxent PLUS:
+                                        <li>поворотно откидная — от 380 мм</li>
+                                        <li>поворотная — от 210 мм (в зависимости от производителя профиля)</li>
+                                    </p>
+                                    <p>
+                                        Вы можете установить основное остекление максимальной ширины без импоста, а сбоку — компактную вентстворку. Узкие створки хорошо подходят для проветривания, а основную часть конструкции можно сделать глухой.
+                                        Еще один плюс, что ширина рамы для ALU axxent PLUS меньше, чем в окне с видимыми петлями
+                                    </p>
 
-                                <h3>
-                                    Скорость производства и монтажа портальных систем с фурнитурой SIEGENIA ALU axxent PLUS
-                                </h3>
-                                <p>
-                                    Скорость монтажа — преимущество, особенно если установка происходит зимой или нужна замена нескольких окон сразу.
-                                    <li>Все детали фурнитуры устанавливаются на производстве — на объекте остается только навесить створку и установить ручку.</li>
-                                    <li>Створки с петлями ALU axxent PLUS быстро устанавливаются и регулируются</li>
-                                </p>
+                                    <h3>
+                                        Скорость производства и монтажа портальных систем с фурнитурой SIEGENIA ALU axxent PLUS
+                                    </h3>
+                                    <p>
+                                        Скорость монтажа — преимущество, особенно если установка происходит зимой или нужна замена нескольких окон сразу.</p>
+                                    <ul>
+                                        <li>Все детали фурнитуры устанавливаются на производстве — на объекте остается только навесить створку и установить ручку.</li>
+                                        <li>Створки с петлями ALU axxent PLUS быстро устанавливаются и регулируются</li>
+                                    </ul>
+                                </div>
+                                <div class="main-wrapper-description-box">
+                                    <picture>
+                                            <source  srcset="/image-gallery/titan_6.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/titan_6.webp" alt="Изображение механизма 6">
+                                    </picture>
+                                </div>
                             </div>
-                            <div class="main-wrapper-description-box">
-                                <picture>
-                                        <source  srcset="/image-gallery/titan_6.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/titan_6.webp" alt="Изображение механизма 6">
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box ">
-                                <picture>
-                                        <source  srcset="/image-gallery/titan_7.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth-2" src="/image-gallery/titan_7.webp" alt="Изображение механизма 7">
-                                </picture>
-                            </div>
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                 <h3>В ножницах ALU axxent PLUS встроена функция защита от захлопывания</h3>
-                                <p>
-                                    В откинутом положении ножницы удерживают створку — предотвращая окно от захлопывания при порыве ветра.
-                                </p>
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box ">
+                                    <picture>
+                                            <source  srcset="/image-gallery/titan_7.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth-2" src="/image-gallery/titan_7.webp" alt="Изображение механизма 7">
+                                    </picture>
+                                </div>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>В ножницах ALU axxent PLUS встроена функция защита от захлопывания</h3>
+                                    <p>
+                                        В откинутом положении ножницы удерживают створку — предотвращая окно от захлопывания при порыве ветра.
+                                    </p>
 
-                                <h3>Система фурнитуры со скрытыми петлями ALU axxent PLUS поддерживает установку дополнительных противовзломных элементов</h3>
-                                <p>
-                                    ALU axxent PLUS дает возможность усовершенствовать окно увеличив устойчивость ко взлому до класса RC3. В окне предусмотрена базовая защита от взлома.
-                                    Если вы устанавливаете окно на первом этаже, над козырьком или в загородном доме — то лучше усановить  дополнительные противовзломные элементы и запираемые ручки — это повышает класс устойчивости ко взлому до RC3. Вскрыть такое окно трудно даже опытному взломщику.
-                                </p>
+                                    <h3>Система фурнитуры со скрытыми петлями ALU axxent PLUS поддерживает установку дополнительных противовзломных элементов</h3>
+                                    <p>
+                                        ALU axxent PLUS дает возможность усовершенствовать окно увеличив устойчивость ко взлому до класса RC3. В окне предусмотрена базовая защита от взлома.
+                                        Если вы устанавливаете окно на первом этаже, над козырьком или в загородном доме — то лучше усановить  дополнительные противовзломные элементы и запираемые ручки — это повышает класс устойчивости ко взлому до RC3. Вскрыть такое окно трудно даже опытному взломщику.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                 <h3>Автоматической привод</h3>
-                                <p>
-                                    Фурнитура поддерживает монтаж скрытого цепного привода DRIVE axxent DK, с которым владелец может отказаться от ручки и управлять окном с кнопки или через приложение SIEGENIA comfort, подключить остекление к «умному» дому.
-                                    Если Вам нужен автоматический привод — у SIEGENIA есть решение для скрытолежащей фурнитуры
-                                </p>
-                                <h3>Ручки</h3>
-                                <p>
-                                    К серии axxent PLUS подходят все виды ручек для фурнитуры ALU — дизайнерские модели ALU GLOBE и Si-line, вариант с ручкой Globe RR круглая розетка. Все варианты ручек представлены как с ключом, так и без ключа. Разный дизайн и функции ручек — один из способов украсить окно и сделать его более защищенным.
-                                </p>
-                                <h3>Датчики</h3>
-                                <p>
-                                    В профиль можно установить магнитный выключатель AEROCONTROL. Датчик незаметно монтируется, контролирует положение створки, подключается к сигнализации, «умному» дому. Если Вы планируете установить сигнализацию на окна — SIEGENIA предлагает незаметное и эффективное решение, которое встраивается в конструкцию при монтаже и не портит вид остекления.
-                                </p>
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>Автоматической привод</h3>
+                                    <p>
+                                        Фурнитура поддерживает монтаж скрытого цепного привода DRIVE axxent DK, с которым владелец может отказаться от ручки и управлять окном с кнопки или через приложение SIEGENIA comfort, подключить остекление к «умному» дому.
+                                        Если Вам нужен автоматический привод — у SIEGENIA есть решение для скрытолежащей фурнитуры
+                                    </p>
+                                    <h3>Ручки</h3>
+                                    <p>
+                                        К серии axxent PLUS подходят все виды ручек для фурнитуры ALU — дизайнерские модели ALU GLOBE и Si-line, вариант с ручкой Globe RR круглая розетка. Все варианты ручек представлены как с ключом, так и без ключа. Разный дизайн и функции ручек — один из способов украсить окно и сделать его более защищенным.
+                                    </p>
+                                    <h3>Датчики</h3>
+                                    <p>
+                                        В профиль можно установить магнитный выключатель AEROCONTROL. Датчик незаметно монтируется, контролирует положение створки, подключается к сигнализации, «умному» дому. Если Вы планируете установить сигнализацию на окна — SIEGENIA предлагает незаметное и эффективное решение, которое встраивается в конструкцию при монтаже и не портит вид остекления.
+                                    </p>
+                                </div>
+                                <div class="main-wrapper-description-box">
+                                    <picture>
+                                            <source  srcset="/image-gallery/mechanizm-2.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/mechanizm-2.webp" alt="Изображение механизма 8">
+                                    </picture>
+                                </div>
                             </div>
-                            <div class="main-wrapper-description-box">
-                                <picture>
-                                        <source  srcset="/image-gallery/mechanizm-2.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/mechanizm-2.webp" alt="Изображение механизма 8">
-                                </picture>
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box ">
+                                    <picture>
+                                            <source  srcset="/image-gallery/mechanizm-3.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/mechanizm-3.webp" alt="Изображение механизма 9">
+                                    </picture>
+                                </div>
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>Роликовый приподниматель створки</h3>
+                                    <p>
+                                        Незаметная деталь с роликом плавно приподнимает створку и позволяет плавно «заходить» створке в раму при ее закрытии. Решение используется для тяжелых створок и снижает нагрузку на петли.
+                                        Приподниматель створки крепится на профиль рамы и предотвращает ее провисание
+                                    </p>
+                                    <h3>Ограничитель открывания до 90°</h3>
+                                    <p>
+                                        Скрытые петли имеют угол открывания 110° — для ограничения угла открывания можно установить ограничитель, который предотвратит удар об откос. Створка удерживается при открывании на 90° и удара об откос не происходит. Ограничитель открывания рекомендуется также устанавливать в детских садах и школах, чтобы защитить от вырывания петель при резком открывании или ударе об откос. Устройство незаметно складывается в закрытом окне, ограничивает открывание створки до 90 градусов.
+                                    </p>
+                                    <h3>«Детский» замок</h3>
+                                    <p>
+                                        Детский замок SIEGENIA — это небольшой элемент, который блокирует поворотный режим створки. Окно с активным детским замком можно перевести в режим проветривания, но открыть полностью не получится. Если у Вас есть дети — то это устройство для Вас.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box ">
-                                <picture>
-                                        <source  srcset="/image-gallery/mechanizm-3.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth" src="/image-gallery/mechanizm-3.webp" alt="Изображение механизма 9">
-                                </picture>
-                            </div>
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>Роликовый приподниматель створки</h3>
-                                <p>
-                                    Незаметная деталь с роликом плавно приподнимает створку и позволяет плавно «заходить» створке в раму при ее закрытии. Решение используется для тяжелых створок и снижает нагрузку на петли.
-                                    Приподниматель створки крепится на профиль рамы и предотвращает ее провисание
-                                </p>
-                                <h3>Ограничитель открывания до 90°</h3>
-                                <p>
-                                    Скрытые петли имеют угол открывания 110° — для ограничения угла открывания можно установить ограничитель, который предотвратит удар об откос. Створка удерживается при открывании на 90° и удара об откос не происходит. Ограничитель открывания рекомендуется также устанавливать в детских садах и школах, чтобы защитить от вырывания петель при резком открывании или ударе об откос. Устройство незаметно складывается в закрытом окне, ограничивает открывание створки до 90 градусов.
-                                </p>
-                                <h3>«Детский» замок</h3>
-                                <p>
-                                    Детский замок SIEGENIA — это небольшой элемент, который блокирует поворотный режим створки. Окно с активным детским замком можно перевести в режим проветривания, но открыть полностью не получится. Если у Вас есть дети — то это устройство для Вас.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="main-wrapper-box-description-row">
-                            <div class="main-wrapper-description-box boxtextwrapper">
-                                <h3>Элемент для контроля проветривания «зима-лето»</h3>
-                                <p>
-                                    Простой и удобный элемент ограничивает угол откидывания: владелец может летом вручную увеличить угол режима проветривания, а зимой — уменьшить.
-                                </p>
-                               <h3>Оригинальный дизайн и остальные преимущества</h3>
-                                <p>
-                                    Окно без петель сбоку выглядит лаконично и современно. Рама занимает меньше места, а остекление больше — в комнате становится светлее, а окно кажется менее массивным.
-                                </p>
-                                <p>
-                                    В ALU axxent PLUS сочетается оригинальный дизайн, хорошие технические характеристики и полный комплект дополнительных возможностей.
-                                </p>
+                            <div class="main-wrapper-box-description-row">
+                                <div class="main-wrapper-description-box boxtextwrapper">
+                                    <h3>Элемент для контроля проветривания «зима-лето»</h3>
+                                    <p>
+                                        Простой и удобный элемент ограничивает угол откидывания: владелец может летом вручную увеличить угол режима проветривания, а зимой — уменьшить.
+                                    </p>
+                                <h3>Оригинальный дизайн и остальные преимущества</h3>
+                                    <p>
+                                        Окно без петель сбоку выглядит лаконично и современно. Рама занимает меньше места, а остекление больше — в комнате становится светлее, а окно кажется менее массивным.
+                                    </p>
+                                    <p>
+                                        В ALU axxent PLUS сочетается оригинальный дизайн, хорошие технические характеристики и полный комплект дополнительных возможностей.
+                                    </p>
 
-                                <p>
-                                    Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
-                                </p>
-                            </div>
-                            <div class="main-wrapper-description-box">
-                                <picture>
-                                        <source  srcset="/image-gallery/otkidivanie-stvorki.avif" type="image/avif">
-                                        <img class="main-catalog-images-plastic oknowidth-1" src="/image-gallery/otkidivanie-stvorki.webp" alt="Изображение механизма 10">
-                                </picture>
+                                    <p>
+                                        Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
+                                    </p>
+                                </div>
+                                <div class="main-wrapper-description-box">
+                                    <picture>
+                                            <source  srcset="/image-gallery/otkidivanie-stvorki.avif" type="image/avif">
+                                            <img class="main-catalog-images-plastic oknowidth-1" src="/image-gallery/otkidivanie-stvorki.webp" alt="Изображение механизма 10">
+                                    </picture>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
 
-            <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
-                <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-2">
-                                    <label class="form-check-label" for="floatingInput">
-                                        Введите контактные данные
-                                    </label>
+                <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
+                    <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
-                                    <label for="floatingInput">Имя</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
-                                    <label for="floatingInput">Номер телефона</label>
-                                </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Портальные системы окон" readonly>
-                                    <label for="floatingInput">Категория</label>
-                                </div>
-                                <div>
+                                <div class="modal-body">
+                                    <div class="mb-2">
+                                        <label class="form-check-label" for="floatingInput">
+                                            Введите контактные данные
+                                        </label>
+                                    </div>
+                                    <div class="form-floating mb-3">                    
+                                        <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
+                                        <label for="floatingInput">Имя</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
+                                        <label for="floatingInput">Номер телефона</label>
+                                    </div>
+                                    <div class="form-floating mb-3">                    
+                                        <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Портальные системы окон" readonly>
+                                        <label for="floatingInput">Категория</label>
+                                    </div>
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                        </svg>
-                                        <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                            <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
-                                    <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
-                                </div>                            
-                                <div class="form__message">
-                                    <!-- Всплывающие сообщения об отправке -->
-                                    <div class="preloader"></div>
-                                    <p class="contact-form__message"></p>
-                                </div>                            
+                                <div class="modal-footer">
+                                    <div>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
+                                        <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
+                                    </div>                            
+                                    <div class="form__message">
+                                        <!-- Всплывающие сообщения об отправке -->
+                                        <div class="preloader"></div>
+                                        <p class="contact-form__message"></p>
+                                    </div>                            
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </main>
         <footer>
         <div class="footer">
@@ -530,15 +561,6 @@
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });
-    </script>
-
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
     </script>
 </body>
 </html>

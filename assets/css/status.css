@@ -82,9 +82,7 @@
 }
 
 #btn-form--add_order{
-    width: 500px;
-    background-color: #e9ecef;
-    color: #212529;
+    width: 100%;
     border: 1px solid #ced4da;
 }
 

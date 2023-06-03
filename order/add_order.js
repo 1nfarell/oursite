@@ -34,10 +34,9 @@
               let input_predoplata = $('#input_predoplata');
               $(input_predoplata).css({'display':'none'});
               
-              document.getElementById('btn-form--add_order').disabled = false;         
-              alert('Заказ '+alertTrigger2+' добавлен в базу!', 'success');
+              document.getElementById('btn-form--add_order').disabled = false;     
               document.location.reload(); 
-            }, 3000); 
+            }, 2000); 
   
           } else if (respond === "NOEMPTY") {
             document.getElementById('btn-form--add_order').disabled = false;

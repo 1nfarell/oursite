@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/css/aos.css"> 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
-    
+    <link rel="stylesheet" href="/assets/css/moskit.css">
     
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -31,13 +31,8 @@
     <link rel="manifest" href="/images/site.webmanifest">
 </head>
 <body>
-    <div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
     <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Заказать Остекление балкона. Окна на балкон</h1>
-    <div id="body" style="visibility: hidden;" class="container-main">
+    <div id="body"  class="container-main">
         <header id="header">
             
             <div class="header--container">
@@ -78,17 +73,9 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
                                 <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
                                 <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
                                 <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
@@ -96,231 +83,274 @@
                                 <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
                             </ul>
                         </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Москитные сетки
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
+                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
+                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
+                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
+                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
+                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
+                            </ul>
+                        </div>
+
                         <div class ="menu-links" >
-                            <span class="spanshow" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                            <span class="spanshow header-btn_setcolor" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label>
                             <ul>
                                 <a  href="/">Главная</a> 
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <span class="spanhidden" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                                <span class="spanhidden header-btn_setcolor" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             </ul>
-                        </div>             
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main>   
             <div class="main">
-                <div class="main-wrapper-about">
-                    <h2>БАЛКОНЫ И ЛОДЖИИ</h2>
-                    <img src="/images/orange-dash.svg" class="orange-dash d-block" alt="полоска разделитель">
-                </div>
-                
-                <div class="catalog-balkon-wrapper">
-                    <div class="balkon-wrapper">
-                        <div class="main-catalog-box blockcenter imagetitle">
-                            <picture>
-                                <source  srcset="/images-catalog/balkon-5.avif" type="image/avif">
-                                <img class="main-catalog-images height-image imagetitle" src="/images-catalog/balkon-5.webp" alt="Балкон">
-                            </picture>
-                        </div>
-                        <div class="balkon-text padding-picture">
-                            <h3>Отличия балкона от лоджии</h3>
-                            <p>Для начала определим, в чем же заключается отличие балкона от лоджии и 
-                                для чего это нужно знать. Главная отличительная черта — это расположение.  
-                                Если балкон расположен на выносной плите, то лоджия представляет собой нишу в 
-                                стене. К другим отличиям можно отнести: </p>                               
-                        </div>
-                        <div class="balkon-wrapper-collumn">
-                            <div class="balkon-text-column balkon-text-margin-bottom">
-                                <h4>Количество открытых сторон</h4>
-                                <p>Только одна сторона у балкона примыкает к помещению, 
-                                остальные выходят на улицу. Лоджия, наоборот, характеризуется 
-                                только одной открытой стороной.</p>
-                            </div>    
-                            <div class="balkon-text-column">
-                                <h4>Обустройство балкона</h4>
-                                <p>Балконные помещения часто делают холодными. 
-                                    На балконе нельзя сформировать систему отопления, без явных потерь тепла. 
-                                    Чтобы сохранить тепло и защититься от попадания осадков Компания Открытие 
-                                    рекомендует застеклить балкон. Кроме этого, несущие способности балкона 
-                                    ограничены конструктивными особенностями. Лоджия выигрывает, так как нет 
-                                    жестких ограничений в назначении помещения.</p>
-                            </div>
-                        </div>
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                    <div class="kroshki " id="list-item-0">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="/catalog/okna">Окна</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" >Остекление балконов и лоджий</li>
+                            </ol>
+                        </nav>
                     </div>
-                    
-                    <div class="balkon-wrapper">
-                        <div class="balkon-text-row">
-                            
-                            <div class="main-catalog-box blockcenter">
+                   
+                    <div class="wrapper-block-title">
+                        <h2 class="wrapper-block-h" id="list-item-2">ОСТЕКЛЕНИЕ БАЛКОНА И ЛОДЖИИ</h2>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
+                    </div>
+                    <div class="catalog-balkon-wrapper">
+                        <div class="balkon-wrapper">
+                            <div class="main-catalog-box blockcenter imagetitle">
                                 <picture>
-                                    <source  srcset="/images-catalog/balkon-1.avif" type="image/avif">
-                                    <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-1.webp" alt="Балкон">
+                                    <source  srcset="/images-catalog/balkon-5.avif" type="image/avif">
+                                    <img class="main-catalog-images height-image imagetitle" src="/images-catalog/balkon-5.webp" alt="Балкон">
                                 </picture>
-                                <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ПЛАСТИК</span>
-                                <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 50 000 р</span>
                             </div>
                             <div class="balkon-text padding-picture">
-                                <h4>Балкон</h4>
-                                <p>Неотапливаемое помещение, которое выступает из плоскости стены фасада. Как правило, 
-                                    такие балконы открытые и неотапливаемые, но встречаются закрытые, остеклённые и утеплённые варианты.</p>
-                                <h5>Результат застекления балкона</h5>       
-                                    <li>появление дополнительной полезной площади </li>
-                                    <li>улучшение внешнего вида балкона или лоджии</li>
+                                <h3>Отличия балкона от лоджии</h3>
+                                <p>Для начала определим, в чем же заключается отличие балкона от лоджии и 
+                                    для чего это нужно знать. Главная отличительная черта — это расположение.  
+                                    Если балкон расположен на выносной плите, то лоджия представляет собой нишу в 
+                                    стене. К другим отличиям можно отнести: </p>                               
                             </div>
-                            <div  class="main-catalog-box blockcenter">
-                                <picture>
-                                    <source  srcset="/images-catalog/balkon-4.avif" type="image/avif">
-                                    <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-4.webp" alt="Французский балкон">
-                                </picture>
-                                <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ФРАНЦУЗКИЙ БАЛКОН</span>
-                                <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 60 000 р</span>
+                            <div class="balkon-wrapper-collumn">
+                                <div class="balkon-text-column balkon-text-margin-bottom">
+                                    <h4>Количество открытых сторон</h4>
+                                    <p>Только одна сторона у балкона примыкает к помещению, 
+                                    остальные выходят на улицу. Лоджия, наоборот, характеризуется 
+                                    только одной открытой стороной.</p>
+                                </div>    
+                                <div class="balkon-text-column">
+                                    <h4>Обустройство балкона</h4>
+                                    <p>Балконные помещения часто делают холодными. 
+                                        На балконе нельзя сформировать систему отопления, без явных потерь тепла. 
+                                        Чтобы сохранить тепло и защититься от попадания осадков Компания Открытие 
+                                        рекомендует застеклить балкон. Кроме этого, несущие способности балкона 
+                                        ограничены конструктивными особенностями. Лоджия выигрывает, так как нет 
+                                        жестких ограничений в назначении помещения.</p>
+                                </div>
                             </div>
-                            <div class="balkon-text padding-picture">
-                                <h4>Французский балкон</h4>
-                                <p>Разновидность балкона, без собственной балконной площадки — 
-                                ограждение устанавливается непосредственно в проёме с наружной стороны, перед дверью. 
-                                Предлагаем также вариант с узкой площадкой, достаточной для выхода на балкон одной ногой. </p>
-                            </div>  
-                        </div>      
-                    </div>
-
-                    <div class="balkon-wrapper">
-                        <div class="main-catalog-box blockcenter imagetitle">
-                            <picture>
-                                <source  srcset="/images-catalog/balkon-6.avif" type="image/avif">
-                                <img class="main-catalog-images height-image imagetitle" src="/images-catalog/balkon-6.webp" alt="Балкон">
-                            </picture>
                         </div>
-                        <div class="balkon-text padding-picture">
-                            <h4>Стоимость остекления</h4>
-                            <p>Цена балконного остекления в Волжском может меняться: в зависимости от 
-                                используемых материалов и типа работ. Чтобы не платить всю сумму сразу, 
-                                теплое остекление можно разделить на этапы, т.е. сначала обшить балкон, 
-                                а уже к холодам – утеплить. Факторы, влияющие на стоимость:</p>
-                               
-                        </div>
-                        <div class="balkon-wrapper-collumn">
-                            <div class="balkon-text-column balkon-text-margin-bottom">
-                                <h4>Тип конструкции</h4>
-                                <p>Компания Открытие предлагает на выбор два вида оконных 
-                                    профилей на выбор, исходя из функциональных требований и бюджета. 
-                                    Компания Открытие использует алюминиевые и пластиковые профили для балконов.</p>
-                            </div>    
-                            <div class="balkon-text-column">
-                                <h4>Размеры и состояние балкона</h4>
-                                <p>Чем больше пространство, которое предстоит остеклить, 
-                                    тем дороже проект. Важно и то, каково состояние парапета. Если в планах расширить 
-                                    пространство, можно использовать остекление с выносом. Чрезвычайно популярный вариант, 
-                                    но стоит дороже.</p>
-                            </div>                            
-                        </div>                        
-                    </div>
-                    <div class="balkon-wrapper">
-                        <div class="balkon-wrapper-collumn"> 
-                            
                         
+                        <div class="balkon-wrapper">
                             <div class="balkon-text-row">
+                                
                                 <div class="main-catalog-box blockcenter">
                                     <picture>
-                                        <source  srcset="/images-catalog/balkon-3.avif" type="image/avif">
-                                        <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-3.webp" alt="Холодное остекление">
+                                        <source  srcset="/images-catalog/balkon-1.avif" type="image/avif">
+                                        <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-1.webp" alt="Балкон">
                                     </picture>
-                                    <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ХОЛОДНЫЙ БАЛКОН</span>
-                                    <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 45 000 р</span>
+                                    <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ПЛАСТИК</span>
+                                    <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 50 000 р</span>
                                 </div>
                                 <div class="balkon-text padding-picture">
-                                    <h4>Холодное остекление</h4>
-                                    <p>Для защиты от дождя, снега и ветра, выбирайте холодное остекление балкона? но если вы планируете эксплуатировать 
-                                        свой балкон в качестве жилого помещения круглый год, вам понадобится утеплить стены, 
-                                        пол и потолок теплыми сэндвич-панелями. 
-                                        Компания Открытие предлагает установку распашных или раздвижных окон без утепления.
-                                    </p>
-                                </div>   
-                                <div class="main-catalog-box blockcenter">
+                                    <h4>Балкон</h4>
+                                    <p>Неотапливаемое помещение, которое выступает из плоскости стены фасада. Как правило, 
+                                        такие балконы открытые и неотапливаемые, но встречаются закрытые, остеклённые и утеплённые варианты.</p>
+                                    <h5>Результат застекления балкона</h5>      
+                                    <ul> 
+                                        <li>появление дополнительной полезной площади </li>
+                                        <li>улучшение внешнего вида балкона или лоджии</li>
+                                    </ul>
+                                </div>
+                                <div  class="main-catalog-box blockcenter">
                                     <picture>
-                                        <source  srcset="/images-catalog/balkon-2.avif" type="image/avif">
-                                        <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-2.webp" alt="Теплое остекление">
+                                        <source  srcset="/images-catalog/balkon-4.avif" type="image/avif">
+                                        <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-4.webp" alt="Французский балкон">
                                     </picture>
-                                    <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ТЕПЛЫЙ БАЛКОН</span>
-                                    <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 80 000 р</span>
+                                    <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ФРАНЦУЗКИЙ БАЛКОН</span>
+                                    <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 60 000 р</span>
                                 </div>
                                 <div class="balkon-text padding-picture">
-                                    <h4>Теплое остекление</h4>
-                                    <p>Теплое остекление в соответствии с названием превратит лоджию в дополнительную 
-                                        комнату, которой можно будет пользоваться даже зимой.</p>
-                                    <h5>Результат застекления балкона</h5>                                    
-                                        <li>повышение температуры в смежной комнате на 3-5<sup>o</sup>С </li>
-                                        <li>увеличение защиты от уличного шума </li>                                    
-                                </div>
-                            </div>
+                                    <h4>Французский балкон</h4>
+                                    <p>Разновидность балкона, без собственной балконной площадки — 
+                                    ограждение устанавливается непосредственно в проёме с наружной стороны, перед дверью. 
+                                    Предлагаем также вариант с узкой площадкой, достаточной для выхода на балкон одной ногой. </p>
+                                </div>  
+                            </div>      
                         </div>
-                    </div>
-                </div>
 
-                
-            </div>
-
-
-           
-            
-
-
-
-            <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
-                <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="balkon-wrapper">
+                            <div class="main-catalog-box blockcenter imagetitle">
+                                <picture>
+                                    <source  srcset="/images-catalog/balkon-6.avif" type="image/avif">
+                                    <img class="main-catalog-images height-image imagetitle" src="/images-catalog/balkon-6.webp" alt="Балкон">
+                                </picture>
                             </div>
-                            <div class="modal-body">
-                                <div class="mb-2">
-                                    <label class="form-check-label" for="floatingInput">
-                                        Введите контактные данные
-                                    </label>
-                                </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
-                                    <label for="floatingInput">Имя</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
-                                    <label for="floatingInput">Номер телефона</label>
-                                </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Балкон" readonly>
-                                    <label for="floatingInput">Категория</label>
-                                </div>
-                                <div>
-                                    <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                        </svg>
-                                        <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                            <div class="balkon-text padding-picture">
+                                <h4>Стоимость остекления</h4>
+                                <p>Цена балконного остекления в Волжском может меняться: в зависимости от 
+                                    используемых материалов и типа работ. Чтобы не платить всю сумму сразу, 
+                                    теплое остекление можно разделить на этапы, т.е. сначала обшить балкон, 
+                                    а уже к холодам – утеплить. Факторы, влияющие на стоимость:</p>
+                                
+                            </div>
+                            <div class="balkon-wrapper-collumn">
+                                <div class="balkon-text-column balkon-text-margin-bottom">
+                                    <h4>Тип конструкции</h4>
+                                    <p>Компания Открытие предлагает на выбор два вида оконных 
+                                        профилей на выбор, исходя из функциональных требований и бюджета. 
+                                        Компания Открытие использует алюминиевые и пластиковые профили для балконов.</p>
+                                </div>    
+                                <div class="balkon-text-column">
+                                    <h4>Размеры и состояние балкона</h4>
+                                    <p>Чем больше пространство, которое предстоит остеклить, 
+                                        тем дороже проект. Важно и то, каково состояние парапета. Если в планах расширить 
+                                        пространство, можно использовать остекление с выносом. Чрезвычайно популярный вариант, 
+                                        но стоит дороже.</p>
+                                </div>                            
+                            </div>                        
+                        </div>
+                        <div class="balkon-wrapper">
+                            <div class="balkon-wrapper-collumn"> 
+                                
+                            
+                                <div class="balkon-text-row">
+                                    <div class="main-catalog-box blockcenter">
+                                        <picture>
+                                            <source  srcset="/images-catalog/balkon-3.avif" type="image/avif">
+                                            <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-3.webp" alt="Холодное остекление">
+                                        </picture>
+                                        <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ХОЛОДНЫЙ БАЛКОН</span>
+                                        <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 45 000 р</span>
+                                    </div>
+                                    <div class="balkon-text padding-picture">
+                                        <h4>Холодное остекление</h4>
+                                        <p>Для защиты от дождя, снега и ветра, выбирайте холодное остекление балкона? но если вы планируете эксплуатировать 
+                                            свой балкон в качестве жилого помещения круглый год, вам понадобится утеплить стены, 
+                                            пол и потолок теплыми сэндвич-панелями. 
+                                            Компания Открытие предлагает установку распашных или раздвижных окон без утепления.
+                                        </p>
+                                    </div>   
+                                    <div class="main-catalog-box blockcenter">
+                                        <picture>
+                                            <source  srcset="/images-catalog/balkon-2.avif" type="image/avif">
+                                            <img class="main-catalog-images height-image balkon-image" src="/images-catalog/balkon-2.webp" alt="Теплое остекление">
+                                        </picture>
+                                        <span class="box-title opacityspan-title">ОСТЕКЛЕНИЕ БАЛКОНОВ - ТЕПЛЫЙ БАЛКОН</span>
+                                        <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price opacityspan-price">от 80 000 р</span>
+                                    </div>
+                                    <div class="balkon-text padding-picture">
+                                        <h4>Теплое остекление</h4>
+                                        <p>Теплое остекление в соответствии с названием превратит лоджию в дополнительную 
+                                            комнату, которой можно будет пользоваться даже зимой.</p>
+                                        <h5>Результат застекления балкона</h5>    
+                                        <ul>                                 
+                                            <li>повышение температуры в смежной комнате на 3-5<sup>o</sup>С </li>
+                                            <li>увеличение защиты от уличного шума </li> 
+                                        </ul>                                    
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
-                                    <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
-                                </div>                            
-                                <div class="form__message">
-                                    <!-- Всплывающие сообщения об отправке -->
-                                    <div class="preloader"></div>
-                                    <p class="contact-form__message"></p>
-                                </div>                            
-                            </div>
-                        
                         </div>
                     </div>
                 </div>
-            </form>
+
+
+            
+                
+
+
+
+                <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
+                    <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-2">
+                                        <label class="form-check-label" for="floatingInput">
+                                            Введите контактные данные
+                                        </label>
+                                    </div>
+                                    <div class="form-floating mb-3">                    
+                                        <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
+                                        <label for="floatingInput">Имя</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
+                                        <label for="floatingInput">Номер телефона</label>
+                                    </div>
+                                    <div class="form-floating mb-3">                    
+                                        <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Балкон" readonly>
+                                        <label for="floatingInput">Категория</label>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                            <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
+                                        <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
+                                    </div>                            
+                                    <div class="form__message">
+                                        <!-- Всплывающие сообщения об отправке -->
+                                        <div class="preloader"></div>
+                                        <p class="contact-form__message"></p>
+                                    </div>                            
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </main>
         <footer>
             <div class="footer">
@@ -408,15 +438,6 @@
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });
-    </script>
-
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
     </script>
 </body>
 </html>

@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="/assets/css/aos.css"> 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/moskit.css">
+    
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -30,13 +32,9 @@
     
 </head>
 <body>
-    <div id="wrap_preloader" class="d-flex justify-content-center" style="position: fixed;top: 400px;width: 100%;margin: 0 auto;z-index: 100">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Загрузка...</span>
-        </div>
-    </div>
+   
     <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Мягкие окна для беседок и террас в Волжском</h1>
-    <div id="body" style="visibility: hidden;" class="container-main">
+    <div id="body"  class="container-main">
         <header id="header">
             
             <div class="header--container">
@@ -77,34 +75,56 @@
                                 Каталог
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые конструкции" href="/catalog/aluminii-system">Алюминиевые конструкции</a></li>
-                                <li><a class="dropdown-item" title="Портальные системы" href="/catalog/portal-okno">Портальные системы</a></li>
-                                <li><a class="dropdown-item" title="Панорамное остекление" href="/catalog/panoramma-okno">Панорамное остекление</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
                                 <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li>
-                                <li><a class="dropdown-item" title="Москитные сетки" href="/catalog/moskit">Москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Балконы и лоджии под ключ</a></li>
+                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
                                 <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
                                 <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
                                 <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
                                 <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Стеллажи" href="/catalog/stellaj">Стеллажи</a></li>
+                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
                             </ul>
                         </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Окна
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
+                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
+                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
+                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
+                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
+                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
+                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
+                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown menu-catalog">
+                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                Москитные сетки
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
+                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
+                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
+                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
+                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
+                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
+                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
+                            </ul>
+                        </div>
+
                         <div class ="menu-links" >
-                            <span class="spanshow" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                            <span class="spanshow header-btn_setcolor" style="display:none;" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label>
                             <ul>
                                 <a  href="/">Главная</a> 
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <span class="spanhidden" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
+                                <span class="spanhidden header-btn_setcolor" data-bs-toggle="modal" data-bs-target="#Modal">Вызвать замерщика</span>
                             </ul>
-                        </div>             
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,108 +132,118 @@
         <main>                
             
             <div class="main">
-                <div class="main-wrapper-about">
-                    <h2>МЯГКИЕ ОКНА</h2>
-                    <img src="/images/orange-dash.svg" class="orange-dash d-block" alt="полоска разделитель">
-                </div>
-                <div class="main-wrapper-box-portal">
-                    <div class="main-catalog-boxs-portal">
-                        <div class="main-catalog-box-portal">
-                            <picture>
-                                <source  srcset="/images-catalog/soft-okno-2.avif" type="image/avif">
-                                <img class="main-catalog-images-portal" src="/images-catalog/soft-okno-2.webp" alt="Изображение МЯГКИЕ ОКНА">
-                            </picture>
-                            <span class="box-title">МЯГКИЕ ОКНА, ШТОРЫ ПВХ ДЛЯ БЕСЕДОК. ТЕРРАС И ВЕРАНД</span>
-                            <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price-plastic">от 1600 руб.м<sup>2</sup></span>
-                        </div>
-
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
+                    <div class="kroshki " id="list-item-0">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="/catalog/okna">Окна</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" >Мягкие окна</li>
+                            </ol>
+                        </nav>
                     </div>
-                    <div class="main-wrapper-description-portal padding-panorama" >
-                        <h3>Что такое мягкие окна</h3>
-                        <p>
-                            Это прозрачные полотна из ткани ПВХ с цветной окантовкой, 
-                            которые изготавливаются по индивидуальным размерам проемов Вашей беседки 
-                            или веранды для создания не продуваемого контура и защиты от попадания 
-                            во внутрь летних строений осадков и пыли.
-                        </p>  
-                        <h3>Преимущества мягких окон</h3>                        
-                        <p>
-                            <li>Защита от осадков. Мягкие окна защитят от сквозняков летними вечерами, от дождя, снега и пыли в любое время года</li> 
-                        </p>
-                        <p>
-                            <li>Мобильность в использовании. Мягкие окна быстро сворачиваются и снимаются, также быстро устанавливаются на место</li>
-                        </p>
-                        <p>
-                            <li>Безопасность. Мягкие окна невозможно разбить и тем более порезаться осколком</li>
-                        </p> 
-                        <p>
-                            <li>Уют где угодно! Внутри летних строений можно поставить мебель и обогреть пространство</li>
-                        </p> 
-
-                        <p>
-                            Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
-                        </p> 
+                  
+                    <div class="wrapper-block-title">
+                        <h2 class="wrapper-block-h" id="list-item-2">МЯГКИЕ ОКНА</h2>
+                        <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
-                </div>    
-            </div>
-
-
-           
-            
-
-
-
-            <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
-                <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="main-wrapper-box-portal">
+                        <div class="main-catalog-boxs-portal">
+                            <div class="main-catalog-box-portal">
+                                <picture>
+                                    <source  srcset="/images-catalog/soft-okno-2.avif" type="image/avif">
+                                    <img class="main-catalog-images-portal" src="/images-catalog/soft-okno-2.webp" alt="Изображение МЯГКИЕ ОКНА">
+                                </picture>
+                                <span class="box-title">МЯГКИЕ ОКНА, ШТОРЫ ПВХ ДЛЯ БЕСЕДОК. ТЕРРАС И ВЕРАНД</span>
+                                <span data-bs-toggle="modal" data-bs-target="#Modal" class="box-price-plastic">от 1600 руб.м<sup>2</sup></span>
                             </div>
-                            <div class="modal-body">
-                                <div class="mb-2">
-                                    <label class="form-check-label" for="floatingInput">
-                                        Введите контактные данные
-                                    </label>
+
+                        </div>
+                        <div class="main-wrapper-description-portal padding-panorama" >
+                            <h3>Что такое мягкие окна</h3>
+                            <p>
+                                Это прозрачные полотна из ткани ПВХ с цветной окантовкой, 
+                                которые изготавливаются по индивидуальным размерам проемов Вашей беседки 
+                                или веранды для создания не продуваемого контура и защиты от попадания 
+                                во внутрь летних строений осадков и пыли.
+                            </p>  
+                            <h3>Преимущества мягких окон</h3>                        
+                            <ul>
+                                <li>Защита от осадков. Мягкие окна защитят от сквозняков летними вечерами, от дождя, снега и пыли в любое время года</li> 
+                            
+                           
+                                <li>Мобильность в использовании. Мягкие окна быстро сворачиваются и снимаются, также быстро устанавливаются на место</li>
+                          
+                                <li>Безопасность. Мягкие окна невозможно разбить и тем более порезаться осколком</li>
+                           
+                                <li>Уют где угодно! Внутри летних строений можно поставить мебель и обогреть пространство</li>
+                            </ul>
+
+                            <p>
+                                Для получения подробной консультации обращайтесь к волжскому производителю в компанию «Оконный завод ОТКРЫТИЕ», оставив заявку на сайте или по телефону.
+                            </p> 
+                        </div>
+                    </div>    
+                </div>
+
+
+            
+                
+
+
+
+                <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
+                    <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
-                                    <label for="floatingInput">Имя</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
-                                    <label for="floatingInput">Номер телефона</label>
-                                </div>
-                                <div class="form-floating mb-3">                    
-                                    <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Мягкие окна" readonly>
-                                    <label for="floatingInput">Категория</label>
-                                </div>
-                                <div>
+                                <div class="modal-body">
+                                    <div class="mb-2">
+                                        <label class="form-check-label" for="floatingInput">
+                                            Введите контактные данные
+                                        </label>
+                                    </div>
+                                    <div class="form-floating mb-3">                    
+                                        <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
+                                        <label for="floatingInput">Имя</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
+                                        <label for="floatingInput">Номер телефона</label>
+                                    </div>
+                                    <div class="form-floating mb-3">                    
+                                        <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Мягкие окна" readonly>
+                                        <label for="floatingInput">Категория</label>
+                                    </div>
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                        </svg>
-                                        <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                            <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
-                                    <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
-                                </div>                            
-                                <div class="form__message">
-                                    <!-- Всплывающие сообщения об отправке -->
-                                    <div class="preloader"></div>
-                                    <p class="contact-form__message"></p>
-                                </div>                            
+                                <div class="modal-footer">
+                                    <div>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
+                                        <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
+                                    </div>                            
+                                    <div class="form__message">
+                                        <!-- Всплывающие сообщения об отправке -->
+                                        <div class="preloader"></div>
+                                        <p class="contact-form__message"></p>
+                                    </div>                            
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </main>
         <footer>
         <div class="footer">
@@ -278,7 +308,7 @@
         var header = document.getElementById("header");
 
         function myFunction() {
-            if ($(this).scrollTop() > 200) {
+            if ($(this).scrollTop() > 0) {
                 header.classList.add("sticky");
             } else {
                 header.classList.remove("sticky");
@@ -296,15 +326,6 @@
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });
-    </script>
-
-    <script>
-        $(window).on('DOMContentLoaded', function () {  
-
-            $(document).ready(function() {
-                document.getElementById("wrap_preloader").style.visibility= "hidden";
-                document.getElementById("body").style.visibility= "visible";})
-        }); 
     </script>
 </body>
 </html>

@@ -29,10 +29,10 @@ function add_Order(){
 
         $contact_name_order = $_POST['contact_name_order'];
         $contact_order =  $_POST["contact_order"];
-        $today_order = date("d.m.Y"); 
+        $today_order = date("d.m.y, G:i"); 
         $order__status = ("В обработке");
-        $time_last_status = date("d.m.Y");
-        $time_last_pay = date("d.m.Y");
+        $time_last_status = date("d.m.y, G:i");
+        $time_last_pay = date("d.m.y, G:i");
         $account = $_SESSION['user']['full_name'];
      
         $sthh = $db_order->prepare("SELECT number_order FROM orders WHERE number_order = '$number_order'");
@@ -57,6 +57,10 @@ function add_Order(){
                
                 $sthh = $db_order->prepare("UPDATE orders SET payment_balance = 0 WHERE number_order = '$number_order'");
                 $sthh->execute();
+
+
+                $stt = $db_order->prepare("UPDATE orders SET time_last_pay = '$time_last_pay' WHERE number_order = '$number_order'");
+                $stt->execute();
             }
 
             // Если есть предоплата

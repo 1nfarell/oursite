@@ -1,9 +1,8 @@
 
-const counter_step = 10; //шаг бесконечного скрола (изменять на такое же значение и в get_order.php)
+
 let data_order = $(this).serialize();
 let field_table__order = $('#table__order');
-var counter_pass = 10;
-var temp = 0;
+
 var rr = new Array();
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
@@ -26,6 +25,10 @@ const alert = (message, type) => {
             const alert = bootstrap.Alert.getOrCreateInstance('#alert-number')
             alert.close()
         }, 3000);
+}
+//перезагрузка страницы по нажатию кнопки
+function reload_page(){
+    document.location.reload(); 
 }
 //именение поля статуса оптаты
 function table_price_change_orderValue(sel, no, pb, po, sp){
@@ -54,9 +57,9 @@ function table_price_change_orderValue(sel, no, pb, po, sp){
             
             if (respond === "SUCCESS") { 
                 setTimeout(() => {                
-                sel.disabled = false;         
-                alert('Успешно. Статус оплаты заказа '+no+', изменен на '+pco+'!', 'success')
-                }, 3000);                 
+                sel.disabled = false;   
+                reload_page();
+                }, 2000);                 
             } else if (respond === "NOTVALID") {
                 sel.disabled = false;          
                 alert('Не получилось изменить статус оплаты заказа '+no+'!', 'success')     
@@ -83,9 +86,8 @@ function table_price_change_orderValue(sel, no, pb, po, sp){
                 
                 if (respond === "SUCCESS") { 
                     setTimeout(() => {                
-                    sel.disabled = false;         
-                    alert('Успешно. Статус оплаты заказа '+no+', изменен на '+pco+'!', 'success')
-                    }, 3000);                 
+                    sel.disabled = false;    
+                    }, 2000);                 
                 } else if (respond === "NOTVALID") {
                     sel.disabled = false;          
                     alert('Не получилось изменить статус оплаты заказа '+no+'!', 'success')     
@@ -113,9 +115,9 @@ function table_statusValue(sel, no){
             
             if (respond === "SUCCESS") { 
                 setTimeout(() => {                
-                sel.disabled = false;         
-                alert('Успешно. Статус заказа '+no+', изменен на '+fd+'!', 'success')
-                }, 3000);                 
+                sel.disabled = false;   
+                reload_page();
+                }, 2000);                 
             } else if (respond === "NOTVALID") {
                 sel.disabled = false;          
                 alert('Не получилось изменить статус заказа '+no+'!', 'success')     
@@ -183,7 +185,7 @@ function table_nameValue (sel, no){
             }}});   
 }
 //именение поля сумма заказа
-function table_priceValue (sel, no, bp, poo){
+function table_priceValue (sel, no, bp, poo, pos){
    
     fd = sel.value;
     $.ajax({
@@ -193,6 +195,7 @@ function table_priceValue (sel, no, bp, poo){
             "price_order_old":poo,
                 "price_order": fd,
                 "number_order": no,
+                "price_order__status": pos,
         },
         beforeSend: () => { 
             sel.disabled = true; 
@@ -391,10 +394,11 @@ function table_delete_btn (e){
             let respond = $.parseJSON(res);
             
             if (respond === "SUCCESS") { 
+                alert('Успешно. Заказ '+e+', удален из базы. Страница будет перезагружена через 2с.', 'success');
                 setTimeout(() => {                
-                e.disabled = false;         
-                alert('Успешно. Заказ '+e+', удален из базы', 'success')
-                }, 3000);                 
+                e.disabled = false;   
+                reload_page();
+                }, 2000);                 
             } else if (respond === "NOTVALID") {
                 e.disabled = false;          
                 alert('Не получилось удалить заказ '+e+'!', 'success')     
@@ -445,7 +449,7 @@ function table_mainValue(SelectData){
             <th class="table_col_width--sum_order" scope="col">Сумма заказа</th>
             <th class="th_ostatok" scope="col">Осталось оплатить</th>        
             <th class="table_col_width--last_oplata" scope="col">Последняя оплата</th>
-            <th class="th_oplata" scope="col">Внести опл. / сумма</th>       
+            <th class="th_oplata" scope="col">Внести опл. / оплач. сумма</th>       
         </tr>
     </thead>    
     <tbody class="table-group-divider">
@@ -455,10 +459,10 @@ function table_mainValue(SelectData){
                 <input type="text" onchange = "table_nameValue(this, '${SelectData[key]['number_order']}')" class="form-control request__input--search nameValue-disabled"  aria-label="Наименование заказа" aria-describedby="inputGroup-sizing-lg" value="${SelectData[key]['description_order']}">
             </td>
             <td class="table_col_width--sum_order">
-                <input type="text" onchange = "table_priceValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}')" class="form-control request__input--search priceValue-disabled"  aria-label="Сумма заказа" aria-describedby="inputGroup-sizing-lg" value="${SelectData[key]['price_order']}">
+                <input type="text" onchange = "table_priceValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}', '${SelectData[key]['price_order__status']}')" class="form-control request__input--search priceValue-disabled"  aria-label="Сумма заказа" aria-describedby="inputGroup-sizing-lg" value="${SelectData[key]['price_order']}">
             </td>
             <td class="td_ostatok">${SelectData[key]['payment_balance']}</td>
-            <td class="table_col_width--last_oplata last_oplata_color">${time_last_pay(SelectData[key]['time_last_pay'])}</td>
+            <td class="table_col_width--last_oplata table_col_width--last_oplata--text last_oplata_color">${time_last_pay(SelectData[key]['time_last_pay'])}</td>
             <td class="td_oplata">
                 <input type="text" onchange = "table_sum_payValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}')" class="form-control request__input--search input_oplata td_oplata-disabled"  aria-label="Оплата" aria-describedby="inputGroup-sizing-lg">
             </td>
@@ -521,13 +525,13 @@ function table_mainValue(SelectData){
                                 <button class="btn btn-outline-secondary btn-delete" style="display:none" onclick="table_delete_btn('${SelectData[key]['number_order']}')" type="button">Удалить заказ</button>
                             </td>
                             <td class="table_col_width--price_change_order"> 
-                                <select  name="price_change_order" onchange = "table_price_change_orderValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}', '${SelectData[key]['sum_pay']}')" class="form-select form-select-default price_change-disabled" aria-label=".form-select-sm пример">
+                                <select name="price_change_order" onchange = "table_price_change_orderValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}', '${SelectData[key]['sum_pay']}')" class="form-select form-select-default price_change-disabled" aria-label=".form-select-sm пример">
                                     <option disabled selected>${SelectData[key]['price_order__status']}</option>
                                     <option value="Не оплачен">Не оплачен</option>
                                     <option value="Предоплата">Предоплата</option>
                                     <option value="Рассрочка">Рассрочка</option>
                                     <option value="Оплачен">Оплачен</option>
-                                    <option style="display:none" value="Возврат">Возврат</option>
+                                    <option  style="display:none" value="Возврат">Возврат</option>
                                 </select>                               
                             </td>                                                           
                             <td class="table_col_width--time_last_status">${SelectData[key]['time_last_status']}</td>                               
@@ -568,10 +572,18 @@ function table_mainValue(SelectData){
 }
 //вывод истории статусов к найденому заказу
 function table_history_status_btn(btn_data, no, table_dataStatus, id_btn_pay, table_dataPay){
+
+    let regex_id_pay = id_btn_pay.replace(/\//gi, "\\/");
+        regex_id_pay = regex_id_pay.replace(/\./gi, "\\.");
+    let regex_dataStatus = table_dataStatus.replace(/\//gi, "\\/");
+        regex_dataStatus = regex_dataStatus.replace(/\./gi, "\\.");
+    let regex_dataPay = table_dataPay.replace(/\//gi, "\\/");
+        regex_dataPay = regex_dataPay.replace(/\./gi, "\\.");
+   
     if (!$(btn_data).hasClass('on_status')) {
-        if($(`#${id_btn_pay}`).hasClass('on_pay')){
-            $(`#${id_btn_pay}`).removeClass('on_pay');
-            $(`#${table_dataPay}`).children().remove();
+        if($(`#${regex_id_pay}`).hasClass('on_pay')){
+            $(`#${regex_id_pay}`).removeClass('on_pay');
+            $(`#${regex_dataPay}`).children().remove();
         }
 
         $(btn_data).addClass('on_status');  
@@ -588,7 +600,7 @@ function table_history_status_btn(btn_data, no, table_dataStatus, id_btn_pay, ta
                 for(let key in SData){  
                     if(key < 1){                       
 
-                        $(`#${table_dataStatus}`).append(`
+                        $(`#${regex_dataStatus}`).append(`
                             <thead>
                                 <tr>
                                     <th class="col-sm-1" scope="col">Статус заказа</th>
@@ -615,16 +627,24 @@ function table_history_status_btn(btn_data, no, table_dataStatus, id_btn_pay, ta
         }) 
     } else {
         $(btn_data).removeClass('on_status');
-        $(`#${table_dataStatus}`).children().remove();
+        $(`#${regex_dataStatus}`).children().remove();
     }     
 }
 //вывод истории оплаты к найденому заказу
-function table_history_pay_btn(btn_data, no, table_dataPay, id_btn_status, table_dataStatus){
-    
+function table_history_pay_btn(btn_data, no, table_dataPay, id_btn_status, table_dataStatus){  
+
+    let regex_id_status = id_btn_status.replace(/\//gi, "\\/");
+        regex_id_status = regex_id_status.replace(/\./gi, "\\.");
+    let regex_dataStatus = table_dataStatus.replace(/\//gi, "\\/");
+        regex_dataStatus = regex_dataStatus.replace(/\./gi, "\\.");
+    let regex_dataPay = table_dataPay.replace(/\//gi, "\\/");
+        regex_dataPay = regex_dataPay.replace(/\./gi, "\\.");
+
     if (!$(btn_data).hasClass('on_pay')) {
-        if($(`#${id_btn_status}`).hasClass('on_status')){
-            $(`#${id_btn_status}`).removeClass('on_status');
-            $(`#${table_dataStatus}`).children().remove();
+        if($(`#${regex_id_status}`).hasClass('on_status')){
+            $(`#${regex_id_status}`).removeClass('on_status');
+            $(`#${regex_dataStatus}`).children().remove();
+         
         }
 
         $(btn_data).addClass('on_pay');
@@ -642,7 +662,7 @@ function table_history_pay_btn(btn_data, no, table_dataPay, id_btn_status, table
                           
                         if(key < 1){
                                 
-                            $(`#${table_dataPay}`).append(`
+                            $(`#${regex_dataPay}`).append(`
                                 <thead>
                                     <tr>
                                         <th class="col-sm-1" scope="col">Оплата</th>
@@ -650,7 +670,7 @@ function table_history_pay_btn(btn_data, no, table_dataPay, id_btn_status, table
                                         <th class="col-sm-1" scope="col">От</th>
                                     </tr>
                                 </thead>
-                                <tbody id="dataPayValue${SData[key]['number_order']}"  class="table-group-divider table_dataPayValue_class">\
+                                <tbody id="dataPayValue${SData[key]['number_order']}"  class="table-group-divider table_dataPayValue_class">
                                     <tr>
                                     </tr>
                                 </tbody>
@@ -669,7 +689,7 @@ function table_history_pay_btn(btn_data, no, table_dataPay, id_btn_status, table
         }) 
     } else {
         $(btn_data).removeClass('on_pay');
-        $(`#${table_dataPay}`).children().remove();
+        $(`#${regex_dataPay}`).children().remove();
     }         
 }
 //появление инпута предоплаты при выборе "предоплаты" в селекте формы
@@ -705,13 +725,13 @@ function add_disabled_field_table(SelectData){
         let td_ostatok_disabled = table[0].querySelector('.td_ostatok-disabled'); //остаток оплаты 
         let montazh_order_disabled = table[0].querySelector('.montazh_order-disabled'); 
        
-
+        let order_status_changes = table[0].querySelector('.form-select__changes'); //выбранный статус заказа
         
 
         if(SelectData[i]['order__status'] == 'Сборка'){
             $(priceValue_disabled).prop('disabled', true);           
             $(nameValue_disabled).prop('disabled', true);         
-            $(date_montazh_disabled).prop('disabled', true);  
+             
             if(SelectData[i]['price_order__status'] == 'Оплачен'){
                 $(price_change_disabled).prop('disabled', true);
     
@@ -719,6 +739,41 @@ function add_disabled_field_table(SelectData){
                 $(td_ostatok_disabled).prop('disabled', true);
             }   
         }
+          //цвета
+        if(SelectData[i]['order__status'] == 'Выполнен'){
+            $(order_status_changes).css({'color':'#146c43'})
+            $(order_status_changes).css({'border-bottom-color':'#146c43'});
+        } else if(SelectData[i]['order__status'] == 'Отменен'){
+            $(order_status_changes).css({'color':'#432874'});
+            $(order_status_changes).css({'border-bottom-color':'#432874'});
+        } else if(SelectData[i]['order__status'] == 'В обработке'){ 
+            $(order_status_changes).css({'color':'#cc9a06'});
+            $(order_status_changes).css({'border-bottom-color':'#cc9a06'});
+        } else if(SelectData[i]['order__status'] == 'Сборка'){
+            $(order_status_changes).css({'color':'#0aa2c0'});
+            $(order_status_changes).css({'border-bottom-color':'#0aa2c0'});
+        } else if(SelectData[i]['order__status'] == 'Доставка'){
+            $(order_status_changes).css({'color':'#520dc2'});
+            $(order_status_changes).css({'border-bottom-color':'#520dc2'});
+        } else if(SelectData[i]['order__status'] == 'Готово к отгрузке'){
+            $(order_status_changes).css({'color':'#1aa179'});
+            $(order_status_changes).css({'border-bottom-color':'#1aa179'});
+        }
+        if(SelectData[i]['price_order__status'] == 'Оплачен'){
+            $(price_change_disabled).css({'color':'#146c43'})
+            $(price_change_disabled).css({'border-bottom-color':'#146c43'});
+        } else if(SelectData[i]['price_order__status'] == 'Рассрочка'){
+            $(price_change_disabled).css({'color':'#fd7e14'})   
+            $(price_change_disabled).css({'border-bottom-color':'#fd7e14'}); 
+        } else if(SelectData[i]['price_order__status'] == 'Предоплата'){
+            $(price_change_disabled).css({'color':'#cc9a06'})
+            $(price_change_disabled).css({'border-bottom-color':'#cc9a06'});
+        } else if (SelectData[i]['price_order__status'] == 'Не оплачен') {
+            $(price_change_disabled).css({'color':'#dc3545'})
+            $(price_change_disabled).css({'border-bottom-color':'#dc3545'});
+            $(td_oplata_disabled).css({'border-bottom-color':'#dc3545'});
+        }
+        //отключение полей
         if(SelectData[i]['order__status'] == 'Выполнен' ||  SelectData[i]['order__status'] == 'Отменен'){
 
             $(priceValue_disabled).prop('disabled', true);           
@@ -736,6 +791,12 @@ function add_disabled_field_table(SelectData){
                 $(td_ostatok_disabled).prop('disabled', true);
             }   
         }
+        if(SelectData[i]['price_order__status'] == 'Предоплата'){
+            $(td_oplata_disabled).css({'border-bottom-color':'#cc9a06'});
+
+        } else if (SelectData[i]['price_order__status'] == 'Рассрочка') {
+            $(td_oplata_disabled).css({'border-bottom-color':'#fd7e14'});
+        }  
         if(SelectData[i]['order__status'] == 'Доставка' || SelectData[i]['order__status'] == 'Готово к отгрузке'){
 
             $(priceValue_disabled).prop('disabled', true);           
@@ -776,18 +837,26 @@ function add_disabled_field_table(SelectData){
 
                 $(td_oplata_disabled).prop('disabled', true);
                 $(td_ostatok_disabled).prop('disabled', true);
+                 
+                //цвет "текста возврат"
+                $(price_change_disabled).css({'color':'#432874'}); 
+                $(price_change_disabled).css({'border-bottom-color':'#432874'});
+                $(td_oplata_disabled).css({'border-bottom-color':'#432874'});
 
-                table[0].querySelector('.th_oplata').style.display = "none";
-                table[0].querySelector('.td_ostatok').style.display = "table-cell";
-                table[0].querySelector('.td_oplata').style.display = "none";
-                table[0].querySelector('.th_ostatok').style.display = "table-cell";   
+                table[0].querySelector('.th_oplata').style.display = "table-cell";
+                table[0].querySelector('.td_ostatok').style.display = "none";
+                table[0].querySelector('.td_oplata').style.display = "table-cell";
+                table[0].querySelector('.th_ostatok').style.display = "none";   
+
+                table[0].querySelector('.th_oplata').innerHTML = "Возврат"
                 
         } else if (SelectData[i]['order__status'] == 'Отменен' && SelectData[i]['price_order__status'] == 'Не оплачен'){
                 $(price_change_disabled).prop('disabled', true);
 
                 $(td_oplata_disabled).prop('disabled', false);
                 $(td_ostatok_disabled).prop('disabled', false);
-              
+               
+
                 table[0].querySelector('.th_oplata').style.display = "none"; //оплата
                 table[0].querySelector('.th_ostatok').style.display = "none";//остаток оплаты
                 table[0].querySelector('.td_oplata').style.display = "none";
@@ -797,67 +866,92 @@ function add_disabled_field_table(SelectData){
         if(SelectData[i]['adress_order'] == 'Самовывоз'){
             table[0].querySelector('.table_col_width--dostavka').style.display = "none";  
             table[0].querySelector('.input--dostavka').style.display = "none";
+            table[0].querySelector('.table_col_width--dostavka').style.display = "none";  
+            table[0].querySelector('.date_montazh-disabled').style.display = "none"; 
+            table[0].querySelector('td.table_col_width--montazh').style.cssText = "padding-right: 0 !important"
         } else {
             table[0].querySelector('.table_col_width--dostavka').style.display = "table-cell";  
             table[0].querySelector('.input--dostavka').style.display = "table-cell";
         }
+        //отключение "последняя оплата"
+        // if(SelectData[i]['price_order__status'] == 'Не оплачен'){ 
+           
+        //         // table[0].querySelector('.table_col_width--last_oplata').style.display = "none"
+        //         // table[0].querySelector('.table_col_width--last_oplata--text').style.display = "none"
+        // }       
     }
 }
-let counter_pass_first = 0;
-//вывод заказов сразу при загрузке страницы
-$.ajax({
-    url: 'order/get_order.php',
-    method: 'POST',
-    data: {data_order,                    
-            "counter_pass":counter_pass_first,
-        },
-    success: function(data){
-        
-        let FSelectData = JSON.parse(data);                  
-        let temp =  FSelectData; 
+//вывод заказов
+var currentEventListener = null;
+const getAllOrder = (
+    change_select_order,
+) => {
+    //удаление таблиц перед выводом выбранной селектором
+    $('#table__order').children().remove();
 
-        if(temp !=null){   
-            $(field_table__order).append(`${table_mainValue(FSelectData)}`) 
-            add_disabled_field_table(FSelectData)
-        }   
-}});
-//бесконечный скролл и вывод таблиц заказов
-window.addEventListener("scroll", function(){
-           
-    var field_table__order = document.getElementById('table__order');    
-   
-    var contentHeight = field_table__order.offsetHeight ;      // 1) высота блока контента вместе с границами
-    var yOffset       = window.pageYOffset;      // 2) текущее положение скролбара
-    var window_height = window.innerHeight;      // 3) высота внутренней области окна документа
-    var y             = yOffset + window_height;
+    let counter_pass_first = 0;
+    const counter_step = 10; //шаг бесконечного скрола (изменять на такое же значение и в get_order.php)
+    var counter_pass = 10;
+    var temp = 0;
     
-    // если пользователь достиг конца 
-   
-    if(y >= contentHeight && temp !=null){
-        $.ajax({
-            url: 'order/get_order.php',
-            method: 'POST',
-            data: {data_order,                    
-                    "counter_pass":counter_pass,
-                },
-            success: function(data){
-                
-                let SelectData = JSON.parse(data);               
-                let temp =  SelectData;  
+    //вывод заказов сразу при загрузке страницы
+    $.ajax({
+        url: 'order/get_order.php',
+        method: 'POST',
+        data: {data_order,                    
+                "counter_pass":counter_pass_first,
+                "change_select_order": change_select_order,
+            },
+        success: function(data){
+            
+            let FSelectData = JSON.parse(data);                  
+            let temp =  FSelectData; 
 
-                if(temp !=null){     
-                    $(field_table__order).append(`${table_mainValue(SelectData)}`)
-                    add_disabled_field_table(SelectData);
-                }  
-        }});
-        //каунтер шага скрола; 
-        counter_pass= counter_pass + counter_step;
-    }  
-});
-//перезагрузка страницы по нажатию кнопки
-function reload_page(){
-    document.location.reload(); 
+            if(temp !=null){   
+                $(field_table__order).append(`${table_mainValue(FSelectData)}`) 
+                add_disabled_field_table(FSelectData)
+            } 
+    }});
+    //бесконечный скролл и вывод таблиц заказов
+    if(currentEventListener) {
+        
+        window.removeEventListener('scroll', currentEventListener)
+    }
+    currentEventListener = () => {
+        var field_table__order = document.getElementById('table__order');    
+    
+        var contentHeight = field_table__order.offsetHeight ;      // 1) высота блока контента вместе с границами
+        var yOffset       = window.pageYOffset;      // 2) текущее положение скролбара
+        var window_height = window.innerHeight;      // 3) высота внутренней области окна документа
+        var y             = yOffset + window_height;
+        
+        // если пользователь достиг конца 
+    
+        if(y >= contentHeight && temp !=null){
+            $.ajax({
+                url: 'order/get_order.php',
+                method: 'POST',
+                data: {data_order,                    
+                        "counter_pass":counter_pass,
+                        "change_select_order": change_select_order,
+                    },
+                success: function(data){
+                    
+                    let SelectData = JSON.parse(data);               
+                    let temp =  SelectData;  
+
+                    if(temp !=null){     
+                        $(field_table__order).append(`${table_mainValue(SelectData)}`)
+                        add_disabled_field_table(SelectData);
+                    }  
+            }});
+            //каунтер шага скрола; 
+            counter_pass= counter_pass + counter_step;
+        } 
+    };
+    window.addEventListener('scroll', currentEventListener)
 }
+
 //вывод таблиц заказов через строку поиска
 (function ($) {  
     $("#search-form").submit(function (event) {
@@ -923,5 +1017,60 @@ function reload_page(){
         });
     });
 })(jQuery);
+
+//вставляет кнопку селектора статуса заказа для фильтрации вывода
+let = btn_select_order = $('#menu_filter');
+
+$(btn_select_order).append(`
+    <select name="order__status" id="filter_order" class="form-select form-select-default form-select__changes" aria-label=".form-select-sm пример">
+        <option selected>Без фильтра</option>
+        <option value="В обработке">В обработке</option>
+        <option value="Сборка">Сборка</option>
+        <option value="Доставка">Доставка</option>
+        <option value="Готово к отгрузке">Готово к отгрузке</option>
+        <option value="Выполнен">Выполнен</option>
+        <option value="Отменен">Отменен</option>
+    </select>   
+`); 
+
+//вывод заказов через выбор в фильтре (селекторе статусов заказа)
+//получить вывод заказов при загрузке странице один раз        
+let fd = '';
+getAllOrder(fd);
+
+let currentEventListenerSelectOrder = null;  
+let sel = document.getElementById('filter_order');
+
+if(currentEventListenerSelectOrder) {
+    sel.removeEventListener('change', currentEventListenerSelectOrder);       
+}
+currentEventListenerSelectOrder = () => {
+    fd = sel.value;
+    if (fd == 'В обработке'){                 
+        getAllOrder(fd); 
+        $('#title_name_order_status').text('ВСЕ "В ОБРАБОТКЕ"');        
+    } else if (fd == 'Сборка'){            
+        getAllOrder(fd);
+        $('#title_name_order_status').text('ВСЕ "В СБОРКЕ"'); 
+    } else if (fd == 'Доставка'){           
+        getAllOrder(fd);
+        $('#title_name_order_status').text('ВСЕ "В ДОСТАВКЕ"'); 
+    } else if (fd == 'Готово к отгрузке'){            
+        getAllOrder(fd);
+        $('#title_name_order_status').text('ВСЕ "ГОТОВО К ОТГРУЗКЕ"'); 
+    } else if (fd == 'Выполнен'){            
+        getAllOrder(fd);
+        $('#title_name_order_status').text('ВСЕ "ВЫПОЛНЕН"'); 
+    } else if (fd == 'Отменен'){            
+        getAllOrder(fd);
+        $('#title_name_order_status').text('ВСЕ "ОТМЕНЕН"'); 
+    } else if (fd == 'Без фильтра'){            
+        fd = '';
+        $('#title_name_order_status').text('ВСЕ ЗАКАЗЫ');
+        getAllOrder(fd);
+        
+    } 
+};
+sel.addEventListener('change', currentEventListenerSelectOrder);    
 
 

@@ -1,7 +1,17 @@
+
 @media (max-width: 1600px){
     .catalog-balkon-wrapper > .list-group-container{
-        display: none;
+        display: none !important;
     }    
+}
+.image-markiz{
+    border-radius: 10px;
+}
+.box-furniture{
+    width: 350px;
+}
+.box-furniture+ .box-furniture{
+    margin-left: 40px;
 }
 .catalog-balkon-wrapper > .list-group-container{
     position: fixed;
@@ -22,8 +32,30 @@
     -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
     -moz-box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
 }
+.carouselCaptions-our {
+    width: 310px !important;
+}
 
+.carouselCaptions-our .carousel-caption{
+    left: 0 !important;
+    top: 90px !important;
+    padding-top: 0!important;
+}
 
+.carouselCaptions-our .carousel-caption h5{
+    color: #404149;
+    background-color: #f5f5f56b;
+    width: 310px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.box-furniture h4{
+    padding-top: 20px;
+}
+.img-furniture{
+    width: 310px;
+}
 .imgintext{
     margin-right: 20px;
 }
@@ -113,9 +145,50 @@
     #carouselExampleCaptions .d-none{
         display: block !important;
     }
-
+    .image-markiz{
+        width: 380px !important;
+    }
 
     .carousel-profil-wrapper{
         margin-top: 30px;
+    }
+
+    .box-furniture-oveflow {
+        overflow-x: scroll;
+        flex-direction: row !important;
+    }
+   
+    .carouselCaptions-our, .carouselCaptions-our .carousel-inner, .img-furniture{
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+    .box-furniture-oveflow{
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 500px){
+    .image-markiz{
+        width: 100% !important;
+    }
+
+    .img-furniture {
+        width: 170px;
+    }
+
+    .carouselCaptions-our {
+        width: 170px !important;
+    }
+
+    .box-furniture-oveflow{
+        padding-bottom: 30px;
+    }
+
+    .carouselCaptions-our .carousel-caption h5{
+        width: 165px;
+        font-size: 16px;
+    }
+
+    .carouselCaptions-our .carousel-caption{
+        top:35px !important;
     }
 }
