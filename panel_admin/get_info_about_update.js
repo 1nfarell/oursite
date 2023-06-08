@@ -26,14 +26,14 @@ function update_mainValue(updatedUpdates){
     return arr;  
     
 }
-//вывод заказов
+//вывод истории обновлений в order.php
 var currentEventListenerScrollUpdateInfo = null;
 const getAllUpdateInfo = (
 ) => {
     //удаление таблиц перед выводом выбранной селектором    
     $(field_info_update).children().remove();
 
-    //вывод заказов сразу при загрузке страницы
+    
     $.ajax({
         url: 'panel_admin/get_info_about_update.php',
         method: 'POST',

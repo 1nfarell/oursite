@@ -29,6 +29,19 @@ function add_Order(){
 
         $contact_name_order = $_POST['contact_name_order'];
         $contact_order =  $_POST["contact_order"];
+
+        // Удаление всех символов, кроме цифр
+        $contact_order = preg_replace("/\D+/", "", $contact_order);
+
+        // Если номер начинается с +7, заменяем его на 8
+        if (substr($contact_order, 0, 1) === "7") {
+            $contact_order[0] = "8";
+        }
+        //если выбрано предоплата, но оплатили 100%
+        if (($price_order - $sum_pay) == 0){
+            $price_order__status = 'Оплачен';
+        }
+
         $today_order = date("d.m.y, G:i"); 
         $order__status = ("В обработке");
         $time_last_status = date("d.m.y, G:i");
@@ -49,7 +62,7 @@ function add_Order(){
             $st->execute();
 
             // Если заказ оплачен сразу
-            if($sum_pay == '' && $price_order__status == 'Оплачен'){
+            if($price_order__status == 'Оплачен'){
                 
                 $stg = $db_order->prepare("INSERT INTO balance_orders(number_order, sum_pay, time_pay, account) VALUES ('$number_order', '$price_order', '$today_order', '$account')");
                 $stg->execute();

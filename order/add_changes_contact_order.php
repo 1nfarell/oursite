@@ -11,6 +11,15 @@ function add_changes_contact_order(){
         
             $contact_order =  $_POST["contact_order"];
             $number_order =  $_POST["number_order"];   
+
+             // Удаление всех символов, кроме цифр
+             $contact_order = preg_replace("/\D+/", "", $contact_order);
+          
+            // Если номер начинается с +7, заменяем его на 8
+            if (substr($contact_order, 0, 1) === "7") {
+                $contact_order[0] = "8";
+            }
+
             $sth = $db_order->prepare("UPDATE orders SET contact_order = '$contact_order' WHERE number_order = '$number_order'");
             
             $sth->execute();

@@ -18,8 +18,9 @@ if (!$_SESSION['user']) {
     <link rel="stylesheet" href="/assets/css/addpost.css">
     <link rel="stylesheet" href="/assets/css/order.css">
     <link rel="stylesheet" href="/assets/css/status.css">
-    <link rel="stylesheet" href="/assets/css/catalog.css">
+    <!-- <link rel="stylesheet" href="/assets/css/catalog.css"> -->
     <link rel="stylesheet" href="/assets/css/moskit.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
     <title>Кабинет</title>
     
     <meta name="robots" content="noindex">
@@ -50,11 +51,16 @@ if (!$_SESSION['user']) {
                             <div class="header-time">
                                 <form id="search-form" method="POST">
                                     <div class="input-group input-group-lg">
-                                        <span class="input-group-text past-btn" id="inputGroup-sizing-lg">№</span>
                                         <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
-                                        <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
+                                        <button id="btn_search" class="btn btn-outline-secondary" type="submit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                            </svg>
+                                        </button>
                                     </div>
+                                    
                                 </form>
+                                <span title="наверх страницы" onclick="topScroll()" class="btn btn-outline-secondary btn__topScroll">Наверх</span>
                             </div>
                             <div class="header-addres">
                                 <!-- <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
@@ -62,102 +68,48 @@ if (!$_SESSION['user']) {
                             </div>
                         </div>                       
                         <div class="header-right">   
-                                                  
-                            <div class="header-right-form">
-                                <form>
-                                    <p><?= $_SESSION['user']['full_name'] ?></p>
-                                </form>
+                            <div class="header-right--form_login">      
+                                <div class="header-right-form">
+                                    <form>
+                                        <p><?= $_SESSION['user']['full_name'] ?></p>
+                                    </form>
+                                </div>
+                                <div class="header-right-form-out">                    
+                                    <?php if(isset($_SESSION['user'])): ?> 
+                                        <a href="vendor/logout.php">Выход</a>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-                            <div class="header-right-form-out">                    
-                                <?php if(isset($_SESSION['user'])): ?> 
-                                    <a href="vendor/logout.php">Выход</a>
-                                <?php endif; ?>
-                            </div>
+                            <span title="добавить заказ" data-bs-toggle="modal" data-bs-target="#ModalAddOrder" class="btn btn-outline-primary btn__add--order">Добавить заказ</span>
                         </div>
                     </div>
                     <div class="menu" >
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Каталог
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Жалюзи" href="/catalog/jaluzi">Жалюзи</a></li>
-                                <li><a class="dropdown-item" title="Рольставни на окна" href="/catalog/jaluzi">Рольставни на окна</a></li>
-                                <!-- <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Маркизы</a></li> -->
-                                <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
-                                <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Окна
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
-                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
-                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
-                                <li><a class="dropdown-item" title="Фурнитура для окон" href="/catalog/komplect-okno">Фурнитура для окон</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Двери
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="двери из пвх и алюминия цены" href="/catalog/door">Все двери</a></li>
-                                <li><a class="dropdown-item" title="Пластиковые двери" href="/catalog/plastic-okno">Пластиковые двери</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые двери" href="/catalog/aluminii-system">Алюминиевые двери</a></li>
-                                <li><a class="dropdown-item" title="Раздвижные двери" href="/catalog/portal-okno">Раздвижные двери</a></li>
-                                <!-- <li><a class="dropdown-item" title="Балконные двери" href="/catalog/dver-balkonnaya">Балконные двери</a></li> -->
-                                <li><a class="dropdown-item" title="Двери входные" href="/catalog/doors/dver-vhodnaya">Двери входные</a></li>
-                                <li><a class="dropdown-item" title="Двери душевые" href="/catalog/doors/dver-dushevaya">Двери душевые</a></li>
-                                <!-- <li><a class="dropdown-item" title="Стеклянные двери" href="/catalog/dver-steklyannaya">Стеклянные двери</a></li> -->
-                                <li><a class="dropdown-item" title="Противопожарные двери" href="/catalog/doors/dver-pozhar">Противопожарные двери</a></li>
-                                <!-- <li><a class="dropdown-item" title="Противопожарные люки" href="/catalog/dver-luk">Противопожарные люки</a></li> -->
-                                <li><a class="dropdown-item" title="Рольставни" href="/catalog/jaluzi">Рольставни</a></li>
-                                <li><a class="dropdown-item" title="Фурнитура для дверей" href="/catalog/komplect-okno">Фурнитура для дверей</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Москитные сетки
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
-                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
-                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
-                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
-                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
-                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
-                            </ul>
-                        </div>                        
-                          
+                        <div class="menu-catalog">
+                            <!-- Кнопка-триггер модального окна Menu -->
+                            
+                            <span class="menu-catalog-links" id="menu_info_trigger" data-bs-toggle="modal" data-bs-target="#menuStaticBackdrop" aria-controls="menuStaticBackdrop">Каталог</span>   
+                        </div>  
+
                         <div class ="menu-links">
                             <input type="checkbox" name="menu" id="btn-menu" />
                             <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
                             <ul>
-                            <!-- <a  href="/cabinet.php">Личный кабинет</a>        
-                            <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
-                            <span title="наверх страницы" onclick="topScroll()" class="">Наверх</span>
-                            <span title="добавить заказ" data-bs-toggle="modal" data-bs-target="#ModalAddOrder" class="">Добавить заказ</span>
-                            <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                            <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
-                            <?php    
-                                if ($_SESSION['user']['id'] == 2) {
-                                    ?>
-                                        <a rel="nofollow" href="/admin.php">Панель админ.</a>
-                                    <?
-                                };
-                            ?>
-                            <!-- Кнопка-триггер модального окна -->
-                            <span id="update_info_trigger" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Что нового</span>
+                                <!-- <a  href="/cabinet.php">Личный кабинет</a>        
+                                <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
+                                
+                                
+                                <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
+                                <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
+                                <?php    
+                                    if ($_SESSION['user']['id'] == 2) {
+                                        ?>
+                                            <a rel="nofollow" href="/admin.php">Панель админ.</a>
+                                        <?
+                                    };
+                                ?>
+                                <!-- Кнопка-триггер модального окна -->
+                                <span id="update_info_trigger" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Что нового</span>
+                              
                             </ul>
                         </div>             
                     </div>
@@ -188,7 +140,7 @@ if (!$_SESSION['user']) {
                                         </div>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="inputGroup-sizing-default">Сумма заказа</span>
-                                            <input id="sum_order" name="price_order" type="number" class="form-control" aria-label="Сумма оплаты в рублях (с точкой и двумя десятичными знаками)" maxlength="20" step="100" required>
+                                            <input id="sum_order" name="price_order" type="number" class="form-control" aria-label="Сумма оплаты в рублях (с точкой и двумя десятичными знаками)" maxlength="20" required>
                                             <span id="input-group-text_dollar" class="input-group-text">₽</span>
                                         </div>   
                                         <div class="input-group mb-3">               
@@ -204,7 +156,7 @@ if (!$_SESSION['user']) {
                                             <span class="input-group-text" id="inputGroup-sizing-default">Предоплата</span>
                                             <input id="presum" name="sum_pay" type="number" class="form-control" aria-label="Предоплата в рублях (с точкой и двумя десятичными знаками)" style="width:170px" maxlength="20" >
                                             <span id="input-group-text_dollar"  class="input-group-text">₽</span>
-                                            <input id="persent_sum" type="number" aria-label="Процент" class="form-control" maxlength="3" max="100" step="5" value="50" onkeydown="return false" onwheel="return false">
+                                            <input id="persent_sum" type="number" aria-label="Процент" class="form-control" maxlength="3" max="100" value="50">
                                             <span id="input-group-text_dollar" class="input-group-text">%</span>
                                         </div>
                                         <div class="input-group mb-3">
@@ -212,8 +164,8 @@ if (!$_SESSION['user']) {
                                             <input name="contact_name_order" type="text" class="form-control" aria-label="ФИО заказчика" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
                                         </div>
                                         <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Контакты</span>
-                                            <input name="contact_order" type="text" class="form-control" aria-label="Контакты" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                            <span class="input-group-text" id="inputGroup-sizing-default">Телефон</span>
+                                            <input name="contact_order" type="tel" pattern="[\d()+\-\s]+" class="form-control" aria-label="Контакты" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
                                         </div>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="inputGroup-sizing-default">Адрес доставки</span>
@@ -248,15 +200,29 @@ if (!$_SESSION['user']) {
                     
                     
                     <div  class="offcanvas offcanvas-start "  tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="staticBackdropLabel">Что нового?</h5>
-                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="staticBackdropLabel">Что нового?</h5>
+                            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                        </div>
+                        <div id="info_site_update" class="offcanvas-body">
+                            
+                        </div>
                     </div>
-                    <div id="info_site_update" class="offcanvas-body">
-                        
-                    </div>
-                    </div>
-                    
+                    <div id="menuStaticBackdrop" aria-labelledby="menuStaticBackdropLabel" class="modal fade modal-catalog" tabindex="-1"  role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="menuStaticBackdropLabel">Каталог</h5>
+                                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                </div>       
+                                <div class="modal-body">
+                                    <div id="info_site_menu" class="offcanvas-body"> 
+
+                                    </div>                              
+                                </div>  
+                            </div>
+                        </div>
+                    </div> 
                     <div style="padding-bottom: 0px;" class="balkon-wrapper">   
                                 
                         <div class="container--row_menu">
@@ -264,12 +230,13 @@ if (!$_SESSION['user']) {
                                 <!-- вывод селектора для поиска по стутуса заказа -->
                             </div>
                             <div>
-                                <button type="button" onclick="reload_page()" class="btn btn-outline-primary">Reload</button>        
+                                <button type="button" onclick="reload_page()" class="btn btn-outline-primary btn_reload">Reload</button>        
                             </div>  
                         </div>
                     </div>
-                    <div style="padding-bottom: 0px;" class="balkon-wrapper all-order-title">
-                        <div id="title_name_order_status" style="padding:20px 0; width:100%; font-size: 22px; font-weight: 600;">ВСЕ ЗАКАЗЫ</div>  
+                    <div  class="balkon-wrapper all-order-title">
+                        <div id="title_name_order_status" >ВСЕ ЗАКАЗЫ</div> 
+                        <div class="order_counter_status"></div> 
                     </div>
                     <div id="table__order" class="balkon-wrapper table-responsive">
                         <!-- вывод таблицы -->
@@ -323,10 +290,10 @@ if (!$_SESSION['user']) {
 <!-- jquery -->
 <script src="/assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="order/add_order.js"></script>
-<script src="order/get_order.js"></script>
-<script src="panel_admin/get_info_about_update.js"></script>
-<script src="order/display_status_info.js"></script>
+<script src="/assets/js/menu.js"></script>
+<script src="/order/add_order.js"></script>
+<script src="/order/get_order.js"></script>
+<script src="/panel_admin/get_info_about_update.js"></script>
 <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
 <!-- Липкий заголовок -->
 <script>
@@ -362,24 +329,29 @@ if (!$_SESSION['user']) {
   
         if (input_predoplata.style.display == 'flex') {
         
-            presum.value = persent_sum.value && sum_order.value ? 
-                sum_order.value * persent_sum.value / 100 : 0;
+            presum.value = Math.round(persent_sum.value && sum_order.value ? 
+                sum_order.value * persent_sum.value / 100 : 0)
             
             persent_sum.addEventListener('input', () => {
                 if (sum_order.value) {
-                    presum.value = sum_order.value * persent_sum.value / 100;
+                    let presum_temp = sum_order.value * persent_sum.value / 100;              
+                    presum.value = Math.round(presum_temp) //проценты
+                    
                 }
             });
             
             sum_order.addEventListener('input', () => {
                 if (persent_sum.value) {
-                    presum.value = sum_order.value * persent_sum.value / 100;
+                    let sum_order_presum_temp = sum_order.value * persent_sum.value / 100;                 
+                    presum.value = Math.round(sum_order_presum_temp) //сумма заказа
                 }
             });
 
             presum.addEventListener('input', () => {
                 if (sum_order.value) {
-                    persent_sum.value = presum.value * 100 / sum_order.value;
+                    let persent_sum_temp = presum.value * 100 / sum_order.value;                   
+                    persent_sum.value = Math.round(persent_sum_temp) //предоплата
+                    
                 }
             });
         }

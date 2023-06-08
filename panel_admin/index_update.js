@@ -1,4 +1,4 @@
-
+//форма истории добавления обновлений на сайта admin.php
 var myModalEl = document.getElementById('ModalUpdate');
 
 let insert_inbody_field = $('#body_update');

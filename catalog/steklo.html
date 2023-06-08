@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
     <link rel="stylesheet" href="/assets/css/moskit.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -68,49 +69,9 @@
                         </div>
                     </div>
                     <div class="menu" >
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Каталог
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Жалюзи и рольставни на окна" href="/catalog/jaluzi">Жалюзи и рольставни на окна</a></li>
-                                <li><a class="dropdown-item" title="Стекла и зеркала" href="/catalog/steklo">Стекла и зеркала</a></li>
-                                <li><a class="dropdown-item" title="Стеклопакеты" href="/catalog/steklopaket">Стеклопакеты</a></li> 
-                                <li><a class="dropdown-item" title="Двери входные" href="/catalog/dver-vhodnaya">Двери входные</a></li>
-                                <li><a class="dropdown-item" title="Двери душевые" href="/catalog/dver-dushevaya">Двери душевые</a></li>
-                                <li><a class="dropdown-item" title="Противопожарные двери по ГОСТу" href="/catalog/dver-pozhar">Противопожарные двери по ГОСТу</a></li>
-                                <li><a class="dropdown-item" title="Кровельные работы" href="/catalog/krovelnye-raboty">Кровельные работы</a></li>
-                                <li><a class="dropdown-item" title="Металлические стеллажи" href="/catalog/stellaj">Металлические стеллажи</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Окна
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="окна из пвх и алюминия цены" href="/catalog/okna">Все окна</a></li>
-                                <li><a class="dropdown-item" title="Пластиковые окна" href="/catalog/plastic-okno">Пластиковые окна</a></li>
-                                <li><a class="dropdown-item" title="Алюминиевые окна" href="/catalog/aluminii-system">Алюминиевые окна</a></li>
-                                <li><a class="dropdown-item" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a></li>
-                                <li><a class="dropdown-item" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a></li>
-                                <li><a class="dropdown-item" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a></li>
-                                <li><a class="dropdown-item" title="Балконы и лоджии под ключ" href="/catalog/balkon">Остекление балконов и лоджий</a></li>
-                                <li><a class="dropdown-item" title="Комплектующие к окнам" href="/catalog/komplect-okno">Комплектующие к окнам</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown menu-catalog">
-                            <button type="button" class="btn btn-secondary dropdown-toggle menu-catalog-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Москитные сетки
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" title="Москитные сетки цены" href="/catalog/moskit">Все москитные сетки</a></li>
-                                <li><a class="dropdown-item" title="Рамная москитная сетка (Стандарт)" href="/catalog/moskit_setki/ramnaya">Рамная сетка (Стандарт)</a></li>
-                                <li><a class="dropdown-item" title="Вставная москитная сетка" href="/catalog/moskit_setki/vstavnaya">Вставная сетка</a></li>
-                                <li><a class="dropdown-item" title="Раздвижная москитная сетка" href="/catalog/moskit_setki/razdvizhnaya">Раздвижная сетка</a></li>
-                                <li><a class="dropdown-item" title="Распашная москитная сетка" href="/catalog/moskit_setki/raspashnaya">Распашная сетка</a></li>
-                                <li><a class="dropdown-item" title="Рулонная москитная сетка" href="/catalog/moskit_setki/rulonnaya">Рулонная сетка</a></li>
-                                <li><a class="dropdown-item" title="Плиссе москитная сетка" href="/catalog/moskit_setki/plisse">Плиссе сетка</a></li>
-                            </ul>
+                        <div class="menu-catalog">
+                            <!-- Кнопка-триггер модального окна Menu -->
+                            <span class="menu-catalog-links" id="menu_info_trigger" data-bs-toggle="modal" data-bs-target="#menuStaticBackdrop" aria-controls="menuStaticBackdrop">Каталог</span>      
                         </div>
 
                         <div class ="menu-links" >
@@ -131,9 +92,32 @@
            
             <div class="main">
                 <div class="catalog-balkon-wrapper catalog-moskit-wrapper " data-bs-target="#list-example" data-bs-spy="scroll" tabindex="0" data-bs-smooth-scroll="true">
-                  
+                    <!-- menu -->
+                    <div id="menuStaticBackdrop" aria-labelledby="menuStaticBackdropLabel" class="modal fade modal-catalog" tabindex="-1"  role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="menuStaticBackdropLabel">Каталог</h5>
+                                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                </div>       
+                                <div class="modal-body">
+                                    <div id="info_site_menu" class="offcanvas-body"> 
+
+                                    </div>                              
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kroshki">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Работа со стеклом</li>
+                            </ol>
+                        </nav>
+                    </div>
                     <div class="wrapper-block-title">
-                        <h2 class="wrapper-block-h" id="list-item-2">СТЕКЛА И ЗЕРКАЛА</h2>
+                        <h2 class="wrapper-block-h" id="list-item-2">РАБОТА СО СТЕКЛОМ</h2>
                         <img loading=lazy src="/images/orange-dash.svg" class="orange-dash d-block" >
                     </div>
                     <div class="main-wrapper-box">
@@ -294,7 +278,6 @@
     </div>
 
     <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
-
     <!-- Липкий заголовок -->
     <script>
         window.onscroll = function() {myFunction()};
@@ -317,6 +300,7 @@
     <script src="/assets/js/main_set_contact_tel.js"></script>
     <!-- Всплывающие окна на странице / Копирование номера телефона в буфер -->
     <script src="/assets/js/main_alert_get_number.js"></script>
+    <script src="/assets/js/menu.js"></script>
     <script>
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');

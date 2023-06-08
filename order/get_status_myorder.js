@@ -157,8 +157,6 @@ function set_date_order(respond){
     paramsStr = paramsStr.split('&');
     var res = paramsStr.map(param => param.split('='));
     var queParams = Object.fromEntries(res);
-    console.log(queParams)
-    console.log(queParams.path)
     if(queParams.number_order !== undefined){
         let no = queParams.number_order;
 

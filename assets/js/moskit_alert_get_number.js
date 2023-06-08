@@ -25,7 +25,8 @@ const alertTrigger1 = document.getElementById('moskit-contact_tel_1')
 const alertTrigger2 = document.getElementById('moskit-contact_tel_2')
 const alertTrigger3 = document.getElementById('info-contact-email')
 const alertTrigger4 = document.getElementById('copyadress')
-if (alertTrigger1 || alertTrigger2 || alertTrigger3 || alertTrigger4) {
+const alertTrigger5 = document.getElementById('copyadress2')
+if (alertTrigger1 || alertTrigger2 || alertTrigger3 || alertTrigger4 || alertTrigger5) {
 alertTrigger1.addEventListener('click', () => {
     alert('Отлично, номер '+alertTrigger1.textContent+' скопирован в буфер!', 'success')
 })
@@ -37,6 +38,9 @@ alertTrigger3.addEventListener('click', () => {
 })
 alertTrigger4.addEventListener('click', () => {
     alert('Отлично, адрес офиса: "'+alertTrigger4.textContent+'" скопирован в буфер!', 'success')
+})
+alertTrigger5.addEventListener('click', () => {
+    alert('Отлично, адрес офиса: "'+alertTrigger5.textContent+'" скопирован в буфер!', 'success')
 })
 }
 
