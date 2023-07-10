@@ -5,8 +5,110 @@ main{
     display: flex;
     flex-grow: 1;
 }
+.info-btn, .form-select{
+    cursor: pointer;
+}
+.header--container__center{
+    padding-left: 70px;
+}
 .main{
     justify-content: flex-start;
+}
+.title-statistic-box{
+    padding-bottom: 20px !important;
+    padding-top: 20px;
+}
+.box_back_in_order{
+    height: 60px;
+    width: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.table_history_btn{
+    padding-left: 0 !important;
+    vertical-align: bottom;
+}
+.order_counter_status{
+    display: flex;
+    flex-direction: column;
+}
+.box_left-menu_order_page--container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 25px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.table_form{
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+}
+.main_page_order_book{
+    width: 930px !important;
+    align-self: flex-end;
+    margin-right: unset;
+    background-color: unset;
+    margin-top: 40px;
+    border-radius: 10px;
+    align-self: flex-start;
+}
+tbody, td, tfoot, th, thead, tr{
+    border-style: unset !important;
+}
+.box_left-menu_order_page{
+    width: 170px ;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+.container--go{
+    position: fixed;
+    width: 170px ;
+}
+.main_order_page{
+    background-color: unset !important;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1130px !important;
+}
+.btn_reload_img{
+    filter: invert(.3);
+    pointer-events: none;
+}
+.btn_reload{
+    transition: 0s;
+}
+.btn_reload:hover{
+    border: 1px solid #ced4da;
+    background-color: unset;
+    border-bottom-color: #005fa3;
+}
+.btn-menu-filter + .btn-menu-filter{
+    margin-left: 0px;
+}
+.btn-status, .btn-pay{
+    border: 1px solid #ced4da;
+}
+.btn-outline-secondary:hover{
+    --bs-btn-hover-bg: unset;
+    border: 1px solid #ced4da;
+    color: #6c757d;
+    border-bottom-color: #005fa3 !important;
+}
+.btn_reload--style{
+    padding:0;
+    width:42px;
+    height:40px;
+    border: 0;
 }
 #btn_search{
     pointer-events: none;
@@ -17,12 +119,10 @@ main{
     font-weight: 100;
     font-size: 14px;
     padding: 8px;
-    align-self: center;
 }
 #title_name_order_status{
     position: relative;
-    padding-bottom: 20px;
-    font-size: 22px; font-weight: 600;
+    font-size: 26px; font-weight: 600;
 }
 .btn__add--order{
     height: 35px;
@@ -70,23 +170,27 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 0!important;
+    padding-bottom:20px;
 }
 .column_count_field{
     --bs-badge-font-size: 0.47em !important; 
 }
 #menu_filter{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 25px;
+    background-color: white;
+    border-radius: 10px;
 }
 #menu_filter div + div{
-    margin-left: 20px;
+    margin-top: 20px;
 }
 #menu_filter div div{
     padding-bottom: 10px;
 }
 .info-btn + .info-btn{
-    margin-left: 20px;
+    margin-top: 15px;
 }
 .liModalLabel, .headerModalLabel, .dataModalLabel, .footerInfoModalLabel{
     font-size: 14px;
@@ -109,12 +213,7 @@ main{
 .container--row_menu{
     display: flex;
     flex-direction: row;
-    width: 100%;
     align-items: flex-end;
-    padding-bottom: 20px;
-}
-.container__menu--filter{
-    padding-right: 20px;
 }
 .table{
     vertical-align: middle;
@@ -131,8 +230,11 @@ main{
     color: #ffffff;
 }
 
-.table_col_width--zakaz,  .table_col_width--time_last_status, .table_col_width--time_last_status_oplat, .table_col_width--sum_order, .table_col_width--last_oplata, .th_ostatok, .th_oplata, .table_col_width--montazh{
+.table_col_width--zakaz,  .table_col_width--time_last_status, .table_col_width--time_last_status_oplat, .table_col_width--sum_order, .table_col_width--last_oplata, .th_ostatok, .th_oplata{
     width: 110px;
+}
+.table_col_width--montazh{
+    width: 140px;
 }
 .td_oplata{
     width: 100px;
@@ -142,42 +244,54 @@ main{
 }
 
 .table_col_width--fio{
-    width: 290px;
+    width: 200px;
     padding-left: 0 !important;
 }
 .table_col_width--contact {
-    width: 150px;
+    width: 170px;
 }
-.table_col_width--price_change_order{
-    width: 190px;
-}
-.table_col_width--time_last_status{
-    width: 120px;
+.table_col_width--price_change_order, .table_col_width--order__status, .table_col_width--time_last_status{
+    width: 100px;
 }
 .table_col_width--dostavka{
-    width: 175px;
+    width: 130px;
     padding-right: 0 !important;
+}
+.table_col_width--dostavka input{
+    width: 130px;
 }
 .table_col_width--order__status{
     padding-right: 0 !important;
-    width: 180px;
+   
 }
 .table_col_width--adres{
     width: 370px
+}
+.table-status-set{
+    width: 425px
+    
+}
+.table-btn-set{
+    width: fit-content;
+}
+.on_pay .btn_reload_img, .on_status .btn_reload_img, .btn-delete:active .btn_reload_img {
+    filter: invert(1);    
+}
+.btn-delete:active{
+    background-color: steelblue !important;
+    border: unset;
 }
 .table_col_width--btn-delete > button{
     margin-left: 0 !important;
 }
 .table_col_width--btn-hist_oplata, .table_col_width--btn-hist_tek_status, .table_col_width--btn-delete{
-    width: 170px;
-}  
-.table_col_width--btn-hist_oplata > button, .table_col_width--btn-hist_tek_status > button, .table_col_width--btn-delete > button{
-    width: 100%;
-}                                                          
+    width: 42px;
+    padding: 0 !important;
+}                                                        
  .table_header--color{
-    box-shadow: 0px 3px 5px 0px #8c989b78;
-    -webkit-box-shadow: 0px 3px 5px 0px #8c989b78;
-    -moz-box-shadow: 0px 3px 5px 0px #8c989b78;
+    box-shadow: 0px 2px 2px 0px #8c989b42;
+    -webkit-box-shadow: 0px 2px 2px 0px #8c989b42;
+    -moz-box-shadow: 0px 2px 2px 0px #8c989b42;
  }                               
  .balkon-wrapper {
     padding-left: 30px !important;
@@ -208,9 +322,6 @@ main{
 }
 .catalog-moskit-wrapper{
     width: 1130px;
-}
-.container--row_menu{
-    padding-top: 20px;
 }
 
 @media (max-width: 1080px) {

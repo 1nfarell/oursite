@@ -497,55 +497,73 @@ function table_mainValue(SelectData){
                 </table>
             </td>
         </tr>
-        <tr>            
+        <tr>  
             <td colspan="6">
-                <table class="table table-sm table-borderless mb-2 ">
-                    <thead>
-                        <tr>
-                            <th class="table_col_width--btn-hist_oplata" scope="col"></th>
-                            <th class="table_col_width--btn-hist_tek_status" scope="col"></th>
-                            <th class="table_col_width--btn-delete" scope="col"></th>                           
-                            <th scope="col">Статус оплаты</th>
-                            <th class="table_col_width--time_last_status" scope="col">Изм. тек. стат.</th>
-                            <th scope="col">Текущий статус готовности</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <td class="table_col_width--btn-hist_oplata">
-                                <button class="btn btn-outline-secondary btn_reload btn-pay" id="btnPay${SelectData[key]['number_order']}" onclick="table_history_pay_btn(this,'${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}', 'btnstatus${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}')" type="button">Ист. стат. оплаты</button>
-                        
-                            </td>
-                            <td class="table_col_width--btn-hist_tek_status">
-                                <button class="btn btn-outline-secondary btn_reload btn-status" id="btnstatus${SelectData[key]['number_order']}" onclick="table_history_status_btn(this, '${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}', 'btnPay${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}')" type="button">Ист. стат. готовности</button>
-                            </td>
-                            <td class="table_col_width--btn-delete">
-                                <button class="btn btn-outline-secondary btn_reload btn-delete" style="display:none" onclick="table_delete_btn('${SelectData[key]['number_order']}')" type="button">Удалить заказ</button>
-                            </td>
-                            <td class="table_col_width--price_change_order"> 
-                                <select name="price_change_order" onchange = "table_price_change_orderValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}', '${SelectData[key]['sum_pay']}')" class="form-select form-select-default price_change-disabled" aria-label=".form-select-sm пример">
-                                    <option disabled selected>${SelectData[key]['price_order__status']}</option>
-                                    <option value="Не оплачен">Не оплачен</option>
-                                    <option value="Предоплата">Предоплата</option>
-                                    <option value="Рассрочка">Рассрочка</option>
-                                    <option value="Оплачен">Оплачен</option>
-                                    <option  style="display:none" value="Возврат">Возврат</option>
-                                </select>                               
-                            </td>                                                           
-                            <td class="table_col_width--time_last_status">${SelectData[key]['time_last_status']}</td>                               
-                            <th class="table_col_width--order__status" >
-                                <select name="order__status" onchange = "table_statusValue(this, '${SelectData[key]['number_order']}')" class="form-select form-select-default form-select__changes" aria-label=".form-select-sm пример">
-                                    <option disabled selected>${SelectData[key]['order__status']}</option>
-                                    <option value="В обработке">В обработке</option>
-                                    <option value="Сборка">Сборка</option>
-                                    <option value="Доставка">Доставка</option>
-                                    <option value="Готово к отгрузке">Готово к отгрузке</option>
-                                    <option value="Выполнен">Выполнен</option>
-                                    <option value="Отменен">Отменен</option>
-                                </select>
-                            </th>
-                        </tr>
-                    </tbody>
+                <table class="table table-sm table-borderless mb-2 "> 
+                    <tr>         
+                        <td class="table_history_btn"> 
+            
+                            <table class="table table-sm table-borderless mb-0 table-btn-set">
+                                <thead>
+                                    <tr>
+                                        <th class="table_col_width--btn-hist_oplata" scope="col"></th>
+                                        <th class="table_col_width--btn-hist_tek_status" scope="col"></th>
+                                        <th class="table_col_width--btn-delete" scope="col"></th>  
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>                           
+                                        <td class="table_col_width--btn-hist_oplata">
+                                            <button class="btn btn-outline-secondary btn_reload btn-pay btn_reload--style" id="btnPay${SelectData[key]['number_order']}" onclick="table_history_pay_btn(this,'${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}', 'btnstatus${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}')" type="button"><img class="btn_reload_img" style="width:23px" src="/images/icon-oplata.png" title="посмотреть историю изменений статуса оплаты заказа"></button>                 
+                                        </td>
+                                        <td class="table_col_width--btn-hist_tek_status">
+                                            <button class="btn btn-outline-secondary btn_reload btn-status btn_reload--style" id="btnstatus${SelectData[key]['number_order']}" onclick="table_history_status_btn(this, '${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}', 'btnPay${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}')" type="button"><img class="btn_reload_img" style="width:23px" src="/images/icon-status.png" title="посмотреть историю изменений статуса выполнения заказа"></button>
+                                        </td>
+                                        <td class="table_col_width--btn-delete">
+                                            <button class="btn btn-outline-secondary btn_reload btn-delete btn_reload--style" style="display:none" onclick="table_delete_btn('${SelectData[key]['number_order']}')" type="button"><img class="btn_reload_img" style="width:23px" src="/images/icon-delete.png" title="удалить заказ навсегда"></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </td>
+                        <td style="text-align: -webkit-right; padding-right:0">                         
+                            <table class="table table-sm table-borderless mb-0 table-status-set">
+                                <thead>
+                                    <tr>                
+                                        <th class="table_col_width--price_change_order" scope="col">Статус оплаты</th>
+                                        <th class="table_col_width--time_last_status" scope="col">Изм. тек. стат.</th>
+                                        <th class="table_col_width--order__status" scope="col">Текущий статус</th>                            
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>   
+                                        <td class="table_col_width--price_change_order"> 
+                                            <select name="price_change_order" onchange = "table_price_change_orderValue(this, '${SelectData[key]['number_order']}', '${SelectData[key]['payment_balance']}', '${SelectData[key]['price_order']}', '${SelectData[key]['sum_pay']}')" class="form-select form-select-default price_change-disabled" aria-label=".form-select-sm пример">
+                                                <option disabled selected>${SelectData[key]['price_order__status']}</option>
+                                                <option value="Не оплачен">Не оплачен</option>
+                                                <option value="Предоплата">Предоплата</option>
+                                                <option value="Рассрочка">Рассрочка</option>
+                                                <option value="Оплачен">Оплачен</option>
+                                                <option  style="display:none" value="Возврат">Возврат</option>
+                                            </select>                               
+                                        </td>                                                           
+                                        <td class="table_col_width--time_last_status">${SelectData[key]['time_last_status']}</td>                               
+                                        <th class="table_col_width--order__status" >
+                                            <select name="order__status" onchange = "table_statusValue(this, '${SelectData[key]['number_order']}')" class="form-select form-select-default form-select__changes" aria-label=".form-select-sm пример">
+                                                <option disabled selected>${SelectData[key]['order__status']}</option>
+                                                <option value="В обработке">В обработке</option>
+                                                <option value="Сборка">Сборка</option>
+                                                <option value="Доставка">Доставка</option>
+                                                <option value="Готово к отгрузке">Готово к отгрузке</option>
+                                                <option value="Выполнен">Выполнен</option>
+                                                <option value="Отменен">Отменен</option>
+                                            </select>
+                                        </th>                                        
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </td> 
+                    </tr>
                 </table> 
             </td>
         </tr> 
@@ -870,25 +888,20 @@ function add_disabled_field_table(SelectData){
         } else {
             table[0].querySelector('.table_col_width--dostavka').style.display = "table-cell";  
             table[0].querySelector('.input--dostavka').style.display = "table-cell";
-        }
-        //отключение "последняя оплата"
-        // if(SelectData[i]['price_order__status'] == 'Не оплачен'){ 
-           
-        //         // table[0].querySelector('.table_col_width--last_oplata').style.display = "none"
-        //         // table[0].querySelector('.table_col_width--last_oplata--text').style.display = "none"
-        // }       
+        }     
     }
 }
+
+
 //вывод заказов
 var currentEventListener = null;
 const getAllOrder = (
     change_select_order,
     change_select_user,
     search_order_in_db,
+    date_sort_order_value,
 ) => {
-    //удаление таблиц перед выводом выбранной селектором
-    // $('#table__order').children().remove();
-
+    
     let counter_pass_first = 0;
     const counter_step = 10; //шаг бесконечного скрола (изменять на такое же значение и в get_order.php)
     var counter_pass = 10;
@@ -903,6 +916,7 @@ const getAllOrder = (
                 "change_select_order": change_select_order,
                 "change_select_user": change_select_user,
                 "search_order_in_db":search_order_in_db,
+                "date_sort_order_value": date_sort_order_value,
             },
         success: function(data){
             
@@ -913,7 +927,10 @@ const getAllOrder = (
                 $('#table__order').children().remove(); 
                 $(field_table__order).append(`${table_mainValue(FSelectData)}`) 
                 add_disabled_field_table(FSelectData)
-            } 
+            } else {
+                $('#table__order').children().remove(); 
+                $('#table__order').append('<div>Нет заказов</div>');
+            }
     }});
     //бесконечный скролл и вывод таблиц заказов
     if(currentEventListener) {
@@ -939,6 +956,7 @@ const getAllOrder = (
                         "change_select_order": change_select_order,
                         "change_select_user": change_select_user,
                         "search_order_in_db":search_order_in_db,
+                        "date_sort_order_value": date_sort_order_value,
                     },
                 success: function(data){
                     
@@ -1004,9 +1022,7 @@ const getAllOrder = (
                         block: "center" // or "end"
                        
                     });
-                    window.removeEventListener('scroll', currentEventListener)
-                    // $('#status__input--search').val('');
-                
+                    window.removeEventListener('scroll', currentEventListener)                
                 } else {
                     let fd_order = '';
                     let fd_user = '';
@@ -1076,20 +1092,30 @@ let fd_user = '';
 getAllOrder(fd, fd_user);
 get_count_status(fd_user)
 display_count_all_order(fd_user);
+//обработчик кнопки сохранения таблицы в excel
+var btn_get_excel = document.getElementById("btn_get_excel");
 
 //прослушиватель фильтров (селекторов) по статусу заказа и по пользователям
 let currentEventListenerSelectOrder = null;  
 let sel = document.getElementById('filter_order');
 let sel_user = document.getElementById('filter_name_who_add_order');
 let input_search_value = document.getElementById('status__input--search');
+let date_sort_order = document.getElementById('date_sort_order');
+
+
+let debounceTimer;
+let debounceTimer2;
 if(currentEventListenerSelectOrder) {
     sel.removeEventListener('change', currentEventListenerSelectOrder);  
-    sel_user.removeEventListener('change', currentEventListenerSelectOrder);     
+    sel_user.removeEventListener('change', currentEventListenerSelectOrder);  
+    input_search_value.removeEventListener('input', currentEventListenerSelectOrder);
+    date_sort_order.removeEventListener('click', currentEventListenerSelectOrder);
 }
 currentEventListenerSelectOrder = () => {
     fd = sel.value;
     fd_user = sel_user.value;
     search_order_in_db = input_search_value.value;
+    
     if (fd == 'В обработке'){  
         $('#title_name_order_status').text('ВСЕ "В ОБРАБОТКЕ"');    
         if (fd_user != 'Без фильтра'){
@@ -1126,8 +1152,7 @@ currentEventListenerSelectOrder = () => {
         if (fd_user == 'Без фильтра'){
             fd_user = '';       
             display_count_all_order(fd_user);
-        } else {
-            
+        } else {            
             display_count_all_order(fd_user);
             $('#title_name_order_status').text('ВСЕ ЗАКАЗЫ: '+fd_user.toUpperCase());
         }
@@ -1135,55 +1160,47 @@ currentEventListenerSelectOrder = () => {
     if (fd_user == 'Без фильтра'){
         fd_user = '';        
     } 
-    get_count_status(fd_user)  
-    getAllOrder(fd, fd_user, search_order_in_db); 
-};
-sel.addEventListener('change', currentEventListenerSelectOrder);    
-sel_user.addEventListener('change', currentEventListenerSelectOrder);   
-
-//прослушиватель поисковой строки (инпута) 
-let debounceTimer;
-let debounceTimer2;
-let currentEventListenerinputSearch = null;
-if(currentEventListenerinputSearch) {
-    input_search_value.removeEventListener('input', currentEventListenerinputSearch);   
-}
-currentEventListenerinputSearch = () => {
-    fd = sel.value;
-    fd_user = sel_user.value;
-    search_order_in_db = input_search_value.value;
-    if (fd_user == 'Без фильтра'){
-        fd_user = '';
-    }   
-    if (fd == 'Без фильтра'){            
-        fd = '';
+    get_count_status(fd_user)      
+    
+    let date_sort_order_value = 'DESC';
+    console.log(event.target.id)
+    // сортировка старый - новый заказ  
+    if(event.target.id == 'date_sort_order' && date_sort_order.value == 'DESC'){
+        date_sort_order.value = 'ASC'
+        date_sort_order_value = date_sort_order.value
+    } else if(event.target.id == 'date_sort_order' && date_sort_order.value == 'ASC') {
+        date_sort_order.value = 'DESC'
+        date_sort_order_value = date_sort_order.value      
     }
+    
 
     // Очистите таймер, если он уже был запущен
     clearTimeout(debounceTimer);
     clearTimeout(debounceTimer2);
+   
     let input_val = input_search_value.value;
     // проверка что введено п/авыа
-    if(input_val.match(/^.*\\.+$/)){
+    if(input_val.match(/^.*\\.+$/) || input_val.match(/^.*\/.+$/)){
         // Назначьте новый таймер для вызова функции через 500 миллисекунд
         debounceTimer = setTimeout(() => {
-            getAllOrder(fd, fd_user, search_order_in_db);
+            getAllOrder(fd, fd_user, search_order_in_db, date_sort_order_value);
         }, 1000);
     } else if (input_val == '') {
         debounceTimer2 = setTimeout(() => {
-        getAllOrder(fd, fd_user, search_order_in_db);
+        getAllOrder(fd, fd_user, search_order_in_db, date_sort_order_value)
         }, 1000);        
     }
 };
-input_search_value.addEventListener('input', currentEventListenerinputSearch);    
-
-
+sel.addEventListener('change', currentEventListenerSelectOrder);    
+sel_user.addEventListener('change', currentEventListenerSelectOrder);   
+input_search_value.addEventListener('input', currentEventListenerSelectOrder); 
+date_sort_order.addEventListener('click', currentEventListenerSelectOrder);
 
 //цветные кнопки с цифрами статусы заказа и оплаты
 function display_status_info(status_info){
     for(i in status_info){    
         let info_html = `
-            <span class="badge text-bg-primary position-relative info-btn">${status_info[i]['status']}
+            <span class="badge text-bg-primary  position-relative info-btn" onclick="get_order_after_click_status(this)">${status_info[i]['status']}
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger info-btn_counter">${status_info[i]['results']}</span>
             </span>    
         `
@@ -1203,6 +1220,72 @@ function display_status_info(status_info){
         }
     }
 }
+
+// нажатие на цветные кнопки статуса \ получение значения
+function get_order_after_click_status(info_val){
+    let info_value = info_val.innerText.split('\n')[0];  
+    fd = info_value;    
+    fd_user = sel_user.value;
+    search_order_in_db = input_search_value.value;
+
+    
+    if (fd == 'В обработке'){  
+        $('#title_name_order_status').text('ВСЕ "В ОБРАБОТКЕ"');    
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "В ОБРАБОТКЕ": '+fd_user.toUpperCase());           
+        }    
+        sel.value="В обработке";
+    } else if (fd == 'Сборка'){   
+        $('#title_name_order_status').text('ВСЕ "В СБОРКЕ"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "В СБОРКЕ: '+fd_user.toUpperCase());
+        }
+        sel.value="Сборка";
+    } else if (fd == 'Доставка'){ 
+        $('#title_name_order_status').text('ВСЕ "В ДОСТАВКЕ"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "В ДОСТАВКЕ: '+fd_user.toUpperCase());
+        }
+        sel.value="Доставка";
+    } else if (fd == 'Готово к отгрузке'){  
+        $('#title_name_order_status').text('ВСЕ "ГОТОВО К ОТГРУЗКЕ"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "ГОТОВО К ОТГРУЗКЕ: '+fd_user.toUpperCase());
+        }
+        sel.value="Готово к отгрузке";
+    } else if (fd == 'Выполнен'){      
+        $('#title_name_order_status').text('ВСЕ "ВЫПОЛНЕН"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "ВЫПОЛНЕН: '+fd_user.toUpperCase());
+        }
+        sel.value="Выполнен";
+    } else if (fd == 'Отменен'){       
+        $('#title_name_order_status').text('ВСЕ "ОТМЕНЕН"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "ОТМЕНЕН: '+fd_user.toUpperCase());
+        }
+        sel.value="Отменен";
+    } else if (fd == 'Предоплата'){       
+        $('#title_name_order_status').text('ВСЕ "ПРЕДОПЛАТА"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "ПРЕДОПЛАТА: '+fd_user.toUpperCase());
+        }
+        sel.value="Без фильтра";
+    } else if (fd == 'Рассрочка'){       
+        $('#title_name_order_status').text('ВСЕ "РАССРОЧКА"'); 
+        if (fd_user != 'Без фильтра'){
+            $('#title_name_order_status').text('ВСЕ "РАССРОЧКА: '+fd_user.toUpperCase());
+        }
+        sel.value="Без фильтра";
+    }     
+
+    if (fd_user == 'Без фильтра'){
+        fd_user = '';        
+    } 
+    get_count_status(fd_user) 
+    getAllOrder(fd, fd_user, search_order_in_db); 
+    
+}
 //цветные кнопки с цифрами статусы заказа и оплаты
 function get_count_status(fd_user){
     $.ajax({
@@ -1220,7 +1303,108 @@ function get_count_status(fd_user){
             if(temp !=null){  
                 $(count_status_field).children().remove(); 
                 display_status_info(temp); 
-            } 
+            } else {
+                $(count_status_field).children().remove(); 
+            }
     }});
 } 
+
+//очистить фильтры
+function cleanFilter(){
+    sel.value="Без фильтра";
+    sel_user.value="Без фильтра";
+    input_search_value.value='';
+    let fd = '';
+    let fd_user = '';
+    let search_order_in_db = '';
+    $('#title_name_order_status').text('ВСЕ ЗАКАЗЫ');
+    display_count_all_order(fd_user);
+    get_count_status(fd_user)  
+    date_sort_order.value = "DESC";
+    getAllOrder(fd, fd_user, search_order_in_db, date_sort_order.value); 
+}   
+
+//сохранение в Excel .. библиотека SheetJS
+const get_excel = (
+    change_select_order,
+    change_select_user,
+    search_order_in_db,
+) => {
+    
+    $.ajax({
+        url: 'order/get_order.php',
+        method: 'POST',
+        data: {                 
+                "change_select_order": change_select_order,
+                "change_select_user": change_select_user,
+                "search_order_in_db":search_order_in_db,
+            },
+        success: function(data){
+            
+            let a_data = JSON.parse(data);                  
+            let temp_a_data =  a_data; 
+
+            var wb = XLSX.utils.book_new();
+
+            // Создаем новый лист в книге
+            var ws = XLSX.utils.json_to_sheet(temp_a_data);
+        
+            // Добавляем лист в книгу
+            XLSX.utils.book_append_sheet(wb, ws, 'Заказы');
+
+            var newHeaders = ['Номер заказа', 'Наименование заказа', 'Сумма заказа', 'Остаток оплаты', 'Статус оплаты', 'Последний платеж', 'Статус заказа', 'Посл. изм. статуса', 'ФИО заказчика', 'Телефон заказчика', 'Адрес заказчика для доставки/монтажа', 'ФИО Монтажника', 'Дата монтажа', 'Добавил заказ', 'Дата оформления'];
+            XLSX.utils.sheet_add_aoa(ws, [newHeaders], {origin: 'A1'});
+        
+            // Задаем ширину столбцов на основе содержимого
+            var columnWidths = newHeaders.map(function (header) {
+                return { wch: header.length + 5 }; // You can adjust the additional width as per your requirement
+              });
+              ws['!cols'] = columnWidths;
+
+
+            // Преобразуем книгу в формат Excel
+            var wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'binary' });
+        
+            // Создаем объект Blob с данными Excel и типом MIME
+            var blob = new Blob([s2ab(wbout)], { type: 'application/octet-stream' });
+        
+            // Создаем ссылку на скачивание файла Excel
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'Выгрузка заказов с сайта Открытие.xlsx';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+        
+    });
+   
+    // Функция для преобразования строк в бинарный формат
+    function s2ab(s) {
+        var buf = new ArrayBuffer(s.length);
+        var view = new Uint8Array(buf);
+        for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+        return buf;
+    }   
+}  
+
+//обработчик кнопки сохранения таблицы в excel
+let handleClick_get_excel = null;
+if(handleClick_get_excel) {
+    btn_get_excel.removeEventListener('change', handleClick_get_excel);  
+}
+handleClick_get_excel = () => {    
+    fd = sel.value;
+    fd_user = sel_user.value;
+    if (fd_user == 'Без фильтра'){
+        fd_user = '';        
+    } 
+    if (fd == 'Без фильтра'){
+        fd = '';        
+    } 
+    search_order_in_db = input_search_value.value;    
+    
+    get_excel(fd, fd_user, search_order_in_db);
+};
+btn_get_excel.addEventListener('click', handleClick_get_excel);  
 

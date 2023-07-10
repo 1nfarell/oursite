@@ -1,0 +1,84 @@
+.main{
+    background-color: unset;
+}
+.container--page_statistics{
+    display: flex;
+    flex-direction: column;
+    width: 1130px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+.box_back_in_order button:first-child{
+    border: 0;
+    background-color: unset;
+}
+.catalog-balkon-wrapper{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 45px;
+}
+
+#chart_column_div, #chart_circle_div{
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.container--page_statistics{
+    display: none;
+}
+.column_div--right{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding-left: 40px;   
+}
+.column_div--right__box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+}
+.column_div--right__box+.column_div--right__box{
+    margin-top: 20px;
+}
+.column_div--circle{
+    display: flex;
+    flex-direction: row;
+    width: 1130px;
+}
+.column_div--circle__box{
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 40px;
+}
+.column_div--circle__box + .column_div--circle__box{
+    margin-left: 20px;
+}
+.balkon-wrapper{
+    width: 1130px;
+}
+
+.persent_average_last_month_count{
+    font-size: 30px;
+}
+
+.persent_average_last_month{
+    font-size: 14px;
+}
+
+.persent_average_title{
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.icon_persent_average{
+    width: 12px;
+    vertical-align: unset;
+    height: 12px;
+    margin-left: 5px;
+}

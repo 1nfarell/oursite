@@ -8,7 +8,8 @@ function update_mainValue(updatedUpdates){
     for (let key in updatedUpdates) {
         arr += `<hr>
             <p class="">
-                ${updatedUpdates[key]['date_update']}
+                ${new Date(updatedUpdates[key]['date_update']).toLocaleDateString('ru-RU')}
+                
             </p><hr>`;
         // Получаем массив resultArrayUpdate для текущего ключа
         const array = updatedUpdates[key]['resultArrayUpdate'];

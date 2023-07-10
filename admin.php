@@ -4,7 +4,7 @@ session_start();
 if (!$_SESSION['user']) {
     header('Location: /login.php');
 };
-if ($_SESSION['user']['id'] != 2) {
+if ($_SESSION['user']['id'] != 2 || $_SESSION['user']['id'] != 24) {
     header('Location: /order.php');
 };
 
@@ -80,7 +80,6 @@ if ($_SESSION['user']['id'] != 2) {
                             <!-- <a  href="/cabinet.php">Личный кабинет</a>        
                             <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
                             
-                            <span title="наверх страницы" onclick="topScroll()" class="">Наверх</span>
                             <a  href="/order.php">Заказы</a> 
                             <span title="добавить изменение" data-bs-toggle="modal" data-bs-target="#ModalUpdate" class="">Добавить изменение</span>
                             <!-- Кнопка-триггер модального окна Menu -->
@@ -135,11 +134,7 @@ if ($_SESSION['user']['id'] != 2) {
                                 </div>
                             </div>
                         </div>                        
-                    </form>          
-                    <div style="padding-bottom: 0px;" class="balkon-wrapper">
-                       
-                    </div>
-                   
+                    </form>                      
                 </div>    
             </div>
         </main> 
@@ -215,6 +210,6 @@ if ($_SESSION['user']['id'] != 2) {
         });
     }
 </script>
-
+    
 </body>
 </html>

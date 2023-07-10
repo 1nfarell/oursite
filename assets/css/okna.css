@@ -4,6 +4,9 @@
         display: none !important;
     }    
 }
+.img_shema-pozhar{
+    object-fit: contain;
+}
 .image-markiz{
     border-radius: 10px;
 }
@@ -19,6 +22,7 @@
 }
 #list-example{
     text-align: left;
+    box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
 }
 .list-group-item.active {
     background-color: steelblue;
@@ -27,10 +31,6 @@
 }
 .list-group-item{
     border: 1px solid rgba(0, 0, 0, 0.2);
-   
-    box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
-    -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
-    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 101, 0, 0.07);
 }
 .carouselCaptions-our {
     width: 310px !important;
@@ -74,7 +74,7 @@
     height: 450px;
 }
 
-#carouselExampleCaptions{
+#carouselExampleCaptions, #carouselDoorColor{
     display: flex;
     width: 100%;
     height: 450px;
@@ -84,6 +84,11 @@
     border: unset;
     box-shadow: unset;
     -webkit-box-shadow: unset;
+}
+
+#carouselDoorColor .img-profil{
+    height: 457px;
+    margin-top: 0px;
 }
 
 .carousel-box-profil{
@@ -102,15 +107,15 @@
     height: 450px;    
 }
 
-#carouselExampleCaptions .carousel-indicators button  {
+#carouselExampleCaptions .carousel-indicators button, #carouselDoorColor .carousel-indicators button {
     background-color: rgb(0, 0, 0);
 }
 
-#carouselExampleCaptions .carousel-control-prev-icon{
+#carouselExampleCaptions .carousel-control-prev-icon, #carouselDoorColor .carousel-control-prev-icon{
     filter: invert(0);
 }
 
-#carouselExampleCaptions .carousel-control-next-icon{
+#carouselExampleCaptions .carousel-control-next-icon,  #carouselDoorColor .carousel-control-next-icon{
     filter: invert(1);
 }
 
@@ -123,13 +128,22 @@
     margin-top: 100px;
 }
 
-#carouselExampleCaptions .carousel-indicators{
+#carouselExampleCaptions .carousel-indicators, #carouselDoorColor .carousel-indicators{
     margin-bottom: 0;
 }
 
 #carouselExampleCaptions .carousel-caption{
     top: -20px;
     bottom: unset;
+    text-align: left;
+    padding-bottom: 0;
+    color: #404149;
+}
+
+#carouselDoorColor .carousel-caption{
+    top: -20px;
+    bottom: unset;
+    left: 28px;
     text-align: left;
     padding-bottom: 0;
     color: #404149;
@@ -142,7 +156,7 @@
     align-items: center;
 }
 @media (max-width: 1080px){
-    #carouselExampleCaptions .d-none{
+    #carouselExampleCaptions .d-none, #carouselDoorColor .d-none{
         display: block !important;
     }
     .image-markiz{

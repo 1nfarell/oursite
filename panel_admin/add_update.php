@@ -15,7 +15,7 @@ function add_Update(){
         //добавление основных полей из формы
         $text_update = $_POST['text_update'.$x];
         $type_update = $_POST['type_update'.$x];  
-        $date_update= date("d.m.y");
+        $date_update= date("Y.m.d");
        
         $array = array('date_update' => $date_update ,'type_update' => $type_update, 'text_update' => $text_update);
 

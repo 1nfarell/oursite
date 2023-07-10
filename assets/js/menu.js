@@ -54,12 +54,13 @@ const getAllMenu = (
                                             <a class="menu__href--field" title="Москитные двери" href="/catalog/moskit">Москитные двери</a>
                                             <a class="menu__href--field" title="Алюминиевые двери" href="/catalog/aluminii-system">Алюминиевые двери</a>
                                             <a class="menu__href--field" title="Раздвижные двери" href="/catalog/portal-okno">Раздвижные двери</a>
-                                            <a class="menu__href--field" title="Балконные двери" href="/catalog/dver-balkonnaya">Балконные двери</a>
-                                            <a class="menu__href--field" title="Двери входные" href="/catalog/doors/dver-vhodnaya">Двери входные</a>
+                                            <a class="menu__href--field" title="Балконные двери" href="/catalog/door">Балконные двери</a>
+                                            <a class="menu__href--field" title="Двери душевые" href="/catalog/doors/dver-dushevaya">Двери душевые</a>
                                         </div>
                                         <div class="menu__container--box menu__container--box__marginleft" >
-                                            <a class="menu__href--field" title="Двери душевые" href="/catalog/doors/dver-dushevaya">Двери душевые</a>
-                                            <a class="menu__href--field" title="Стеклянные двери" href="/catalog/doors/dver-steklyannaya">Стеклянные двери</a>
+                                            <a class="menu__href--field" title="Двери входные" href="/catalog/doors/dver-vhodnaya">Двери входные</a>
+                                            <a class="menu__href--field" title="Двери межкомнатные" href="/catalog/door">Двери межкомнатные</a>                                            
+                                            <a class="menu__href--field" title="Стеклянные двери" href="/catalog/door">Стеклянные двери</a>
                                             <a class="menu__href--field" title="Противопожарные двери" href="/catalog/doors/dver-pozhar">Противопожарные двери</a>
                                             <a class="menu__href--field" title="Противопожарные люки" href="/catalog/doors/dver-luk">Противопожарные люки</a>
                                             <a class="menu__href--title" title="Металлические стеллажи" style="padding-top: 5px;" href="/catalog/stellaj">Металлические стеллажи</a>
@@ -185,7 +186,7 @@ const getAllMenu = (
                                 </div>
                                 <div class="menu__container--box">
                                     <a class="menu__href--title" title="Оконная фурнитура" href="/catalog/okna">Оконная фурнитура</a>
-                                    <a class="menu__href--field" title="Фурнитура ENDOV" href="/catalog/okna">Фурнитура ENDOV</a>
+                                    <a class="menu__href--field" title="Фурнитура ENDOV" href="/catalog/okna">Фурнитура ENDOW</a>
                                     <a class="menu__href--field" title="Фурнитура MACO" href="/catalog/okna">Фурнитура MACO</a>
                                     <a class="menu__href--field" title="Фурнитура SIEGENIA" href="/catalog/okna">Фурнитура SIEGENIA</a>
                                 </div>

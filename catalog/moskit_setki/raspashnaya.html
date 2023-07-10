@@ -129,6 +129,29 @@
                           <a class="list-group-item list-group-item-action" href="#list-item-8">Наши работы и отзывы</a>
                           <a class="list-group-item list-group-item-action" href="#list-item-9">Похожие изделия</a>
                         </div>
+                        <div class="list-group list-group__padding">
+                            <a class="list-group-item list-group-item-action" href="/images-catalog/moskit-preview-video.png" data-bs-toggle="modal" data-bs-target="#modalvideo" alt="как сделать замер москитной сетки">
+                                <img class="icon-ruletka" src="/images-catalog/icon-ruletka.png"> 
+                                <div>Как сделать замер</div>
+                                <div>москитной сетки на окно?</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal fade video moskit-video" id="modalvideo" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Замер сетки самостоятельно.</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    <video loading=lazy class="imagetitlemoskit-img contast titlemoskit--drop-shadow video" controls="controls" style="border-radius:10px;" alt="как сделать замер москитной сетки" >
+                                        <source src="/video/kak_sdelat_zamer_setki.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="balkon-wrapper balkon-wrapper-planshetwdth">
                        
@@ -148,9 +171,23 @@
                             <p><strong>Оконный завод Открытие изготавливает распашные москитные сетки на окна, двери, балконы</strong> и 
                                 любые другие проёмы различной конфигурации и типа конструкции. <strong>Заказывая распашную москитную сетку 
                                     в Волжском под заказ</strong> вы получаете качественное изделие по конкурентной цене.</p>
+                            <div>
+                                <div class="okna-garant-box">                                    
+                                    <img loading=lazy src="/images-catalog/okna-garant.png" class="okna-garant d-block">
+                                    <p>Мы более 20 лет <strong>производим и устанавливаем распашные москитные сетки</strong> и даем гарантию на нашу продукцию.</p>
+                                </div>
+                                <div class="okna-garant-box">                                    
+                                    <img loading=lazy src="/images-catalog/okna-garant.png" class="okna-garant d-block">
+                                    <p><strong>Изготавливаем и устанавливаем москитные сетки</strong>: рамные, вставные, раздвижные, распашные, рулонные, плиссе.</p>
+                                </div>
+                                <div class="okna-garant-box">                                    
+                                    <img loading=lazy src="/images-catalog/okna-garant.png" class="okna-garant d-block">
+                                    <p>Распашные москитные сетки, выполненные заводом «Открытие» отвечают всем требованиям ГОСТа.</p>
+                                </div>                                
+                            </div>
                         </div>
-                        <div class="color-size-wrapper">
-                            <!-- <img loading=lazy class="moskit-besplatno" src="/images-catalog/moskit-besplatno.png" alt="бесплатно при заказе москитной сетки"> -->
+                        <div class="color-size-wrapper besplatno-box">
+                            <!-- блок рекламы -->
                         </div>
                     </div>
                     <div class="balkon-wrapper balkon-wrapper__revers">
@@ -601,9 +638,19 @@
      <!-- Всплывающие окна на странице / Копирование номера телефона в буфер -->
      <script src="/assets/js/moskit_alert_get_number.js"></script>
      <script src="/assets/js/menu.js"></script>
+     <script src="/assets/js/ad_block.js"></script>
     <script>
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
+        });
+    </script>
+     <script>
+        $(document).on('hide.bs.modal', function(e) {
+        const $target = $(e.target);
+        if ($target.hasClass('video')) {
+            const video = $target.find('video')[0];
+            video.pause();
+        }
         });
     </script>
     <!-- меню навигации -->

@@ -11,11 +11,22 @@
     background-color: unset;
     border-color: unset;
 }
-
+#carousel_ad_block{
+    border: unset;
+    box-shadow: unset;
+}
 .besplatno-box{
     display: flex;
     flex-direction: column !important;
     align-items: center;
+
+    width: 100%;
+    min-width: 240px;
+    max-width: 555px;
+    height: 100%;
+    max-height: 312px;
+    min-height: 135px;
+    aspect-ratio: 16/9;
 }
 
 .besplatno-box > span{
@@ -568,7 +579,7 @@ p{
 
 .color-title-text{
     width: 540px;
-    margin-right: 80px;
+    margin-right: 45px;
 }
 
 .carousel-title-size{
@@ -588,8 +599,8 @@ p{
     padding: 0 !important;
 }
 .project--img__size{
-    width: 100%;
-    object-fit: cover;
+    
+    object-fit: contain;
     display: flex;
     margin: 0 auto;
     border-radius: 10px;

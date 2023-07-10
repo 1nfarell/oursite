@@ -21,6 +21,7 @@ if (!$_SESSION['user']) {
     <!-- <link rel="stylesheet" href="/assets/css/catalog.css"> -->
     <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="stylesheet" href="/assets/css/menu.css">
+    <link rel="stylesheet" href="/assets/css/stat.css">
     <title>Кабинет</title>
     
     <meta name="robots" content="noindex">
@@ -51,7 +52,29 @@ if (!$_SESSION['user']) {
                             <div class="header-time">
                                 <form id="search-form" method="POST">
                                     <div class="input-group input-group-lg">
-                                        <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input"  aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
+                                        <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input" 
+                                        title="Подсказка поиска:
+    по заказу: з\ номер
+    по наименованию: н\ текст
+    по фио: ф\ текст
+    по телефону: т\ 89190010101
+    по адресу: а\ текст
+    по монтажнику: м\ текст
+    по дате монтажа: дм\ 01.01.01 или дд\ 01.01.01
+    по пользователю: п\ текст
+    по дате оформления до\ 01.01.01
+    по статусу оплаты: со\ текст
+    по последней оплате: по\ 01.01.01
+    по статусу готовности: сг\ текст
+Альтернатива: 
+    Вместо обратного слэша (\) можно использовать обычный слэш (/)
+Принцип работы: 
+    Поиск работает по принципу поиска подстроки в строке. 
+    Вводите строку и ждете 2с, найденные записи отобразятся сами.
+Удаление записи: 
+    Вводите номер заказа -> кнопка Enter -> кнопка 'Удалить', в найденном заказе.
+"  
+                                                aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
                                         <button id="btn_search" class="btn btn-outline-secondary" type="submit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -101,7 +124,7 @@ if (!$_SESSION['user']) {
                                 <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
                                 <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
                                 <?php    
-                                    if ($_SESSION['user']['id'] == 2) {
+                                    if ($_SESSION['user']['id'] == 24) {
                                         ?>
                                             <a rel="nofollow" href="/admin.php">Панель админ.</a>
                                         <?
@@ -118,8 +141,18 @@ if (!$_SESSION['user']) {
         </header>   
         <!-- main -->
         <main>   
-            <div class="main">     
-                <div class="catalog-balkon-wrapper catalog-moskit-wrapper">                                   
+            <div class="main main_order_page">   
+                <div class="box_left-menu_order_page">
+                    <div class="container--go">
+                        <div id="menu_filter" class="container__menu--filter">
+                                    <!-- вывод селектора для поиска по стутуса заказа -->
+                        </div>
+                        <div class="box_left-menu_order_page--container">
+                            <div class="order_counter_status"></div> 
+                        </div>
+                    </div>
+                </div>  
+                <div class="catalog-moskit-wrapper main_page_order_book">                                   
                          
                     <form id="form--add_order" method="POST">
                         <div id="ModalAddOrder" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
@@ -223,26 +256,42 @@ if (!$_SESSION['user']) {
                             </div>
                         </div>
                     </div> 
-                    <div style="padding-bottom: 0px;" class="balkon-wrapper">   
-                                
-                        <div class="container--row_menu">
-                            <div id="menu_filter" class="container__menu--filter">
-                                <!-- вывод селектора для поиска по стутуса заказа -->
-                            </div>
-                            <div>
-                                <button type="button" onclick="reload_page()" class="btn btn-outline-primary btn_reload">Reload</button>        
+                    <div  class="all-order-title">
+                        <div id="title_name_order_status" >ВСЕ ЗАКАЗЫ</div> 
+                        <div class="container--row_menu">   
+                            <div class="btn-menu-filter">
+                                <button type="button" id="date_sort_order" value="DESC" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-and-down.png" title="сортировка по дате оформления: старый - новый"></button>        
+                            </div>                          
+                            <div class="btn-menu-filter">
+                                <button type="button" onclick="cleanFilter()" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images/reset-icon.png" title="сброс всех фильтров и очистка поисковой строки"></button>        
+                            </div> 
+                            <div class="btn-menu-filter">
+                                <button type="button" onclick="reload_page()" class="btn btn-outline-secondary btn_reload btn_reload--style" ><img class="btn_reload_img" style="width:23px" src="/images/reload-icon.png" title="перезагрузка страницы"></button>        
+                            </div> 
+                            <?php    
+                                if ($_SESSION['user']['id'] == 2 || $_SESSION['user']['id'] == 24 || $_SESSION['user']['id'] == 27) {
+                                    ?>                              
+                            <div class="btn-menu-filter">
+                                <button id="btn_open_analitics" onclick="show_page_analitics()"  type="button" class="btn btn-outline-secondary btn_reload btn_reload--style" ><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-analitics.png" title="открыть аналитику"></button>
+                            </div>  <?
+                                    };
+                            ?> 
+                            <div class="btn-menu-filter">
+                                <button id="btn_get_excel"  type="button" class="btn btn-outline-secondary btn_reload btn_reload--style" ><img class="btn_reload_img" style="width:23px" src="/images/save-icon.png" title="скачать выбранные заказы в формате Excel"></button>
                             </div>  
                         </div>
                     </div>
-                    <div  class="balkon-wrapper all-order-title">
-                        <div id="title_name_order_status" >ВСЕ ЗАКАЗЫ</div> 
-                        <div class="order_counter_status"></div> 
-                    </div>
-                    <div id="table__order" class="balkon-wrapper table-responsive">
+                    <div id="table__order" class="table-responsive">
                         <!-- вывод таблицы -->
                     </div>
+
+                    
                 </div>    
             </div>
+            <!-- аналитика  -->
+            <div class="container--page_statistics">
+                
+            </div>  
         </main> 
         <!-- футтер -->
         <footer>
@@ -289,12 +338,15 @@ if (!$_SESSION['user']) {
     </div>
 <!-- jquery -->
 <script src="/assets/js/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.4/dist/xlsx.full.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="/assets/js/menu.js"></script>
 <script src="/order/add_order.js"></script>
 <script src="/order/get_order.js"></script>
 <script src="/panel_admin/get_info_about_update.js"></script>
 <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/statistics/stat.js"></script>
 <!-- Липкий заголовок -->
 <script>
     window.onscroll = function() {myFunction()};
@@ -357,5 +409,53 @@ if (!$_SESSION['user']) {
         }
     });
 </script> 
+ <!-- меню навигации -->
+ <script>
+        let list_group = document.querySelector(".box_left-menu_order_page > .container--go");
+        let footer = document.querySelector(".footer");
+
+        const getStoppElementOnHight = ({
+        targetElement,
+        stopperElement,
+        fixedTop,
+        offset = 0
+    }) => {
+        let globalStopperCollisionScrollPosition = null;
+        return (e) => {
+            let targetRect = targetElement.getBoundingClientRect();
+        
+            let stopperReact = stopperElement.getBoundingClientRect();
+        
+            let stopperTopBorder = stopperReact.top;
+        
+            let targetBottomBorder = targetRect.y + targetRect.height + offset;
+            
+            let absoluteTop = stopperTopBorder + window.scrollY - targetRect.height - offset;
+        
+            if(
+                globalStopperCollisionScrollPosition
+                && window.scrollY < globalStopperCollisionScrollPosition
+            ) {
+                targetElement.style.position = "fixed";
+                targetElement.style.top = `${fixedTop}px`;
+                globalStopperCollisionScrollPosition = null;
+                return;
+            }
+            if(globalStopperCollisionScrollPosition) return
+            if (targetBottomBorder > stopperTopBorder){
+                targetElement.style.position = "absolute";
+                targetElement.style.top = `${absoluteTop}px`;
+                globalStopperCollisionScrollPosition = window.scrollY;
+            }
+        }
+    }
+
+    document.addEventListener("scroll", getStoppElementOnHight({
+        targetElement: list_group,
+        stopperElement: footer,
+        fixedTop: 120,
+        offset:270
+    }));
+    </script>
 </body>
 </html>

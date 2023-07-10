@@ -9,12 +9,18 @@
 .pohozhiitovar__box{
     width: 204px;
 }
-
 .pohozhiitovar__img{
     height: 204px !important;
     width: 202px;
 }
-
+.icon-ruletka {
+    width: 115px;
+}
+.list-group__padding{
+    padding-top: 20px;
+    border-bottom: 1px solid #F7654A;
+    border-bottom-width: medium !important;
+}
 .pohozhiitovar__description{
     top: 135px !important;
     height: 69px !important;
