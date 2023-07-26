@@ -529,7 +529,7 @@ const getAllMenu = (
                                         </div>
                                         <div class="menu__container--box_row menu__container--box__width menu__container--box__margin">
                                             <div class="menu__container--box">
-                                                <img loading="lazy" class="img-menu" src="/images/jaluzi-2.webp" alt="жалюзи">
+                                                <img loading="lazy" class="img-menu" src="/images-catalog/jaluzi-2.webp" alt="жалюзи">
                                             </div>
                                             <div class="menu__container--box">
                                                 <a class="menu__href--title" title="Жалюзи" href="/catalog/jaluzi">Все жалюзи</a>
