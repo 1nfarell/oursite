@@ -120,7 +120,7 @@
 
 
 .catalog-moskit-wrapper{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .main-wrapper-about{
@@ -216,6 +216,8 @@ picture{
     transition: 0.3s;
     width: fit-content;
 }
+
+
 
 .box-price:hover{
     background-color: #ff4220;     
@@ -626,8 +628,7 @@ p{
 .carousel-title-size .carousel-control-prev-icon{
     filter: invert(0);
 }
-
-
+       
 @media (min-width: 1080px)  { 
     .color-size-wrapper{
         display: flex;
@@ -1257,7 +1258,9 @@ p{
 
 
 @media (max-width: 1080px)  {
-    
+    .besplatno-box{
+        margin-top: 30px;
+    }
     .balkon-wrapper__revers{
         flex-direction: column-reverse !important;
     }

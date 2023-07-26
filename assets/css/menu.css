@@ -38,8 +38,11 @@
     font-weight: 600;
     color: #404149;
     width: fit-content;
+    transition: .2s;
 }
-
+.menu__href--title:hover{
+    color: steelblue;
+}
 .menu__container--box_padding0{
     padding-bottom: 0;
     padding-top: 20px;
@@ -52,8 +55,11 @@
     color: #404149d3;
     width: fit-content;
     font-size: 14.5px;
+    transition: .2s;
 }
-
+.menu__href--field:hover{
+    color: #7eb2d7;
+}
 .modal-catalog{
     --bs-modal-width: 1140px;
     padding-right: 0px !important;

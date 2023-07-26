@@ -107,12 +107,6 @@ if (!$_SESSION['user']) {
                         </div>
                     </div>
                     <div class="menu" >
-                        <div class="menu-catalog">
-                            <!-- Кнопка-триггер модального окна Menu -->
-                            
-                            <span class="menu-catalog-links" id="menu_info_trigger" data-bs-toggle="modal" data-bs-target="#menuStaticBackdrop" aria-controls="menuStaticBackdrop">Каталог</span>   
-                        </div>  
-
                         <div class ="menu-links">
                             <input type="checkbox" name="menu" id="btn-menu" />
                             <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
@@ -240,22 +234,7 @@ if (!$_SESSION['user']) {
                         <div id="info_site_update" class="offcanvas-body">
                             
                         </div>
-                    </div>
-                    <div id="menuStaticBackdrop" aria-labelledby="menuStaticBackdropLabel" class="modal fade modal-catalog" tabindex="-1"  role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="menuStaticBackdropLabel">Каталог</h5>
-                                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                                </div>       
-                                <div class="modal-body">
-                                    <div id="info_site_menu" class="offcanvas-body"> 
-
-                                    </div>                              
-                                </div>  
-                            </div>
-                        </div>
-                    </div> 
+                    </div>                   
                     <div  class="all-order-title">
                         <div id="title_name_order_status" >ВСЕ ЗАКАЗЫ</div> 
                         <div class="container--row_menu">   
@@ -337,16 +316,18 @@ if (!$_SESSION['user']) {
         <div class="AlertPlaceholder" id="liveAlertPlaceholder"></div>
     </div>
 <!-- jquery -->
+<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/js/jquery-3.6.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.4/dist/xlsx.full.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/xlsx@0.17.4/dist/xlsx.full.min.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="/assets/js/menu.js"></script>
+
 <script src="/order/add_order.js"></script>
 <script src="/order/get_order.js"></script>
+
 <script src="/panel_admin/get_info_about_update.js"></script>
-<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="/statistics/stat.js"></script>
+
+<script defer type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script defer src="/statistics/stat.js"></script>
 <!-- Липкий заголовок -->
 <script>
     window.onscroll = function() {myFunction()};

@@ -2,6 +2,25 @@
     object-fit: cover;
     border-radius: 10px;
 }
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+
+	80% {
+		transform: translateY(-2px);
+		transform: translateY(-2px);
+	}
+}
+.header-btn_setcolor img{
+    animation: bounce 1s infinite;
+}
 .pohozhiitovar__container + .pohozhiitovar__container{
     margin-left: 30px;
 }
@@ -73,8 +92,18 @@
     font-size: 16px;
     
 }
+.kroshki .breadcrumb-item{
+    color: #404149;
+    
+}
 .kroshki .breadcrumb-item a{
-    color: steelblue;
+    color: #404149;
+    text-decoration: none;
+    transition: .2s;
+}
+.kroshki .breadcrumb-item a:hover{
+    color: #7eb2d7;
+    
 }
 
 @media (min-width: 1080px) {

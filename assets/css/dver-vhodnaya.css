@@ -97,6 +97,9 @@
 .dver--price div:nth-child(11){
     margin-top: 310px;
 }
+.dver--price div:nth-child(12){
+    margin-top: 310px;
+}
 
 @media (max-width:1080px) {
     .tab-content--dver .tab-pane, .balkon-wrapper.balkon-wrapper__catalog{
@@ -152,6 +155,10 @@
         position: absolute;
         margin-top: 308vw;
     }
+    .dver--price div:nth-child(12){
+        position: absolute;
+        margin-top: 341vw;
+    }
     .nav-img--dver{
         width: 70vw;
     }
@@ -161,6 +168,10 @@
     .nav-link--dver{
         font-size: 12px;
         padding: 5px 10px;
+        width: 100%;
+        word-wrap: break-word;
     }
-    
+    .nav-pills--dver{
+        min-width: 75px;
+    }
 }

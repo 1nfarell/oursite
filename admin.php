@@ -23,7 +23,6 @@ if ($_SESSION['user']['id'] != 2 || $_SESSION['user']['id'] != 24) {
     <link rel="stylesheet" href="/assets/css/status.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
     <link rel="stylesheet" href="/assets/css/moskit.css">
-    <link rel="stylesheet" href="/assets/css/menu.css">
     <title>Панель администратора</title>
     
     <meta name="robots" content="noindex">
@@ -77,14 +76,11 @@ if ($_SESSION['user']['id'] != 2 || $_SESSION['user']['id'] != 24) {
                             <input type="checkbox" name="menu" id="btn-menu" />
                             <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
                             <ul>
-                            <!-- <a  href="/cabinet.php">Личный кабинет</a>        
-                            <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
-                            
-                            <a  href="/order.php">Заказы</a> 
-                            <span title="добавить изменение" data-bs-toggle="modal" data-bs-target="#ModalUpdate" class="">Добавить изменение</span>
-                            <!-- Кнопка-триггер модального окна Menu -->
-                            <span class="menu-catalog-links" id="menu_info_trigger" data-bs-toggle="modal" data-bs-target="#menuStaticBackdrop" aria-controls="menuStaticBackdrop">Каталог</span>
-                          
+                                <!-- <a  href="/cabinet.php">Личный кабинет</a>        
+                                <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
+                                
+                                <a  href="/order.php">Заказы</a> 
+                                <span title="добавить изменение" data-bs-toggle="modal" data-bs-target="#ModalUpdate" class="">Добавить изменение</span>
                             </ul>
                         </div>             
                     </div>
@@ -94,23 +90,8 @@ if ($_SESSION['user']['id'] != 2 || $_SESSION['user']['id'] != 24) {
         <!-- main -->
         <main>   
             <div class="main">     
-                <div class="catalog-balkon-wrapper catalog-moskit-wrapper">  
-                     <!-- menu -->
-                    <div id="menuStaticBackdrop" aria-labelledby="menuStaticBackdropLabel" class="modal fade modal-catalog" tabindex="-1"  role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="menuStaticBackdropLabel">Каталог</h5>
-                                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                                </div>       
-                                <div class="modal-body">
-                                    <div id="info_site_menu" class="offcanvas-body"> 
-
-                                    </div>                              
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
+                <div class="catalog-balkon-wrapper catalog-moskit-wrapper"> 
+                    
                     <form id="form--update" method="POST">
                         <div id="ModalUpdate" class="modal fade" tabindex="-1" aria-labelledby="ModalUpdateLabel" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
@@ -182,12 +163,12 @@ if ($_SESSION['user']['id'] != 2 || $_SESSION['user']['id'] != 24) {
         <div class="AlertPlaceholder" id="liveAlertPlaceholder"></div>
     </div>
 <!-- jquery -->
+<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/menu.js"></script>
 <script src="/panel_admin/index_update.js"></script>
 <script src="/panel_admin/add_update.js"></script>
-<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+
 <!-- Липкий заголовок -->
 <script>
     window.onscroll = function() {myFunction()};

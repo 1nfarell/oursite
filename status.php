@@ -6,19 +6,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отслеживание заказа по трек номеру Открытие</title>
-    <meta name="application-name" content="">
+    <title>Отслеживание заказа по трек номеру</title>
+    <meta name="application-name" content="Отслеживание заказа по трек номеру">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xn----7sbqlhcsgevuc0j.xn--p1ai/status.php">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Отслеживание заказа по трек номеру">
+    <meta property="og:description" content="Удобное отслеживание и трекинг ваших заказов. Отследить заказ легко - введите трек номер и получите актуальную информацию.">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="Оконный завод Открытие">
+    <meta property="og:site_name" content="Завод окон Открытие">
     <meta property="og:image" content="/images-catalog/moskit-banner.png">
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="Отследить заказ">
+    <meta name="description" content="Удобное отслеживание и трекинг ваших заказов. Отследить заказ легко - введите трек номер и получите актуальную информацию.">
     <link rel="canonical" href="https://xn----7sbqlhcsgevuc0j.xn--p1ai/status.php">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/index.css">
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/assets/css/moskit.css">
     <link rel="stylesheet" href="/assets/css/status.css">
     <link rel="stylesheet" href="/assets/css/menu.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -33,63 +34,18 @@
     
 </head>
 <body>
-    <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Отслеживание заказа по трек номеру Открытие</h1>
+    <h1 style="position: absolute;top: -99999px;left: -99999px;" class="hide-h1">Отслеживание заказа по трек номеру</h1>
     <div id="body" class="container-main">
-        <header id="header">
+        <header id="header">            
+            <!-- header страницы загружается посредством js -->
             
-            <div class="header--container">
-                <div class="header-center">
-                    <a title="Нажми, чтобы вернуться на главную" href="/">
-                        <span class="header-namefirm">ОКОННЫЙ ЗАВОД</span>
-                        <span class="header-namefirm">ОТКРЫТИЕ</span>
-                        <span class="header-tagline">СОХРАНЯЕТ ТЕПЛО И ТИШИНУ</span>
-                    </a>
-                </div>
-                <div class="header--container__center">
-                    <div class="header">
-                        <div class="header-left">
-                            <div class="header-time">
-                                <img class="icon time" src="/images/time.svg" alt="режим работы Открытие">
-                                <span title="Режим работы Оконного завода Открытие">Пн-Пт с 08:00 до 18:00</span>
-                            </div>
-                            <div class="header-addres">
-                                <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
-                                <a href="#ouradress" title="Адрес офиса Оконного завода Открытие">Наш офис в г. Волжском</a>
-                            </div>
-                        </div>                       
-                        <div class="header-right">
-                            <div>
-                                <img class="icon phone" src="/images/phone.svg" alt="Позвонить в офис Открытие">
-                                <a id="main-telegram_href" rel="nofollow" href=""><img class="icon viber" src="/images/telegram.svg" title="Нажми, чтобы перейти в чат telegram" alt="сделать заказ москитной сетки на окно в telegram"></a>
-                                <a id="main-whatsup_href" rel="nofollow" href=""> <img class="icon whatsup" title="Нажми, чтобы перейти в чат whatsup" src="/images/whatsup.svg" alt="сделать заказ москитной сетки на окно в whatsup"></a>
-                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_1" class="tel"></span>
-                            </div>
-                            <div>
-                                <span title="Отдел продаж. Нажми, чтобы скопировать номер телефона" id="main-contact_tel_2" class="tel"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu" >
-                        <div class="menu-catalog">
-                            <!-- Кнопка-триггер модального окна Menu -->
-                            <span class="menu-catalog-links" id="menu_info_trigger" data-bs-toggle="modal" data-bs-target="#menuStaticBackdrop" aria-controls="menuStaticBackdrop">Каталог</span>      
-                        </div>                      
-                          
-                        <div class ="menu-links" >
-                            <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
-                            <ul>
-                            <a  href="/">Главная</a>
-                            <a class="header-btn_setcolor"  href="https://clck.ru/34Ph9X" title="Оставить отзыв на Яндекс Картах">Оставить отзыв</a>
-                            </ul>
-                        </div>             
-                    </div>
-                </div>
-            </div>
-        </header>   
+        </header> 
         <!-- main  -->
         <main>   
-            <div class="main">     
+            <div class="main"> 
+                <div id="menuStaticBackdrop" aria-labelledby="menuStaticBackdropLabel" class="modal fade modal-catalog" tabindex="-1"  role="dialog" aria-hidden="true">
+                    <!-- menu -->
+                </div>    
                 <div class="catalog-balkon-wrapper catalog-moskit-wrapper table_request">
                     <div id="table_status--container" class="table_status--container">
                         <div class="balkon-wrapper balkon-wrapper--column">
@@ -103,22 +59,6 @@
                                     <button id="btn_search" class="btn btn-outline-secondary" type="submit">НАЙТИ</button>
                                 </div>
                             </form>
-                        </div>
-                        <!-- menu -->
-                        <div id="menuStaticBackdrop" aria-labelledby="menuStaticBackdropLabel" class="modal fade modal-catalog" tabindex="-1"  role="dialog" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="menuStaticBackdropLabel">Каталог</h5>
-                                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                                    </div>       
-                                    <div class="modal-body">
-                                        <div id="info_site_menu" class="offcanvas-body"> 
-
-                                        </div>                              
-                                    </div>  
-                                </div>
-                            </div>
                         </div>
                         <div class="container__status_qrcode">
                             <div>
@@ -169,7 +109,7 @@
                                     <span style="text-decoration:underline;" class="footerminus">Мы работаем</span>
                                     <span class="footertext">Пн-Пт с 08:00 до 18:00</span>
                                     <span style="text-decoration:underline;" class="footerminus">Почта</span>
-                                    <span id="main-contact-email" class="tel" title="Нажми, чтобы скопировать электронную почту">contact@окна-открытие.рф</span>
+                                    <span id="contact-email" class="tel" title="Нажми, чтобы скопировать электронную почту">contact@окна-открытие.рф</span>
                                 </div>
                                 
                                 <div>
@@ -196,34 +136,23 @@
         <!-- сообщение о копировании телефона -->
         <div class="AlertPlaceholder" id="liveAlertPlaceholder"></div>
     </div>
-    <!-- itc-slider -->    
-    <script src="/assets/js/jquery-3.6.1.min.js"></script>
-    <script src="/order/get_status_myorder.js"></script>
-   
+
     <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/jquery-3.6.1.min.js"></script>
 
-    <!-- Липкий заголовок -->
-    <script>
-        window.onscroll = function() {myFunction()};
+    <!-- header страницы -->
+    <script defer src="/assets/js/header_pages.js"></script>  
 
-        var header = document.getElementById("header");
-
-        function myFunction() {
-            if ($(this).scrollTop() > 0) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
-    </script>
-    <script src="/assets/js/jquery.mask.min.js"></script>
-    <script src="/assets/js/telegramform.js"></script>
+    <script defer src="/order/get_status_myorder.js"></script>    
+   
+    <script defer src="/assets/js/jquery.mask.min.js"></script>
+    <script defer src="/assets/js/telegramform.js"></script>
    <!-- изменение номеров телефона в шапке -->
-   <script src="/assets/js/main_set_contact_tel.js"></script>
+   <script defer src="/assets/js/set_contact_tel.js"></script>
    <!-- Всплывающие окна на странице / Копирование номера телефона в буфер -->
-   <script src="/assets/js/main_alert_get_number.js"></script>
-   <script src="/assets/js/menu.js"></script>
-    <script>
+   <script defer src="/assets/js/alert_get_number.js"></script>
+  
+    <script defer>
         $(function () {
         $('input[type="tel"]').mask('8 (000) 000-00-00');
         });

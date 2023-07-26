@@ -1,5 +1,5 @@
 
-// Всплывающие окна на странице (moskit.html и все москитные сетки)
+// Всплывающие окна на странице 
 
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
@@ -21,12 +21,12 @@ setTimeout(() => {
 }, 3000);
 }
 
-const alertTrigger1 = document.getElementById('moskit-contact_tel_1')
-const alertTrigger2 = document.getElementById('moskit-contact_tel_2')
-const alertTrigger3 = document.getElementById('info-contact-email')
+const alertTrigger1 = document.getElementById('contact_tel_1')
+const alertTrigger2 = document.getElementById('contact_tel_2')
+const alertTrigger3 = document.getElementById('contact-email')
 const alertTrigger4 = document.getElementById('copyadress')
 const alertTrigger5 = document.getElementById('copyadress2')
-if (alertTrigger1 || alertTrigger2 || alertTrigger3 || alertTrigger4 || alertTrigger5) {
+if (alertTrigger1 || alertTrigger2 || alertTrigger3 || alertTrigger4|| alertTrigger5) {
 alertTrigger1.addEventListener('click', () => {
     alert('Отлично, номер '+alertTrigger1.textContent+' скопирован в буфер!', 'success')
 })
