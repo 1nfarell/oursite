@@ -571,12 +571,13 @@ p{
 
 .moskit-banner-lenta{
     position: absolute;
-    width: 700px;
+    width: 800px;
     height: 100px;
     z-index: 2;
-    left: 20%;
-    right: 20%;
-    top: 1%;
+    left: 0;
+    right: 0;
+    top: 10px;
+    margin: auto;
 }
 
 .color-title-text{
@@ -1260,6 +1261,7 @@ p{
 @media (max-width: 1080px)  {
     .besplatno-box{
         margin-top: 30px;
+        margin-bottom: 20px;
     }
     .balkon-wrapper__revers{
         flex-direction: column-reverse !important;
@@ -1522,7 +1524,7 @@ p{
         padding: 0 20px;
     }
     .form-span-title{
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
     .balkon-text.banner-buy
     {

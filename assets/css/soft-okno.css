@@ -1,0 +1,65 @@
+.komplect-title{
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: #ffffffcf;
+    padding-bottom: 12px;
+    margin: 0;
+    border-bottom-left-radius: 8px;
+    padding-top: 10px;
+    width: 102%;
+    font-size: 18px;
+}
+
+.main-catalog-box-type__komplect{
+    margin-right: 20px;
+}
+.catalog-box__soft, .catalog-box__soft--descr{
+    width: 270px !important;
+
+}
+
+.soft__plenka--img{
+    border-radius: 10px;
+}
+
+.catalog-box__soft--img{
+    width: 270px !important;
+    height: 220px !important;
+}
+.moskit-razbor-setki__padding-right{
+    padding-right: 20px;
+}
+
+@media (min-width: 1080px) {
+  
+    .plenka__width{
+        width: 680px !important; 
+    }
+    .plenka__width--img_box{
+        width: 430px !important;
+    }
+    .soft__plenka--img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .color-text{
+        margin-right: 20px;
+    }
+}
+@media (max-width: 1080px) {
+    .komplect-box__overflow{
+        overflow-x: scroll;
+        margin-bottom: 40px;
+    } 
+    .catalog-box__soft--descr{
+        width: 170px !important;
+    } 
+    .soft__plenka--img{
+        width: 100%;
+        object-fit: contain;
+    } 
+}
