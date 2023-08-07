@@ -102,6 +102,57 @@
                     </div>     
                 </div> 
             </div>
+            <form id="form-contact" method="POST" class="contact-form" autocomplete="off">
+                <div id="Modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">ВАШ ЗАПРОС</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-2">
+                                <label class="form-check-label" for="floatingInput">
+                                    Введите контактные данные
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">                    
+                                <input name="name" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70">
+                                <label for="floatingInput">Имя</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input name="phone" type="tel" class="form-control" id="floatingInput" placeholder="Номер телефона">
+                                <label for="floatingInput">Номер телефона</label>
+                            </div>
+                            <div class="form-floating mb-3">                    
+                                <input name="category" type="text" class="form-control" placeholder="Имя" aria-label="Username" maxlength="70" value="Вопрос по моему заказу" readonly>
+                                <label for="floatingInput">Категория</label>
+                            </div>
+                            <div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                    <span>Нажимая на кнопку "Сделать заказ", Вы даёте согласие на обработку своих персональных данных согласно ФЗ N152.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
+                                <button id="pressbtnform" type="submit" class="btn btn-primary">СДЕЛАТЬ ЗАКАЗ</button>   
+                            </div>                            
+                            <div class="form__message">
+                                <!-- Всплывающие сообщения об отправке -->
+                                <div class="preloader"></div>
+                                <p class="contact-form__message"></p>
+                            </div>                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </main>    
         <!-- футтер -->
         <footer>
@@ -118,7 +169,7 @@
                         <div class="contant-info-left">
                             <span class="contant-info-left__title">Оконный завод ОТКРЫТИЕ</span>
                             <p class="contant-info-left__description">
-                                Наша компания изготавливает и устанавливает москитные сетки в Волжском, Волгограде, Николаевске и в других городах Волгоградской области.
+                                Завод Открытие работает в городе Волжском, Волгограде, Николаевске и в других городах Волгоградской области.
                             </p>
                             <div class="contant-info-left-time">
                                 <div>

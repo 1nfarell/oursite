@@ -281,7 +281,7 @@ if (!$_SESSION['user']) {
                         <div class="contant-info-left">
                             <span class="contant-info-left__title">Оконный завод ОТКРЫТИЕ</span>
                             <p class="contant-info-left__description">
-                                Наша компания изготавливает и устанавливает москитные сетки в Волжском, Волгограде, Николаевске и в других городах Волгоградской области.
+                            Завод Открытие работает в городе Волжском, Волгограде, Николаевске и в других городах Волгоградской области.
                             </p>
                             <div class="contant-info-left-time">
                                 <div>
