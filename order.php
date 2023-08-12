@@ -47,88 +47,86 @@ if (!$_SESSION['user']) {
                     </a>
                 </div>
                 <div class="header--container__center">
-                    <div class="header">
-                        <div class="header-left">
-                            <div class="header-time">
-                                <form id="search-form" method="POST">
-                                    <div class="input-group input-group-lg">
-                                        <input id="status__input--search" type="text" name="input_search" class="form-control request__input--search past-input" 
-                                        title="Подсказка поиска:
-    по заказу: з\ номер
-    по наименованию: н\ текст
-    по фио: ф\ текст
-    по телефону: т\ 89190010101
-    по адресу: а\ текст
-    по монтажнику: м\ текст
-    по дате монтажа: дм\ 01.01.01 или дд\ 01.01.01
-    по пользователю: п\ текст
-    по дате оформления до\ 01.01.01
-    по статусу оплаты: со\ текст
-    по последней оплате: по\ 01.01.01
-    по статусу готовности: сг\ текст
+                    <!-- <div class="input-group">
+                        <input type="text" id="header__search__input" class="form-control header-search__input" placeholder="Поиск по сайту" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary header-search__btn" type="button" id="button-addon2"><img class="icon_header-menu" src="/images-catalog/admin_panel/icon-search.png"></button>
+                        <div id="search-result-field" class="search__result">
+                        </div>                        
+                    </div>  -->
+                    <div class="header-left">
+                        <div class="header-time">
+                            <form id="search-form" method="POST">
+                                <div class="input-group ">
+                                    <input id="status__input--search" type="text" name="input_search" class="form-control header-search__input "  placeholder="Поиск заказов"
+                                    title="Подсказка поиска:
+по заказу: з\ номер
+по наименованию: н\ текст
+по фио: ф\ текст
+по телефону: т\ 89190010101
+по адресу: а\ текст
+по монтажнику: м\ текст
+по дате монтажа: дм\ 01.01.01 или дд\ 01.01.01
+по пользователю: п\ текст
+по дате оформления до\ 01.01.01
+по статусу оплаты: со\ текст
+по последней оплате: по\ 01.01.01
+по статусу готовности: сг\ текст
 Альтернатива: 
-    Вместо обратного слэша (\) можно использовать обычный слэш (/)
+Вместо обратного слэша (\) можно использовать обычный слэш (/)
 Принцип работы: 
-    Поиск работает по принципу поиска подстроки в строке. 
-    Вводите строку и ждете 2с, найденные записи отобразятся сами.
+Поиск работает по принципу поиска подстроки в строке. 
+Вводите строку и ждете 2с, найденные записи отобразятся сами.
 Удаление записи: 
-    Вводите номер заказа -> кнопка Enter -> кнопка 'Удалить', в найденном заказе.
+Вводите номер заказа -> кнопка Enter -> кнопка 'Удалить', в найденном заказе.
 "  
-                                                aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
-                                        <button id="btn_search" class="btn btn-outline-secondary" type="submit">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    
-                                </form>
-                                <span title="наверх страницы" onclick="topScroll()" class="btn btn-outline-secondary btn__topScroll">Наверх</span>
-                            </div>
-                            <div class="header-addres">
-                                <!-- <img class="icon compas" src="/images/compas.svg" alt="адрес офиса Открытие">
-                                <a href="#ouradress" title="Адрес офиса Оконного завода Открытие">Наш офис в г. Волжском</a> -->
-                            </div>
-                        </div>                       
-                        <div class="header-right">   
-                            <div class="header-right--form_login">      
-                                <div class="header-right-form">
-                                    <form>
-                                        <p><?= $_SESSION['user']['full_name'] ?></p>
-                                    </form>
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <button class="btn btn-outline-secondary header-search__btn" type="button" id="button-addon2"><img class="icon_header-menu" src="/images-catalog/admin_panel/icon-search.png"></button>
                                 </div>
-                                <div class="header-right-form-out">                    
-                                    <?php if(isset($_SESSION['user'])): ?> 
-                                        <a href="vendor/logout.php">Выход</a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                            <span title="добавить заказ" data-bs-toggle="modal" data-bs-target="#ModalAddOrder" class="btn btn-outline-primary btn__add--order">Добавить заказ</span>
-                        </div>
+                            </form>
+                        </div>      
                     </div>
-                    <div class="menu" >
-                        <div class ="menu-links">
-                            <input type="checkbox" name="menu" id="btn-menu" />
-                            <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
-                            <ul>
-                                <!-- <a  href="/cabinet.php">Личный кабинет</a>        
-                                <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
+                    <div>
+                        <div class="header">   
+                            <div class="header-right">   
+                                <div class="header-right--form_login">      
+                                    <div class="header-right-form">
+                                        <form>
+                                            <p><?= $_SESSION['user']['full_name'] ?></p>
+                                        </form>
+                                    </div>
+                                    <div class="header-right-form-out">                    
+                                        <?php if(isset($_SESSION['user'])): ?> 
+                                            <a href="vendor/logout.php">Выход</a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <span title="добавить заказ" data-bs-toggle="modal" data-bs-target="#ModalAddOrder" class="btn btn-outline-primary btn__add--order">Добавить заказ</span>
+                            </div>
+                        </div>                    
+                        <div class="menu" >
+                            <div class ="menu-links">
+                                <input type="checkbox" name="menu" id="btn-menu" />
+                                <label for="btn-menu"><img class="icon-menu" src="/images/menu.png"></label> 
+                                <ul>
+                                    <!-- <a  href="/cabinet.php">Личный кабинет</a>        
+                                    <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
+                                    
+                                    
+                                    <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
+                                    <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
+                                    <?php    
+                                        if ($_SESSION['user']['id'] == 24) {
+                                            ?>
+                                                <a rel="nofollow" href="/admin.php">Панель админ.</a>
+                                            <?
+                                        };
+                                    ?>
+                                    <!-- Кнопка-триггер модального окна -->
+                                    <span id="update_info_trigger" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Что нового</span>
                                 
-                                
-                                <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
-                                <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
-                                <?php    
-                                    if ($_SESSION['user']['id'] == 24) {
-                                        ?>
-                                            <a rel="nofollow" href="/admin.php">Панель админ.</a>
-                                        <?
-                                    };
-                                ?>
-                                <!-- Кнопка-триггер модального окна -->
-                                <span id="update_info_trigger" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Что нового</span>
-                              
-                            </ul>
-                        </div>             
+                                </ul>
+                            </div>             
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,100 +142,20 @@ if (!$_SESSION['user']) {
                         <div class="box_left-menu_order_page--container">
                             <div class="order_counter_status"></div> 
                         </div>
+                        <div class="box_left-menu_order_page--container very_old_order-box">
+                            <div id="very_old_order" class="very_old_order-class">
+                                <span>Позабытые заказы</span> 
+                            </div> 
+                        </div>
                     </div>
                 </div>  
-                <div class="catalog-moskit-wrapper main_page_order_book">                                   
-                         
-                    <form id="form--add_order" method="POST">
-                        <div id="ModalAddOrder" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Добавить заказ</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>       
-                                    <div class="modal-body">
-                                        <div class="input-group mb-3">
-                                            <span  class="input-group-text" id="inputGroup-sizing-default">Номер заказа</span>
-                                            <input id="input-form--add_order" name="number_order" type="text" class="form-control" aria-label="Номер заказа" aria-describedby="inputGroup-sizing-default" maxlength="20" required >
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Наименование</span>
-                                            <input name="description_order" type="text" class="form-control" aria-label="Наименование" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Сумма заказа</span>
-                                            <input id="sum_order" name="price_order" type="number" class="form-control" aria-label="Сумма оплаты в рублях (с точкой и двумя десятичными знаками)" maxlength="20" required>
-                                            <span id="input-group-text_dollar" class="input-group-text">₽</span>
-                                        </div>   
-                                        <div class="input-group mb-3">               
-                                            <select name="price_order--status" onchange="changeVarianPay(this);" id="price_order_stat" class="form-select form-select-default" required>
-                                                <option disabled selected>Выберите статус оплаты</option>
-                                                <option style="display:none" value="Не оплачен">Не оплачен</option>
-                                                <option value="Предоплата">Предоплата</option>
-                                                <option value="Рассрочка">Рассрочка</option>
-                                                <option value="Оплачен">Оплачен</option>
-                                            </select>
-                                        </div>
-                                        <div id="input_predoplata" style="display:none;" class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Предоплата</span>
-                                            <input id="presum" name="sum_pay" type="number" class="form-control" aria-label="Предоплата в рублях (с точкой и двумя десятичными знаками)" style="width:170px" maxlength="20" >
-                                            <span id="input-group-text_dollar"  class="input-group-text">₽</span>
-                                            <input id="persent_sum" type="number" aria-label="Процент" class="form-control" maxlength="3" max="100" value="50">
-                                            <span id="input-group-text_dollar" class="input-group-text">%</span>
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">ФИО заказчика</span>
-                                            <input name="contact_name_order" type="text" class="form-control" aria-label="ФИО заказчика" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Телефон</span>
-                                            <input name="contact_order" type="tel" pattern="[\d()+\-\s]+" class="form-control" aria-label="Контакты" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Адрес доставки</span>
-                                            <input name="adress_order" type="text" class="form-control" aria-label="Адрес" placeholder="не указывать, если самовывоз" aria-describedby="inputGroup-sizing-default" maxlength="255">
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Монтажник</span>
-                                            <input name="montazh_order" type="text" class="form-control" aria-label="Монтаж" placeholder="не указывать, если без монтажа" aria-describedby="inputGroup-sizing-default" maxlength="255">
-                                        </div>
-                                        <div class="input-group mb-1">
-                                            <button id="btn-form--add_order" type="submit" class="btn btn-primary ">Добавить заказ</button>
-                                        </div>    
-                                    </div>
-                                    <div class="modal-footer">
-                                    
-                                        
-                                        <div>
-                                            <div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                                </svg>
-                                                <span>После нажатия "Добавить заказ" страница перезагрузится через 2с.</span>
-                                            </div>
-                                        </div>
-                                    </div>                                       
-                                      
-                                </div>
-                            </div>
-                        </div>                        
-                    </form>
-                    
-                    
-                    <div  class="offcanvas offcanvas-start "  tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="staticBackdropLabel">Что нового?</h5>
-                            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
-                        </div>
-                        <div id="info_site_update" class="offcanvas-body">
-                            
-                        </div>
-                    </div>                   
+                <div>
                     <div  class="all-order-title">
                         <div id="title_name_order_status" >ВСЕ ЗАКАЗЫ</div> 
-                        <div class="container--row_menu">   
+                        <div class="container--row_menu">  
+                            <div class="btn-menu-filter">
+                                <button type="button" onclick="topScroll()" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-arrow.png" title="подняться вверх"></button>        
+                            </div> 
                             <div class="btn-menu-filter">
                                 <button type="button" id="date_sort_order" value="DESC" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-and-down.png" title="сортировка по дате оформления: старый - новый"></button>        
                             </div>                          
@@ -260,12 +178,103 @@ if (!$_SESSION['user']) {
                             </div>  
                         </div>
                     </div>
-                    <div id="table__order" class="table-responsive">
-                        <!-- вывод таблицы -->
-                    </div>
+                    <div class="catalog-moskit-wrapper main_page_order_book">                                   
+                            
+                        <form id="form--add_order" method="POST">
+                            <div id="ModalAddOrder" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Добавить заказ</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>       
+                                        <div class="modal-body">
+                                            <div class="input-group mb-3">
+                                                <span  class="input-group-text" id="inputGroup-sizing-default">Номер заказа</span>
+                                                <input id="input-form--add_order" name="number_order" type="text" class="form-control" aria-label="Номер заказа" aria-describedby="inputGroup-sizing-default" maxlength="20" required >
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Наименование</span>
+                                                <input name="description_order" type="text" class="form-control" aria-label="Наименование" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Сумма заказа</span>
+                                                <input id="sum_order" name="price_order" type="number" class="form-control" aria-label="Сумма оплаты в рублях (с точкой и двумя десятичными знаками)" maxlength="20" required>
+                                                <span id="input-group-text_dollar" class="input-group-text">₽</span>
+                                            </div>   
+                                            <div class="input-group mb-3">               
+                                                <select name="price_order--status" onchange="changeVarianPay(this);" id="price_order_stat" class="form-select form-select-default" required>
+                                                    <option disabled selected>Выберите статус оплаты</option>
+                                                    <option style="display:none" value="Не оплачен">Не оплачен</option>
+                                                    <option value="Предоплата">Предоплата</option>
+                                                    <option value="Рассрочка">Рассрочка</option>
+                                                    <option value="Оплачен">Оплачен</option>
+                                                </select>
+                                            </div>
+                                            <div id="input_predoplata" style="display:none;" class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Предоплата</span>
+                                                <input id="presum" name="sum_pay" type="number" class="form-control" aria-label="Предоплата в рублях (с точкой и двумя десятичными знаками)" style="width:170px" maxlength="20" >
+                                                <span id="input-group-text_dollar"  class="input-group-text">₽</span>
+                                                <input id="persent_sum" type="number" aria-label="Процент" class="form-control" maxlength="3" max="100" value="50">
+                                                <span id="input-group-text_dollar" class="input-group-text">%</span>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">ФИО заказчика</span>
+                                                <input name="contact_name_order" type="text" class="form-control" aria-label="ФИО заказчика" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Телефон</span>
+                                                <input name="contact_order" type="tel" pattern="[\d()+\-\s]+" class="form-control" aria-label="Контакты" aria-describedby="inputGroup-sizing-default" maxlength="255" required>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Адрес доставки</span>
+                                                <input name="adress_order" type="text" class="form-control" aria-label="Адрес" placeholder="не указывать, если самовывоз" aria-describedby="inputGroup-sizing-default" maxlength="255">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Монтажник</span>
+                                                <input name="montazh_order" type="text" class="form-control" aria-label="Монтаж" placeholder="не указывать, если без монтажа" aria-describedby="inputGroup-sizing-default" maxlength="255">
+                                            </div>
+                                            <div class="input-group mb-1">
+                                                <button id="btn-form--add_order" type="submit" class="btn btn-primary ">Добавить заказ</button>
+                                            </div>    
+                                        </div>
+                                        <div class="modal-footer">
+                                        
+                                            
+                                            <div>
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                    </svg>
+                                                    <span>После нажатия "Добавить заказ" страница перезагрузится через 2с.</span>
+                                                </div>
+                                            </div>
+                                        </div>                                       
+                                        
+                                    </div>
+                                </div>
+                            </div>                        
+                        </form>
+                        
+                        
+                        <div  class="offcanvas offcanvas-start "  tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="staticBackdropLabel">Что нового?</h5>
+                                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                            </div>
+                            <div id="info_site_update" class="offcanvas-body">
+                                
+                            </div>
+                        </div>                   
+                     
+                        <div id="table__order" class="table-responsive">
+                            <!-- вывод таблицы -->
+                        </div>
 
-                    
-                </div>    
+                        
+                    </div>    
+                </div>
             </div>
             <!-- аналитика  -->
             <div class="container--page_statistics">

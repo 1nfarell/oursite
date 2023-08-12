@@ -382,7 +382,7 @@ const getAllMenu = (
                                                 <a class="menu__href--field" title="Раздвижные окна" href="/catalog/portal-okno">Раздвижные окна</a>
                                                 <a class="menu__href--field" title="Панорамные окна" href="/catalog/panoramma-okno">Панорамные окна</a>
                                                 <a class="menu__href--field" title="Мягкие окна" href="/catalog/soft-okno">Мягкие окна</a>
-                                                <a class="menu__href--field" title="Павильоны и киоски" href="/catalog/okno/peregorodki">Павильоны и киоски</a>
+                                                <a class="menu__href--field" title="Перегородки ПВХ и алюм." href="/catalog/okno/peregorodki">Перегородки ПВХ и алюм.</a>
                                                 <a class="menu__href--field" title="Нестандартные окна" href="/catalog/okna">Нестандартные окна</a>
                                             </div>                                            
                                         </div>

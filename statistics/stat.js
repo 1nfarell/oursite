@@ -2,6 +2,21 @@ let main_order_page = $('.main_order_page')
 let page_statistics = $('.container--page_statistics')
 
 function show_page_analitics(){
+
+    // Получаем текущую дату
+    const currentDate = new Date();
+    // Устанавливаем день на 0, чтобы перейти к прошлому месяцу
+    currentDate.setDate(0);
+    // Получаем номер прошлого месяца
+    const previousMonth = currentDate.getMonth();
+    // Создаем массив со списком названий месяцев
+    const months = [
+    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    ];
+    // Получаем название прошлого месяца
+    const previousMonthName = months[previousMonth];
+
     $(main_order_page).css({'display':'none'})
     $(page_statistics).css({'display':'flex'})
     $(page_statistics).append(`
@@ -14,17 +29,17 @@ function show_page_analitics(){
             <div id="chart_column_div"></div>
             <div class="column_div--right">                        
                 <div class="column_div--right__box">
-                    <div class="persent_average_title">Заказов за месяц</div>
+                    <div class="persent_average_title">Заказов за ${previousMonthName}</div>
                     <div id="persent_average_order_interval" class="persent_average_last_month"></div>
                     <div id="persent_average_last_month_order_count" class="persent_average_last_month_count"></div>                                
                 </div>
                 <div class="column_div--right__box">
-                    <div class="persent_average_title">Поступлений за месяц</div>
+                    <div class="persent_average_title">Поступлений за ${previousMonthName}</div>
                     <div id="persent_average_price_interval" class="persent_average_last_month"></div>
                     <div id="persent_average_last_month_price_sum" class="persent_average_last_month_count"></div>                                
                 </div>
                 <div class="column_div--right__box">
-                    <div class="persent_average_title">Время выполнения</div>
+                    <div class="persent_average_title">Быстрота за ${previousMonthName}</div>
                     <div id="persent_average_time_interval" class="persent_average_last_month"></div>
                     <div id="persent_average_last_month_time" class="persent_average_last_month_count"></div>   
                 </div>

@@ -1408,3 +1408,76 @@ handleClick_get_excel = () => {
 };
 btn_get_excel.addEventListener('click', handleClick_get_excel);  
 
+
+// ================================================
+// вывести старые заказы
+
+let very_old_order = $('#very_old_order');
+
+function get_very_old_order(){
+    $.ajax({
+        url: 'order/get_order.php',
+        method: 'POST',
+        success: function(data){
+            
+            let Data = JSON.parse(data);  
+            
+            // дата от которой считаем
+            let date1 = Date.now() - 604800000;
+                       
+            for(let key in Data){
+                let date2 = Data[key]['time_last_status'].split(",")[0];   
+                     
+                //преобразуем дату в формат из .23 в .2023
+                let parts = date2.split(".");
+                let year = parts[2];
+
+                // Проверяем, является ли год двузначным
+                if (year.length === 2) {
+                // Преобразуем двузначный год в четырехзначный год
+                year = "20" + year;
+                }
+
+                // Обновляем год в исходной дате
+                parts[2] = year;
+
+                // Соединяем части даты в новую строку
+                let newDate = parts.join(".");
+
+                let parsedDate2 = new Date(newDate.split('.').reverse().join('-'))
+                parsedDate2 = parsedDate2.getTime();
+
+               
+                console.log(date2)
+                console.log(parsedDate2)
+                // Сравниваем две даты
+                if (date1 < parsedDate2) {
+                    console.log(date1 + ' меньше, чем ' + parsedDate2);
+                     
+                } else if (date1 > parsedDate2) {
+                    console.log(date1 + ' больше, чем ' + parsedDate2);
+                     // вывод номера заказа в поле если заказ старый
+                     $(very_old_order).append(`<span onclick="show_table(this)">${Data[key]['number_order']}</span>`);
+                } else {
+                    console.log(date1 + ' равна ' + parsedDate2);
+                }
+               
+                
+            }
+                
+    }});
+} 
+get_very_old_order()
+
+function show_table(this_old_order){
+    let value_onclick = $(this_old_order).text();   
+ 
+    let fd = '';
+    let fd_user = '';
+    let search_order_in_db = `з/ ${value_onclick}`;
+    $('#title_name_order_status').text(`ЗАКАЗЫ: ${value_onclick}`);
+    $('.column_count_field').css({"display":"none"})
+  
+    get_count_status(fd_user)  
+    getAllOrder(fd, fd_user, search_order_in_db); 
+}
