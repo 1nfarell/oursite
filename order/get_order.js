@@ -514,13 +514,13 @@ function table_mainValue(SelectData){
                                 <tbody class="table-group-divider">
                                     <tr>                           
                                         <td class="table_col_width--btn-hist_oplata">
-                                            <button class="btn btn-outline-secondary btn_reload btn-pay btn_reload--style" id="btnPay${SelectData[key]['number_order']}" onclick="table_history_pay_btn(this,'${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}', 'btnstatus${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}')" type="button"><img class="btn_reload_img" style="width:23px" src="/images/icon-oplata.png" title="посмотреть историю изменений статуса оплаты заказа"></button>                 
+                                            <button class="btn btn-outline-secondary btn_reload btn-pay btn_reload--style" id="btnPay${SelectData[key]['number_order']}" onclick="table_history_pay_btn(this,'${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}', 'btnstatus${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}')" type="button" title="посмотреть историю изменений статуса оплаты заказа"><img class="btn_reload_img" style="width:23px" src="/images/icon-oplata.png" ></button>                 
                                         </td>
                                         <td class="table_col_width--btn-hist_tek_status">
-                                            <button class="btn btn-outline-secondary btn_reload btn-status btn_reload--style" id="btnstatus${SelectData[key]['number_order']}" onclick="table_history_status_btn(this, '${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}', 'btnPay${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}')" type="button"><img class="btn_reload_img" style="width:23px" src="/images/icon-status.png" title="посмотреть историю изменений статуса выполнения заказа"></button>
+                                            <button class="btn btn-outline-secondary btn_reload btn-status btn_reload--style" id="btnstatus${SelectData[key]['number_order']}" onclick="table_history_status_btn(this, '${SelectData[key]['number_order']}', 'table_datastatusValue${SelectData[key]['number_order']}', 'btnPay${SelectData[key]['number_order']}', 'table_dataPayValue${SelectData[key]['number_order']}')" type="button" title="посмотреть историю изменений статуса выполнения заказа"><img class="btn_reload_img" style="width:23px" src="/images/icon-status.png" ></button>
                                         </td>
                                         <td class="table_col_width--btn-delete">
-                                            <button class="btn btn-outline-secondary btn_reload btn-delete btn_reload--style" style="display:none" onclick="table_delete_btn('${SelectData[key]['number_order']}')" type="button"><img class="btn_reload_img" style="width:23px" src="/images/icon-delete.png" title="удалить заказ навсегда"></button>
+                                            <button class="btn btn-outline-secondary btn_reload btn-delete btn_reload--style" style="display:none" onclick="table_delete_btn('${SelectData[key]['number_order']}')" type="button" title="удалить заказ навсегда"><img class="btn_reload_img" style="width:23px" src="/images/icon-delete.png" ></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -1426,49 +1426,36 @@ function get_very_old_order(){
             let date1 = Date.now() - 604800000;
                        
             for(let key in Data){
+
                 let date2 = Data[key]['time_last_status'].split(",")[0];   
                      
                 //преобразуем дату в формат из .23 в .2023
                 let parts = date2.split(".");
                 let year = parts[2];
-
                 // Проверяем, является ли год двузначным
                 if (year.length === 2) {
                 // Преобразуем двузначный год в четырехзначный год
-                year = "20" + year;
-                }
-
+                    year = "20" + year;}
                 // Обновляем год в исходной дате
                 parts[2] = year;
-
                 // Соединяем части даты в новую строку
                 let newDate = parts.join(".");
 
                 let parsedDate2 = new Date(newDate.split('.').reverse().join('-'))
                 parsedDate2 = parsedDate2.getTime();
 
-               
-                console.log(date2)
-                console.log(parsedDate2)
                 // Сравниваем две даты
-                if (date1 < parsedDate2) {
-                    console.log(date1 + ' меньше, чем ' + parsedDate2);
-                     
-                } else if (date1 > parsedDate2) {
-                    console.log(date1 + ' больше, чем ' + parsedDate2);
-                     // вывод номера заказа в поле если заказ старый
-                     $(very_old_order).append(`<span onclick="show_table(this)">${Data[key]['number_order']}</span>`);
-                } else {
-                    console.log(date1 + ' равна ' + parsedDate2);
+                if(Data[key]['order__status'] != ('Выполнен' || 'Отменен')){
+                    if (date1 > parsedDate2){
+                        // вывод номера заказа в поле если заказ старый
+                        $(very_old_order).append(`<span onclick="show_table(this)" >${Data[key]['number_order']}</span>`);
+                    } 
                 }
-               
-                
             }
-                
     }});
 } 
 get_very_old_order()
-
+//вывод 
 function show_table(this_old_order){
     let value_onclick = $(this_old_order).text();   
  

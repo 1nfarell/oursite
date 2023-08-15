@@ -100,7 +100,7 @@ if (!$_SESSION['user']) {
                                         <?php endif; ?>
                                     </div>
                                 </div>
-                                <span title="добавить заказ" data-bs-toggle="modal" data-bs-target="#ModalAddOrder" class="btn btn-outline-primary btn__add--order">Добавить заказ</span>
+                                <span data-bs-toggle="modal" data-bs-target="#ModalAddOrder" class="btn btn-outline-primary btn__add--order">Добавить заказ</span>
                             </div>
                         </div>                    
                         <div class="menu" >
@@ -112,7 +112,7 @@ if (!$_SESSION['user']) {
                                     <a  href="/blog.php" title="Услуги Волжского Оконного завода ОТКРЫТИЕ">Статьи</a> -->
                                     
                                     
-                                    <a  href="/status.php" title="Отслеживание заказа Открытие">Отслеж. заказа</a>
+                                    <a href="/status.php">Отслеж. заказа</a>
                                     <a rel="nofollow" href="tg://resolve?domain=maksbeketsky">Поддержка</a>
                                     <?php    
                                         if ($_SESSION['user']['id'] == 24) {
@@ -144,7 +144,7 @@ if (!$_SESSION['user']) {
                         </div>
                         <div class="box_left-menu_order_page--container very_old_order-box">
                             <div id="very_old_order" class="very_old_order-class">
-                                <span>Позабытые заказы</span> 
+                                <span title="Заказы, которые больше недели не меняли статус">Позабытые заказы</span> 
                             </div> 
                         </div>
                     </div>
@@ -154,27 +154,27 @@ if (!$_SESSION['user']) {
                         <div id="title_name_order_status" >ВСЕ ЗАКАЗЫ</div> 
                         <div class="container--row_menu">  
                             <div class="btn-menu-filter">
-                                <button type="button" onclick="topScroll()" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-arrow.png" title="подняться вверх"></button>        
+                                <button type="button" onclick="topScroll()" class="btn btn-outline-secondary btn_reload btn_reload--style" title="подняться вверх"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-arrow.png" ></button>        
                             </div> 
                             <div class="btn-menu-filter">
-                                <button type="button" id="date_sort_order" value="DESC" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-and-down.png" title="сортировка по дате оформления: старый - новый"></button>        
+                                <button type="button" id="date_sort_order" value="DESC" class="btn btn-outline-secondary btn_reload btn_reload--style" title="сортировка по дате оформления: старый - новый"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-up-and-down.png" ></button>        
                             </div>                          
                             <div class="btn-menu-filter">
-                                <button type="button" onclick="cleanFilter()" class="btn btn-outline-secondary btn_reload btn_reload--style"><img class="btn_reload_img" style="width:23px" src="/images/reset-icon.png" title="сброс всех фильтров и очистка поисковой строки"></button>        
+                                <button type="button" onclick="cleanFilter()" class="btn btn-outline-secondary btn_reload btn_reload--style" title="сброс всех фильтров и очистка поисковой строки"><img class="btn_reload_img" style="width:23px" src="/images/reset-icon.png" ></button>        
                             </div> 
                             <div class="btn-menu-filter">
-                                <button type="button" onclick="reload_page()" class="btn btn-outline-secondary btn_reload btn_reload--style" ><img class="btn_reload_img" style="width:23px" src="/images/reload-icon.png" title="перезагрузка страницы"></button>        
+                                <button type="button" onclick="reload_page()" class="btn btn-outline-secondary btn_reload btn_reload--style" title="перезагрузка страницы"><img class="btn_reload_img" style="width:23px" src="/images/reload-icon.png" ></button>        
                             </div> 
                             <?php    
                                 if ($_SESSION['user']['id'] == 2 || $_SESSION['user']['id'] == 24 || $_SESSION['user']['id'] == 27) {
                                     ?>                              
                             <div class="btn-menu-filter">
-                                <button id="btn_open_analitics" onclick="show_page_analitics()"  type="button" class="btn btn-outline-secondary btn_reload btn_reload--style" ><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-analitics.png" title="открыть аналитику"></button>
+                                <button id="btn_open_analitics" onclick="show_page_analitics()"  type="button" class="btn btn-outline-secondary btn_reload btn_reload--style" title="открыть аналитику"><img class="btn_reload_img" style="width:23px" src="/images-catalog/admin_panel/icon-analitics.png" ></button>
                             </div>  <?
                                     };
                             ?> 
                             <div class="btn-menu-filter">
-                                <button id="btn_get_excel"  type="button" class="btn btn-outline-secondary btn_reload btn_reload--style" ><img class="btn_reload_img" style="width:23px" src="/images/save-icon.png" title="скачать выбранные заказы в формате Excel"></button>
+                                <button id="btn_get_excel"  type="button" class="btn btn-outline-secondary btn_reload btn_reload--style" title="скачать выбранные заказы в формате Excel"><img class="btn_reload_img" style="width:23px" src="/images/save-icon.png" ></button>
                             </div>  
                         </div>
                     </div>
