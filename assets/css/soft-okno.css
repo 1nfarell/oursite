@@ -8,7 +8,8 @@
     background: #ffffffcf;
     padding-bottom: 12px;
     margin: 0;
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     padding-top: 10px;
     width: 102%;
     font-size: 18px;
@@ -64,6 +65,7 @@
     } 
     .komplect-title{
         border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
     }
     .moskit-razbor-setki__img{
         width: 100%;

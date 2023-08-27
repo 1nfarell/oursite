@@ -4,6 +4,7 @@
         display: none !important;
     }    
 }
+
 .img_shema-pozhar{
     object-fit: contain;
 }
@@ -180,6 +181,10 @@
     }
     .box-furniture-oveflow{
         padding-bottom: 30px;
+    }
+    #carouselExampleCaptions .carousel-caption{
+        width: 100%;
+        left: 0;
     }
 }
 @media (max-width: 500px){

@@ -470,10 +470,11 @@ const getAllMenu = (
                                                 <img loading="lazy" class="img-menu" src="/images-catalog/onka-rollet.png" alt="Рольставни">
                                             </div>
                                             <div class="menu__container--box">
-                                                <a class="menu__href--title" title="Рольставни" href="/catalog/okna">Рольставни</a>
-                                                <a class="menu__href--field" title="Рольставни на окна" href="/catalog/okna">Рольставни на окна</a>
+                                                <a class="menu__href--title" title="Рольставни" href="/catalog/rolstavni/rolstavni">Роллетные системы</a>
+                                                <a class="menu__href--field" title="Рольставни на окна" href="/catalog/rolstavni/rolstavni">Рольставни</a>
                                                 <a class="menu__href--field" title="Рольставни в проем" href="/catalog/door">Рольставни в проем</a>
                                                 <a class="menu__href--field" title="Прозрачные рольставни" href="/catalog/door">Прозрачные рольставни</a>
+                                                <a class="menu__href--field" title="Гаражные рольворота" href="/catalog/rolstavni/vorota_v_garazh">Гаражные рольворота</a>
                                             </div>
                                         </div>
                                         <div class="menu__container--box_row menu__container--box__width menu__container--box__margin">
